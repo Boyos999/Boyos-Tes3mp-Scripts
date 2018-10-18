@@ -21,7 +21,7 @@ menuHelper.DisplayMenu(self.pid, Players[self.pid].currentCustomMenu)
             tes3mp.SetPos(self.pid, config.defaultSpawnPos[1],
                 config.defaultSpawnPos[2], config.defaultSpawnPos[3])
             tes3mp.SetRot(self.pid, config.defaultSpawnRot[1], config.defaultSpawnRot[2])
-			tes3mp.SendPos(self.pid)
+            tes3mp.SendPos(self.pid)
         end
     end
 ```
