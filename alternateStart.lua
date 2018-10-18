@@ -1,7 +1,6 @@
 --To install follow the instructions on https://github.com/Boyos999/tes3mpScripts
 
 
-
 Menus["Alternate Start"] = {
 text = "Choose your starting location.",
     buttons = {
