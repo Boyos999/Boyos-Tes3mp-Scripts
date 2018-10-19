@@ -12,7 +12,8 @@ menuHelper.DisplayMenu(self.pid, Players[self.pid].currentCustomMenu)
 4. Comment or Delete the following block from BasePlayer:EndCharGen
 
 ```lua
-	if config.defaultSpawnCell ~= nil then
+
+if config.defaultSpawnCell ~= nil then
 
         tes3mp.SetCell(self.pid, config.defaultSpawnCell)
         tes3mp.SendCell(self.pid)
@@ -26,7 +27,7 @@ menuHelper.DisplayMenu(self.pid, Players[self.pid].currentCustomMenu)
     end
 ```
 
-5. Paste the following block at the end of the base.lua file just before Return BasePlayer (will eventually go in its own file)
+5. Paste the following block at the end of the base.lua file just before Return BasePlayer
 
 ```lua
 function BasePlayer:AltStart(altCell,altPos,altRot)
