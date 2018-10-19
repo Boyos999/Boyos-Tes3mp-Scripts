@@ -39,7 +39,7 @@ Menus["Alternate Start"] = {
 Menus["Hlaalu"] = {
 	text = "Choose your starting location.",
 	buttons = {
-		{ caption = "Default (Balmora)", 
+		{ caption = "Balmora (Default)", 
 			destinations = { 
 				menuHelper.destinations.setDefault(nil,
 				{
