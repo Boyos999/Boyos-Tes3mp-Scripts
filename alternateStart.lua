@@ -4,11 +4,6 @@
 Menus["Alternate Start"] = {
 	text = "Choose your starting location.",
     buttons = {
-		{ caption = "Coastal Villages", 
-			destinations = { 
-				menuHelper.destinations.setDefault("Coastal Villages") 
-			} 
-		},
 		{ caption = "Hlaalu", 
 			destinations = { 
 				menuHelper.destinations.setDefault("Hlaalu") 
@@ -47,6 +42,24 @@ Menus["Hlaalu"] = {
 					menuHelper.effects.runPlayerFunction("Message", {"Spawned in Balmora\n"})
 				}) 
 			} 
+		},
+		{ caption = "Gnaar Mok", 
+			destinations = { 
+				menuHelper.destinations.setDefault(nil,
+				{
+					menuHelper.effects.runPlayerFunction("AltStart", {"-8,3",{-61448.434, 27527.604, 538.173},{0, 135}}),
+					menuHelper.effects.runPlayerFunction("Message", {"Spawned in Gnaar Mok\n"})
+				}) 
+			}
+		},
+		{ caption = "Hla Oad", 
+			destinations = { 
+				menuHelper.destinations.setDefault(nil,
+				{
+					menuHelper.effects.runPlayerFunction("AltStart", {"-6,-5",{-46720, -38176, 224},{0, 315}}),
+					menuHelper.effects.runPlayerFunction("Message", {"Spawned in Hla Oad\n"})
+				}) 
+			}
 		},
 		{ caption = "Suran", 
 			destinations = { 
@@ -91,6 +104,15 @@ Menus["Redoran"] = {
 				{
 					menuHelper.effects.runPlayerFunction("AltStart", {"-3,12",{-22400, 101728, 2000.414},{0, 0}}),
 					menuHelper.effects.runPlayerFunction("Message", {"Spawned in Maar Gan\n"})
+				}) 
+			}
+		},
+		{ caption = "Khuul", 
+			destinations = { 
+				menuHelper.destinations.setDefault(nil,
+				{
+					menuHelper.effects.runPlayerFunction("AltStart", {"-9,17",{-67072, 139264, 196.649},{0, 0}}),
+					menuHelper.effects.runPlayerFunction("Message", {"Spawned in Khuul\n"})
 				}) 
 			}
 		},
@@ -222,58 +244,21 @@ Menus["Imperial"] = {
 				}) 
 			}
 		},
-		{ caption = "Wolverine Hall", 
-			destinations = { 
-				menuHelper.destinations.setDefault(nil,
-				{
-					menuHelper.effects.runPlayerFunction("AltStart", {"18,3",{149248, 29856, 712.153},{0, 270}}),
-					menuHelper.effects.runPlayerFunction("Message", {"Spawned in Wolverine Hall\n"})
-				}) 
-			}
-		},
-		{ caption = "Back", 
-			destinations = { 
-				menuHelper.destinations.setDefault("Alternate Start") 
-			} 
-		}
-	}
-}
-Menus["Coastal Villages"] = {
-	text = "Choose your starting location.",
-	buttons = {
-		{ caption = "Gnaar Mok", 
-			destinations = { 
-				menuHelper.destinations.setDefault(nil,
-				{
-					menuHelper.effects.runPlayerFunction("AltStart", {"-8,3",{-61448.434, 27527.604, 538.173},{0, 135}}),
-					menuHelper.effects.runPlayerFunction("Message", {"Spawned in Gnaar Mok\n"})
-				}) 
-			}
-		},
-		{ caption = "Hla Oad", 
-			destinations = { 
-				menuHelper.destinations.setDefault(nil,
-				{
-					menuHelper.effects.runPlayerFunction("AltStart", {"-6,-5",{-46720, -38176, 224},{0, 315}}),
-					menuHelper.effects.runPlayerFunction("Message", {"Spawned in Hla Oad\n"})
-				}) 
-			}
-		},
-		{ caption = "Khuul", 
-			destinations = { 
-				menuHelper.destinations.setDefault(nil,
-				{
-					menuHelper.effects.runPlayerFunction("AltStart", {"-9,17",{-67072, 139264, 196.649},{0, 0}}),
-					menuHelper.effects.runPlayerFunction("Message", {"Spawned in Khuul\n"})
-				}) 
-			}
-		},
 		{ caption = "Seyda Neen", 
 			destinations = { 
 				menuHelper.destinations.setDefault(nil,
 				{
 					menuHelper.effects.runPlayerFunction("AltStart", {"-2,-9",{-10912, -71008, 240.122},{0, 0}}),
 					menuHelper.effects.runPlayerFunction("Message", {"Spawned in Seyda Neen\n"})
+				}) 
+			}
+		},
+		{ caption = "Wolverine Hall", 
+			destinations = { 
+				menuHelper.destinations.setDefault(nil,
+				{
+					menuHelper.effects.runPlayerFunction("AltStart", {"18,3",{149248, 29856, 712.153},{0, 270}}),
+					menuHelper.effects.runPlayerFunction("Message", {"Spawned in Wolverine Hall\n"})
 				}) 
 			}
 		},
