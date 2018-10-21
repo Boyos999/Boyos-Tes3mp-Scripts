@@ -1,5 +1,5 @@
 --To install follow the instructions on https://github.com/Boyos999/tes3mpScripts
-
+--After character creation, this menu pops up and lets the player choose a city they want to spawn in
 
 Menus["Alternate Start"] = {
 	text = "Choose your starting location.",
