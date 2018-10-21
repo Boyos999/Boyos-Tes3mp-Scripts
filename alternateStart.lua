@@ -3,7 +3,7 @@
 
 Menus["Alternate Start"] = {
 	text = "Choose your starting location.",
-    buttons = {
+	buttons = {
 		{ caption = "Hlaalu", 
 			destinations = { 
 				menuHelper.destinations.setDefault("Hlaalu") 
