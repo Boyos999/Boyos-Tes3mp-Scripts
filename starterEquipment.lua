@@ -1,4 +1,11 @@
 --To install follow the instructions on https://github.com/Boyos999/tes3mpScripts
+
+--This script will add some starting gear to the player's inventory after finishing character creation based on the
+--values of their skills
+
+
+
+
 -- 0,1,2, 3, 4, 5, 6, 7, 9,  16, 18, 21,22,23
 -- b,a,ma,ha,bl,lb,ax,sp,enc,alc,sec,la,sb,marks
 
