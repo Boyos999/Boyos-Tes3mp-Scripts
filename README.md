@@ -53,7 +53,7 @@ end
 ```lua
 starterEquipment.GiveStarterItems(pid)
 ```
-3. Also in eventHander.lua, add at the following line at the top under the [ commandHandler = require("commandHandler") ] line
+3. Also in eventHander.lua, add the following line at the top under the [ commandHandler = require("commandHandler") ] line
 ```lua
 starterEquipment = require("starterEquipment")
 ```
