@@ -4,12 +4,13 @@ Allows the player to select a location to spawn at when their character is first
 To Install:
 1. Download alternateStart.lua and put it in your scripts\menu folder
 2. Go to config.lua, find config.menuHelperFiles and add "alternateStart" to the list
-3. In scripts\player\base.lua, find the BasePlayer:EndCharGen function and just before the end add the following two lines
+3. In eventHandler.lua, find the eventHandler.OnPlayerEndCharGen function and just before the end add the following two lines
 ```lua
-Players[self.pid].currentCustomMenu = "Alternate Start"
-menuHelper.DisplayMenu(self.pid, Players[self.pid].currentCustomMenu)
+Players[pid].currentCustomMenu = "Alternate Start"
+menuHelper.DisplayMenu(pid, Players[pid].currentCustomMenu)
 ```
 4. Comment or Delete the following block from BasePlayer:EndCharGen
+NOTE: This step can be skipped if you're unsure, players will just load into balmora before the alternate start menu pops up
 
 ```lua
 
