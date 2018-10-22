@@ -1,4 +1,4 @@
-#INSTALL INSTRUCTIONS
+# INSTALL INSTRUCTIONS
 1. Download resMenu.lua, put it in scripts\Menu folder
 2. Go to config.lua, find config.menuHelperFiles and add "resMenu" to the list
 3. Find eventHandler.OnDeathTimeExpiration = function(pid) in eventHandler.lua, replace Players[pid]:Ressurect() 
