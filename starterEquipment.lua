@@ -2,10 +2,10 @@
 
 --This script will add some starting gear to the player's inventory after finishing character creation based on the
 --values of their skills
+--Only gives armor and weapon for highest skills (marksman not included)
 
 
-
-
+-- abbreviated skills and their skill ids
 -- 0,1,2, 3, 4, 5, 6, 7, 9,  16, 18, 21,22,23
 -- b,a,ma,ha,bl,lb,ax,sp,enc,alc,sec,la,sb,marks
 
@@ -23,19 +23,42 @@ starterEquipment.GiveStarterItems = function(pid)
 	local minor = 15
 	local baseGold = { refId = "Gold_001", count = 100, charge = -1}
 	
-	--Block
-	--First determine which armor class is the highest
-	--heavyarmor takes priority
+	--[[
+	Armor priority to reduce item spam
+	Heavy armor (3)
+	medium armor (2)
+	Light armor (21)
+	]]--
 	local highest = 3
 	if tes3mp.GetSkillBase(pid, 2) > tes3mp.GetSkillBase(pid,highest) then
-		--mediumarmor is second priority
 		highest = 2
 	end
 	if tes3mp.GetSkillBase(pid, 21) > tes3mp.GetSkillBase(pid,highest) then
-		--lightarmor is lowest priority
 		highest = 21
 	end
 	
+	--[[
+	weapon priority to reduce item spam (marksman not included)
+	long blade (5)
+	axe (6)
+	blunt (4)
+	spear (7)
+	short blade (22)
+	]]--
+	local HighestWeapon = 5
+	if tes3mp.GetSkillBase(pid, 6) > tes3mp.GetSkillBase(pid,highest) then
+		HighestWeapon = 6
+	end
+	if tes3mp.GetSkillBase(pid, 4) > tes3mp.GetSkillBase(pid,highest) then
+		HighestWeapon = 4
+	end
+	if tes3mp.GetSkillBase(pid, 7) > tes3mp.GetSkillBase(pid,highest) then
+		HighestWeapon = 7
+	end
+	if tes3mp.GetSkillBase(pid, 22) > tes3mp.GetSkillBase(pid,highest) then
+		HighestWeapon = 22
+	end
+	--Block
 	if tes3mp.GetSkillBase(pid, 0) >= major then
 		--heavyshield
 		if highest == 3 then
@@ -80,7 +103,7 @@ starterEquipment.GiveStarterItems = function(pid)
 	end
 	
 	--mediumarmor
-	if tes3mp.GetSkillBase(pid, 2) >= major then
+	if tes3mp.GetSkillBase(pid, 2) >= major and highest == 2 then
 		local maItems = {
 			{ "bonemold_cuirass",1,-1},
 			{ "bonemold_boots",1, -1},
@@ -91,13 +114,13 @@ starterEquipment.GiveStarterItems = function(pid)
 			table.insert(Players[pid].data.inventory, structuredItem)
 		end
 	
-	elseif tes3mp.GetSkillBase(pid, 2) >= minor then
+	elseif tes3mp.GetSkillBase(pid, 2) >= minor and highest == 2 then
 		local structuredItem = { refId = "imperial_chain_cuirass", count = 1, charge = -1}
 		table.insert(Players[pid].data.inventory, structuredItem)
 	end
 	
 	--heavyarmor
-	if tes3mp.GetSkillBase(pid, 3) >= major then
+	if tes3mp.GetSkillBase(pid, 3) >= major and highest == 3 then
 		local haItems = {
 			{ "steel_cuirass",1,-1},
 			{ "steel_boots",1, -1},
@@ -108,47 +131,47 @@ starterEquipment.GiveStarterItems = function(pid)
 			table.insert(Players[pid].data.inventory, structuredItem)
 		end
 	
-	elseif tes3mp.GetSkillBase(pid, 3) >= minor then
+	elseif tes3mp.GetSkillBase(pid, 3) >= minor and highest == 3 then
 		local structuredItem = { refId = "iron_cuirass", count = 1, charge = -1}
 		table.insert(Players[pid].data.inventory, structuredItem)
 	end
 	
 	--blunt
-	if tes3mp.GetSkillBase(pid, 4) >= major then
+	if tes3mp.GetSkillBase(pid, 4) >= major and HighestWeapon == 4 then
 		local structuredItem = { refId = "steel mace", count = 1, charge = -1}
 		table.insert(Players[pid].data.inventory, structuredItem)
 	
-	elseif tes3mp.GetSkillBase(pid, 4) >= minor then
+	elseif tes3mp.GetSkillBase(pid, 4) >= minor and HighestWeapon == 4 then
 		local structuredItem = { refId = "iron club", count = 1, charge = -1}
 		table.insert(Players[pid].data.inventory, structuredItem)
 	end
 	
 	--longblade
-	if tes3mp.GetSkillBase(pid, 5) >= major then
+	if tes3mp.GetSkillBase(pid, 5) >= major and HighestWeapon == 5 then
 		local structuredItem = { refId = "steel longsword", count = 1, charge = -1}
 		table.insert(Players[pid].data.inventory, structuredItem)
 	
-	elseif tes3mp.GetSkillBase(pid, 5) >= minor then
+	elseif tes3mp.GetSkillBase(pid, 5) >= minor and HighestWeapon == 5 then
 		local structuredItem = { refId = "iron broadsword", count = 1, charge = -1}
 		table.insert(Players[pid].data.inventory, structuredItem)
 	end
 	
 	--axe
-	if tes3mp.GetSkillBase(pid, 6) >= major then
+	if tes3mp.GetSkillBase(pid, 6) >= major and HighestWeapon == 6 then
 		local structuredItem = { refId = "steel war axe", count = 1, charge = -1}
 		table.insert(Players[pid].data.inventory, structuredItem)
 	
-	elseif tes3mp.GetSkillBase(pid, 6) >= minor then
+	elseif tes3mp.GetSkillBase(pid, 6) >= minor and HighestWeapon == 6 then
 		local structuredItem = { refId = "chitin war axe", count = 1, charge = -1}
 		table.insert(Players[pid].data.inventory, structuredItem)
 	end
 	
 	--spear
-	if tes3mp.GetSkillBase(pid, 7) >= major then
+	if tes3mp.GetSkillBase(pid, 7) >= major and HighestWeapon == 7 then
 		local structuredItem = { refId = "steel spear", count = 1, charge = -1}
 		table.insert(Players[pid].data.inventory, structuredItem)
 	
-	elseif tes3mp.GetSkillBase(pid, 7) >= minor then
+	elseif tes3mp.GetSkillBase(pid, 7) >= minor and HighestWeapon == 7 then
 		local structuredItem = { refId = "chitin spear", count = 1, charge = -1}
 		table.insert(Players[pid].data.inventory, structuredItem)
 	end
@@ -227,7 +250,7 @@ starterEquipment.GiveStarterItems = function(pid)
 	end
 	
 	--lightarmor
-	if tes3mp.GetSkillBase(pid, 21) >= major then
+	if tes3mp.GetSkillBase(pid, 21) >= major and highest == 21 then
 		local laItems = {
 			{ "chitin cuirass",1,-1},
 			{ "chitin boots",1, -1},
@@ -238,17 +261,17 @@ starterEquipment.GiveStarterItems = function(pid)
 			table.insert(Players[pid].data.inventory, structuredItem)
 		end
 	
-	elseif tes3mp.GetSkillBase(pid, 21) >= minor then
+	elseif tes3mp.GetSkillBase(pid, 21) >= minor and highest == 21 then
 		local structuredItem = { refId = "netch_leather_boiled_cuirass", count = 1, charge = -1}
 		table.insert(Players[pid].data.inventory, structuredItem)
 	end
 	
 	--shortblade
-	if tes3mp.GetSkillBase(pid, 22) >= major then
+	if tes3mp.GetSkillBase(pid, 22) >= major and HighestWeapon == 22 then
 		local structuredItem = { refId = "steel shortsword", count = 1, charge = -1}
 		table.insert(Players[pid].data.inventory, structuredItem)
 	
-	elseif tes3mp.GetSkillBase(pid, 22) >= minor then
+	elseif tes3mp.GetSkillBase(pid, 22) >= minor and HighestWeapon == 22 then
 		local structuredItem = { refId = "chitin shortsword", count = 1, charge = -1}
 		table.insert(Players[pid].data.inventory, structuredItem)
 	end
