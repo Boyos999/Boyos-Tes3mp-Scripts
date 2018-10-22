@@ -1,6 +1,15 @@
+--[[
+INSTALL INSTRUCTIONS
+1. Download resMenu.lua, put it in scripts\Menu folder
+2. Go to config.lua, find config.menuHelperFiles and add "resMenu" to the list
+3. Find eventHandler.OnDeathTimeExpiration = function(pid) in eventHandler.lua, replace Players[pid]:Ressurect() 
+with the following two lines (inside the if block)
 
+	Players[pid].currentCustomMenu = "Res Menu"
+	menuHelper.DisplayMenu(pid, Players[pid].currentCustomMenu)
 
-
+4. paste the commented block found below the menu here at the bottom of scripts\Player\base.lua (before the return)
+]]--
 Menus["Res Menu"] = {
 	text = "Would you like to revive at the nearest Tribunal Temple, or Imperial Shrine?",
 	buttons = {
