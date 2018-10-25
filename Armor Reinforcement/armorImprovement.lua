@@ -25,9 +25,9 @@ Menus["Armor Reinforcement"] = {
 		}	
     }
 }
-
+--End Results
 Menus["Insufficient Materials"] = {
-    text = "To improve a piece of armor you must have an original piece as well as a repair hammer and armorer skill of relevant level.",
+    text = "To reinforce a piece of armor you must have an original piece as well as a repair hammer and armorer skill of relevant level.",
     buttons = {
 		{ caption = "Back", destinations = { menuHelper.destinations.setFromCustomVariable("previousCustomMenu") } },
 		{ caption = "Exit", destinations = nil },
@@ -35,9 +35,9 @@ Menus["Insufficient Materials"] = {
 }
 
 Menus["Generic Success"] = {
-	text = "Would you like to continue improving armor?",
+	text = "Would you like to continue reinforcing armor?",
     buttons = {
-		{ caption = "Yes", destinations = { menuHelper.destinations.setFromCustomVariable("Armor Reinforcement") } },
+		{ caption = "Yes", destinations = { menuHelper.destinations.setFromCustomVariable("previousCustomMenu") } },
 		{ caption = "No", destinations = nil },
     }
 }
