@@ -27,7 +27,7 @@ logicHandler.TeleportPlayerToLocation = function(pid, altCell,altPos,altRot)
 end
 ```
 
-4. Comment or Delete the following block from BasePlayer:EndCharGen
+4. In Scripts\Players\base.lua Comment or Delete the following block from BasePlayer:EndCharGen
 NOTE: This step can be skipped if you're unsure, players will just load into balmora before the alternate start menu pops up
 
 ```lua
