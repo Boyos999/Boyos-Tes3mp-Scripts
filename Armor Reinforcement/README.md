@@ -27,4 +27,4 @@ NOTE: you can change "armorimp" to whatever command you want it to be (ex. with 
 	elseif cmd[1] == "armorimp" then
 		Players[pid].currentCustomMenu = "Armor Reinforcement"
 		menuHelper.DisplayMenu(pid, Players[pid].currentCustomMenu)
-```lua
+```
