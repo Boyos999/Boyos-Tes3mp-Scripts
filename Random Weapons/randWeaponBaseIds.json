@@ -1,5 +1,3 @@
-
-
 {
 	"axes1h": [
 		{ "refid": "chitin war axe" },
@@ -9,18 +7,13 @@
 		{ "refid": "dwarven war axe" },
 		{ "refid": "glass war axe" },
 		{ "refid": "ebony war axe" },
-		{ "refid": "daedric war axe" },
-		{ "refid": "BM huntsman axe" },
-		{ "refid": "BM huntsman war axe" },
-		{ "refid": "BM ice war axe"},
-		{ "refid": "BM nordic silver axe"}
+		{ "refid": "daedric war axe" }
 	],
 	"axes2h": [
 		{ "refid": "iron battle axe"},
 		{ "refid": "steel battle axe"},
 		{ "refid": "dwarven battle axe"},
 		{ "refid": "nordic battle axe"},
-		{ "refid": "BM nordic silver battleaxe"},
 		{ "refid": "adamantium_axe"},
 		{ "refid": "daedric battle axe"}
 	],
@@ -37,7 +30,94 @@
 		{ "refid": "orcish warhammer"},
 		{ "refid": "dwarven warhammer"},
 		{ "refid": "6th bell hammer"},
-		{ "refid": "daedric warhammer"}
-		
+		{ "refid": "daedric warhammer"}	
+	]
+	"bluntStaff": [
+		{ "refid": "wooden staff"},
+		{ "refid": "steel staff"},
+		{ "refid": "silver staff"},
+		{ "refid": "dreugh staff"},
+		{ "refid": "glass staff"},
+		{ "refid": "ebony staff"},
+		{ "refid": "daedric staff"}
+	]
+	"longblade1h": [
+		{ "refid": "iron broadsword"},
+		{ "refid": "iron longsword"},
+		{ "refid": "steel broadsword"},
+		{ "refid": "steel longsword"},
+		{ "refid": "steel katana"},
+		{ "refid": "silver longsword"},
+		{ "refid": "nordic broadsword"},
+		{ "refid": "glass longsword"},
+		{ "refid": "ebony broadsword"},
+		{ "refid": "ebony longsword"},
+		{ "refid": "daedric longsword"},
+		{ "refid": "daedric katana"}
+	]
+	"longblade2h": [
+		{ "refid": "iron claymore"},
+		{ "refid": "steel claymore"},
+		{ "refid": "steel dai-katana"},
+		{ "refid": "silver claymore"},
+		{ "refid": "nordic claymore"},
+		{ "refid": "dwarven claymore"},
+		{ "refid": "glass claymore"},
+		{ "refid": "adamantium_claymore"},
+		{ "refid": "daedric claymore"},
+		{ "refid": "daedric dai-katana"}
+	]
+	"marksBow": [
+		{ "refid": "bonemold long bow"},
+		{ "refid": "chitin short bow"},
+		{ "refid": "daedric long bow"},
+		{ "refid": "long bow"},
+		{ "refid": "short bow"},
+		{ "refid": "steel longbow"}
+	]
+	"marksXbow": [
+		{ "refid": "steel crossbow"},
+		{ "refid": "dwarven crossbow"},
+		{ "refid": "BM huntsman crossbow"}
+	]
+	"shortbladeDagger": [
+		{ "refid": "chitin dagger"},
+		{ "refid": "daedric dagger"},
+		{ "refid": "daedric tanto"},
+		{ "refid": "glass dagger"},
+		{ "refid": "iron dagger"},
+		{ "refid": "iron tanto"},
+		{ "refid": "silver dagger"},
+		{ "refid": "steel dagger"},
+		{ "refid": "steel tanto"}
+	]
+	"shortblade": [
+		{ "refid": "adamantium_shortsword"},
+		{ "refid": "chitin shortsword"},
+		{ "refid": "daedric shortsword"},
+		{ "refid": "daedric wakizashi"},
+		{ "refid": "dwarven shortsword"},
+		{ "refid": "ebony shortsword"},
+		{ "refid": "imperial shortsword"},
+		{ "refid:" "iron shortsword"},
+		{ "refid": "iron wakizashi"},
+		{ "refid": "silver shortsword"},
+		{ "refid": "steel shortsword"},
+		{ "refid": "steel wakizashi"}
+	]
+	"spear": [
+		{ "refid": "adamantium_spear"},
+		{ "refid": "chitin spear"},
+		{ "refid": "daedric spear"},
+		{ "refid": "dwarven halberd"},
+		{ "refid": "dwarven spear"},
+		{ "refid": "ebony spear"},
+		{ "refid": "glass halberd"},
+		{ "refid": "iron halberd"},
+		{ "refid": "Iron Long Spear"},
+		{ "refid": "iron spear"},
+		{ "refid": "silver spear"},
+		{ "refid": "steel halberd"},
+		{ "refid": "steel spear"}
 	]
 }
