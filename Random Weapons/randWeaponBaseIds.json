@@ -1,0 +1,43 @@
+
+
+{
+	"axes1h": [
+		{ "refid": "chitin war axe" },
+		{ "refid": "iron war axe" },
+		{ "refid": "steel war axe" },
+		{ "refid": "silver war axe" },
+		{ "refid": "dwarven war axe" },
+		{ "refid": "glass war axe" },
+		{ "refid": "ebony war axe" },
+		{ "refid": "daedric war axe" },
+		{ "refid": "BM huntsman axe" },
+		{ "refid": "BM huntsman war axe" },
+		{ "refid": "BM ice war axe"},
+		{ "refid": "BM nordic silver axe"}
+	],
+	"axes2h": [
+		{ "refid": "iron battle axe"},
+		{ "refid": "steel battle axe"},
+		{ "refid": "dwarven battle axe"},
+		{ "refid": "nordic battle axe"},
+		{ "refid": "BM nordic silver battleaxe"},
+		{ "refid": "adamantium_axe"},
+		{ "refid": "daedric battle axe"}
+	],
+	"bluntMace": [
+		{ "refid": "iron mace"},
+		{ "refid": "steel mace"},
+		{ "refid": "dwarven mace"},
+		{ "refid": "daedric mace"},
+		{ "refid": "adamantium_mace"}
+	],
+	"bluntHammer": [
+		{ "refid": "iron warhammer"},
+		{ "refid": "steel warhammer"},
+		{ "refid": "orcish warhammer"},
+		{ "refid": "dwarven warhammer"},
+		{ "refid": "6th bell hammer"},
+		{ "refid": "daedric warhammer"}
+		
+	]
+}
