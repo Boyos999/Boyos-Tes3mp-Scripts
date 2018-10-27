@@ -3,8 +3,9 @@ Menus that allow players to "Reinforce" pieces of armor to increase their armor 
 
 Works by creating a custom record for the piece of armor based on the original
 
-Currently supports reinforcing Netch leather (20-25 armor rating), Bonemold (25-28), and Iron (30).
-Current requirements for all are 1 Journeyman's repair hammer (not consumed), 1 original piece of armor, and an armorer skill of 50.
+Currently supports reinforcing Netch leather (20-25 armor rating), Chitin (35), Bonemold (25-28), Orcish (40), Iron (30), and Steel (40).
+Current requirements for the lower tier are 1 Journeyman's repair hammer (not consumed), 1 original piece of armor, and an armorer skill of 50.
+Requirements for the higher tier are 1 master's repair hammer, 1 original piece of armor, 100 gold, and an armorer skill of 75.
 
 
 

@@ -50,6 +50,11 @@ Menus["Light Armor"] = {
 				menuHelper.destinations.setDefault("Netch Leather")
 			}
 		},
+		{ caption = "Chitin",
+			destinations = {
+				menuHelper.destinations.setDefault("Chitin Armor")
+			}
+		},
 		{ caption = "Back", destinations = { menuHelper.destinations.setDefault("Armor Reinforcement") } },
 		{ caption = "Exit", 
 			destinations = { 
@@ -239,6 +244,207 @@ Menus["Netch Leather"] = {
 	}
 }
 
+----Chitin
+Menus["Chitin Armor"] = {
+	text = "Reinforcing a piece of Chitin Armor requires an original piece, a Master's Repair Hammer, 100 gold, and an armorer skill of 75",
+	buttons = {
+		{ caption = "Chitin Helm",
+			destinations = {
+				menuHelper.destinations.setDefault("Insufficient Materials"),
+				menuHelper.destinations.setConditional("Generic Success",
+                {
+                    menuHelper.conditions.requireItem("repair_master_01", 1),
+					menuHelper.conditions.requireItem("chitin helm", 1),
+					menuHelper.conditions.requireItem("gold_001",100),
+					menuHelper.conditions.requireSkill("Armorer", 75),
+                },
+				{
+                    menuHelper.effects.removeItem("chitin helm", 1),
+					menuHelper.effects.removeItem("gold_001", 100),
+					menuHelper.effects.runGlobalFunction("logicHandler", "ArmorReinforcement",
+						{menuHelper.variables.currentPid(), "chitin helm",35,300})
+				})
+			}
+		},
+		{ caption = "Chitin Mask Helm",
+			destinations = {
+				menuHelper.destinations.setDefault("Insufficient Materials"),
+				menuHelper.destinations.setConditional("Generic Success",
+                {
+                    menuHelper.conditions.requireItem("repair_master_01", 1),
+					menuHelper.conditions.requireItem("chitin_mask_helm", 1),
+					menuHelper.conditions.requireItem("gold_001",100),
+					menuHelper.conditions.requireSkill("Armorer", 75),
+                },
+				{
+                    menuHelper.effects.removeItem("chitin_mask_helm", 1),
+					menuHelper.effects.removeItem("gold_001", 100),
+					menuHelper.effects.runGlobalFunction("logicHandler", "ArmorReinforcement",
+						{menuHelper.variables.currentPid(), "chitin_mask_helm",35,300})
+				})
+			}
+		},
+		{ caption = "Redoran Watchman's Helm",
+			destinations = {
+				menuHelper.destinations.setDefault("Insufficient Materials"),
+				menuHelper.destinations.setConditional("Generic Success",
+                {
+                    menuHelper.conditions.requireItem("repair_master_01", 1),
+					menuHelper.conditions.requireItem("chitin_watchman_helm", 1),
+					menuHelper.conditions.requireItem("gold_001",100),
+					menuHelper.conditions.requireSkill("Armorer", 75),
+                },
+				{
+                    menuHelper.effects.removeItem("chitin_watchman_helm", 1),
+					menuHelper.effects.removeItem("gold_001", 100),
+					menuHelper.effects.runGlobalFunction("logicHandler", "ArmorReinforcement",
+						{menuHelper.variables.currentPid(), "chitin_watchman_helm",37,300})
+				})
+			}
+		},
+		{ caption = "Chitin Cuirass",
+			destinations = {
+				menuHelper.destinations.setDefault("Insufficient Materials"),
+				menuHelper.destinations.setConditional("Generic Success",
+                {
+                    menuHelper.conditions.requireItem("repair_master_01", 1),
+					menuHelper.conditions.requireItem("chitin cuirass", 1),
+					menuHelper.conditions.requireItem("gold_001",100),
+					menuHelper.conditions.requireSkill("Armorer", 75),
+                },
+				{
+                    menuHelper.effects.removeItem("chitin cuirass", 1),
+					menuHelper.effects.removeItem("gold_001", 100),
+					menuHelper.effects.runGlobalFunction("logicHandler", "ArmorReinforcement",
+						{menuHelper.variables.currentPid(), "chitin cuirass",35,300})
+				})
+			}
+		},
+		{ caption = "Chitin Pauldrons",
+			destinations = {
+				menuHelper.destinations.setDefault("Insufficient Materials"),
+				menuHelper.destinations.setConditional("Generic Success",
+                {
+                    menuHelper.conditions.requireItem("repair_master_01", 1),
+					menuHelper.conditions.requireItem("chitin pauldron - left", 1),
+					menuHelper.conditions.requireItem("chitin pauldron - right", 1),
+					menuHelper.conditions.requireItem("gold_001",100),
+					menuHelper.conditions.requireSkill("Armorer", 75),
+                },
+				{
+                    menuHelper.effects.removeItem("chitin pauldron - left", 1),
+					menuHelper.effects.removeItem("chitin pauldron - right", 1),
+					menuHelper.effects.removeItem("gold_001", 100),
+					menuHelper.effects.runGlobalFunction("logicHandler", "ArmorReinforcement",
+						{menuHelper.variables.currentPid(), "chitin pauldron - left",35,250}),
+					menuHelper.effects.runGlobalFunction("logicHandler", "ArmorReinforcement",
+						{menuHelper.variables.currentPid(), "chitin pauldron - right",35,250})
+				})
+			}
+		},
+		{ caption = "Chitin Gauntlets",
+			destinations = {
+				menuHelper.destinations.setDefault("Insufficient Materials"),
+				menuHelper.destinations.setConditional("Generic Success",
+                {
+                    menuHelper.conditions.requireItem("repair_master_01", 1),
+					menuHelper.conditions.requireItem("chitin gauntlet - left", 1),
+					menuHelper.conditions.requireItem("chitin gauntlet - right", 1),
+					menuHelper.conditions.requireItem("gold_001",100),
+					menuHelper.conditions.requireSkill("Armorer", 75),
+                },
+				{
+                    menuHelper.effects.removeItem("chitin gauntlet - left", 1),
+					menuHelper.effects.removeItem("chitin gauntlet - right", 1),
+					menuHelper.effects.removeItem("gold_001", 100),
+					menuHelper.effects.runGlobalFunction("logicHandler", "ArmorReinforcement",
+						{menuHelper.variables.currentPid(), "chitin gauntlet - left",35,150}),
+					menuHelper.effects.runGlobalFunction("logicHandler", "ArmorReinforcement",
+						{menuHelper.variables.currentPid(), "chitin gauntlet - right",35,150})
+				})
+			}
+		},
+		{ caption = "Chitin Greaves",
+			destinations = {
+				menuHelper.destinations.setDefault("Insufficient Materials"),
+				menuHelper.destinations.setConditional("Generic Success",
+                {
+                    menuHelper.conditions.requireItem("repair_master_01", 1),
+					menuHelper.conditions.requireItem("chitin greaves", 1),
+					menuHelper.conditions.requireItem("gold_001",100),
+					menuHelper.conditions.requireSkill("Armorer", 75),
+                },
+				{
+                    menuHelper.effects.removeItem("chitin greaves", 1),
+					menuHelper.effects.removeItem("gold_001", 100),
+					menuHelper.effects.runGlobalFunction("logicHandler", "ArmorReinforcement",
+						{menuHelper.variables.currentPid(), "chitin greaves",35,250})
+				})
+			}
+		},
+		{ caption = "Chitin Boots",
+			destinations = {
+				menuHelper.destinations.setDefault("Insufficient Materials"),
+				menuHelper.destinations.setConditional("Generic Success",
+                {
+                    menuHelper.conditions.requireItem("repair_master_01", 1),
+					menuHelper.conditions.requireItem("chitin boots", 1),
+					menuHelper.conditions.requireItem("gold_001",100),
+					menuHelper.conditions.requireSkill("Armorer", 75),
+                },
+				{
+                    menuHelper.effects.removeItem("chitin boots", 1),
+					menuHelper.effects.removeItem("gold_001", 100),
+					menuHelper.effects.runGlobalFunction("logicHandler", "ArmorReinforcement",
+						{menuHelper.variables.currentPid(), "chitin boots",35,200})
+				})
+			}
+		},
+		{ caption = "Chitin Shield",
+			destinations = {
+				menuHelper.destinations.setDefault("Insufficient Materials"),
+				menuHelper.destinations.setConditional("Generic Success",
+                {
+                    menuHelper.conditions.requireItem("repair_master_01", 1),
+					menuHelper.conditions.requireItem("chitin_shield", 1),
+					menuHelper.conditions.requireItem("gold_001",100),
+					menuHelper.conditions.requireSkill("Armorer", 75),
+                },
+				{
+                    menuHelper.effects.removeItem("chitin_shield", 1),
+					menuHelper.effects.removeItem("gold_001", 100),
+					menuHelper.effects.runGlobalFunction("logicHandler", "ArmorReinforcement",
+						{menuHelper.variables.currentPid(), "chitin_shield",35,300})
+				})
+			}
+		},
+		{ caption = "Chitin Tower Shield",
+			destinations = {
+				menuHelper.destinations.setDefault("Insufficient Materials"),
+				menuHelper.destinations.setConditional("Generic Success",
+                {
+                    menuHelper.conditions.requireItem("repair_master_01", 1),
+					menuHelper.conditions.requireItem("chitin_towershield", 1),
+					menuHelper.conditions.requireItem("gold_001",100),
+					menuHelper.conditions.requireSkill("Armorer", 75),
+                },
+				{
+                    menuHelper.effects.removeItem("chitin_towershield", 1),
+					menuHelper.effects.removeItem("gold_001", 100),
+					menuHelper.effects.runGlobalFunction("logicHandler", "ArmorReinforcement",
+						{menuHelper.variables.currentPid(), "chitin_towershield",38,350})
+				})
+			}
+		},
+		{ caption = "Back", destinations = { menuHelper.destinations.setDefault("Light Armor") } },
+		{ caption = "Exit", 
+			destinations = { 
+				menuHelper.destinations.setDefault(nil) 
+			} 
+		}
+	}
+}
+
 --Medium Armor
 Menus["Medium Armor"] = {
 	text = "What set of armor would you like to reinforce?",
@@ -248,6 +454,11 @@ Menus["Medium Armor"] = {
 				menuHelper.destinations.setDefault("Bonemold")
 			}
 		},
+		{ caption = "Orcish",
+			destinations = {
+				menuHelper.destinations.setDefault("Orcish Armor")
+			}
+		},	
 		{ caption = "Back", destinations = { menuHelper.destinations.setDefault("Armor Reinforcement") } },
 		{ caption = "Exit", 
 			destinations = { 
@@ -647,6 +858,152 @@ Menus["Standard Bonemold"] = {
 	}
 }
 
+Menus["Orcish Armor"] = {
+	text = "Reinforcing a piece of Orcish Armor requires an original piece, a Master's Repair Hammer, 100 gold, and an armorer skill of 75",
+	buttons = {
+		{ caption = "Orcish Helm",
+			destinations = {
+				menuHelper.destinations.setDefault("Insufficient Materials"),
+				menuHelper.destinations.setConditional("Generic Success",
+                {
+                    menuHelper.conditions.requireItem("repair_master_01", 1),
+					menuHelper.conditions.requireItem("orcish_helm", 1),
+					menuHelper.conditions.requireItem("gold_001",100),
+					menuHelper.conditions.requireSkill("Armorer", 75),
+                },
+				{
+                    menuHelper.effects.removeItem("orcish_helm", 1),
+					menuHelper.effects.removeItem("gold_001", 100),
+					menuHelper.effects.runGlobalFunction("logicHandler", "ArmorReinforcement",
+						{menuHelper.variables.currentPid(), "orcish_helm",40,350})
+				})
+			}
+		},
+		{ caption = "Orcish Cuirass",
+			destinations = {
+				menuHelper.destinations.setDefault("Insufficient Materials"),
+				menuHelper.destinations.setConditional("Generic Success",
+                {
+                    menuHelper.conditions.requireItem("repair_master_01", 1),
+					menuHelper.conditions.requireItem("orcish_cuirass", 1),
+					menuHelper.conditions.requireItem("gold_001",100),
+					menuHelper.conditions.requireSkill("Armorer", 75),
+                },
+				{
+                    menuHelper.effects.removeItem("orcish_cuirass", 1),
+					menuHelper.effects.removeItem("gold_001", 100),
+					menuHelper.effects.runGlobalFunction("logicHandler", "ArmorReinforcement",
+						{menuHelper.variables.currentPid(), "orcish_cuirass",40,1000})
+				})
+			}
+		},
+		{ caption = "Orcish Pauldrons",
+			destinations = {
+				menuHelper.destinations.setDefault("Insufficient Materials"),
+				menuHelper.destinations.setConditional("Generic Success",
+                {
+                    menuHelper.conditions.requireItem("repair_master_01", 1),
+					menuHelper.conditions.requireItem("orcish_pauldron_left", 1),
+					menuHelper.conditions.requireItem("orcish_pauldron_right", 1),
+					menuHelper.conditions.requireItem("gold_001",100),
+					menuHelper.conditions.requireSkill("Armorer", 75),
+                },
+				{
+                    menuHelper.effects.removeItem("orcish_pauldron_left", 1),
+					menuHelper.effects.removeItem("orcish_pauldron_right", 1),
+					menuHelper.effects.removeItem("gold_001", 100),
+					menuHelper.effects.runGlobalFunction("logicHandler", "ArmorReinforcement",
+						{menuHelper.variables.currentPid(), "orcish_pauldron_left",40,350}),
+					menuHelper.effects.runGlobalFunction("logicHandler", "ArmorReinforcement",
+						{menuHelper.variables.currentPid(), "orcish_pauldron_right",40,350})
+				})
+			}
+		},
+		{ caption = "Orcish Bracers",
+			destinations = {
+				menuHelper.destinations.setDefault("Insufficient Materials"),
+				menuHelper.destinations.setConditional("Generic Success",
+                {
+                    menuHelper.conditions.requireItem("repair_master_01", 1),
+					menuHelper.conditions.requireItem("orcish_bracer_left", 1),
+					menuHelper.conditions.requireItem("orcish_bracer_right", 1),
+					menuHelper.conditions.requireItem("gold_001",100),
+					menuHelper.conditions.requireSkill("Armorer", 75),
+                },
+				{
+                    menuHelper.effects.removeItem("orcish_bracer_left", 1),
+					menuHelper.effects.removeItem("orcish_bracer_right", 1),
+					menuHelper.effects.removeItem("gold_001", 100),
+					menuHelper.effects.runGlobalFunction("logicHandler", "ArmorReinforcement",
+						{menuHelper.variables.currentPid(), "orcish_bracer_left",40,200}),
+					menuHelper.effects.runGlobalFunction("logicHandler", "ArmorReinforcement",
+						{menuHelper.variables.currentPid(), "orcish_bracer_right",40,200})
+				})
+			}
+		},
+		{ caption = "Orcish Greaves",
+			destinations = {
+				menuHelper.destinations.setDefault("Insufficient Materials"),
+				menuHelper.destinations.setConditional("Generic Success",
+                {
+                    menuHelper.conditions.requireItem("repair_master_01", 1),
+					menuHelper.conditions.requireItem("orcish_greaves", 1),
+					menuHelper.conditions.requireItem("gold_001",100),
+					menuHelper.conditions.requireSkill("Armorer", 75),
+                },
+				{
+                    menuHelper.effects.removeItem("orcish_greaves", 1),
+					menuHelper.effects.removeItem("gold_001", 100),
+					menuHelper.effects.runGlobalFunction("logicHandler", "ArmorReinforcement",
+						{menuHelper.variables.currentPid(), "orcish_greaves",40,350})
+				})
+			}
+		},
+		{ caption = "Orcish Boots",
+			destinations = {
+				menuHelper.destinations.setDefault("Insufficient Materials"),
+				menuHelper.destinations.setConditional("Generic Success",
+                {
+                    menuHelper.conditions.requireItem("repair_master_01", 1),
+					menuHelper.conditions.requireItem("orcish_boots", 1),
+					menuHelper.conditions.requireItem("gold_001",100),
+					menuHelper.conditions.requireSkill("Armorer", 75),
+                },
+				{
+                    menuHelper.effects.removeItem("orcish_boots", 1),
+					menuHelper.effects.removeItem("gold_001", 100),
+					menuHelper.effects.runGlobalFunction("logicHandler", "ArmorReinforcement",
+						{menuHelper.variables.currentPid(), "orcish_boots",40,350})
+				})
+			}
+		},
+		{ caption = "Orcish Tower Shield",
+			destinations = {
+				menuHelper.destinations.setDefault("Insufficient Materials"),
+				menuHelper.destinations.setConditional("Generic Success",
+                {
+                    menuHelper.conditions.requireItem("repair_master_01", 1),
+					menuHelper.conditions.requireItem("orcish_towershield", 1),
+					menuHelper.conditions.requireItem("gold_001",100),
+					menuHelper.conditions.requireSkill("Armorer", 75),
+                },
+				{
+                    menuHelper.effects.removeItem("orcish_towershield", 1),
+					menuHelper.effects.removeItem("gold_001", 100),
+					menuHelper.effects.runGlobalFunction("logicHandler", "ArmorReinforcement",
+						{menuHelper.variables.currentPid(), "orcish_towershield",44,720})
+				})
+			}
+		},
+		{ caption = "Back", destinations = { menuHelper.destinations.setDefault("Medium Armor") } },
+		{ caption = "Exit", 
+			destinations = { 
+				menuHelper.destinations.setDefault(nil) 
+			} 
+		}
+	}
+}
+
 --Heavy Armor
 Menus["Heavy Armor"] = {
 	text = "What set of armor would you like to reinforce?",
@@ -654,6 +1011,11 @@ Menus["Heavy Armor"] = {
 		{ caption = "Iron",
 			destinations = {
 				menuHelper.destinations.setDefault("Iron Armor")
+			}
+		},
+		{ caption = "Steel",
+			destinations = {
+				menuHelper.destinations.setDefault("Steel Armor")
 			}
 		},
 		{ caption = "Back", destinations = { menuHelper.destinations.setDefault("Armor Reinforcement") } },
@@ -831,5 +1193,171 @@ Menus["Iron Armor"] = {
 				menuHelper.destinations.setDefault(nil) 
 			} 
 		}
+	}
+}
+
+----Steel 
+Menus["Steel Armor"] = {
+	text = "Reinforcing a piece of Orcish Armor requires an original piece, a Master's Repair Hammer, 100 gold, and an armorer skill of 75",
+	buttons = {
+		{ caption = "Steel Helm",
+			destinations = {
+				menuHelper.destinations.setDefault("Insufficient Materials"),
+				menuHelper.destinations.setConditional("Generic Success",
+                {
+                    menuHelper.conditions.requireItem("repair_master_01", 1),
+					menuHelper.conditions.requireItem("steel_helm", 1),
+					menuHelper.conditions.requireItem("gold_001",100),
+					menuHelper.conditions.requireSkill("Armorer", 75),
+                },
+				{
+                    menuHelper.effects.removeItem("steel_helm", 1),
+					menuHelper.effects.removeItem("gold_001", 100),
+					menuHelper.effects.runGlobalFunction("logicHandler", "ArmorReinforcement",
+						{menuHelper.variables.currentPid(), "steel_helm",40,350})
+				})
+			}
+		},
+		{ caption = "Steel Cuirass",
+			destinations = {
+				menuHelper.destinations.setDefault("Insufficient Materials"),
+				menuHelper.destinations.setConditional("Generic Success",
+                {
+                    menuHelper.conditions.requireItem("repair_master_01", 1),
+					menuHelper.conditions.requireItem("steel_cuirass", 1),
+					menuHelper.conditions.requireItem("gold_001",100),
+					menuHelper.conditions.requireSkill("Armorer", 75),
+                },
+				{
+                    menuHelper.effects.removeItem("steel_cuirass", 1),
+					menuHelper.effects.removeItem("gold_001", 100),
+					menuHelper.effects.runGlobalFunction("logicHandler", "ArmorReinforcement",
+						{menuHelper.variables.currentPid(), "steel_cuirass",40,1000})
+				})
+			}
+		},
+		{ caption = "Steel Pauldrons",
+			destinations = {
+				menuHelper.destinations.setDefault("Insufficient Materials"),
+				menuHelper.destinations.setConditional("Generic Success",
+                {
+                    menuHelper.conditions.requireItem("repair_master_01", 1),
+					menuHelper.conditions.requireItem("steel_pauldron_left", 1),
+					menuHelper.conditions.requireItem("steel_pauldron_right", 1),
+					menuHelper.conditions.requireItem("gold_001",100),
+					menuHelper.conditions.requireSkill("Armorer", 75),
+                },
+				{
+                    menuHelper.effects.removeItem("steel_pauldron_left", 1),
+					menuHelper.effects.removeItem("steel_pauldron_right", 1),
+					menuHelper.effects.removeItem("gold_001", 100),
+					menuHelper.effects.runGlobalFunction("logicHandler", "ArmorReinforcement",
+						{menuHelper.variables.currentPid(), "steel_pauldron_left",40,350}),
+					menuHelper.effects.runGlobalFunction("logicHandler", "ArmorReinforcement",
+						{menuHelper.variables.currentPid(), "steel_pauldron_right",40,350})
+				})
+			}
+		},
+		{ caption = "Steel Gauntlets",
+			destinations = {
+				menuHelper.destinations.setDefault("Insufficient Materials"),
+				menuHelper.destinations.setConditional("Generic Success",
+                {
+                    menuHelper.conditions.requireItem("repair_master_01", 1),
+					menuHelper.conditions.requireItem("steel_gauntlet_left", 1),
+					menuHelper.conditions.requireItem("steel_gauntlet_right", 1),
+					menuHelper.conditions.requireItem("gold_001",100),
+					menuHelper.conditions.requireSkill("Armorer", 75),
+                },
+				{
+                    menuHelper.effects.removeItem("steel_gauntlet_left", 1),
+					menuHelper.effects.removeItem("steel_gauntlet_right", 1),
+					menuHelper.effects.removeItem("gold_001", 100),
+					menuHelper.effects.runGlobalFunction("logicHandler", "ArmorReinforcement",
+						{menuHelper.variables.currentPid(), "steel_gauntlet_left",40,200}),
+					menuHelper.effects.runGlobalFunction("logicHandler", "ArmorReinforcement",
+						{menuHelper.variables.currentPid(), "steel_gauntlet_right",40,200})
+				})
+			}
+		},
+		{ caption = "Steel Greaves",
+			destinations = {
+				menuHelper.destinations.setDefault("Insufficient Materials"),
+				menuHelper.destinations.setConditional("Generic Success",
+                {
+                    menuHelper.conditions.requireItem("repair_master_01", 1),
+					menuHelper.conditions.requireItem("steel_greaves", 1),
+					menuHelper.conditions.requireItem("gold_001",100),
+					menuHelper.conditions.requireSkill("Armorer", 75),
+                },
+				{
+                    menuHelper.effects.removeItem("steel_greaves", 1),
+					menuHelper.effects.removeItem("gold_001", 100),
+					menuHelper.effects.runGlobalFunction("logicHandler", "ArmorReinforcement",
+						{menuHelper.variables.currentPid(), "steel_greaves",40,350})
+				})
+			}
+		},
+		{ caption = "Steel Boots",
+			destinations = {
+				menuHelper.destinations.setDefault("Insufficient Materials"),
+				menuHelper.destinations.setConditional("Generic Success",
+                {
+                    menuHelper.conditions.requireItem("repair_master_01", 1),
+					menuHelper.conditions.requireItem("steel_boots", 1),
+					menuHelper.conditions.requireItem("gold_001",100),
+					menuHelper.conditions.requireSkill("Armorer", 75),
+                },
+				{
+                    menuHelper.effects.removeItem("steel_boots", 1),
+					menuHelper.effects.removeItem("gold_001", 100),
+					menuHelper.effects.runGlobalFunction("logicHandler", "ArmorReinforcement",
+						{menuHelper.variables.currentPid(), "steel_boots",40,350})
+				})
+			}
+		},
+		{ caption = "Steel Shield",
+			destinations = {
+				menuHelper.destinations.setDefault("Insufficient Materials"),
+				menuHelper.destinations.setConditional("Generic Success",
+                {
+                    menuHelper.conditions.requireItem("repair_master_01", 1),
+					menuHelper.conditions.requireItem("steel_shield", 1),
+					menuHelper.conditions.requireItem("gold_001",100),
+					menuHelper.conditions.requireSkill("Armorer", 75),
+                },
+				{
+                    menuHelper.effects.removeItem("steel_shield", 1),
+					menuHelper.effects.removeItem("gold_001", 100),
+					menuHelper.effects.runGlobalFunction("logicHandler", "ArmorReinforcement",
+						{menuHelper.variables.currentPid(), "steel_shield",40,650})
+				})
+			}
+		},
+		{ caption = "Steel Tower Shield",
+			destinations = {
+				menuHelper.destinations.setDefault("Insufficient Materials"),
+				menuHelper.destinations.setConditional("Generic Success",
+                {
+                    menuHelper.conditions.requireItem("repair_master_01", 1),
+					menuHelper.conditions.requireItem("steel_towershield", 1),
+					menuHelper.conditions.requireItem("gold_001",100),
+					menuHelper.conditions.requireSkill("Armorer", 75),
+                },
+				{
+                    menuHelper.effects.removeItem("steel_towershield", 1),
+					menuHelper.effects.removeItem("gold_001", 100),
+					menuHelper.effects.runGlobalFunction("logicHandler", "ArmorReinforcement",
+						{menuHelper.variables.currentPid(), "steel_towershield",44,720})
+				})
+			}
+		},
+		{ caption = "Back", destinations = { menuHelper.destinations.setDefault("Heavy Armor") } },
+		{ caption = "Exit", 
+			destinations = { 
+				menuHelper.destinations.setDefault(nil) 
+			} 
+		}
+		
 	}
 }
