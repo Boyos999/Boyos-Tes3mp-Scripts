@@ -3,6 +3,7 @@ local armorImprovementHelper = {}
 function armorImprovementHelper.ArmorReinforcementFunction(pid, armorName, armorRating, armorHealth)
 
 	local newRefId = armorName .. "_" .. Players[pid].name
+	armorImprovementHelper.StoreRecord(pid, "/storerecord armor clear")
 	armorImprovementHelper.StoreRecord(pid, "/storerecord armor id " .. newRefId)
 	armorImprovementHelper.StoreRecord(pid, "/storerecord armor baseId " .. armorName)
 	armorImprovementHelper.StoreRecord(pid, "/storerecord armor armorRating " .. armorRating)
