@@ -6,7 +6,7 @@ jsonInterface = require("jsonInterface")
 cfgRandWeap = require("cfgRandWeap")
 
 randomWeapons.CreateRandWeap = function(pid)
-	local idIterator = Players[pid].data.customVariables.randCounter
+	local idIterator = WorldInstance.data.customVariables.randCounter
 	
 	
 	local weapType = math.random(1,12)
@@ -220,17 +220,17 @@ randomWeapons.CreateRandWeap = function(pid)
 	end
 	
 	--use this to make sure there are no repeat ids
-	if Players[pid].data.customVariables.randCounter == nil then
+	if WorldInstance.data.customVariables.randCounter == nil then
 		idIterator = 0
 	else
 		idIterator = idIterator + 1
 	end
-	Players[pid].data.customVariables.randCounter = idIterator
+	WorldInstance.data.customVariables.randCounter = idIterator
 	
 	--calculate a new item value based on damage
 	weapValue = ((weapMinChopDmg + weapMaxChopDmg + weapMinSlashDmg + weapMaxSlashDmg + weapMinThrustDmg + weapMaxThrustDmg)/6)*10
 	
-	local newRefId = idIterator .. "_" .. weapBaseId .. "_" .. Players[pid].name
+	local newRefId = idIterator .. "_" .. weapBaseId
 	randomWeapons.StoreRecord(pid, "/storerecord weapon clear")
 	randomWeapons.StoreRecord(pid, "/storerecord weapon id " .. newRefId)
 	randomWeapons.StoreRecord(pid, "/storerecord weapon baseId " .. weapBaseId)
@@ -246,6 +246,7 @@ randomWeapons.CreateRandWeap = function(pid)
 	Players[pid]:LoadInventory()
 	Players[pid]:LoadEquipment()
 	Players[pid]:Save()
+	WorldInstance:Save()
 	
 end
 
