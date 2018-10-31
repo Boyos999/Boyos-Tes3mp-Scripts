@@ -230,7 +230,7 @@ randomWeapons.CreateRandWeap = function(pid)
 	--calculate a new item value based on damage
 	weapValue = ((weapMinChopDmg + weapMaxChopDmg + weapMinSlashDmg + weapMaxSlashDmg + weapMinThrustDmg + weapMaxThrustDmg)/6)*10
 	
-	local newRefId = idIterator .. "_" .. weapBaseId .. "_" .. Players[pid].name
+	local newRefId = string.lower(idIterator .. "_" .. weapBaseId .. "_" .. Players[pid].name)
 	randomWeapons.StoreRecord(pid, "/storerecord weapon clear")
 	randomWeapons.StoreRecord(pid, "/storerecord weapon id " .. newRefId)
 	randomWeapons.StoreRecord(pid, "/storerecord weapon baseId " .. weapBaseId)
