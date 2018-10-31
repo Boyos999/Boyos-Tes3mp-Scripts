@@ -1,8 +1,15 @@
 local armorImprovementHelper = {}
 
 function armorImprovementHelper.ArmorReinforcementFunction(pid, armorName, armorRating, armorHealth)
-
-	local newRefId = armorName .. "_" .. Players[pid].name
+	local idIterator = WorldInstance.data.customVariables.armorImpCounter
+	if WorldInstance.data.customVariables.armorImpCounter == nil then
+		idIterator = 0
+	else
+		idIterator = idIterator + 1
+	end
+	WorldInstance.data.customVariables.randCounter = idIterator
+	
+	local newRefId = armorName .. "_" .. idIterator
 	armorImprovementHelper.StoreRecord(pid, "/storerecord armor clear")
 	armorImprovementHelper.StoreRecord(pid, "/storerecord armor id " .. newRefId)
 	armorImprovementHelper.StoreRecord(pid, "/storerecord armor baseId " .. armorName)
@@ -14,6 +21,7 @@ function armorImprovementHelper.ArmorReinforcementFunction(pid, armorName, armor
 	table.insert(Players[pid].data.inventory, structuredItem)
 	Players[pid]:LoadInventory()
 	Players[pid]:LoadEquipment()
+	WorldInstance:Save()
 
 end
 
