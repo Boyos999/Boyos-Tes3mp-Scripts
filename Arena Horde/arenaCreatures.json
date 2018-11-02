@@ -1,0 +1,7 @@
+{
+	"creatures":[
+		{ "refid": "scrib" },
+		{ "refid": "nix-hound" },
+		{ "refid": "scamp" }
+	]
+}
