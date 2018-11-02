@@ -61,7 +61,7 @@ function arenaHorde.ArenaWave(pid,playerMult,diffMult,wave)
 	local creatureRefid
 	local arenaCreatureRefid
 	local i = 0
-	local j = 0
+	local j = 1
 	for i, creature in pairs(creatureTable.creatures) do
 		if i == wave then
 			creatureRefid = creature.refid
