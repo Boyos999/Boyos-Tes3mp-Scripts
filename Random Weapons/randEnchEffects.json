@@ -1,0 +1,262 @@
+{
+	"Once": [
+	]
+	"Strike": [
+		{ 
+			"EnchName": "Fire Damage",
+			"EnchIndex": "14",
+			"EnchMagMinMin": "1",
+			"EnchMagMinMax": "15",
+			"EnchMagMaxMin": "5",
+			"EnchMagMaxMax": "40",
+			"EnchAoeMin": "1",
+			"EnchAoeMax": "15",
+			"EnchDurMin": "1",
+			"EnchDurMax": "5"
+		},
+		{ 
+			"EnchName": "Shock Damage",
+			"EnchIndex": "15",
+			"EnchMagMinMin": "1",
+			"EnchMagMinMax": "15",
+			"EnchMagMaxMin": "5",
+			"EnchMagMaxMax": "40",
+			"EnchAoeMin": "1",
+			"EnchAoeMax": "15",
+			"EnchDurMin": "1",
+			"EnchDurMax": "5"
+		},
+		{ 
+			"EnchName": "Frost Damage",
+			"EnchIndex": "16",
+			"EnchMagMinMin": "1",
+			"EnchMagMinMax": "15",
+			"EnchMagMaxMin": "5",
+			"EnchMagMaxMax": "40",
+			"EnchAoeMin": "1",
+			"EnchAoeMax": "15",
+			"EnchDurMin": "1",
+			"EnchDurMax": "5"
+		},
+		{ 
+			"EnchName": "Damage Health",
+			"EnchIndex": "23",
+			"EnchMagMinMin": "1",
+			"EnchMagMinMax": "10",
+			"EnchMagMaxMin": "5",
+			"EnchMagMaxMax": "30",
+			"EnchAoeMin": "1",
+			"EnchAoeMax": "15",
+			"EnchDurMin": "1",
+			"EnchDurMax": "5"
+		},
+		{ 
+			"EnchName": "Damage Magicka",
+			"EnchIndex": "24",
+			"EnchMagMinMin": "1",
+			"EnchMagMinMax": "10",
+			"EnchMagMaxMin": "5",
+			"EnchMagMaxMax": "30",
+			"EnchAoeMin": "1",
+			"EnchAoeMax": "15",
+			"EnchDurMin": "1",
+			"EnchDurMax": "5"
+		},
+		{ 
+			"EnchName": "Damage Fatigue",
+			"EnchIndex": "25",
+			"EnchMagMinMin": "1",
+			"EnchMagMinMax": "25",
+			"EnchMagMaxMin": "5",
+			"EnchMagMaxMax": "60",
+			"EnchAoeMin": "1",
+			"EnchAoeMax": "15",
+			"EnchDurMin": "1",
+			"EnchDurMax": "5"
+		},
+		{ 
+			"EnchName": "Poison",
+			"EnchIndex": "27",
+			"EnchMagMinMin": "1",
+			"EnchMagMinMax": "15",
+			"EnchMagMaxMin": "5",
+			"EnchMagMaxMax": "40",
+			"EnchAoeMin": "1",
+			"EnchAoeMax": "15",
+			"EnchDurMin": "1",
+			"EnchDurMax": "5"
+		},
+		{ 
+			"EnchName": "Disintegrate Weapon",
+			"EnchIndex": "37",
+			"EnchMagMinMin": "1",
+			"EnchMagMinMax": "25",
+			"EnchMagMaxMin": "5",
+			"EnchMagMaxMax": "60",
+			"EnchAoeMin": "1",
+			"EnchAoeMax": "15",
+			"EnchDurMin": "1",
+			"EnchDurMax": "5"
+		},
+		{ 
+			"EnchName": "Disintegrate Armor",
+			"EnchIndex": "38",
+			"EnchMagMinMin": "1",
+			"EnchMagMinMax": "25",
+			"EnchMagMaxMin": "5",
+			"EnchMagMaxMax": "60",
+			"EnchAoeMin": "1",
+			"EnchAoeMax": "15",
+			"EnchDurMin": "1",
+			"EnchDurMax": "5"
+		},
+		{ 
+			"EnchName": "Blind",
+			"EnchIndex": "47",
+			"EnchMagMinMin": "1",
+			"EnchMagMinMax": "35",
+			"EnchMagMaxMin": "15",
+			"EnchMagMaxMax": "80",
+			"EnchAoeMin": "1",
+			"EnchAoeMax": "15",
+			"EnchDurMin": "5",
+			"EnchDurMax": "20"
+		},
+		{ 
+			"EnchName": "Sound",
+			"EnchIndex": "48",
+			"EnchMagMinMin": "1",
+			"EnchMagMinMax": "35",
+			"EnchMagMaxMin": "15",
+			"EnchMagMaxMax": "80",
+			"EnchAoeMin": "1",
+			"EnchAoeMax": "15",
+			"EnchDurMin": "5",
+			"EnchDurMax": "20"
+		},
+		{ 
+			"EnchName": "Absorb Health",
+			"EnchIndex": "86",
+			"EnchMagMinMin": "1",
+			"EnchMagMinMax": "10",
+			"EnchMagMaxMin": "5",
+			"EnchMagMaxMax": "30",
+			"EnchAoeMin": "0",
+			"EnchAoeMax": "0",
+			"EnchDurMin": "1",
+			"EnchDurMax": "5"
+		},
+		{ 
+			"EnchName": "Absorb Magicka",
+			"EnchIndex": "87",
+			"EnchMagMinMin": "1",
+			"EnchMagMinMax": "10",
+			"EnchMagMaxMin": "5",
+			"EnchMagMaxMax": "30",
+			"EnchAoeMin": "0",
+			"EnchAoeMax": "0",
+			"EnchDurMin": "1",
+			"EnchDurMax": "5"
+		},
+		{ 
+			"EnchName": "Absorb Fatigue",
+			"EnchIndex": "88",
+			"EnchMagMinMin": "1",
+			"EnchMagMinMax": "25",
+			"EnchMagMaxMin": "5",
+			"EnchMagMaxMax": "60",
+			"EnchAoeMin": "0",
+			"EnchAoeMax": "0",
+			"EnchDurMin": "1",
+			"EnchDurMax": "5"
+		},
+		{ 
+			"EnchName": "Damage Attribute",
+			"EnchIndex": "22",
+			"EnchMagMinMin": "1",
+			"EnchMagMinMax": "5",
+			"EnchMagMaxMin": "5",
+			"EnchMagMaxMax": "30",
+			"EnchAoeMin": "0",
+			"EnchAoeMax": "0",
+			"EnchDurMin": "0",
+			"EnchDurMax": "0"
+		},
+		{ 
+			"EnchName": "Damage Skill",
+			"EnchIndex": "26",
+			"EnchMagMinMin": "1",
+			"EnchMagMinMax": "5",
+			"EnchMagMaxMin": "5",
+			"EnchMagMaxMax": "30",
+			"EnchAoeMin": "0",
+			"EnchAoeMax": "0",
+			"EnchDurMin": "0",
+			"EnchDurMax": "0"
+		},
+		{ 
+			"EnchName": "Absorb Attribute",
+			"EnchIndex": "85",
+			"EnchMagMinMin": "1",
+			"EnchMagMinMax": "5",
+			"EnchMagMaxMin": "5",
+			"EnchMagMaxMax": "30",
+			"EnchAoeMin": "0",
+			"EnchAoeMax": "0",
+			"EnchDurMin": "0",
+			"EnchDurMax": "0"
+		},
+		{ 
+			"EnchName": "Absorb Skill",
+			"EnchIndex": "89",
+			"EnchMagMinMin": "1",
+			"EnchMagMinMax": "5",
+			"EnchMagMaxMin": "5",
+			"EnchMagMaxMax": "30",
+			"EnchAoeMin": "0",
+			"EnchAoeMax": "0",
+			"EnchDurMin": "0",
+			"EnchDurMax": "0"
+		},
+		{ 
+			"EnchName": "Soultrap",
+			"EnchIndex": "58",
+			"EnchMagMinMin": "0",
+			"EnchMagMinMax": "0",
+			"EnchMagMaxMin": "0",
+			"EnchMagMaxMax": "0",
+			"EnchAoeMin": "0",
+			"EnchAoeMax": "0",
+			"EnchDurMin": "15",
+			"EnchDurMax": "35"
+		},
+		{ 
+			"EnchName": "Paralyze",
+			"EnchIndex": "45",
+			"EnchMagMinMin": "0",
+			"EnchMagMinMax": "0",
+			"EnchMagMaxMin": "0",
+			"EnchMagMaxMax": "0",
+			"EnchAoeMin": "0",
+			"EnchAoeMax": "0",
+			"EnchDurMin": "1",
+			"EnchDurMax": "15"
+		},
+		{ 
+			"EnchName": "Silence",
+			"EnchIndex": "46",
+			"EnchMagMinMin": "0",
+			"EnchMagMinMax": "0",
+			"EnchMagMaxMin": "0",
+			"EnchMagMaxMax": "0",
+			"EnchAoeMin": "0",
+			"EnchAoeMax": "0",
+			"EnchDurMin": "5",
+			"EnchDurMax": "25"
+		}
+	]
+	"Use": [
+	]
+	"Const": [
+	]
+}

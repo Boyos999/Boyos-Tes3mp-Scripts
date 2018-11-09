@@ -1,263 +1,89 @@
+--[[
+Currently Only supports strike enchantments
 
-local randomWeapons = {}
+valid enchTypes
+Cast Once = 0
+Cast When Strikes = 1
+Cast When Used = 2
+Constant Effect = 3
 
-tableHelper = require("tableHelper")
+Self RangeType = 0
+Touch RangeType = 1
+Target RangeType = 2
+]]--
+
+local randomEnchantments = {}
+
 jsonInterface = require("jsonInterface")
-cfgRandWeap = require("cfgRandWeap")
-randomEnchantments = require("randomEnchantments")
 
-randomWeapons.CreateRandWeap = function(pid)
-	local idIterator = WorldInstance.data.customVariables.randCounter
+function randomEnchantments.CreateRandEnch(pid, enchType)
+	local idIterator = WorldInstance.data.customVariables.randEnchCounter
+	local enchList = jsonInterface.load("randEnchEffects.json")
+	local effectRand
+	local effectIndex
+	local effectMagMin
+	local effectMagMax
+	local effectDur
+	local effectAoe
+	local effectAttr = -1
+	local effectSkill = -1
+	local effectCost
+	local effectCharge
+	local enchId
+	local effectRange
+	--use random seed to prevent fuckery
 	math.randomseed( os.time() )
 	
-	local weapType = math.random(1,12)
-	local weapBaseRand
-	local weapBaseId
-	local weapMinChopDmg
-	local weapMaxChopDmg
-	local weapMinSlashDmg
-	local weapMaxSlashDmg
-	local weapMinThrustDmg
-	local weapMaxThrustDmg
-	local weapEnch
-	local weapValue
 	
-	
-	
-	local baseIdList = jsonInterface.load("randWeaponBaseIds.json")
-	
-	if weapType == 1 then
-		weapBaseRand = math.random(1,8)
-		for i, weapon in pairs(baseIdList.axes1h) do
-			if i == weapBaseRand then
-				weapBaseId = weapon.refid
+	if enchType == 1 then
+		effectRand = math.random(1,21)
+		for i, effect in pairs(enchList.Strike) do
+			if i == effectRand then
+				effectIndex = effect.EnchIndex
+				effectMagMin = math.random(effect.EnchMagMinMin,effect.EnchMagMinMax)
+				effectMagMax = math.random(effect.EnchMagMaxMin,effect.EnchMagMaxMax)
+				effectDur = math.random(effect.EnchDurMin,effect.EnchDurMax)
+				effectAoe = math.random(effect.EnchAoeMin,effect.EnchAoeMax)
 			end
 		end
-		weapMinChopDmg = math.random(cfgRandWeap.axe1hChopMin[1],cfgRandWeap.axe1hChopMin[2])
-		weapMaxChopDmg = math.random(cfgRandWeap.axe1hChopMax[1],cfgRandWeap.axe1hChopMax[2])
-		weapMinSlashDmg = math.random(cfgRandWeap.axe1hSlashMin[1],cfgRandWeap.axe1hSlashMin[2])
-		weapMaxSlashDmg = math.random(cfgRandWeap.axe1hSlashMax[1],cfgRandWeap.axe1hSlashMax[2])
-		weapMinThrustDmg = math.random(cfgRandWeap.axe1hThrustMin[1],cfgRandWeap.axe1hThrustMin[2])
-		weapMaxThrustDmg = math.random(cfgRandWeap.axe1hThrustMax[1],cfgRandWeap.axe1hThrustMax[2])
-		weapEnch = math.random(cfgRandWeap.axe1hEnch[1],cfgRandWeap.axe1hEnch[2])
-		
-	elseif weapType == 2 then
-		weapBaseRand = math.random(1,6)
-		for i, weapon in pairs(baseIdList.axes2h) do
-			if i == weapBaseRand then
-				weapBaseId = weapon.refid
-			end
-		end
-		weapMinChopDmg = math.random(cfgRandWeap.axe2hChopMin[1],cfgRandWeap.axe2hChopMin[2])
-		weapMaxChopDmg = math.random(cfgRandWeap.axe2hChopMax[1],cfgRandWeap.axe2hChopMax[2])
-		weapMinSlashDmg = math.random(cfgRandWeap.axe2hSlashMin[1],cfgRandWeap.axe2hSlashMin[2])
-		weapMaxSlashDmg = math.random(cfgRandWeap.axe2hSlashMax[1],cfgRandWeap.axe2hSlashMax[2])
-		weapMinThrustDmg = math.random(cfgRandWeap.axe2hThrustMin[1],cfgRandWeap.axe2hThrustMin[2])
-		weapMaxThrustDmg = math.random(cfgRandWeap.axe2hThrustMax[1],cfgRandWeap.axe2hThrustMax[2])
-		weapEnch = math.random(cfgRandWeap.axe2hEnch[1],cfgRandWeap.axe2hEnch[2])
-	
-	elseif weapType == 3 then
-		weapBaseRand = math.random(1,5)
-		for i, weapon in pairs(baseIdList.bluntMace) do
-			if i == weapBaseRand then
-				weapBaseId = weapon.refid
-			end
-		end
-		weapMinChopDmg = math.random(cfgRandWeap.maceChopMin[1],cfgRandWeap.maceChopMin[2])
-		weapMaxChopDmg = math.random(cfgRandWeap.maceChopMax[1],cfgRandWeap.maceChopMax[2])
-		weapMinSlashDmg = math.random(cfgRandWeap.maceSlashMin[1],cfgRandWeap.maceSlashMin[2])
-		weapMaxSlashDmg = math.random(cfgRandWeap.maceSlashMax[1],cfgRandWeap.maceSlashMax[2])
-		weapMinThrustDmg = math.random(cfgRandWeap.maceThrustMin[1],cfgRandWeap.maceThrustMin[2])
-		weapMaxThrustDmg = math.random(cfgRandWeap.maceThrustMax[1],cfgRandWeap.maceThrustMax[2])
-		weapEnch = math.random(cfgRandWeap.maceEnch[1],cfgRandWeap.maceEnch[2])
-	
-	elseif weapType == 4 then
-		weapBaseRand = math.random(1,6)
-		for i, weapon in pairs(baseIdList.bluntHammer) do
-			if i == weapBaseRand then
-				weapBaseId = weapon.refid
-			end
-		end
-		weapMinChopDmg = math.random(cfgRandWeap.hammerChopMin[1],cfgRandWeap.hammerChopMin[2])
-		weapMaxChopDmg = math.random(cfgRandWeap.hammerChopMax[1],cfgRandWeap.hammerChopMax[2])
-		weapMinSlashDmg = math.random(cfgRandWeap.hammerSlashMin[1],cfgRandWeap.hammerSlashMin[2])
-		weapMaxSlashDmg = math.random(cfgRandWeap.hammerSlashMax[1],cfgRandWeap.hammerSlashMax[2])
-		weapMinThrustDmg = math.random(cfgRandWeap.hammerThrustMin[1],cfgRandWeap.hammerThrustMin[2])
-		weapMaxThrustDmg = math.random(cfgRandWeap.hammerThrustMax[1],cfgRandWeap.hammerThrustMax[2])
-		weapEnch = math.random(cfgRandWeap.hammerEnch[1],cfgRandWeap.hammerEnch[2])
-		
-	elseif weapType == 5 then
-		weapBaseRand = math.random(1,7)
-		for i, weapon in pairs(baseIdList.bluntStaff) do
-			if i == weapBaseRand then
-				weapBaseId = weapon.refid
-			end
-		end
-		weapMinChopDmg = math.random(cfgRandWeap.staffChopMin[1],cfgRandWeap.staffChopMin[2])
-		weapMaxChopDmg = math.random(cfgRandWeap.staffChopMax[1],cfgRandWeap.staffChopMax[2])
-		weapMinSlashDmg = math.random(cfgRandWeap.staffSlashMin[1],cfgRandWeap.staffSlashMin[2])
-		weapMaxSlashDmg = math.random(cfgRandWeap.staffSlashMax[1],cfgRandWeap.staffSlashMax[2])
-		weapMinThrustDmg = math.random(cfgRandWeap.staffThrustMin[1],cfgRandWeap.staffThrustMin[2])
-		weapMaxThrustDmg = math.random(cfgRandWeap.staffThrustMax[1],cfgRandWeap.staffThrustMax[2])
-		weapEnch = math.random(cfgRandWeap.staffEnch[1],cfgRandWeap.staffEnch[2])
-		
-	elseif weapType == 6 then
-		weapBaseRand = math.random(1,12)
-		for i, weapon in pairs(baseIdList.longblade1h) do
-			if i == weapBaseRand then
-				weapBaseId = weapon.refid
-			end
-		end
-		weapMinChopDmg = math.random(cfgRandWeap.lb1hChopMin[1],cfgRandWeap.lb1hChopMin[2])
-		weapMaxChopDmg = math.random(cfgRandWeap.lb1hChopMax[1],cfgRandWeap.lb1hChopMax[2])
-		weapMinSlashDmg = math.random(cfgRandWeap.lb1hSlashMin[1],cfgRandWeap.lb1hSlashMin[2])
-		weapMaxSlashDmg = math.random(cfgRandWeap.lb1hSlashMax[1],cfgRandWeap.lb1hSlashMax[2])
-		weapMinThrustDmg = math.random(cfgRandWeap.lb1hThrustMin[1],cfgRandWeap.lb1hThrustMin[2])
-		weapMaxThrustDmg = math.random(cfgRandWeap.lb1hThrustMax[1],cfgRandWeap.lb1hThrustMax[2])
-		weapEnch = math.random(cfgRandWeap.lb1hEnch[1],cfgRandWeap.lb1hEnch[2])
-	
-	elseif weapType == 7 then
-		weapBaseRand = math.random(1,10)
-		for i, weapon in pairs(baseIdList.longblade2h) do
-			if i == weapBaseRand then
-				weapBaseId = weapon.refid
-			end
-		end
-		weapMinChopDmg = math.random(cfgRandWeap.lb2hChopMin[1],cfgRandWeap.lb2hChopMin[2])
-		weapMaxChopDmg = math.random(cfgRandWeap.lb2hChopMax[1],cfgRandWeap.lb2hChopMax[2])
-		weapMinSlashDmg = math.random(cfgRandWeap.lb2hSlashMin[1],cfgRandWeap.lb2hSlashMin[2])
-		weapMaxSlashDmg = math.random(cfgRandWeap.lb2hSlashMax[1],cfgRandWeap.lb2hSlashMax[2])
-		weapMinThrustDmg = math.random(cfgRandWeap.lb2hThrustMin[1],cfgRandWeap.lb2hThrustMin[2])
-		weapMaxThrustDmg = math.random(cfgRandWeap.lb2hThrustMax[1],cfgRandWeap.lb2hThrustMax[2])
-		weapEnch = math.random(cfgRandWeap.lb2hEnch[1],cfgRandWeap.lb2hEnch[2])
-		
-	elseif weapType == 8 then
-		weapBaseRand = math.random(1,6)
-		for i, weapon in pairs(baseIdList.marksBow) do
-			if i == weapBaseRand then
-				weapBaseId = weapon.refid
-			end
-		end
-		weapMinChopDmg = math.random(cfgRandWeap.bowChopMin[1],cfgRandWeap.bowChopMin[2])
-		weapMaxChopDmg = math.random(cfgRandWeap.bowChopMax[1],cfgRandWeap.bowChopMax[2])
-		weapMinSlashDmg = 0
-		weapMaxSlashDmg = 0
-		weapMinThrustDmg = 0
-		weapMaxThrustDmg = 0
-		weapEnch = math.random(cfgRandWeap.bowEnch[1],cfgRandWeap.bowEnch[2])
-		
-	elseif weapType == 9 then
-		weapBaseRand = math.random(1,3)
-		for i, weapon in pairs(baseIdList.marksXbow) do
-			if i == weapBaseRand then
-				weapBaseId = weapon.refid
-			end
-		end
-		weapMaxChopDmg = math.random(cfgRandWeap.xbowChopMax[1],cfgRandWeap.xbowChopMax[2])
-		weapMinChopDmg = weapMaxChopDmg
-		weapMinSlashDmg = 0
-		weapMaxSlashDmg = 0
-		weapMinThrustDmg = 0
-		weapMaxThrustDmg = 0
-		weapEnch = math.random(cfgRandWeap.xbowEnch[1],cfgRandWeap.xbowEnch[2])
-		
-	elseif weapType == 10 then
-		weapBaseRand = math.random(1,9)
-		for i, weapon in pairs(baseIdList.shortbladeDagger) do
-			if i == weapBaseRand then
-				weapBaseId = weapon.refid
-			end
-		end
-		weapMinChopDmg = math.random(cfgRandWeap.daggerChopMin[1],cfgRandWeap.daggerChopMin[2])
-		weapMaxChopDmg = math.random(cfgRandWeap.daggerChopMax[1],cfgRandWeap.daggerChopMax[2])
-		weapMinSlashDmg = math.random(cfgRandWeap.daggerSlashMin[1],cfgRandWeap.daggerSlashMin[2])
-		weapMaxSlashDmg = math.random(cfgRandWeap.daggerSlashMax[1],cfgRandWeap.daggerSlashMax[2])
-		weapMinThrustDmg = math.random(cfgRandWeap.daggerThrustMin[1],cfgRandWeap.daggerThrustMin[2])
-		weapMaxThrustDmg = math.random(cfgRandWeap.daggerThrustMax[1],cfgRandWeap.daggerThrustMax[2])
-		weapEnch = math.random(cfgRandWeap.daggerEnch[1],cfgRandWeap.daggerEnch[2])
-		
-	elseif weapType == 11 then
-		weapBaseRand = math.random(1,12)
-		for i, weapon in pairs(baseIdList.shortblade) do
-			if i == weapBaseRand then
-				weapBaseId = weapon.refid
-			end
-		end
-		weapMinChopDmg = math.random(cfgRandWeap.sbChopMin[1],cfgRandWeap.sbChopMin[2])
-		weapMaxChopDmg = math.random(cfgRandWeap.sbChopMax[1],cfgRandWeap.sbChopMax[2])
-		weapMinSlashDmg = math.random(cfgRandWeap.sbSlashMin[1],cfgRandWeap.sbSlashMin[2])
-		weapMaxSlashDmg = math.random(cfgRandWeap.sbSlashMax[1],cfgRandWeap.sbSlashMax[2])
-		weapMinThrustDmg = math.random(cfgRandWeap.sbThrustMin[1],cfgRandWeap.sbThrustMin[2])
-		weapMaxThrustDmg = math.random(cfgRandWeap.sbThrustMax[1],cfgRandWeap.sbThrustMax[2])
-		weapEnch = math.random(cfgRandWeap.sbEnch[1],cfgRandWeap.sbEnch[2])
-		
-	elseif weapType == 12 then
-		weapBaseRand = math.random(1,13)
-		for i, weapon in pairs(baseIdList.spear) do
-			if i == weapBaseRand then
-				weapBaseId = weapon.refid
-			end
-		end
-		weapMinChopDmg = math.random(cfgRandWeap.spearChopMin[1],cfgRandWeap.spearChopMin[2])
-		weapMaxChopDmg = math.random(cfgRandWeap.spearChopMax[1],cfgRandWeap.spearChopMax[2])
-		weapMinSlashDmg = math.random(cfgRandWeap.spearSlashMin[1],cfgRandWeap.spearSlashMin[2])
-		weapMaxSlashDmg = math.random(cfgRandWeap.spearSlashMax[1],cfgRandWeap.spearSlashMax[2])
-		weapMinThrustDmg = math.random(cfgRandWeap.spearThrustMin[1],cfgRandWeap.spearThrustMin[2])
-		weapMaxThrustDmg = math.random(cfgRandWeap.spearThrustMax[1],cfgRandWeap.spearThrustMax[2])
-		weapEnch = math.random(cfgRandWeap.spearEnch[1],cfgRandWeap.spearEnch[2])
-	
+		effectCost = math.random(10,50)
+		effectCharge = effectCost*math.random(5,25)
+		effectRange = 1
 	end
 	
-	
-	--make sure no max values are higher than min, if they are, make them equal
-	if weapMinChopDmg > weapMaxChopDmg then
-		weapMinChopDmg = weapMaxChopDmg
+	if effectMagMin > effectMagMax then
+		effectMagMax = effectMagMin
 	end
-	if weapMinSlashDmg > weapMaxSlashDmg then
-		weapMinSlashDmg = weapMaxSlashDmg
+	if tonumber(effectIndex) == 22 or tonumber(effectIndex) == 85 then
+		effectAttr = math.random(0,7)
 	end
-	if weapMinThrustDmg > weapMaxThrustDmg then
-		weapMinThrustDmg = weapMaxThrustDmg
+	if tonumber(effectIndex) == 26 or tonumber(effectIndex) == 89 then
+		effectSkill = math.random(0,26)
 	end
 	
-	--use this to make sure there are no repeat ids
-	if WorldInstance.data.customVariables.randCounter == nil then
+	if WorldInstance.data.customVariables.randEnchCounter == nil then
 		idIterator = 0
 	else
 		idIterator = idIterator + 1
 	end
-	WorldInstance.data.customVariables.randCounter = idIterator
+	WorldInstance.data.customVariables.randEnchCounter = idIterator
 	
-	--calculate a new item value based on damage
-	weapValue = ((weapMinChopDmg + weapMaxChopDmg + weapMinSlashDmg + weapMaxSlashDmg + weapMinThrustDmg + weapMaxThrustDmg)/6)*10
+	enchId = "random_enchant_" .. idIterator
+	randomEnchantments.StoreRecord(pid, "/storerecord enchantment clear")
+	randomEnchantments.StoreRecord(pid, "/storerecord enchantment id " .. enchId)
+	randomEnchantments.StoreRecord(pid, "/storerecord enchantment subtype " .. enchType)
+	randomEnchantments.StoreRecord(pid, "/storerecord enchantment cost " .. effectCost)
+	randomEnchantments.StoreRecord(pid, "/storerecord enchantment charge " .. effectCharge)
+	randomEnchantments.StoreRecord(pid, "/storerecord enchantment add effect " .. effectIndex .. ", "
+	.. effectRange .. ", " .. effectDur .. ", " .. effectAoe .. ", " .. effectMagMin .. ", " .. effectMagMax .. ", "
+	.. effectAttr .. ", " .. effectSkill)
+	randomEnchantments.CreateRecord(pid, "/createrecord enchantment")
 	
-	local newRefId = idIterator .. "_" .. weapBaseId
-	randomWeapons.StoreRecord(pid, "/storerecord weapon clear")
-	randomWeapons.StoreRecord(pid, "/storerecord weapon id " .. newRefId)
-	randomWeapons.StoreRecord(pid, "/storerecord weapon baseId " .. weapBaseId)
-	randomWeapons.StoreRecord(pid, "/storerecord weapon enchantmentCharge " .. weapEnch)
-	randomWeapons.StoreRecord(pid, "/storerecord weapon value " .. weapValue)
-	randomWeapons.StoreRecord(pid, "/storerecord weapon damageChop " .. weapMinChopDmg .. " " .. weapMaxChopDmg)
-	randomWeapons.StoreRecord(pid, "/storerecord weapon damageSlash " .. weapMinSlashDmg .. " " .. weapMaxSlashDmg)
-	randomWeapons.StoreRecord(pid, "/storerecord weapon damageThrust " .. weapMinThrustDmg .. " " .. weapMaxThrustDmg)
-	--enchantshit
-	if weapType ~= 8 and weapType ~= 9 then
-		local enchantId = randomEnchantments.CreateRandEnch(pid, 1)
-		randomWeapons.StoreRecord(pid, "/storerecord weapon enchantmentId " .. enchantId)
-	end
-	--enchantshit
-	randomWeapons.CreateRecord(pid, "/createrecord weapon")
-	
-	local structuredItem = { refId = newRefId, count = 1, charge = -1}
-	table.insert(Players[pid].data.inventory, structuredItem)
-	Players[pid]:LoadInventory()
-	Players[pid]:LoadEquipment()
-	Players[pid]:Save()
-	WorldInstance:Save()
+	return enchId
 	
 end
-
-function randomWeapons.StoreRecord(pid, cmd)
+------------------------------------------------------------------------------------------
+function randomEnchantments.StoreRecord(pid, cmd)
 
 	cmd = cmd:split(" ")
     if Players[pid].data.customVariables == nil then
@@ -341,7 +167,7 @@ function randomWeapons.StoreRecord(pid, cmd)
                         magnitudeMin = tonumber(inputValues[5]), magnitudeMax = tonumber(inputValues[6]),
                         attribute = tonumber(inputValues[7]), skill = tonumber(inputValues[8]) }
                     table.insert(storedTable.effects, effect)
-                    Players[pid]:Message("Added effect " .. inputConcatenation .. "\n")
+                   --Players[pid]:Message("Added effect " .. inputConcatenation .. "\n")
                 else
                     Players[pid]:Message("Please use a numerical value for the effect ID.\n")
                 end
@@ -448,7 +274,7 @@ function randomWeapons.StoreRecord(pid, cmd)
     end
 end
 
-function randomWeapons.CreateRecord(pid, cmd)
+function randomEnchantments.CreateRecord(pid, cmd)
 
 	cmd = cmd:split(" ")
     if Players[pid].data.customVariables == nil then
@@ -617,4 +443,4 @@ function randomWeapons.CreateRecord(pid, cmd)
     --Players[pid]:Message(message)
 end
 
-return randomWeapons
+return randomEnchantments
