@@ -1,4 +1,4 @@
-# Random weapons, now with enchantments proof of concept
+# Random weapons, now with enchantments proof of concept (and armor without enchantments)
 1. Download randomWeapons.lua, randomEnchantments.lua, and randomArmor.lua and put them in your scripts folder
 2. Download randWeaponBaseIds.json, randEnchEffects.json, and randArmorBaseIds.json and put them in your data folder
 3. Download cfgRandWeap.lua, and cfgRandArmor.lua and put it in your scripts folder
