@@ -31,8 +31,6 @@ function randomEnchantments.CreateRandEnch(pid, enchType)
 	local effectCharge
 	local enchId
 	local effectRange
-	--use random seed to prevent fuckery
-	math.randomseed( os.time() )
 	
 	
 	if enchType == 1 then
