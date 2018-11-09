@@ -9,7 +9,7 @@ function armorImprovementHelper.ArmorReinforcementFunction(pid, armorName, armor
 	end
 	WorldInstance.data.customVariables.randCounter = idIterator
 	
-	local newRefId = armorName .. "_" .. idIterator
+	local newRefId = string.lower(armorName .. "_" .. idIterator)
 	armorImprovementHelper.StoreRecord(pid, "/storerecord armor clear")
 	armorImprovementHelper.StoreRecord(pid, "/storerecord armor id " .. newRefId)
 	armorImprovementHelper.StoreRecord(pid, "/storerecord armor baseId " .. armorName)
