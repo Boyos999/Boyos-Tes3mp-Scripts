@@ -27,9 +27,9 @@ arenaHorde = require("arenaHorde")
 6. example of previous step
 ```lua
 eventHandler.OnWorldKillCount = function(pid)
-    if Players[pid] ~= nil and Players[pid]:IsLoggedIn() then
-        WorldInstance:SaveKills(pid)
-    end
+	if Players[pid] ~= nil and Players[pid]:IsLoggedIn() then
+		WorldInstance:SaveKills(pid)
+	end
 	if WorldInstance.data.customVariables.arenaStatus == 1 then
 		arenaHorde.ArenaContinue(pid)
 	end
