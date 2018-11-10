@@ -1,5 +1,5 @@
 --[[
-Currently Only supports strike enchantments
+Currently Only supports strike enchantments, returns the custom enchant id as a string.
 
 valid enchTypes
 Cast Once = 0
