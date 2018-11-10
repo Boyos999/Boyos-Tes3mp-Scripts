@@ -16,5 +16,9 @@ randomArmor = require("randomArmor")
 ```
 6. you can now spawn random weapons using /randweap (you probably don't want to do this on a public server, this is for testing purposes)
 7. you can also spawn random armor using /randarmor (no enchants right now)
+8. While not required I would recommend pasting the following line into the function OnServerInit in serverCore.lua (if you don't use this the random seed for math.random will be the same each time the server starts, potentially resulting in the same results from math.random rolls and producing duplicate equipment)
+```lua
+math.randomseed(os.time())
+```
 
 NOTE: Random enchantments script currently only supports on strike enchantments (type 1), I'll work on random armor w/enchants at some point
