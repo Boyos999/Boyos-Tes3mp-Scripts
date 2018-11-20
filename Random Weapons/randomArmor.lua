@@ -11,8 +11,11 @@ randomArmor.CreateRandArmor = function(pid)
 	local armorBaseRand
 	local armorBaseId
 	local armorRating
+	local armorRatingOne
+	local armorRatingTwo
 	local armorValue
 	local newRefId
+	local enchantRand
 	local baseIdList = jsonInterface.load("randArmorBaseIds.json")
 	
 	if armorType == 1 then
@@ -22,7 +25,13 @@ randomArmor.CreateRandArmor = function(pid)
 				armorBaseId = armor.refid
 			end
 		end
-		armorRating = math.random(cfgRandArmor.LArange[1],cfgRandArmor.LArange[2])
+		armorRatingOne = math.random(cfgRandArmor.LArange[1],cfgRandArmor.LArange[2])
+		armorRatingTwo = math.random(cfgRandArmor.LArange[1],cfgRandArmor.LArange[2])
+		if armorRatingOne > armorRatingTwo then
+			armorRating = armorRatingTwo
+		else
+			armorRating = armorRatingOne
+		end
 		
 	elseif armorType == 2 then
 		armorBaseRand = math.random(1,84)
@@ -31,7 +40,13 @@ randomArmor.CreateRandArmor = function(pid)
 				armorBaseId = armor.refid
 			end
 		end
-		armorRating = math.random(cfgRandArmor.MArange[1],cfgRandArmor.MArange[2])
+		armorRatingOne = math.random(cfgRandArmor.MArange[1],cfgRandArmor.MArange[2])
+		armorRatingTwo = math.random(cfgRandArmor.MArange[1],cfgRandArmor.MArange[2])
+		if armorRatingOne > armorRatingTwo then
+			armorRating = armorRatingTwo
+		else
+			armorRating = armorRatingOne
+		end
 		
 	elseif armorType == 3 then
 		armorBaseRand = math.random(1,96)
@@ -40,8 +55,13 @@ randomArmor.CreateRandArmor = function(pid)
 				armorBaseId = armor.refid
 			end
 		end
-		armorRating = math.random(cfgRandArmor.HArange[1],cfgRandArmor.HArange[2])
-		
+		armorRatingOne = math.random(cfgRandArmor.HArange[1],cfgRandArmor.HArange[2])
+		armorRatingTwo = math.random(cfgRandArmor.HArange[1],cfgRandArmor.HArange[2])
+		if armorRatingOne > armorRatingTwo then
+			armorRating = armorRatingTwo
+		else
+			armorRating = armorRatingOne
+		end
 	end
 	
 	if WorldInstance.data.customVariables.randArmorCounter == nil then
@@ -54,10 +74,20 @@ randomArmor.CreateRandArmor = function(pid)
 	armorValue = 10*(armorRating^1.2)
 	newRefId = string.lower(idIterator .."_" .. armorBaseId)
 	
+	randomArmor.StoreRecord(pid, "/storerecord armor clear")
 	randomArmor.StoreRecord(pid, "/storerecord armor id " .. newRefId)
 	randomArmor.StoreRecord(pid, "/storerecord armor baseId " .. armorBaseId)
 	randomArmor.StoreRecord(pid, "/storerecord armor armorRating " .. armorRating)
 	randomArmor.StoreRecord(pid, "/storerecord armor value " .. armorValue)
+	
+	--enchantshit, only const effect for now
+	enchantRand = math.random(1,100)
+	if enchantRand <= cfgRandArmor.CEchance then
+		local enchantId = randomEnchantments.CreateRandEnch(pid, 3)
+		randomArmor.StoreRecord(pid, "/storerecord armor enchantmentId " .. enchantId)
+	end
+	--enchantshit
+	
 	randomArmor.CreateRecord(pid, "/createrecord armor")
 	
 	local structuredItem = { refId = newRefId, count = 1, charge = -1}

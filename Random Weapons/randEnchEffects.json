@@ -258,5 +258,167 @@
 	"Use": [
 	]
 	"Const": [
+		{ 
+			"EnchName": "Swift Swim",
+			"EnchIndex": "1",
+			"EnchMagMin": "5",
+			"EnchMagMax": "50"
+		},
+		{ 
+			"EnchName": "Shield",
+			"EnchIndex": "3",
+			"EnchMagMin": "1",
+			"EnchMagMax": "30"
+		},
+		{ 
+			"EnchName": "Fire Shield",
+			"EnchIndex": "4",
+			"EnchMagMin": "1",
+			"EnchMagMax": "30"
+		},
+		{ 
+			"EnchName": "Lightning Shield",
+			"EnchIndex": "5",
+			"EnchMagMin": "1",
+			"EnchMagMax": "30"
+		},
+		{ 
+			"EnchName": "Frost Shield",
+			"EnchIndex": "6",
+			"EnchMagMin": "1",
+			"EnchMagMax": "30"
+		},
+		{ 
+			"EnchName": "Feather",
+			"EnchIndex": "8",
+			"EnchMagMin": "5",
+			"EnchMagMax": "75"
+		},
+		{ 
+			"EnchName": "Chameleon",
+			"EnchIndex": "40",
+			"EnchMagMin": "1",
+			"EnchMagMax": "40"
+		},
+		{ 
+			"EnchName": "Light",
+			"EnchIndex": "41",
+			"EnchMagMin": "10",
+			"EnchMagMax": "65"
+		},
+		{ 
+			"EnchName": "Sanctuary",
+			"EnchIndex": "42",
+			"EnchMagMin": "1",
+			"EnchMagMax": "40"
+		},
+		{ 
+			"EnchName": "NightEye",
+			"EnchIndex": "43",
+			"EnchMagMin": "10",
+			"EnchMagMax": "65"
+		},
+		{ 
+			"EnchName": "SpellAbsorption",
+			"EnchIndex": "67",
+			"EnchMagMin": "1",
+			"EnchMagMax": "20"
+		},
+		{ 
+			"EnchName": "Reflect",
+			"EnchIndex": "68",
+			"EnchMagMin": "1",
+			"EnchMagMax": "20"
+		},
+		{ 
+			"EnchName": "FortifyHealth",
+			"EnchIndex": "80",
+			"EnchMagMin": "5",
+			"EnchMagMax": "60"
+		},
+		{ 
+			"EnchName": "FortifyMagicka",
+			"EnchIndex": "81",
+			"EnchMagMin": "1",
+			"EnchMagMax": "50"
+		},
+		{ 
+			"EnchName": "FortifyFatigue",
+			"EnchIndex": "82",
+			"EnchMagMin": "1",
+			"EnchMagMax": "100"
+		},
+		{ 
+			"EnchName": "ResistFire",
+			"EnchIndex": "90",
+			"EnchMagMin": "1",
+			"EnchMagMax": "50"
+		},
+		{ 
+			"EnchName": "ResistFrost",
+			"EnchIndex": "91",
+			"EnchMagMin": "1",
+			"EnchMagMax": "50"
+		},
+		{ 
+			"EnchName": "ResistShock",
+			"EnchIndex": "92",
+			"EnchMagMin": "1",
+			"EnchMagMax": "50"
+		},
+		{ 
+			"EnchName": "ResistMagicka",
+			"EnchIndex": "93",
+			"EnchMagMin": "1",
+			"EnchMagMax": "50"
+		},
+		{ 
+			"EnchName": "FortifyAttack",
+			"EnchIndex": "117",
+			"EnchMagMin": "1",
+			"EnchMagMax": "35"
+		},
+		{ 
+			"EnchName": "ResistPoison",
+			"EnchIndex": "97",
+			"EnchMagMin": "1",
+			"EnchMagMax": "75"
+		},
+		{ 
+			"EnchName": "ResistNormalWeapons",
+			"EnchIndex": "98",
+			"EnchMagMin": "1",
+			"EnchMagMax": "75"
+		},
+		{ 
+			"EnchName": "ResistParalysis",
+			"EnchIndex": "99",
+			"EnchMagMin": "1",
+			"EnchMagMax": "75"
+		},
+		{ 
+			"EnchName": "FortifyAttribute",
+			"EnchIndex": "79",
+			"EnchMagMin": "1",
+			"EnchMagMax": "35"
+		},
+		{ 
+			"EnchName": "FortifySkill",
+			"EnchIndex": "83",
+			"EnchMagMin": "1",
+			"EnchMagMax": "35"
+		},
+		{ 
+			"EnchName": "WaterBreathing",
+			"EnchIndex": "0",
+			"EnchMagMin": "1",
+			"EnchMagMax": "1"
+		},
+		{ 
+			"EnchName": "WaterWalking",
+			"EnchIndex": "2",
+			"EnchMagMin": "1",
+			"EnchMagMax": "1"
+		},
 	]
 }

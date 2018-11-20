@@ -1,5 +1,5 @@
 --[[
-Currently Only supports strike enchantments, returns the custom enchant id as a string.
+Currently Only supports strike enchantments
 
 valid enchTypes
 Cast Once = 0
@@ -47,15 +47,35 @@ function randomEnchantments.CreateRandEnch(pid, enchType)
 		effectCost = math.random(10,50)
 		effectCharge = effectCost*math.random(5,25)
 		effectRange = 1
+		
+	elseif enchType == 3 then
+		effectRand = math.random(1,27)
+		for i, effect in pairs(enchList.Const) do
+			if i == effectRand then
+				effectIndex = effect.EnchIndex
+				effectMagMin = math.random(effect.EnchMagMin,effect.EnchMagMax)
+				effectMagMax = math.random(effect.EnchMagMin,effect.EnchMagMax)
+				if effectMagMin > effectMagMax then
+					effectMagMin = effectMagMax
+				else
+					effectMagMax = effectMagMin
+				end
+				effectDur = 1
+				effectAoe = 0
+			end
+		end
+		effectCost = 0
+		effectCharge = 0
+		effectRange = 0
 	end
 	
 	if effectMagMin > effectMagMax then
 		effectMagMax = effectMagMin
 	end
-	if tonumber(effectIndex) == 22 or tonumber(effectIndex) == 85 then
+	if tonumber(effectIndex) == 22 or tonumber(effectIndex) == 85 or tonumber(effectIndex) == 79 then
 		effectAttr = math.random(0,7)
 	end
-	if tonumber(effectIndex) == 26 or tonumber(effectIndex) == 89 then
+	if tonumber(effectIndex) == 26 or tonumber(effectIndex) == 89 or tonumber(effectIndex) == 83 then
 		effectSkill = math.random(0,26)
 	end
 	
