@@ -238,12 +238,14 @@ randomWeapons.CreateRandWeap = function(pid)
 	randomWeapons.StoreRecord(pid, "/storerecord weapon damageChop " .. weapMinChopDmg .. " " .. weapMaxChopDmg)
 	randomWeapons.StoreRecord(pid, "/storerecord weapon damageSlash " .. weapMinSlashDmg .. " " .. weapMaxSlashDmg)
 	randomWeapons.StoreRecord(pid, "/storerecord weapon damageThrust " .. weapMinThrustDmg .. " " .. weapMaxThrustDmg)
-	--enchantshit
+	--enchants
 	if weapType ~= 8 and weapType ~= 9 then
-		local enchantId = randomEnchantments.CreateRandEnch(pid, 1)
-		randomWeapons.StoreRecord(pid, "/storerecord weapon enchantmentId " .. enchantId)
+		if math.random(1,100) < cfgRandWeap.CSchance
+			local enchantId = randomEnchantments.CreateRandEnch(pid, 1)
+			randomWeapons.StoreRecord(pid, "/storerecord weapon enchantmentId " .. enchantId)
+		end
 	end
-	--enchantshit
+	--enchants
 	randomWeapons.CreateRecord(pid, "/createrecord weapon")
 	
 	local structuredItem = { refId = newRefId, count = 1, charge = -1}
@@ -254,7 +256,10 @@ randomWeapons.CreateRandWeap = function(pid)
 	WorldInstance:Save()
 	
 end
-
+--[[
+Create and store record functions copied from commandhandler in https://github.com/TES3MP/CoreScripts 
+with minor edits to remove non-debug message spam
+]]--
 function randomWeapons.StoreRecord(pid, cmd)
 
 	cmd = cmd:split(" ")

@@ -6,6 +6,8 @@ cfgRandArmor = require("cfgRandArmor")
 
 
 randomArmor.CreateRandArmor = function(pid)
+
+	--declare variables for clarity
 	local idIterator = WorldInstance.data.customVariables.randArmorCounter
 	local armorType = math.random(1,3)
 	local armorBaseRand
@@ -18,21 +20,30 @@ randomArmor.CreateRandArmor = function(pid)
 	local enchantRand
 	local baseIdList = jsonInterface.load("randArmorBaseIds.json")
 	
+	--light armor
 	if armorType == 1 then
+		--roll for baseid
 		armorBaseRand = math.random(1,72)
+		--find baseid from json file
 		for i, armor in pairs(baseIdList.light) do
 			if i == armorBaseRand then
 				armorBaseId = armor.refid
 			end
 		end
-		armorRatingOne = math.random(cfgRandArmor.LArange[1],cfgRandArmor.LArange[2])
-		armorRatingTwo = math.random(cfgRandArmor.LArange[1],cfgRandArmor.LArange[2])
-		if armorRatingOne > armorRatingTwo then
-			armorRating = armorRatingTwo
+		--roll armor rating, unlucky set in cfgRandArmor
+		if cfgRandArmor.Unlucky == 1 then
+			armorRatingOne = math.random(cfgRandArmor.LArange[1],cfgRandArmor.LArange[2])
+			armorRatingTwo = math.random(cfgRandArmor.LArange[1],cfgRandArmor.LArange[2])
+			if armorRatingOne > armorRatingTwo then
+				armorRating = armorRatingTwo
+			else
+				armorRating = armorRatingOne
+			end
 		else
-			armorRating = armorRatingOne
+			armorRating = math.random(cfgRandArmor.LArange[1],cfgRandArmor.LArange[2])
 		end
-		
+	
+	--medium armor
 	elseif armorType == 2 then
 		armorBaseRand = math.random(1,84)
 		for i, armor in pairs(baseIdList.medium) do
@@ -40,14 +51,19 @@ randomArmor.CreateRandArmor = function(pid)
 				armorBaseId = armor.refid
 			end
 		end
-		armorRatingOne = math.random(cfgRandArmor.MArange[1],cfgRandArmor.MArange[2])
-		armorRatingTwo = math.random(cfgRandArmor.MArange[1],cfgRandArmor.MArange[2])
-		if armorRatingOne > armorRatingTwo then
-			armorRating = armorRatingTwo
+		if cfgRandArmor.Unlucky == 1 then
+			armorRatingOne = math.random(cfgRandArmor.MArange[1],cfgRandArmor.MArange[2])
+			armorRatingTwo = math.random(cfgRandArmor.MArange[1],cfgRandArmor.MArange[2])
+			if armorRatingOne > armorRatingTwo then
+				armorRating = armorRatingTwo
+			else
+				armorRating = armorRatingOne
+			end
 		else
-			armorRating = armorRatingOne
+			armorRating = math.random(cfgRandArmor.MArange[1],cfgRandArmor.MArange[2])
 		end
 		
+	--heavy armor
 	elseif armorType == 3 then
 		armorBaseRand = math.random(1,96)
 		for i, armor in pairs(baseIdList.heavy) do
@@ -55,15 +71,20 @@ randomArmor.CreateRandArmor = function(pid)
 				armorBaseId = armor.refid
 			end
 		end
-		armorRatingOne = math.random(cfgRandArmor.HArange[1],cfgRandArmor.HArange[2])
-		armorRatingTwo = math.random(cfgRandArmor.HArange[1],cfgRandArmor.HArange[2])
-		if armorRatingOne > armorRatingTwo then
-			armorRating = armorRatingTwo
+		if cfgRandArmor.Unlucky == 1 then
+			armorRatingOne = math.random(cfgRandArmor.HArange[1],cfgRandArmor.HArange[2])
+			armorRatingTwo = math.random(cfgRandArmor.HArange[1],cfgRandArmor.HArange[2])
+			if armorRatingOne > armorRatingTwo then
+				armorRating = armorRatingTwo
+			else
+				armorRating = armorRatingOne
+			end
 		else
-			armorRating = armorRatingOne
+			armorRating = math.random(cfgRandArmor.HArange[1],cfgRandArmor.HArange[2])
 		end
 	end
 	
+	--Counter to append to new id so each id is unique
 	if WorldInstance.data.customVariables.randArmorCounter == nil then
 		idIterator = 0
 	else
@@ -71,25 +92,31 @@ randomArmor.CreateRandArmor = function(pid)
 	end
 	WorldInstance.data.customVariables.randArmorCounter = idIterator
 
+	--calculate a gold value for custom armor
 	armorValue = 10*(armorRating^1.2)
+	
+	--new refid
 	newRefId = string.lower(idIterator .."_" .. armorBaseId)
 	
+	--storerecord statements, clearing first
 	randomArmor.StoreRecord(pid, "/storerecord armor clear")
 	randomArmor.StoreRecord(pid, "/storerecord armor id " .. newRefId)
 	randomArmor.StoreRecord(pid, "/storerecord armor baseId " .. armorBaseId)
 	randomArmor.StoreRecord(pid, "/storerecord armor armorRating " .. armorRating)
 	randomArmor.StoreRecord(pid, "/storerecord armor value " .. armorValue)
 	
-	--enchantshit, only const effect for now
+	--enchants, only const effect for now
 	enchantRand = math.random(1,100)
 	if enchantRand <= cfgRandArmor.CEchance then
 		local enchantId = randomEnchantments.CreateRandEnch(pid, 3)
 		randomArmor.StoreRecord(pid, "/storerecord armor enchantmentId " .. enchantId)
 	end
-	--enchantshit
+	--enchants
 	
+	--creates custom record
 	randomArmor.CreateRecord(pid, "/createrecord armor")
 	
+	--add custom record to player's inventory
 	local structuredItem = { refId = newRefId, count = 1, charge = -1}
 	table.insert(Players[pid].data.inventory, structuredItem)
 	Players[pid]:LoadInventory()
@@ -97,7 +124,10 @@ randomArmor.CreateRandArmor = function(pid)
 	Players[pid]:Save()
 	WorldInstance:Save()
 end
--------------------------------------------
+--[[
+Create and store record functions copied from commandhandler in https://github.com/TES3MP/CoreScripts 
+with minor edits to remove non-debug message spam
+]]--
 function randomArmor.StoreRecord(pid, cmd)
 
 	cmd = cmd:split(" ")

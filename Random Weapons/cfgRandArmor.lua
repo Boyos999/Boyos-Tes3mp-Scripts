@@ -1,5 +1,8 @@
 cfgRandArmor = {}
 
+--unlucky armor rating rolls
+---Rolls twice and takes the lower value, reduces average roll
+cfgRandArmor.Unlucky = 1
 
 --Light Armor Range
 cfgRandArmor.LArange = {5,50}

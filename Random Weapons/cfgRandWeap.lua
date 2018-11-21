@@ -5,6 +5,10 @@ If the values are set such that the max value can be rolled lower than the min v
 ]]--
 cfgRandWeap = {}
 
+--enchant chance
+---Cast when strikes
+cfgRandWeap.CSchance = 50
+
 --war axe ranges
 cfgRandWeap.axe1hChopMin = {1,10}
 cfgRandWeap.axe1hChopMax = {20,50}
