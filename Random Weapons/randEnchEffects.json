@@ -203,8 +203,8 @@
 			"EnchMagMaxMax": "30",
 			"EnchAoeMin": "0",
 			"EnchAoeMax": "0",
-			"EnchDurMin": "0",
-			"EnchDurMax": "0"
+			"EnchDurMin": "1",
+			"EnchDurMax": "10"
 		},
 		{ 
 			"EnchName": "Absorb Skill",
@@ -215,8 +215,8 @@
 			"EnchMagMaxMax": "30",
 			"EnchAoeMin": "0",
 			"EnchAoeMax": "0",
-			"EnchDurMin": "0",
-			"EnchDurMax": "0"
+			"EnchDurMin": "1",
+			"EnchDurMax": "10"
 		},
 		{ 
 			"EnchName": "Soultrap",
