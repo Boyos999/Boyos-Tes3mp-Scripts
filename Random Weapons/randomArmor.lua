@@ -108,7 +108,7 @@ randomArmor.CreateRandArmor = function(pid)
 	--enchants, only const effect for now
 	enchantRand = math.random(1,100)
 	if enchantRand <= cfgRandArmor.CEchance then
-		local enchantId = randomEnchantments.CreateRandEnch(pid, 3,3)
+		local enchantId = randomEnchantments.CreateRandEnch(pid, 3,1)
 		randomArmor.StoreRecord(pid, "/storerecord armor enchantmentId " .. enchantId)
 	end
 	--enchants

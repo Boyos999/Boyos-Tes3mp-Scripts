@@ -242,7 +242,7 @@ randomWeapons.CreateRandWeap = function(pid)
 	--enchants
 	if weapType ~= 8 and weapType ~= 9 then
 		if math.random(1,100) < cfgRandWeap.CSchance then
-			local enchantId = randomEnchantments.CreateRandEnch(pid, 1,3)
+			local enchantId = randomEnchantments.CreateRandEnch(pid, 1,1)
 			randomWeapons.StoreRecord(pid, "/storerecord weapon enchantmentId " .. enchantId)
 		end
 	end
