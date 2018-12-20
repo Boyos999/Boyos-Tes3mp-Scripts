@@ -16,36 +16,58 @@ local randomEnchantments = {}
 
 jsonInterface = require("jsonInterface")
 
-function randomEnchantments.CreateRandEnch(pid, enchType)
+function randomEnchantments.CreateRandEnch(pid, enchType, numEffects)
 	--declare variables for clarity
 	local idIterator = WorldInstance.data.customVariables.randEnchCounter
 	local enchList = jsonInterface.load("randEnchEffects.json")
-	local effectRand
-	local effectIndex
-	local effectMagMin
-	local effectMagMax
-	local effectDur
-	local effectAoe
-	local effectAttr = -1
-	local effectSkill = -1
+	local effectRand = {}
+	local effectIndex = {}
+	local effectMagMin = {}
+	local effectMagMax = {}
+	local effectDur = {}
+	local effectAoe = {}
+	local effectAttr = {}
+	local effectSkill = {}
 	local effectCost
 	local effectCharge
-	local enchId
 	local effectRange
+	local enchId
 	
 	--cast when strikes
 	if enchType == 1 then
 		--roll for magic effect
-		effectRand = math.random(1,21)
-		--find effect from json file
-		for i, effect in pairs(enchList.Strike) do
-			if i == effectRand then
-				--roll values based on ranges in json file
-				effectIndex = effect.EnchIndex
-				effectMagMin = math.random(effect.EnchMagMinMin,effect.EnchMagMinMax)
-				effectMagMax = math.random(effect.EnchMagMaxMin,effect.EnchMagMaxMax)
-				effectDur = math.random(effect.EnchDurMin,effect.EnchDurMax)
-				effectAoe = math.random(effect.EnchAoeMin,effect.EnchAoeMax)
+		for i = 1, numEffects do
+			effectRand[i] = math.random(1,21)
+			--find effect from json file
+			for j, effect in pairs(enchList.Strike) do
+				if j == effectRand[i] then
+					--roll values based on ranges in json file
+					effectIndex[i] = effect.EnchIndex
+					effectMagMin[i] = math.random(effect.EnchMagMinMin,effect.EnchMagMinMax)
+					effectMagMax[i] = math.random(effect.EnchMagMaxMin,effect.EnchMagMaxMax)
+					effectDur[i] = math.random(effect.EnchDurMin,effect.EnchDurMax)
+					effectAoe[i] = math.random(effect.EnchAoeMin,effect.EnchAoeMax)
+					if effectAoe[i] < 5 then
+						effectAoe[i] = 0
+					end
+				end
+			end
+			
+			--if minimun is greater than maximum set them equal
+			if effectMagMin[i] > effectMagMax[i] then
+				effectMagMax[i] = effectMagMin[i]
+			end
+			--magic effects that require an attribute field get one
+			if tonumber(effectIndex[i]) == 22 or tonumber(effectIndex[i]) == 85 or tonumber(effectIndex[i]) == 79 then
+				effectAttr[i] = math.random(0,7)
+			else
+				effectAttr[i] = -1
+			end
+			--magic effects that require a skill field get one
+			if tonumber(effectIndex[i]) == 26 or tonumber(effectIndex[i]) == 89 or tonumber(effectIndex[i]) == 83 then
+				effectSkill[i] = math.random(0,26)
+			else
+				effectSkill[i] = -1
 			end
 		end
 		--Randomly calculate cost and charge
@@ -54,25 +76,40 @@ function randomEnchantments.CreateRandEnch(pid, enchType)
 		effectCharge = effectCost*math.random(5,25)
 		--On Touch
 		effectRange = 1
-	
+		
 	--Constant Effect
 	elseif enchType == 3 then
-		effectRand = math.random(1,27)
-		for i, effect in pairs(enchList.Const) do
-			if i == effectRand then
-				effectIndex = effect.EnchIndex
-				effectMagMin = math.random(effect.EnchMagMin,effect.EnchMagMax)
-				effectMagMax = math.random(effect.EnchMagMin,effect.EnchMagMax)
-				--pick whichever is lower and take that magnitude (unlucky)
-				if effectMagMin > effectMagMax then
-					effectMagMin = effectMagMax
-				else
-					effectMagMax = effectMagMin
+		for i = 1, numEffects do
+			effectRand[i] = math.random(1,27)
+			for j, effect in pairs(enchList.Const) do
+				if j == effectRand[i] then
+					effectIndex[i] = effect.EnchIndex
+					effectMagMin[i] = math.random(effect.EnchMagMin,effect.EnchMagMax)
+					effectMagMax[i] = math.random(effect.EnchMagMin,effect.EnchMagMax)
+					--pick whichever is lower and take that magnitude (unlucky)
+					if effectMagMin[i] > effectMagMax[i] then
+						effectMagMin[i] = effectMagMax[i]
+					else
+						effectMagMax[i] = effectMagMin[i]
+					end
+					--set appropriate values for constant effect enchants
+					effectDur[i] = 1
+					effectAoe[i] = 0
 				end
-				--set appropriate values for constant effect enchants
-				effectDur = 1
-				effectAoe = 0
 			end
+			--magic effects that require an attribute field get one
+			if tonumber(effectIndex[i]) == 22 or tonumber(effectIndex[i]) == 85 or tonumber(effectIndex[i]) == 79 then
+				effectAttr[i] = math.random(0,7)
+			else
+				effectAttr[i] = -1
+			end
+			--magic effects that require a skill field get one
+			if tonumber(effectIndex[i]) == 26 or tonumber(effectIndex[i]) == 89 or tonumber(effectIndex[i]) == 83 then
+				effectSkill[i] = math.random(0,26)
+			else
+				effectSkill[i] = -1
+			end
+			
 		end
 		--set appropriate values for constant effect enchants
 		effectCost = 0
@@ -80,18 +117,7 @@ function randomEnchantments.CreateRandEnch(pid, enchType)
 		effectRange = 0
 	end
 	
-	--if minimun is greater than maximum set them equal
-	if effectMagMin > effectMagMax then
-		effectMagMax = effectMagMin
-	end
-	--magic effects that require an attribute field get one
-	if tonumber(effectIndex) == 22 or tonumber(effectIndex) == 85 or tonumber(effectIndex) == 79 then
-		effectAttr = math.random(0,7)
-	end
-	--magic effects that require a skill field get one
-	if tonumber(effectIndex) == 26 or tonumber(effectIndex) == 89 or tonumber(effectIndex) == 83 then
-		effectSkill = math.random(0,26)
-	end
+	
 	
 	--Counter to append to new id so each id is unique
 	if WorldInstance.data.customVariables.randEnchCounter == nil then
@@ -109,9 +135,11 @@ function randomEnchantments.CreateRandEnch(pid, enchType)
 	randomEnchantments.StoreRecord(pid, "/storerecord enchantment subtype " .. enchType)
 	randomEnchantments.StoreRecord(pid, "/storerecord enchantment cost " .. effectCost)
 	randomEnchantments.StoreRecord(pid, "/storerecord enchantment charge " .. effectCharge)
-	randomEnchantments.StoreRecord(pid, "/storerecord enchantment add effect " .. effectIndex .. ", "
-	.. effectRange .. ", " .. effectDur .. ", " .. effectAoe .. ", " .. effectMagMin .. ", " .. effectMagMax .. ", "
-	.. effectAttr .. ", " .. effectSkill)
+	for i = 1, numEffects do
+		randomEnchantments.StoreRecord(pid, "/storerecord enchantment add effect " .. effectIndex[i] .. ", "
+		.. effectRange .. ", " .. effectDur[i] .. ", " .. effectAoe[i] .. ", " .. effectMagMin[i] .. ", " .. effectMagMax[i] .. ", "
+		.. effectAttr[i] .. ", " .. effectSkill[i])
+	end
 	randomEnchantments.CreateRecord(pid, "/createrecord enchantment")
 	
 	--returns custom id

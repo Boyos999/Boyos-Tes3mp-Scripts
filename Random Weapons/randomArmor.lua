@@ -108,7 +108,7 @@ randomArmor.CreateRandArmor = function(pid)
 	--enchants, only const effect for now
 	enchantRand = math.random(1,100)
 	if enchantRand <= cfgRandArmor.CEchance then
-		local enchantId = randomEnchantments.CreateRandEnch(pid, 3)
+		local enchantId = randomEnchantments.CreateRandEnch(pid, 3,3)
 		randomArmor.StoreRecord(pid, "/storerecord armor enchantmentId " .. enchantId)
 	end
 	--enchants
@@ -118,11 +118,10 @@ randomArmor.CreateRandArmor = function(pid)
 	
 	--add custom record to player's inventory
 	local structuredItem = { refId = newRefId, count = 1, charge = -1}
-	table.insert(Players[pid].data.inventory, structuredItem)
-	Players[pid]:LoadInventory()
-	Players[pid]:LoadEquipment()
 	Players[pid]:Save()
 	WorldInstance:Save()
+	
+	return structuredItem
 end
 --[[
 Create and store record functions copied from commandhandler in https://github.com/TES3MP/CoreScripts 
