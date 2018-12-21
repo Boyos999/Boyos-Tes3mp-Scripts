@@ -10,14 +10,14 @@ randomArmor = require("randomArmor")
 5. FOR TESTING: put the following elseif block in process commands also in command handler
 ```lua
 	elseif cmd[1] == "randweap" then
-		local randomWeap = randomWeapons.CreateRandWeap(pid)
+		local randomWeap = randomWeapons.CreateRandWeap(pid,1)
 		table.insert(Players[pid].data.inventory, randomWeap)
 		Players[pid]:LoadInventory()
 		Players[pid]:LoadEquipment()
 		Players[pid]:Save()
 		
 	elseif cmd[1] == "randarmor" then
-		local randomArmor = randomArmor.CreateRandArmor(pid)
+		local randomArmor = randomArmor.CreateRandArmor(pid,1)
 		table.insert(Players[pid].data.inventory, randomArmor)
 		Players[pid]:LoadInventory()
 		Players[pid]:LoadEquipment()

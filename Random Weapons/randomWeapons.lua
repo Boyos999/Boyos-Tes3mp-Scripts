@@ -6,7 +6,13 @@ jsonInterface = require("jsonInterface")
 cfgRandWeap = require("cfgRandWeap")
 randomEnchantments = require("randomEnchantments")
 
-randomWeapons.CreateRandWeap = function(pid)
+--[[
+Takes the player's pid, and the maximum number of enchants on the item ctrl+f for "enchants" to find code
+A value of 0 in enchEffectsNum skips creating an enchantment.
+
+Returns the weapon in the form of a structured item
+]]--
+randomWeapons.CreateRandWeap = function(pid, enchEffectsNum)
 	local idIterator = WorldInstance.data.customVariables.randCounter	
 	local weapType = math.random(1,12)
 	local weapBaseRand
@@ -19,6 +25,7 @@ randomWeapons.CreateRandWeap = function(pid)
 	local weapMaxThrustDmg
 	local weapEnch
 	local weapValue
+	local numEnchants
 	
 	
 	
@@ -241,9 +248,20 @@ randomWeapons.CreateRandWeap = function(pid)
 	
 	--enchants
 	if weapType ~= 8 and weapType ~= 9 then
+		--Makes a roll to determine if the item has an enchantment based on cfg value
 		if math.random(1,100) < cfgRandWeap.CSchance then
-			local enchantId = randomEnchantments.CreateRandEnch(pid, 1,1)
-			randomWeapons.StoreRecord(pid, "/storerecord weapon enchantmentId " .. enchantId)
+			if enchEffectsNum > 1 then
+				--Roll between 1 and given value of enchEffectsNum to determine the number of effects
+				numEnchants = math.random(1,enchEffectsNum)
+			elseif enchEffectsNum == 1 then
+				numEnchants = 1
+			else
+				numEnchants = 0
+			end
+			if numEnchants ~= 0 then
+				local enchantId = randomEnchantments.CreateRandEnch(pid, 1,enchEffectsNum)
+				randomWeapons.StoreRecord(pid, "/storerecord weapon enchantmentId " .. enchantId)
+			end
 		end
 	end
 	--enchants

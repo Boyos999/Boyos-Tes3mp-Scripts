@@ -15,7 +15,11 @@ Target RangeType = 2
 local randomEnchantments = {}
 
 jsonInterface = require("jsonInterface")
-
+--[[
+Takes the player's pid, the type of enchantment (list above) and the number of effects
+for the enchantment.
+Returns the id for the created custom enchantment
+]]--
 function randomEnchantments.CreateRandEnch(pid, enchType, numEffects)
 	--declare variables for clarity
 	local idIterator = WorldInstance.data.customVariables.randEnchCounter

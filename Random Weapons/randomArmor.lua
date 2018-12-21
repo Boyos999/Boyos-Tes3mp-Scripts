@@ -4,8 +4,13 @@ tableHelper = require("tableHelper")
 jsonInterface = require("jsonInterface")
 cfgRandArmor = require("cfgRandArmor")
 
+--[[
+Takes the player's pid, and the maximum number of enchants on the item ctrl+f for "enchants" to find code
+A value of 0 in enchEffectsNum skips creating an enchantment.
 
-randomArmor.CreateRandArmor = function(pid)
+Returns the weapon in the form of a structured item
+]]--
+randomArmor.CreateRandArmor = function(pid, enchEffectsNum)
 
 	--declare variables for clarity
 	local idIterator = WorldInstance.data.customVariables.randArmorCounter
@@ -18,6 +23,7 @@ randomArmor.CreateRandArmor = function(pid)
 	local armorValue
 	local newRefId
 	local enchantRand
+	local numEnchants
 	local baseIdList = jsonInterface.load("randArmorBaseIds.json")
 	
 	--light armor
@@ -106,10 +112,21 @@ randomArmor.CreateRandArmor = function(pid)
 	randomArmor.StoreRecord(pid, "/storerecord armor value " .. armorValue)
 	
 	--enchants, only const effect for now
+	--Makes a roll to determine if the item has an enchantment based on cfg value
 	enchantRand = math.random(1,100)
 	if enchantRand <= cfgRandArmor.CEchance then
-		local enchantId = randomEnchantments.CreateRandEnch(pid, 3,1)
-		randomArmor.StoreRecord(pid, "/storerecord armor enchantmentId " .. enchantId)
+		if enchEffectsNum > 1 then
+			--Roll between 1 and given value of enchEffectsNum to determine the number of effects
+			numEnchants = math.random(1,enchEffectsNum)
+		elseif enchEffectsNum == 1 then
+			numEnchants = 1
+		else
+			numEnchants = 0
+		end
+		if numEnchants ~= 0 then
+			local enchantId = randomEnchantments.CreateRandEnch(pid, 3,numEnchants)
+			randomArmor.StoreRecord(pid, "/storerecord armor enchantmentId " .. enchantId)
+		end
 	end
 	--enchants
 	
