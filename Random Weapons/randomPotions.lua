@@ -1,160 +1,121 @@
---[[
-Currently Only supports strike and constant effect enchantments
-
-valid enchTypes
-Cast Once = 0
-Cast When Strikes = 1
-Cast When Used = 2
-Constant Effect = 3
-
-Self RangeType = 0
-Touch RangeType = 1
-Target RangeType = 2
-]]--
-
-local randomEnchantments = {}
+local randomPotions = {}
 
 jsonInterface = require("jsonInterface")
+
 --[[
-Takes the player's pid, the type of enchantment (list above) and the number of effects
-for the enchantment.
-Returns the id for the created custom enchantment
+Takes the player's pid and the number of effects for the potion.
+Returns a potion in the form of a structured item
 ]]--
-function randomEnchantments.CreateRandEnch(pid, enchType, numEffects)
-	--declare variables for clarity
-	local idIterator = WorldInstance.data.customVariables.randEnchCounter
-	local enchList = jsonInterface.load("randEnchEffects.json")
+
+function randomPotions.CreateRandomPotion(pid, numEffects)
+	
+	local idIterator = WorldInstance.data.customVariables.randPotionCounter
+	local effectList = jsonInterface.load("randPotionEffects.json")
 	local effectRand = {}
 	local effectIndex = {}
-	local effectMagMin = {}
-	local effectMagMax = {}
+	local effectMag = {}
 	local effectDur = {}
-	local effectAoe = {}
+	local effectAoe = 0
 	local effectAttr = {}
 	local effectSkill = {}
-	local effectCost
-	local effectCharge
-	local effectRange
-	local enchId
+	local effectName = {}
+	local effectRange = 0
+	local potionId
+	local potionName
+	local potionIcon
+	local potionModel
+	local potionWeight
+	local grapihcsRand
 	
-	--cast when strikes
-	if enchType == 1 then
-		--roll for magic effect
-		for i = 1, numEffects do
-			effectRand[i] = math.random(1,21)
-			--find effect from json file
-			for j, effect in pairs(enchList.Strike) do
-				if j == effectRand[i] then
-					--roll values based on ranges in json file
-					effectIndex[i] = effect.EnchIndex
-					effectMagMin[i] = math.random(effect.EnchMagMinMin,effect.EnchMagMinMax)
-					effectMagMax[i] = math.random(effect.EnchMagMaxMin,effect.EnchMagMaxMax)
-					effectDur[i] = math.random(effect.EnchDurMin,effect.EnchDurMax)
-					effectAoe[i] = math.random(effect.EnchAoeMin,effect.EnchAoeMax)
-					if effectAoe[i] < 5 then
-						effectAoe[i] = 0
-					end
-				end
-			end
-			
-			--if minimun is greater than maximum set them equal
-			if effectMagMin[i] > effectMagMax[i] then
-				effectMagMax[i] = effectMagMin[i]
-			end
-			--magic effects that require an attribute field get one
-			if tonumber(effectIndex[i]) == 22 or tonumber(effectIndex[i]) == 85 or tonumber(effectIndex[i]) == 79 then
-				effectAttr[i] = math.random(0,7)
-			else
-				effectAttr[i] = -1
-			end
-			--magic effects that require a skill field get one
-			if tonumber(effectIndex[i]) == 26 or tonumber(effectIndex[i]) == 89 or tonumber(effectIndex[i]) == 83 then
-				effectSkill[i] = math.random(0,26)
-			else
-				effectSkill[i] = -1
-			end
+	for i = 1, numEffects do
+		effectRand[i] = math.random(1,50)
+		--find effect from json file
+		for j, effect in pairs(effectList.Effects) do
+			if j == effectRand[i] then
+				--roll values based on ranges in json file
+				effectIndex[i] = effect.EffectIndex
+				effectMag[i] = math.random(effect.EffectMagMin,effect.EffectMagMax)
+				effectDur[i] = math.random(effect.EffectDurMin,effect.EffectDurMax)
+				effectName[i] = effect.EffectName
+			end	
 		end
-		--Randomly calculate cost and charge
-		effectCost = math.random(10,50)
-		--This gives between 5 and 25 uses (default auto-calc gives 10)
-		effectCharge = effectCost*math.random(5,25)
-		--On Touch
-		effectRange = 1
-		
-	--Constant Effect
-	elseif enchType == 3 then
-		for i = 1, numEffects do
-			effectRand[i] = math.random(1,27)
-			for j, effect in pairs(enchList.Const) do
-				if j == effectRand[i] then
-					effectIndex[i] = effect.EnchIndex
-					effectMagMin[i] = math.random(effect.EnchMagMin,effect.EnchMagMax)
-					effectMagMax[i] = math.random(effect.EnchMagMin,effect.EnchMagMax)
-					--pick whichever is lower and take that magnitude (unlucky)
-					if effectMagMin[i] > effectMagMax[i] then
-						effectMagMin[i] = effectMagMax[i]
-					else
-						effectMagMax[i] = effectMagMin[i]
-					end
-					--set appropriate values for constant effect enchants
-					effectDur[i] = 1
-					effectAoe[i] = 0
-				end
-			end
-			--magic effects that require an attribute field get one
-			if tonumber(effectIndex[i]) == 22 or tonumber(effectIndex[i]) == 85 or tonumber(effectIndex[i]) == 79 then
-				effectAttr[i] = math.random(0,7)
-			else
-				effectAttr[i] = -1
-			end
-			--magic effects that require a skill field get one
-			if tonumber(effectIndex[i]) == 26 or tonumber(effectIndex[i]) == 89 or tonumber(effectIndex[i]) == 83 then
-				effectSkill[i] = math.random(0,26)
-			else
-				effectSkill[i] = -1
-			end
-			
+		--magic effects that require an attribute field get one
+		if tonumber(effectIndex[i]) == 74 or tonumber(effectIndex[i]) == 79 then
+			effectAttr[i] = math.random(0,7)
+		else
+			effectAttr[i] = -1
 		end
-		--set appropriate values for constant effect enchants
-		effectCost = 0
-		effectCharge = 0
-		effectRange = 0
+		--magic effects that require a skill field get one
+		if tonumber(effectIndex[i]) == 78 or tonumber(effectIndex[i]) == 83 then
+			effectSkill[i] = math.random(0,26)
+		else
+			effectSkill[i] = -1
+		end
+		--If summon spell, determine which creature it summons
+		if tonumber(effectIndex[i]) == 102 then
+			effectIndex[i] = tonumber(effectIndex[i]) + math.random(0,14)
+		end
+		--If bound spell, determine what it binds
+		if tonumber(effectIndex[i]) == 120 then
+			local temp = math.random(0,10)
+			--Thanks bethesda for putting "extraspell" in the middle of the bound spells, you the real mvp
+			--I bet one day this will get removed in OpenMW and break everything
+			if temp > 5 then
+				temp = temp + 1
+			end
+			effectIndex[i] = tonumber(effectIndex[i]) + temp
+		end
 	end
 	
-	
-	
 	--Counter to append to new id so each id is unique
-	if WorldInstance.data.customVariables.randEnchCounter == nil then
+	if WorldInstance.data.customVariables.randPotionCounter == nil then
 		idIterator = 0
 	else
 		idIterator = idIterator + 1
 	end
-	WorldInstance.data.customVariables.randEnchCounter = idIterator
+	WorldInstance.data.customVariables.randPotionCounter = idIterator
 	
 	--assign unique id
-	enchId = "random_enchant_" .. idIterator
+	potionId = "random_potion_" .. idIterator
+	potionName = "Potion of " .. effectName[1]
+	
+	--choose what this potion will look like
+	graphicsRand = math.random(1,6)
+	for i, graphics in pairs(effectList.Graphics) do
+		if i == graphicsRand then
+			potionModel = graphics.Model
+			potionIcon = graphics.Icon
+			potionWeight = graphics.Weight
+		end
+	end
+	
 	--store and create record statements
-	randomEnchantments.StoreRecord(pid, "/storerecord enchantment clear")
-	randomEnchantments.StoreRecord(pid, "/storerecord enchantment id " .. enchId)
-	randomEnchantments.StoreRecord(pid, "/storerecord enchantment subtype " .. enchType)
-	randomEnchantments.StoreRecord(pid, "/storerecord enchantment cost " .. effectCost)
-	randomEnchantments.StoreRecord(pid, "/storerecord enchantment charge " .. effectCharge)
+	randomPotions.StoreRecord(pid, "/storerecord potion clear")
+	randomPotions.StoreRecord(pid, "/storerecord potion id " .. potionId)
+	randomPotions.StoreRecord(pid, "/storerecord potion name " .. potionName)
+	randomPotions.StoreRecord(pid, "/storerecord potion icon " .. potionIcon)
+	randomPotions.StoreRecord(pid, "/storerecord potion model " .. potionModel)
+	randomPotions.StoreRecord(pid, "/storerecord potion weight " .. potionWeight)
 	for i = 1, numEffects do
-		randomEnchantments.StoreRecord(pid, "/storerecord enchantment add effect " .. effectIndex[i] .. ", "
-		.. effectRange .. ", " .. effectDur[i] .. ", " .. effectAoe[i] .. ", " .. effectMagMin[i] .. ", " .. effectMagMax[i] .. ", "
+		randomPotions.StoreRecord(pid, "/storerecord potion add effect " .. effectIndex[i] .. ", "
+		.. effectRange .. ", " .. effectDur[i] .. ", " .. effectAoe .. ", " .. effectMag[i] .. ", " .. effectMag[i] .. ", "
 		.. effectAttr[i] .. ", " .. effectSkill[i])
 	end
-	randomEnchantments.CreateRecord(pid, "/createrecord enchantment")
+	randomPotions.CreateRecord(pid, "/createrecord potion")
 	
-	--returns custom id
-	return enchId
+	--returns structured potion
+	local structuredItem = { refId = potionId, count = 1, charge = -1}
+	Players[pid]:Save()
+	WorldInstance:Save()
+	return structuredItem
 	
 end
+
 --[[
 Create and store record functions copied from commandhandler in https://github.com/TES3MP/CoreScripts 
 with minor edits to remove non-debug message spam
 ]]--
-function randomEnchantments.StoreRecord(pid, cmd)
+function randomPotions.StoreRecord(pid, cmd)
 
 	cmd = cmd:split(" ")
     if Players[pid].data.customVariables == nil then
@@ -345,7 +306,7 @@ function randomEnchantments.StoreRecord(pid, cmd)
     end
 end
 
-function randomEnchantments.CreateRecord(pid, cmd)
+function randomPotions.CreateRecord(pid, cmd)
 
 	cmd = cmd:split(" ")
     if Players[pid].data.customVariables == nil then
@@ -514,4 +475,4 @@ function randomEnchantments.CreateRecord(pid, cmd)
     --Players[pid]:Message(message)
 end
 
-return randomEnchantments
+return randomPotions

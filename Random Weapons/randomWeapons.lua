@@ -247,6 +247,7 @@ randomWeapons.CreateRandWeap = function(pid, enchEffectsNum)
 	randomWeapons.StoreRecord(pid, "/storerecord weapon damageThrust " .. weapMinThrustDmg .. " " .. weapMaxThrustDmg)
 	
 	--enchants
+	--bows and xbows don't get enchants since cast when strikes enchants don't work with bows
 	if weapType ~= 8 and weapType ~= 9 then
 		--Makes a roll to determine if the item has an enchantment based on cfg value
 		if math.random(1,100) < cfgRandWeap.CSchance then
