@@ -1,10 +1,25 @@
-# Starter Equipment Script
-1. Download starterEquipment.lua and put it in your scripts folder
-2. In eventHandler.lua, find the eventHandler.OnPlayerEndCharGen function and just before the end add the following line
-```lua
-starterEquipment.GiveStarterItems(pid)
-```
-3. Also in eventHander.lua, add the following line at the top under the [ commandHandler = require("commandHandler") ] line
-```lua
-starterEquipment = require("starterEquipment")
-```
+# Various Tes3mp scripts
+
+# Alternate Start
+Opens a menu at the end of character creation, allowing the player to choose a city they want to start in
+
+# Arena Horde
+(Currently shelved)An attempt at making a sort of horde mode in the arena, put on hold due to weird issues with spawning enemies and not knowing how to auto-remove corpses leading to a very cluttered arena
+
+# Armor Reinforcement
+Uses a menu to allow a player with a required armorer skill to improve lower tier armor to fill in gaps in armor progression
+
+# Randomized Items
+Contains scripts to generate randomized:
+Weapons
+Armor
+Scrolls
+Potions
+Enchantments (no cast on use yet)
+Designed to be customizable and configurable to a specific server's needs
+
+# Res Menu
+Gives the player the choice of respawning at an imperial shrine or tribunal temple on death, as opposed to it being random
+
+# Starter Equipment
+A simple script to add some basic starter equipment to players based on their skills
