@@ -12,6 +12,8 @@ function randomScrolls.CreateRandomScroll(pid,numEffects)
 	local scrollName = "Ancient Scroll"
 	local scrollId
 	local enchId
+	local scrollValue
+	local scrollWeight = 0.20
 	
 	enchId = randomEnchantments.CreateRandEnch(pid,0,numEffects)
 	
@@ -23,6 +25,7 @@ function randomScrolls.CreateRandomScroll(pid,numEffects)
 	WorldInstance.data.customVariables.randScrollCounter = idIterator
 	
 	scrollId = "random_scroll_" .. idIterator
+	scrollValue = math.random(150,450)
 	
 	randomScrolls.StoreRecord(pid,"/storerecord book clear")
 	randomScrolls.StoreRecord(pid,"/storerecord book id " .. scrollId)
@@ -30,6 +33,8 @@ function randomScrolls.CreateRandomScroll(pid,numEffects)
 	randomScrolls.StoreRecord(pid,"/storerecord book model " .. scrollModel)
 	randomScrolls.StoreRecord(pid,"/storerecord book icon " .. scrollIcon)
 	randomScrolls.StoreRecord(pid,"/storerecord book scrollState true")
+	randomScrolls.StoreRecord(pid,"/storerecord book weight " .. scrollWeight)
+	randomScrolls.StoreRecord(pid,"/storerecord book value " .. scrollValue)
 	randomScrolls.StoreRecord(pid,"/storerecord book enchantmentId " .. enchId)
 	randomScrolls.StoreRecord(pid,"/storerecord book skillId -1")
 	randomScrolls.CreateRecord(pid, "/createrecord book")
