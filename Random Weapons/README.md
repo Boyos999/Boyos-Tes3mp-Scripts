@@ -48,7 +48,7 @@ randomScrolls = require("randomScrolls")
 math.randomseed(os.time())
 ```
 
-NOTE: Random enchantments script currently only supports on strike enchantments (type 1), and constant effect enchantments (type 3), in both randomArmor.lua and randomWeapons.lua there is a block of code with the comment "enchants," the code here determines the chance of an item being enchanted.
+NOTE: Random enchantments script currently does not support on use enchantments (type 2), in both randomArmor.lua and randomWeapons.lua there is a block of code with the comment "enchants," the code here determines the chance of an item being enchanted.
 
 Random Potions, Armor, weapons, and scrolls all take a pid, and the number of enchantments as their args
 
