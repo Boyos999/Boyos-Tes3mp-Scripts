@@ -23,3 +23,7 @@ Gives the player the choice of respawning at an imperial shrine or tribunal temp
 
 # Starter Equipment
 A simple script to add some basic starter equipment to players based on their skills
+
+# Note Writing
+Use /write <text> (without <>) to create a note with given text.
+Makes a check to see if the player has the required item(s) (only paper) by default.
