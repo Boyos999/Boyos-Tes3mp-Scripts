@@ -14,7 +14,11 @@ function noteWriting.CreateNote(pid,cmd)
 		Players[pid]:Message("You lack the materials to make a note")
 		return nil
 	end
-	
+	--Make sure there is text after /write
+	if cmd[2] == nil then
+		Players[pid]:Message("No text given")
+		return nil
+	end
 	--Declare variables here
 	local idIterator = WorldInstance.data.customVariables.noteCounter
 	local noteId
