@@ -7,7 +7,8 @@ Returns either a structured item, or nil if the player lacks paper.
 function noteWriting.CreateNote(pid,cmd)
 
 	--Checks if players have the required Item(s)
-	if inventoryHelper.containsItem(Players[pid].data.inventory,sc_paper_plain,-1,-1,-1) then
+	if inventoryHelper.containsItem(Players[pid].data.inventory,"sc_paper plain") then
+		inventoryHelper.removeItem(Players[pid].data.inventory,"sc_paper plain",1)
 		Players[pid]:Message("You made a note")
 	else
 		Players[pid]:Message("You lack the materials to make a note")
