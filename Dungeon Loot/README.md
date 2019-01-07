@@ -4,7 +4,7 @@
 3. Cooldown time is specified at the top of the file, during which players will not get items
 4. Check the comments for more information (or ask), the table included is an example ex. custom chest (the name and model don't matter, but the id and noPickUp script are important)
 ```lua
-	"dungeonchest_armor_one_a":{
+      "dungeonchest_armor_one_a":{
       "name":"Armor Chest",
       "model":"o\\Contain_De_Chest_01.NIF",
       "script":"noPickUp"
@@ -12,6 +12,7 @@
 ```
 5. Download dungeonLoot.lua and armorone.json, put them in scripts and data folders respectively
 6. paste the following block in event handler's OnObjectActivate function after 
+
 ```lua objectUniqueIndex = tes3mp.GetObjectRefNum(index) .. "-" .. tes3mp.GetObjectMpNum(index)```
 ```lua
 --dungeonLoot
