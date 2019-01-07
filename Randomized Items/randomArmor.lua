@@ -115,15 +115,9 @@ randomArmor.CreateRandArmor = function(pid, enchEffectsNum)
 	--Makes a roll to determine if the item has an enchantment based on cfg value
 	enchantRand = math.random(1,100)
 	if enchantRand <= cfgRandArmor.CEchance then
-		if enchEffectsNum > 1 then
-			--Roll between 1 and given value of enchEffectsNum to determine the number of effects
-			numEnchants = math.random(1,enchEffectsNum)
-		elseif enchEffectsNum == 1 then
-			numEnchants = 1
-		else
-			numEnchants = 0
-		end
-		if numEnchants ~= 0 then
+		numEnchants = enchEffectsNum
+		--no negative numbers pls
+		if numEnchants >= 0 then
 			local enchantId = randomEnchantments.CreateRandEnch(pid, 3,numEnchants)
 			randomArmor.StoreRecord(pid, "/storerecord armor enchantmentId " .. enchantId)
 		end
