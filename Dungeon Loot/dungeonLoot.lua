@@ -32,6 +32,7 @@ end
 function dungeonLoot.CheckCooldown(pid, locationName, chestId)
 	local state
 	local playerName = Players[pid].name
+	jsondata = jsonInterface.load("DungeonLoot.json")
 	if jsondata == nil then
 		jsondata = {}
 	end
