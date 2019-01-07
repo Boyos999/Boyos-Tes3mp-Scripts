@@ -12,8 +12,10 @@
 ```
 5. Download dungeonLoot.lua and armorone.json, put them in scripts and data folders respectively
 6. paste the following block in event handler's OnObjectActivate function after 
+```lua 
+objectUniqueIndex = tes3mp.GetObjectRefNum(index) .. "-" .. tes3mp.GetObjectMpNum(index)
+```
 
-```lua objectUniqueIndex = tes3mp.GetObjectRefNum(index) .. "-" .. tes3mp.GetObjectMpNum(index)```
 ```lua
 --dungeonLoot
 if dungeonLoot.CheckId(objectRefId,pid) == true then
