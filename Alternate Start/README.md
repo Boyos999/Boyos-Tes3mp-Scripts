@@ -22,8 +22,8 @@ altStartHelper = require("altStartHelper")
 
 6. Then also in logicHandler.lua, paste the following block near the bottom, before the return statements
 ```lua
-logicHandler.TeleportPlayerToLocation = function(pid, altCell,altPos,altRot)
-	altStartHelper.altStartFunction(pid, altCell,altPos,altRot)
+logicHandler.TeleportPlayerToLocation = function(pid, altCell,altPosX, altPosY, altPosZ,altRotX, altRotY)
+	altStartHelper.altStartFunction(pid, altCell,altPosX, altPosY, altPosZ,altRotX, altRotY)
 end
 ```
 
