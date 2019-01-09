@@ -1,17 +1,16 @@
 local altStartHelper = {}
 
-altStartHelper.altStartFunction = function(pid, altCell,altPos,altRot)
-
+altStartHelper.altStartFunction = function(pid, altCell,altPosX, altPosY, altPosZ,altRotX, altRotY)
 	if altCell ~= nil then
 
         tes3mp.SetCell(pid, altCell)
         tes3mp.SendCell(pid)
-
-        if altPos ~= nil and altRot ~= nil then
-            tes3mp.SetPos(pid, altPos[1], altPos[2], altPos[3])
-            tes3mp.SetRot(pid, altRot[1], altRot[2])
-            tes3mp.SendPos(pid)
-        end
+		
+		if altPosX ~= nil and altPosY ~= nil and altPosZ ~= nil and altRotX ~= nil and altRotY ~= nil then
+			tes3mp.SetPos(pid, altPosX, altPosY, altPosZ)
+			tes3mp.SetRot(pid, altRotX, altRotY)
+			tes3mp.SendPos(pid)
+		end
     end
 
 end
