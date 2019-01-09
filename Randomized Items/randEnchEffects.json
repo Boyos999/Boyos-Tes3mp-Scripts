@@ -1,6 +1,6 @@
 {
 	"Once": [
-		{ 
+		1:{ 
 			"EnchName": "Swift Swim",
 			"EnchIndex": "1",
 			"EnchMagMinMin": "25",
@@ -13,7 +13,7 @@
 			"EnchDurMax": "150",
 			"EnchRange": "Self"
 		},
-		{ 
+		2:{ 
 			"EnchName": "Shield",
 			"EnchIndex": "3",
 			"EnchMagMinMin": "15",
@@ -26,7 +26,7 @@
 			"EnchDurMax": "75",
 			"EnchRange": "Self"
 		},
-		{ 
+		3:{ 
 			"EnchName": "Fire Shield",
 			"EnchIndex": "4",
 			"EnchMagMinMin": "15",
@@ -39,7 +39,7 @@
 			"EnchDurMax": "75",
 			"EnchRange": "Self"
 		},
-		{ 
+		4:{ 
 			"EnchName": "Lightning Shield",
 			"EnchIndex": "5",
 			"EnchMagMinMin": "15",
@@ -52,7 +52,7 @@
 			"EnchDurMax": "75",
 			"EnchRange": "Self"
 		},
-		{ 
+		5:{ 
 			"EnchName": "Frost Shield",
 			"EnchIndex": "6",
 			"EnchMagMinMin": "15",
@@ -65,7 +65,7 @@
 			"EnchDurMax": "75",
 			"EnchRange": "Self"
 		},
-		{ 
+		6:{ 
 			"EnchName": "Burden",
 			"EnchIndex": "7",
 			"EnchMagMinMin": "25",
@@ -78,7 +78,7 @@
 			"EnchDurMax": "150",
 			"EnchRange": "Other"
 		},
-		{ 
+		7:{ 
 			"EnchName": "Feather",
 			"EnchIndex": "8",
 			"EnchMagMinMin": "25",
@@ -91,7 +91,7 @@
 			"EnchDurMax": "150",
 			"EnchRange": "Self"
 		},
-		{ 
+		8:{ 
 			"EnchName": "Jump",
 			"EnchIndex": "9",
 			"EnchMagMinMin": "10",
@@ -104,7 +104,7 @@
 			"EnchDurMax": "25",
 			"EnchRange": "Self"
 		},
-		{ 
+		9:{ 
 			"EnchName": "Levitate",
 			"EnchIndex": "10",
 			"EnchMagMinMin": "10",
@@ -117,7 +117,7 @@
 			"EnchDurMax": "45",
 			"EnchRange": "Self"
 		},
-		{ 
+		10:{ 
 			"EnchName": "Slowfall",
 			"EnchIndex": "11",
 			"EnchMagMinMin": "10",
@@ -130,7 +130,7 @@
 			"EnchDurMax": "45",
 			"EnchRange": "Self"
 		},
-		{ 
+		11:{ 
 			"EnchName": "Chameleon",
 			"EnchIndex": "40",
 			"EnchMagMinMin": "15",
@@ -143,7 +143,7 @@
 			"EnchDurMax": "75",
 			"EnchRange": "Self"
 		},
-		{ 
+		12:{ 
 			"EnchName": "Light",
 			"EnchIndex": "41",
 			"EnchMagMinMin": "25",
@@ -156,7 +156,7 @@
 			"EnchDurMax": "150",
 			"EnchRange": "All"
 		},
-		{ 
+		13:{ 
 			"EnchName": "Sanctuary",
 			"EnchIndex": "42",
 			"EnchMagMinMin": "15",
@@ -169,7 +169,7 @@
 			"EnchDurMax": "75",
 			"EnchRange": "Self"
 		},
-		{ 
+		14:{ 
 			"EnchName": "Night Eye",
 			"EnchIndex": "43",
 			"EnchMagMinMin": "25",
@@ -182,7 +182,7 @@
 			"EnchDurMax": "150",
 			"EnchRange": "Self"
 		},
-		{ 
+		15:{ 
 			"EnchName": "Dispel",
 			"EnchIndex": "57",
 			"EnchMagMinMin": "25",
@@ -195,7 +195,7 @@
 			"EnchDurMax": "0",
 			"EnchRange": "All"
 		},
-		{ 
+		16:{ 
 			"EnchName": "Telekinesis",
 			"EnchIndex": "59",
 			"EnchMagMinMin": "25",
@@ -208,7 +208,7 @@
 			"EnchDurMax": "150",
 			"EnchRange": "Self"
 		},
-		{ 
+		17:{ 
 			"EnchName": "Detect Animal",
 			"EnchIndex": "64",
 			"EnchMagMinMin": "25",
@@ -221,7 +221,7 @@
 			"EnchDurMax": "150",
 			"EnchRange": "Self"
 		},
-		{ 
+		18:{ 
 			"EnchName": "Detect Enchantment",
 			"EnchIndex": "65",
 			"EnchMagMinMin": "25",
@@ -234,7 +234,7 @@
 			"EnchDurMax": "150",
 			"EnchRange": "Self"
 		},
-		{ 
+		19:{ 
 			"EnchName": "Detect Key",
 			"EnchIndex": "66",
 			"EnchMagMinMin": "25",
@@ -247,7 +247,7 @@
 			"EnchDurMax": "150",
 			"EnchRange": "Self"
 		},
-		{ 
+		20:{ 
 			"EnchName": "Spell Absorption",
 			"EnchIndex": "67",
 			"EnchMagMinMin": "1",
@@ -260,7 +260,7 @@
 			"EnchDurMax": "25",
 			"EnchRange": "Self"
 		},
-		{ 
+		21:{ 
 			"EnchName": "Reflect",
 			"EnchIndex": "68",
 			"EnchMagMinMin": "1",
@@ -273,7 +273,7 @@
 			"EnchDurMax": "25",
 			"EnchRange": "Self"
 		},
-		{ 
+		22:{ 
 			"EnchName": "Restore Health",
 			"EnchIndex": "75",
 			"EnchMagMinMin": "1",
@@ -286,7 +286,7 @@
 			"EnchDurMax": "25",
 			"EnchRange": "Self"
 		},
-		{ 
+		23:{ 
 			"EnchName": "Restore Magicka",
 			"EnchIndex": "76",
 			"EnchMagMinMin": "1",
@@ -299,7 +299,7 @@
 			"EnchDurMax": "25",
 			"EnchRange": "Self"
 		},
-		{ 
+		24:{ 
 			"EnchName": "Restore Fatigue",
 			"EnchIndex": "77",
 			"EnchMagMinMin": "1",
@@ -312,7 +312,7 @@
 			"EnchDurMax": "25",
 			"EnchRange": "Self"
 		},
-		{ 
+		25:{ 
 			"EnchName": "Fortify Health",
 			"EnchIndex": "80",
 			"EnchMagMinMin": "10",
@@ -325,7 +325,7 @@
 			"EnchDurMax": "150",
 			"EnchRange": "Self"
 		},
-		{ 
+		26:{ 
 			"EnchName": "Fortify Magicka",
 			"EnchIndex": "81",
 			"EnchMagMinMin": "10",
@@ -338,7 +338,7 @@
 			"EnchDurMax": "150",
 			"EnchRange": "Self"
 		},
-		{ 
+		27:{ 
 			"EnchName": "Fortify Fatigue",
 			"EnchIndex": "82",
 			"EnchMagMinMin": "10",
@@ -351,7 +351,7 @@
 			"EnchDurMax": "150",
 			"EnchRange": "Self"
 		},
-		{ 
+		28:{ 
 			"EnchName": "Resist Fire",
 			"EnchIndex": "90",
 			"EnchMagMinMin": "20",
@@ -364,7 +364,7 @@
 			"EnchDurMax": "150",
 			"EnchRange": "Self"
 		},
-		{ 
+		29:{ 
 			"EnchName": "Resist Frost",
 			"EnchIndex": "91",
 			"EnchMagMinMin": "20",
@@ -377,7 +377,7 @@
 			"EnchDurMax": "150",
 			"EnchRange": "Self"
 		},
-		{ 
+		30:{ 
 			"EnchName": "Resist Shock",
 			"EnchIndex": "92",
 			"EnchMagMinMin": "20",
@@ -390,7 +390,7 @@
 			"EnchDurMax": "150",
 			"EnchRange": "Self"
 		},
-		{ 
+		31:{ 
 			"EnchName": "Resist Magicka",
 			"EnchIndex": "93",
 			"EnchMagMinMin": "20",
@@ -403,7 +403,7 @@
 			"EnchDurMax": "150",
 			"EnchRange": "Self"
 		},
-		{ 
+		32:{ 
 			"EnchName": "Resist Poison",
 			"EnchIndex": "97",
 			"EnchMagMinMin": "20",
@@ -416,7 +416,7 @@
 			"EnchDurMax": "150",
 			"EnchRange": "Self"
 		},
-		{ 
+		33:{ 
 			"EnchName": "Resist Normal Weapons",
 			"EnchIndex": "98",
 			"EnchMagMinMin": "20",
@@ -429,7 +429,7 @@
 			"EnchDurMax": "150",
 			"EnchRange": "Self"
 		},
-		{ 
+		34:{ 
 			"EnchName": "Resist Paralysis",
 			"EnchIndex": "99",
 			"EnchMagMinMin": "20",
@@ -442,7 +442,7 @@
 			"EnchDurMax": "150",
 			"EnchRange": "Self"
 		},
-		{ 
+		35:{ 
 			"EnchName": "Fortify Attack",
 			"EnchIndex": "117",
 			"EnchMagMinMin": "10",
@@ -455,7 +455,7 @@
 			"EnchDurMax": "75",
 			"EnchRange": "Self"
 		},
-		{ 
+		36:{ 
 			"EnchName": "Fire Damage",
 			"EnchIndex": "14",
 			"EnchMagMinMin": "5",
@@ -468,7 +468,7 @@
 			"EnchDurMax": "4",
 			"EnchRange": "Other"
 		},
-		{ 
+		37:{ 
 			"EnchName": "Shock Damage",
 			"EnchIndex": "15",
 			"EnchMagMinMin": "5",
@@ -481,7 +481,7 @@
 			"EnchDurMax": "4",
 			"EnchRange": "Other"
 		},
-		{ 
+		38:{ 
 			"EnchName": "Frost Damage",
 			"EnchIndex": "16",
 			"EnchMagMinMin": "5",
@@ -494,7 +494,7 @@
 			"EnchDurMax": "4",
 			"EnchRange": "Other"
 		},
-		{ 
+		39:{ 
 			"EnchName": "Damage Health",
 			"EnchIndex": "23",
 			"EnchMagMinMin": "5",
@@ -507,7 +507,7 @@
 			"EnchDurMax": "4",
 			"EnchRange": "Other"
 		},
-		{ 
+		40:{ 
 			"EnchName": "Damage Magicka",
 			"EnchIndex": "24",
 			"EnchMagMinMin": "5",
@@ -520,7 +520,7 @@
 			"EnchDurMax": "4",
 			"EnchRange": "Other"
 		},
-		{ 
+		41:{ 
 			"EnchName": "Damage Fatigue",
 			"EnchIndex": "25",
 			"EnchMagMinMin": "5",
@@ -533,7 +533,7 @@
 			"EnchDurMax": "4",
 			"EnchRange": "Other"
 		},
-		{ 
+		42:{ 
 			"EnchName": "Poison",
 			"EnchIndex": "27",
 			"EnchMagMinMin": "1",
@@ -546,7 +546,7 @@
 			"EnchDurMax": "25",
 			"EnchRange": "Other"
 		},
-		{ 
+		43:{ 
 			"EnchName": "Disintegrate Weapon",
 			"EnchIndex": "37",
 			"EnchMagMinMin": "5",
@@ -559,7 +559,7 @@
 			"EnchDurMax": "4",
 			"EnchRange": "Other"
 		},
-		{ 
+		44:{ 
 			"EnchName": "Disintegrate Armor",
 			"EnchIndex": "38",
 			"EnchMagMinMin": "5",
@@ -572,7 +572,7 @@
 			"EnchDurMax": "4",
 			"EnchRange": "Other"
 		},
-		{ 
+		45:{ 
 			"EnchName": "Blind",
 			"EnchIndex": "47",
 			"EnchMagMinMin": "5",
@@ -585,7 +585,7 @@
 			"EnchDurMax": "45",
 			"EnchRange": "Other"
 		},
-		{ 
+		46:{ 
 			"EnchName": "Sound",
 			"EnchIndex": "48",
 			"EnchMagMinMin": "5",
@@ -598,7 +598,7 @@
 			"EnchDurMax": "45",
 			"EnchRange": "Other"
 		},
-		{ 
+		47:{ 
 			"EnchName": "Absorb Health",
 			"EnchIndex": "86",
 			"EnchMagMinMin": "1",
@@ -611,7 +611,7 @@
 			"EnchDurMax": "25",
 			"EnchRange": "Other"
 		},
-		{ 
+		48:{ 
 			"EnchName": "Absorb Magicka",
 			"EnchIndex": "87",
 			"EnchMagMinMin": "1",
@@ -624,7 +624,7 @@
 			"EnchDurMax": "25",
 			"EnchRange": "Other"
 		},
-		{ 
+		49:{ 
 			"EnchName": "Absorb Fatigue",
 			"EnchIndex": "88",
 			"EnchMagMinMin": "1",
@@ -637,7 +637,7 @@
 			"EnchDurMax": "25",
 			"EnchRange": "Other"
 		},
-		{ 
+		50:{ 
 			"EnchName": "Charm",
 			"EnchIndex": "44",
 			"EnchMagMinMin": "1",
@@ -650,7 +650,7 @@
 			"EnchDurMax": "45",
 			"EnchRange": "Other"
 		},
-		{ 
+		51:{ 
 			"EnchName": "Weakness to Fire",
 			"EnchIndex": "28",
 			"EnchMagMinMin": "20",
@@ -663,7 +663,7 @@
 			"EnchDurMax": "45",
 			"EnchRange": "Other"
 		},
-		{ 
+		52:{ 
 			"EnchName": "Weakness to Frost",
 			"EnchIndex": "29",
 			"EnchMagMinMin": "20",
@@ -676,7 +676,7 @@
 			"EnchDurMax": "45",
 			"EnchRange": "Other"
 		},
-		{ 
+		53:{ 
 			"EnchName": "Weakness to Shock",
 			"EnchIndex": "30",
 			"EnchMagMinMin": "20",
@@ -689,7 +689,7 @@
 			"EnchDurMax": "45",
 			"EnchRange": "Other"
 		},
-		{ 
+		54:{ 
 			"EnchName": "Weakness to Magicka",
 			"EnchIndex": "31",
 			"EnchMagMinMin": "20",
@@ -702,7 +702,7 @@
 			"EnchDurMax": "45",
 			"EnchRange": "Other"
 		},
-		{ 
+		55:{ 
 			"EnchName": "Weakness to Poison",
 			"EnchIndex": "35",
 			"EnchMagMinMin": "20",
@@ -715,7 +715,7 @@
 			"EnchDurMax": "45",
 			"EnchRange": "Other"
 		},
-		{ 
+		56:{ 
 			"EnchName": "Calm Humanoid",
 			"EnchIndex": "49",
 			"EnchMagMinMin": "5",
@@ -728,7 +728,7 @@
 			"EnchDurMax": "30",
 			"EnchRange": "Other"
 		},
-		{ 
+		57:{ 
 			"EnchName": "Calm Creature",
 			"EnchIndex": "50",
 			"EnchMagMinMin": "5",
@@ -741,7 +741,7 @@
 			"EnchDurMax": "30",
 			"EnchRange": "Other"
 		},
-		{ 
+		58:{ 
 			"EnchName": "Frenzy Humanoid",
 			"EnchIndex": "51",
 			"EnchMagMinMin": "5",
@@ -754,7 +754,7 @@
 			"EnchDurMax": "30",
 			"EnchRange": "Other"
 		},
-		{ 
+		59:{ 
 			"EnchName": "Frenzy Creature",
 			"EnchIndex": "52",
 			"EnchMagMinMin": "5",
@@ -767,7 +767,7 @@
 			"EnchDurMax": "30",
 			"EnchRange": "Other"
 		},
-		{ 
+		60:{ 
 			"EnchName": "Demoralize Humanoid",
 			"EnchIndex": "53",
 			"EnchMagMinMin": "5",
@@ -780,7 +780,7 @@
 			"EnchDurMax": "30",
 			"EnchRange": "Other"
 		},
-		{ 
+		61:{ 
 			"EnchName": "Demoralize Creature",
 			"EnchIndex": "54",
 			"EnchMagMinMin": "5",
@@ -793,7 +793,7 @@
 			"EnchDurMax": "30",
 			"EnchRange": "Other"
 		},
-		{ 
+		62:{ 
 			"EnchName": "Rally Humanoid",
 			"EnchIndex": "55",
 			"EnchMagMinMin": "5",
@@ -806,7 +806,7 @@
 			"EnchDurMax": "30",
 			"EnchRange": "Other"
 		},
-		{ 
+		63:{ 
 			"EnchName": "Rally Creature",
 			"EnchIndex": "56",
 			"EnchMagMinMin": "5",
@@ -819,7 +819,7 @@
 			"EnchDurMax": "30",
 			"EnchRange": "Other"
 		},
-		{ 
+		64:{ 
 			"EnchName": "Turn Undead",
 			"EnchIndex": "101",
 			"EnchMagMinMin": "5",
@@ -832,7 +832,7 @@
 			"EnchDurMax": "30",
 			"EnchRange": "Other"
 		},
-		{ 
+		65:{ 
 			"EnchName": "Command Creature",
 			"EnchIndex": "118",
 			"EnchMagMinMin": "5",
@@ -845,7 +845,7 @@
 			"EnchDurMax": "30",
 			"EnchRange": "Other"
 		},
-		{ 
+		66:{ 
 			"EnchName": "Command Humanoid",
 			"EnchIndex": "119",
 			"EnchMagMinMin": "5",
@@ -858,7 +858,7 @@
 			"EnchDurMax": "30",
 			"EnchRange": "Other"
 		},
-		{ 
+		67:{ 
 			"EnchName": "Mark",
 			"EnchIndex": "60",
 			"EnchMagMinMin": "1",
@@ -871,7 +871,7 @@
 			"EnchDurMax": "0",
 			"EnchRange": "Self"
 		},
-		{ 
+		68:{ 
 			"EnchName": "Recall",
 			"EnchIndex": "61",
 			"EnchMagMinMin": "1",
@@ -884,7 +884,7 @@
 			"EnchDurMax": "0",
 			"EnchRange": "Self"
 		},
-		{ 
+		69:{ 
 			"EnchName": "Divine Intervention",
 			"EnchIndex": "62",
 			"EnchMagMinMin": "1",
@@ -897,7 +897,7 @@
 			"EnchDurMax": "0",
 			"EnchRange": "Self"
 		},
-		{ 
+		70:{ 
 			"EnchName": "AlmsiviIntervention",
 			"EnchIndex": "63",
 			"EnchMagMinMin": "1",
@@ -910,7 +910,7 @@
 			"EnchDurMax": "0",
 			"EnchRange": "Self"
 		},
-		{ 
+		71:{ 
 			"EnchName": "Summoning",
 			"EnchIndex": "102",
 			"EnchMagMinMin": "1",
@@ -923,7 +923,7 @@
 			"EnchDurMax": "100",
 			"EnchRange": "Self"
 		},
-		{ 
+		72:{ 
 			"EnchName": "Binding",
 			"EnchIndex": "120",
 			"EnchMagMinMin": "1",
@@ -936,7 +936,7 @@
 			"EnchDurMax": "125",
 			"EnchRange": "Self"
 		},
-		{ 
+		73:{ 
 			"EnchName": "Restore Attribute",
 			"EnchIndex": "74",
 			"EnchMagMinMin": "1",
@@ -949,7 +949,7 @@
 			"EnchDurMax": "25",
 			"EnchRange": "Self"
 		},
-		{ 
+		74:{ 
 			"EnchName": "Restore Skill",
 			"EnchIndex": "78",
 			"EnchMagMinMin": "1",
@@ -962,7 +962,7 @@
 			"EnchDurMax": "25",
 			"EnchRange": "Self"
 		},
-		{ 
+		75:{ 
 			"EnchName": "Fortify Attribute",
 			"EnchIndex": "79",
 			"EnchMagMinMin": "10",
@@ -975,7 +975,7 @@
 			"EnchDurMax": "150",
 			"EnchRange": "Self"
 		},
-		{ 
+		76:{ 
 			"EnchName": "Fortify Skill",
 			"EnchIndex": "83",
 			"EnchMagMinMin": "10",
@@ -988,7 +988,7 @@
 			"EnchDurMax": "150",
 			"EnchRange": "Self"
 		},
-		{ 
+		77:{ 
 			"EnchName": "Damage Attribute",
 			"EnchIndex": "22",
 			"EnchMagMinMin": "1",
@@ -1001,7 +1001,7 @@
 			"EnchDurMax": "4",
 			"EnchRange": "Other"
 		},
-		{ 
+		78:{ 
 			"EnchName": "Damage Skill",
 			"EnchIndex": "26",
 			"EnchMagMinMin": "1",
@@ -1014,7 +1014,7 @@
 			"EnchDurMax": "4",
 			"EnchRange": "Other"
 		},
-		{ 
+		79:{ 
 			"EnchName": "Absorb Attribute",
 			"EnchIndex": "85",
 			"EnchMagMinMin": "10",
@@ -1027,7 +1027,7 @@
 			"EnchDurMax": "25",
 			"EnchRange": "Other"
 		},
-		{ 
+		80:{ 
 			"EnchName": "Absorb Skill",
 			"EnchIndex": "89",
 			"EnchMagMinMin": "10",
@@ -1040,7 +1040,7 @@
 			"EnchDurMax": "25",
 			"EnchRange": "Other"
 		},
-		{ 
+		81:{ 
 			"EnchName": "Cure Common Disease",
 			"EnchIndex": "69",
 			"EnchMagMinMin": "1",
@@ -1053,7 +1053,7 @@
 			"EnchDurMax": "0",
 			"EnchRange": "Self"
 		},
-		{ 
+		82:{ 
 			"EnchName": "Cure Blight Disease",
 			"EnchIndex": "70",
 			"EnchMagMinMin": "1",
@@ -1066,7 +1066,7 @@
 			"EnchDurMax": "0",
 			"EnchRange": "Self"
 		},
-		{ 
+		83:{ 
 			"EnchName": "Cure Poison",
 			"EnchIndex": "72",
 			"EnchMagMinMin": "1",
@@ -1079,7 +1079,7 @@
 			"EnchDurMax": "0",
 			"EnchRange": "Self"
 		},
-		{ 
+		84:{ 
 			"EnchName": "Water Breathing",
 			"EnchIndex": "0",
 			"EnchMagMinMin": "1",
@@ -1092,7 +1092,7 @@
 			"EnchDurMax": "125",
 			"EnchRange": "Self"
 		},
-		{ 
+		85:{ 
 			"EnchName": "Water Walking",
 			"EnchIndex": "2",
 			"EnchMagMinMin": "1",
@@ -1105,7 +1105,7 @@
 			"EnchDurMax": "125",
 			"EnchRange": "Self"
 		},
-		{ 
+		86:{ 
 			"EnchName": "Invisibility",
 			"EnchIndex": "39",
 			"EnchMagMinMin": "1",
@@ -1118,7 +1118,7 @@
 			"EnchDurMax": "100",
 			"EnchRange": "Self"
 		},
-		{ 
+		87:{ 
 			"EnchName": "Soul Trap",
 			"EnchIndex": "58",
 			"EnchMagMinMin": "1",
@@ -1131,7 +1131,7 @@
 			"EnchDurMax": "45",
 			"EnchRange": "Other"
 		},
-		{ 
+		88:{ 
 			"EnchName": "Paralyze",
 			"EnchIndex": "45",
 			"EnchMagMinMin": "1",
@@ -1144,7 +1144,7 @@
 			"EnchDurMax": "50",
 			"EnchRange": "Other"
 		},
-		{ 
+		89:{ 
 			"EnchName": "Silence",
 			"EnchIndex": "46",
 			"EnchMagMinMin": "1",
@@ -1157,7 +1157,7 @@
 			"EnchDurMax": "60",
 			"EnchRange": "Other"
 		},
-		{ 
+		90:{ 
 			"EnchName": "Lock",
 			"EnchIndex": "12",
 			"EnchMagMinMin": "25",
@@ -1170,7 +1170,7 @@
 			"EnchDurMax": "0",
 			"EnchRange": "Other"
 		},
-		{ 
+		91:{ 
 			"EnchName": "Open",
 			"EnchIndex": "13",
 			"EnchMagMinMin": "25",
@@ -1185,7 +1185,7 @@
 		}
 	]
 	"Strike": [
-		{ 
+		1:{ 
 			"EnchName": "Fire Damage",
 			"EnchIndex": "14",
 			"EnchMagMinMin": "1",
@@ -1197,7 +1197,7 @@
 			"EnchDurMin": "1",
 			"EnchDurMax": "5"
 		},
-		{ 
+		2:{ 
 			"EnchName": "Shock Damage",
 			"EnchIndex": "15",
 			"EnchMagMinMin": "1",
@@ -1209,7 +1209,7 @@
 			"EnchDurMin": "1",
 			"EnchDurMax": "5"
 		},
-		{ 
+		3:{ 
 			"EnchName": "Frost Damage",
 			"EnchIndex": "16",
 			"EnchMagMinMin": "1",
@@ -1221,7 +1221,7 @@
 			"EnchDurMin": "1",
 			"EnchDurMax": "5"
 		},
-		{ 
+		4:{ 
 			"EnchName": "Damage Health",
 			"EnchIndex": "23",
 			"EnchMagMinMin": "1",
@@ -1233,7 +1233,7 @@
 			"EnchDurMin": "1",
 			"EnchDurMax": "5"
 		},
-		{ 
+		5:{ 
 			"EnchName": "Damage Magicka",
 			"EnchIndex": "24",
 			"EnchMagMinMin": "1",
@@ -1245,7 +1245,7 @@
 			"EnchDurMin": "1",
 			"EnchDurMax": "5"
 		},
-		{ 
+		6:{ 
 			"EnchName": "Damage Fatigue",
 			"EnchIndex": "25",
 			"EnchMagMinMin": "1",
@@ -1257,7 +1257,7 @@
 			"EnchDurMin": "1",
 			"EnchDurMax": "5"
 		},
-		{ 
+		7:{ 
 			"EnchName": "Poison",
 			"EnchIndex": "27",
 			"EnchMagMinMin": "1",
@@ -1269,7 +1269,7 @@
 			"EnchDurMin": "1",
 			"EnchDurMax": "5"
 		},
-		{ 
+		8:{ 
 			"EnchName": "Disintegrate Weapon",
 			"EnchIndex": "37",
 			"EnchMagMinMin": "1",
@@ -1281,7 +1281,7 @@
 			"EnchDurMin": "1",
 			"EnchDurMax": "5"
 		},
-		{ 
+		9:{ 
 			"EnchName": "Disintegrate Armor",
 			"EnchIndex": "38",
 			"EnchMagMinMin": "1",
@@ -1293,7 +1293,7 @@
 			"EnchDurMin": "1",
 			"EnchDurMax": "5"
 		},
-		{ 
+		10:{ 
 			"EnchName": "Blind",
 			"EnchIndex": "47",
 			"EnchMagMinMin": "1",
@@ -1305,7 +1305,7 @@
 			"EnchDurMin": "5",
 			"EnchDurMax": "20"
 		},
-		{ 
+		11:{ 
 			"EnchName": "Sound",
 			"EnchIndex": "48",
 			"EnchMagMinMin": "1",
@@ -1317,7 +1317,7 @@
 			"EnchDurMin": "5",
 			"EnchDurMax": "20"
 		},
-		{ 
+		12:{ 
 			"EnchName": "Absorb Health",
 			"EnchIndex": "86",
 			"EnchMagMinMin": "1",
@@ -1329,7 +1329,7 @@
 			"EnchDurMin": "1",
 			"EnchDurMax": "5"
 		},
-		{ 
+		13:{ 
 			"EnchName": "Absorb Magicka",
 			"EnchIndex": "87",
 			"EnchMagMinMin": "1",
@@ -1341,7 +1341,7 @@
 			"EnchDurMin": "1",
 			"EnchDurMax": "5"
 		},
-		{ 
+		14:{ 
 			"EnchName": "Absorb Fatigue",
 			"EnchIndex": "88",
 			"EnchMagMinMin": "1",
@@ -1353,7 +1353,7 @@
 			"EnchDurMin": "1",
 			"EnchDurMax": "5"
 		},
-		{ 
+		15:{ 
 			"EnchName": "Damage Attribute",
 			"EnchIndex": "22",
 			"EnchMagMinMin": "1",
@@ -1365,7 +1365,7 @@
 			"EnchDurMin": "0",
 			"EnchDurMax": "0"
 		},
-		{ 
+		16:{ 
 			"EnchName": "Damage Skill",
 			"EnchIndex": "26",
 			"EnchMagMinMin": "1",
@@ -1377,7 +1377,7 @@
 			"EnchDurMin": "0",
 			"EnchDurMax": "0"
 		},
-		{ 
+		17:{ 
 			"EnchName": "Absorb Attribute",
 			"EnchIndex": "85",
 			"EnchMagMinMin": "1",
@@ -1389,7 +1389,7 @@
 			"EnchDurMin": "1",
 			"EnchDurMax": "10"
 		},
-		{ 
+		18:{ 
 			"EnchName": "Absorb Skill",
 			"EnchIndex": "89",
 			"EnchMagMinMin": "1",
@@ -1401,7 +1401,7 @@
 			"EnchDurMin": "1",
 			"EnchDurMax": "10"
 		},
-		{ 
+		19:{ 
 			"EnchName": "Soultrap",
 			"EnchIndex": "58",
 			"EnchMagMinMin": "0",
@@ -1413,7 +1413,7 @@
 			"EnchDurMin": "15",
 			"EnchDurMax": "35"
 		},
-		{ 
+		20:{ 
 			"EnchName": "Paralyze",
 			"EnchIndex": "45",
 			"EnchMagMinMin": "0",
@@ -1425,7 +1425,7 @@
 			"EnchDurMin": "1",
 			"EnchDurMax": "15"
 		},
-		{ 
+		21:{ 
 			"EnchName": "Silence",
 			"EnchIndex": "46",
 			"EnchMagMinMin": "0",
@@ -1436,172 +1436,232 @@
 			"EnchAoeMax": "0",
 			"EnchDurMin": "5",
 			"EnchDurMax": "25"
+		},
+		22:{ 
+			"EnchName": "Weakness to Fire",
+			"EnchIndex": "28",
+			"EnchMagMinMin": "15",
+			"EnchMagMinMax": "50",
+			"EnchMagMaxMin": "35",
+			"EnchMagMaxMax": "100",
+			"EnchAoeMin": "1",
+			"EnchAoeMax": "15",
+			"EnchDurMin": "5",
+			"EnchDurMax": "20"
+		},
+		23:{ 
+			"EnchName": "Weakness to Frost",
+			"EnchIndex": "29",
+			"EnchMagMinMin": "15",
+			"EnchMagMinMax": "50",
+			"EnchMagMaxMin": "35",
+			"EnchMagMaxMax": "100",
+			"EnchAoeMin": "1",
+			"EnchAoeMax": "15",
+			"EnchDurMin": "5",
+			"EnchDurMax": "20"
+		},
+		24:{ 
+			"EnchName": "Weakness to Shock",
+			"EnchIndex": "30",
+			"EnchMagMinMin": "15",
+			"EnchMagMinMax": "50",
+			"EnchMagMaxMin": "35",
+			"EnchMagMaxMax": "100",
+			"EnchAoeMin": "1",
+			"EnchAoeMax": "15",
+			"EnchDurMin": "5",
+			"EnchDurMax": "20"
+		},
+		25:{ 
+			"EnchName": "Weakness to Magicka",
+			"EnchIndex": "31",
+			"EnchMagMinMin": "15",
+			"EnchMagMinMax": "50",
+			"EnchMagMaxMin": "35",
+			"EnchMagMaxMax": "100",
+			"EnchAoeMin": "1",
+			"EnchAoeMax": "15",
+			"EnchDurMin": "5",
+			"EnchDurMax": "20"
+		},
+		26:{ 
+			"EnchName": "Weakness to Poison",
+			"EnchIndex": "35",
+			"EnchMagMinMin": "15",
+			"EnchMagMinMax": "50",
+			"EnchMagMaxMin": "35",
+			"EnchMagMaxMax": "100",
+			"EnchAoeMin": "1",
+			"EnchAoeMax": "15",
+			"EnchDurMin": "5",
+			"EnchDurMax": "20"
 		}
 	]
 	"Use": [
 	]
 	"Const": [
-		{ 
+		1:{ 
 			"EnchName": "Swift Swim",
 			"EnchIndex": "1",
 			"EnchMagMin": "5",
 			"EnchMagMax": "50"
 		},
-		{ 
+		2:{ 
 			"EnchName": "Shield",
 			"EnchIndex": "3",
 			"EnchMagMin": "1",
 			"EnchMagMax": "30"
 		},
-		{ 
+		3:{ 
 			"EnchName": "Fire Shield",
 			"EnchIndex": "4",
 			"EnchMagMin": "1",
 			"EnchMagMax": "30"
 		},
-		{ 
+		4:{ 
 			"EnchName": "Lightning Shield",
 			"EnchIndex": "5",
 			"EnchMagMin": "1",
 			"EnchMagMax": "30"
 		},
-		{ 
+		5:{ 
 			"EnchName": "Frost Shield",
 			"EnchIndex": "6",
 			"EnchMagMin": "1",
 			"EnchMagMax": "30"
 		},
-		{ 
+		6:{ 
 			"EnchName": "Feather",
 			"EnchIndex": "8",
 			"EnchMagMin": "5",
 			"EnchMagMax": "75"
 		},
-		{ 
+		7:{ 
 			"EnchName": "Chameleon",
 			"EnchIndex": "40",
 			"EnchMagMin": "1",
 			"EnchMagMax": "40"
 		},
-		{ 
+		8:{ 
 			"EnchName": "Light",
 			"EnchIndex": "41",
 			"EnchMagMin": "10",
 			"EnchMagMax": "65"
 		},
-		{ 
+		9:{ 
 			"EnchName": "Sanctuary",
 			"EnchIndex": "42",
 			"EnchMagMin": "1",
 			"EnchMagMax": "40"
 		},
-		{ 
+		10:{ 
 			"EnchName": "NightEye",
 			"EnchIndex": "43",
 			"EnchMagMin": "10",
 			"EnchMagMax": "65"
 		},
-		{ 
+		11:{ 
 			"EnchName": "SpellAbsorption",
 			"EnchIndex": "67",
 			"EnchMagMin": "1",
 			"EnchMagMax": "20"
 		},
-		{ 
+		12:{ 
 			"EnchName": "Reflect",
 			"EnchIndex": "68",
 			"EnchMagMin": "1",
 			"EnchMagMax": "20"
 		},
-		{ 
+		13:{ 
 			"EnchName": "FortifyHealth",
 			"EnchIndex": "80",
 			"EnchMagMin": "5",
 			"EnchMagMax": "60"
 		},
-		{ 
+		14:{ 
 			"EnchName": "FortifyMagicka",
 			"EnchIndex": "81",
 			"EnchMagMin": "1",
 			"EnchMagMax": "50"
 		},
-		{ 
+		15:{ 
 			"EnchName": "FortifyFatigue",
 			"EnchIndex": "82",
 			"EnchMagMin": "1",
 			"EnchMagMax": "100"
 		},
-		{ 
+		16:{ 
 			"EnchName": "ResistFire",
 			"EnchIndex": "90",
 			"EnchMagMin": "1",
 			"EnchMagMax": "50"
 		},
-		{ 
+		17:{ 
 			"EnchName": "ResistFrost",
 			"EnchIndex": "91",
 			"EnchMagMin": "1",
 			"EnchMagMax": "50"
 		},
-		{ 
+		18:{ 
 			"EnchName": "ResistShock",
 			"EnchIndex": "92",
 			"EnchMagMin": "1",
 			"EnchMagMax": "50"
 		},
-		{ 
+		19:{ 
 			"EnchName": "ResistMagicka",
 			"EnchIndex": "93",
 			"EnchMagMin": "1",
 			"EnchMagMax": "50"
 		},
-		{ 
+		20:{ 
 			"EnchName": "FortifyAttack",
 			"EnchIndex": "117",
 			"EnchMagMin": "1",
 			"EnchMagMax": "35"
 		},
-		{ 
+		21:{ 
 			"EnchName": "ResistPoison",
 			"EnchIndex": "97",
 			"EnchMagMin": "1",
 			"EnchMagMax": "75"
 		},
-		{ 
+		22:{ 
 			"EnchName": "ResistNormalWeapons",
 			"EnchIndex": "98",
 			"EnchMagMin": "1",
 			"EnchMagMax": "75"
 		},
-		{ 
+		23:{ 
 			"EnchName": "ResistParalysis",
 			"EnchIndex": "99",
 			"EnchMagMin": "1",
 			"EnchMagMax": "75"
 		},
-		{ 
+		24:{ 
 			"EnchName": "FortifyAttribute",
 			"EnchIndex": "79",
 			"EnchMagMin": "1",
 			"EnchMagMax": "35"
 		},
-		{ 
+		25:{ 
 			"EnchName": "FortifySkill",
 			"EnchIndex": "83",
 			"EnchMagMin": "1",
 			"EnchMagMax": "35"
 		},
-		{ 
+		26:{ 
 			"EnchName": "WaterBreathing",
 			"EnchIndex": "0",
 			"EnchMagMin": "1",
 			"EnchMagMax": "1"
 		},
-		{ 
+		27:{ 
 			"EnchName": "WaterWalking",
 			"EnchIndex": "2",
 			"EnchMagMin": "1",
 			"EnchMagMax": "1"
-		},
+		}
 	]
 }

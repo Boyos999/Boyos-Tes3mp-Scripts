@@ -1,36 +1,36 @@
 {
 	"Graphics": [
-		{
+		1:{
 			"Type": "Bargain",
 			"Icon": "m\\Tx_potion_bargain_01.tga",
 			"Model": "m\\Misc_Potion_Bargain_01.nif",
 			"Weight": "1.5"
 		},
-		{
+		2:{
 			"Type": "Cheap",
 			"Icon": "m\\Tx_potion_cheap_01.tga",
 			"Model": "m\\Misc_Potion_Cheap_01.nif",
 			"Weight": "1.0"
 		},
-		{
+		3:{
 			"Type": "Standard",
 			"Icon": "m\\Tx_potion_standard_01.tga",
 			"Model": "m\\Misc_Potion_Standard_01.nif",
 			"Weight": "0.75"
 		},
-		{
+		4:{
 			"Type": "Quality",
 			"Icon": "m\\Tx_potion_quality_01.tga",
 			"Model": "m\\Misc_Potion_Quality_01.nif",
 			"Weight": "0.5"
 		},
-		{
+		5:{
 			"Type": "Exclusive",
 			"Icon": "m\\Tx_potion_exclusive_01.tga",
 			"Model": "m\\Misc_Potion_Exclusive_01.nif",
 			"Weight": "0.25"
 		},
-		{
+		6:{
 			"Type": "Fresh",
 			"Icon": "m\\Tx_potion_fresh_01.tga",
 			"Model": "m\\Misc_Potion_Fresh_01.nif",
@@ -38,7 +38,7 @@
 		}
 	]
 	"Effects": [
-		{
+		1:{
 			"EffectName": "Swift Swim",
 			"EffectIndex": "1",
 			"EffectMagMin": "5",
@@ -46,7 +46,7 @@
 			"EffectDurMin": "15",
 			"EffectDurMax": "100"
 		},
-		{
+		2:{
 			"EffectName": "Shield",
 			"EffectIndex": "3",
 			"EffectMagMin": "5",
@@ -54,7 +54,7 @@
 			"EffectDurMin": "5",
 			"EffectDurMax": "45"
 		},
-		{
+		3:{
 			"EffectName": "Fire Shield",
 			"EffectIndex": "4",
 			"EffectMagMin": "5",
@@ -62,7 +62,7 @@
 			"EffectDurMin": "5",
 			"EffectDurMax": "45"
 		},
-		{
+		4:{
 			"EffectName": "Lightning Shield",
 			"EffectIndex": "5",
 			"EffectMagMin": "5",
@@ -70,7 +70,7 @@
 			"EffectDurMin": "5",
 			"EffectDurMax": "45"
 		},
-		{
+		5:{
 			"EffectName": "Frost Shield",
 			"EffectIndex": "6",
 			"EffectMagMin": "5",
@@ -78,7 +78,7 @@
 			"EffectDurMin": "5",
 			"EffectDurMax": "45"
 		},
-		{
+		6:{
 			"EffectName": "Feather",
 			"EffectIndex": "8",
 			"EffectMagMin": "5",
@@ -86,7 +86,7 @@
 			"EffectDurMin": "5",
 			"EffectDurMax": "100"
 		},
-		{
+		7:{
 			"EffectName": "Jump",
 			"EffectIndex": "9",
 			"EffectMagMin": "5",
@@ -94,7 +94,7 @@
 			"EffectDurMin": "5",
 			"EffectDurMax": "30"
 		},
-		{
+		8:{
 			"EffectName": "Levitate",
 			"EffectIndex": "10",
 			"EffectMagMin": "5",
@@ -102,7 +102,7 @@
 			"EffectDurMin": "5",
 			"EffectDurMax": "30"
 		},
-		{
+		9:{
 			"EffectName": "Slowfall",
 			"EffectIndex": "11",
 			"EffectMagMin": "5",
@@ -110,7 +110,7 @@
 			"EffectDurMin": "5",
 			"EffectDurMax": "30"
 		},
-		{
+		10:{
 			"EffectName": "Chameleon",
 			"EffectIndex": "40",
 			"EffectMagMin": "5",
@@ -118,7 +118,7 @@
 			"EffectDurMin": "5",
 			"EffectDurMax": "30"
 		},
-		{
+		11:{
 			"EffectName": "Light",
 			"EffectIndex": "41",
 			"EffectMagMin": "5",
@@ -126,7 +126,7 @@
 			"EffectDurMin": "5",
 			"EffectDurMax": "100"
 		},
-		{
+		12:{
 			"EffectName": "Sanctuary",
 			"EffectIndex": "42",
 			"EffectMagMin": "5",
@@ -134,7 +134,7 @@
 			"EffectDurMin": "5",
 			"EffectDurMax": "45"
 		},
-		{
+		13:{
 			"EffectName": "NightEye",
 			"EffectIndex": "43",
 			"EffectMagMin": "5",
@@ -142,7 +142,7 @@
 			"EffectDurMin": "5",
 			"EffectDurMax": "100"
 		},
-		{
+		14:{
 			"EffectName": "Dispel",
 			"EffectIndex": "57",
 			"EffectMagMin": "10",
@@ -150,7 +150,7 @@
 			"EffectDurMin": "0",
 			"EffectDurMax": "0"
 		},
-		{
+		15:{
 			"EffectName": "Telekinesis",
 			"EffectIndex": "59",
 			"EffectMagMin": "5",
@@ -158,7 +158,7 @@
 			"EffectDurMin": "5",
 			"EffectDurMax": "30"
 		},
-		{
+		16:{
 			"EffectName": "Detect Animal",
 			"EffectIndex": "64",
 			"EffectMagMin": "15",
@@ -166,7 +166,7 @@
 			"EffectDurMin": "5",
 			"EffectDurMax": "30"
 		},
-		{
+		17:{
 			"EffectName": "Detect Enchantment",
 			"EffectIndex": "65",
 			"EffectMagMin": "15",
@@ -174,7 +174,7 @@
 			"EffectDurMin": "5",
 			"EffectDurMax": "30"
 		},
-		{
+		18:{
 			"EffectName": "Detect Key",
 			"EffectIndex": "66",
 			"EffectMagMin": "15",
@@ -182,7 +182,7 @@
 			"EffectDurMin": "5",
 			"EffectDurMax": "30"
 		},
-		{
+		19:{
 			"EffectName": "Spell Absorption",
 			"EffectIndex": "67",
 			"EffectMagMin": "5",
@@ -190,7 +190,7 @@
 			"EffectDurMin": "5",
 			"EffectDurMax": "20"
 		},
-		{
+		20:{
 			"EffectName": "Reflect",
 			"EffectIndex": "68",
 			"EffectMagMin": "5",
@@ -198,7 +198,7 @@
 			"EffectDurMin": "5",
 			"EffectDurMax": "20"
 		},
-		{
+		21:{
 			"EffectName": "Restore Health",
 			"EffectIndex": "75",
 			"EffectMagMin": "1",
@@ -206,7 +206,7 @@
 			"EffectDurMin": "1",
 			"EffectDurMax": "15"
 		},
-		{
+		22:{
 			"EffectName": "Restore Magicka",
 			"EffectIndex": "76",
 			"EffectMagMin": "1",
@@ -214,7 +214,7 @@
 			"EffectDurMin": "1",
 			"EffectDurMax": "15"
 		},
-		{
+		23:{
 			"EffectName": "Restore Fatigue",
 			"EffectIndex": "77",
 			"EffectMagMin": "5",
@@ -222,7 +222,7 @@
 			"EffectDurMin": "1",
 			"EffectDurMax": "30"
 		},
-		{
+		24:{
 			"EffectName": "Fortify Health",
 			"EffectIndex": "80",
 			"EffectMagMin": "5",
@@ -230,7 +230,7 @@
 			"EffectDurMin": "5",
 			"EffectDurMax": "60"
 		},
-		{
+		25:{
 			"EffectName": "Fortify Magicka",
 			"EffectIndex": "81",
 			"EffectMagMin": "5",
@@ -238,7 +238,7 @@
 			"EffectDurMin": "5",
 			"EffectDurMax": "60"
 		},
-		{
+		26:{
 			"EffectName": "Fortify Fatigue",
 			"EffectIndex": "82",
 			"EffectMagMin": "5",
@@ -246,7 +246,7 @@
 			"EffectDurMin": "5",
 			"EffectDurMax": "60"
 		},
-		{
+		27:{
 			"EffectName": "Resist Fire",
 			"EffectIndex": "90",
 			"EffectMagMin": "5",
@@ -254,7 +254,7 @@
 			"EffectDurMin": "5",
 			"EffectDurMax": "45"
 		},
-		{
+		28:{
 			"EffectName": "Resist Frost",
 			"EffectIndex": "91",
 			"EffectMagMin": "5",
@@ -262,7 +262,7 @@
 			"EffectDurMin": "5",
 			"EffectDurMax": "45"
 		},
-		{
+		29:{
 			"EffectName": "Resist Shock",
 			"EffectIndex": "92",
 			"EffectMagMin": "5",
@@ -270,7 +270,7 @@
 			"EffectDurMin": "5",
 			"EffectDurMax": "45"
 		},
-		{
+		30:{
 			"EffectName": "Resist Magicka",
 			"EffectIndex": "93",
 			"EffectMagMin": "5",
@@ -278,7 +278,7 @@
 			"EffectDurMin": "5",
 			"EffectDurMax": "45"
 		},
-		{
+		31:{
 			"EffectName": "Resist Poison",
 			"EffectIndex": "97",
 			"EffectMagMin": "5",
@@ -286,7 +286,7 @@
 			"EffectDurMin": "5",
 			"EffectDurMax": "45"
 		},
-		{
+		32:{
 			"EffectName": "Resist Normal Weapons",
 			"EffectIndex": "98",
 			"EffectMagMin": "5",
@@ -294,7 +294,7 @@
 			"EffectDurMin": "5",
 			"EffectDurMax": "45"
 		},
-		{
+		33:{
 			"EffectName": "Resist Paralysis",
 			"EffectIndex": "99",
 			"EffectMagMin": "5",
@@ -302,7 +302,7 @@
 			"EffectDurMin": "5",
 			"EffectDurMax": "45"
 		},
-		{
+		34:{
 			"EffectName": "Fortify Attack",
 			"EffectIndex": "117",
 			"EffectMagMin": "5",
@@ -310,7 +310,7 @@
 			"EffectDurMin": "5",
 			"EffectDurMax": "45"
 		},
-		{
+		35:{
 			"EffectName": "Mark",
 			"EffectIndex": "60",
 			"EffectMagMin": "1",
@@ -318,7 +318,7 @@
 			"EffectDurMin": "0",
 			"EffectDurMax": "0"
 		},
-		{
+		36:{
 			"EffectName": "Recall",
 			"EffectIndex": "61",
 			"EffectMagMin": "1",
@@ -326,7 +326,7 @@
 			"EffectDurMin": "0",
 			"EffectDurMax": "0"
 		},
-		{
+		37:{
 			"EffectName": "Divine Intervention",
 			"EffectIndex": "62",
 			"EffectMagMin": "1",
@@ -334,7 +334,7 @@
 			"EffectDurMin": "0",
 			"EffectDurMax": "0"
 		},
-		{
+		38:{
 			"EffectName": "Almsivi Intervention",
 			"EffectIndex": "63",
 			"EffectMagMin": "1",
@@ -342,7 +342,7 @@
 			"EffectDurMin": "0",
 			"EffectDurMax": "0"
 		},
-		{
+		39:{
 			"EffectName": "Summoning",
 			"EffectIndex": "102",
 			"EffectMagMin": "1",
@@ -350,7 +350,7 @@
 			"EffectDurMin": "10",
 			"EffectDurMax": "60"
 		},
-		{
+		40:{
 			"EffectName": "Binding",
 			"EffectIndex": "120",
 			"EffectMagMin": "1",
@@ -358,7 +358,7 @@
 			"EffectDurMin": "15",
 			"EffectDurMax": "75"
 		},
-		{
+		41:{
 			"EffectName": "Restore Attribute",
 			"EffectIndex": "74",
 			"EffectMagMin": "1",
@@ -366,7 +366,7 @@
 			"EffectDurMin": "1",
 			"EffectDurMax": "15"
 		},
-		{
+		42:{
 			"EffectName": "Restore Skill",
 			"EffectIndex": "78",
 			"EffectMagMin": "1",
@@ -374,7 +374,7 @@
 			"EffectDurMin": "1",
 			"EffectDurMax": "15"
 		},
-		{
+		43:{
 			"EffectName": "Fortify Attribute",
 			"EffectIndex": "79",
 			"EffectMagMin": "1",
@@ -382,7 +382,7 @@
 			"EffectDurMin": "5",
 			"EffectDurMax": "45"
 		},
-		{
+		44:{
 			"EffectName": "Fortify Skill",
 			"EffectIndex": "83",
 			"EffectMagMin": "1",
@@ -390,7 +390,7 @@
 			"EffectDurMin": "5",
 			"EffectDurMax": "45"
 		},
-		{
+		45:{
 			"EffectName": "Cure Common Disease",
 			"EffectIndex": "69",
 			"EffectMagMin": "1",
@@ -398,7 +398,7 @@
 			"EffectDurMin": "0",
 			"EffectDurMax": "0"
 		},
-		{
+		46:{
 			"EffectName": "Cure Blight Disease",
 			"EffectIndex": "70",
 			"EffectMagMin": "1",
@@ -406,7 +406,7 @@
 			"EffectDurMin": "0",
 			"EffectDurMax": "0"
 		},
-		{
+		47:{
 			"EffectName": "Cure Poison",
 			"EffectIndex": "72",
 			"EffectMagMin": "1",
@@ -414,7 +414,7 @@
 			"EffectDurMin": "0",
 			"EffectDurMax": "0"
 		},
-		{
+		48:{
 			"EffectName": "Water Breathing",
 			"EffectIndex": "0",
 			"EffectMagMin": "1",
@@ -422,7 +422,7 @@
 			"EffectDurMin": "5",
 			"EffectDurMax": "85"
 		},
-		{
+		49:{
 			"EffectName": "Water Walking",
 			"EffectIndex": "0",
 			"EffectMagMin": "1",
@@ -430,13 +430,13 @@
 			"EffectDurMin": "5",
 			"EffectDurMax": "85"
 		},
-		{
+		50:{
 			"EffectName": "Invisibility",
 			"EffectIndex": "0",
 			"EffectMagMin": "1",
 			"EffectMagMax": "1",
 			"EffectDurMin": "1",
 			"EffectDurMax": "60"
-		},
+		}
 	]
 }
