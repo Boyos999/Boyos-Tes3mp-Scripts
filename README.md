@@ -9,6 +9,12 @@ Opens a menu at the end of character creation, allowing the player to choose a c
 # Armor Reinforcement
 Uses a menu to allow a player with a required armorer skill to improve lower tier armor to fill in gaps in armor progression
 
+# Dungeon Loot
+Script for a hopefully modular system of cooldown based looting. Explaining how it determines which table it uses is easier with an example
+For the Id "dungeonchest_armor_one_a" the script looks for a table "armorone.json"
+When a player activates the chest (which could really be any object), the playername, location, id, and time are recorded if it has been long enough since the last activation.
+If everything checks out it gives the player an item from the respective table, more details both on file comments and the readme
+
 # Randomized Items
 Contains scripts to generate randomized:
 Weapons
