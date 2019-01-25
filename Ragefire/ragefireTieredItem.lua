@@ -204,9 +204,9 @@ ragefireTieredItem.Enchantment = function(pid, tier)
 	effectIndex = effect.EnchIndex
 	effectName = effect.EnchName
 	effectMag = math.random(effect.EnchMagMin,effect.EnchMagMax)
-	if effectIndex == 83 then
+	if tonumber(effectIndex) == 83 then
 		effectSkill = skillIdList[math.random(1,17)]
-	elseif effectIndex == 79 then
+	elseif tonumber(effectIndex) == 79 then
 		effectAttr = math.random(0,7)
 	end
 	
