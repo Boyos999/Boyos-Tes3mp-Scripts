@@ -5,7 +5,12 @@ Takes a pid, and the cmd inputted into chat.
 Returns either a structured item, or nil if the player lacks paper.
 ]]--
 function noteWriting.CreateNote(pid,cmd)
-
+	--Make sure there is text after /write
+	if cmd[2] == nil then
+		Players[pid]:Message("No text given")
+		return nil
+	end
+	
 	--Checks if players have the required Item(s)
 	if inventoryHelper.containsItem(Players[pid].data.inventory,"sc_paper plain") then
 		inventoryHelper.removeItem(Players[pid].data.inventory,"sc_paper plain",1)
@@ -14,11 +19,7 @@ function noteWriting.CreateNote(pid,cmd)
 		Players[pid]:Message("You lack the materials to make a note")
 		return nil
 	end
-	--Make sure there is text after /write
-	if cmd[2] == nil then
-		Players[pid]:Message("No text given")
-		return nil
-	end
+	
 	--Declare variables here
 	local idIterator = WorldInstance.data.customVariables.noteCounter
 	local noteId
