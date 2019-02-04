@@ -3,7 +3,7 @@ local dungeonLoot = {}
 local jsonInterface = require("jsonInterface")
 
 --Remove this if you don't care about random items
-randomArmor = require("randomArmor")
+--randomArmor = require("randomArmor")
 
 local jsondata = nil
 
@@ -82,14 +82,17 @@ function dungeonLoot.Reward(pid, objectRefId)
 	local splitItemId = itemId:split("_")
 	
 	if splitItemId[1] == "by" then
+		--[[
 		--You'll need an if statement for each non-standard id
 		if splitItemId[2] == "randomarmor" then
 			local randomarmor = randomArmor.CreateRandArmor(pid, tonumber(splitItemId[3]))
 			--table.insert instead of inventoryHelper because I didn't know about it at the time
 			table.insert(Players[pid].data.inventory, randomarmor)
 		end
+		
 	else
 	--otherwise just add the Id to the player's inventory
+		]]--
 		inventoryHelper.addItem(Players[pid].data.inventory,itemId,1)
 	end
 	
