@@ -80,10 +80,8 @@ function dungeonLoot.Reward(pid, objectRefId)
 	--I recommend using a prefix in the id (ex. by_<whatever>) then using the Id to determine what to do with it
 	--this example uses the id by_randomarmor_2 to make a random piece of armor with 2 enchants
 	local splitItemId = itemId:split("_")
-	
-	if splitItemId[1] == "by" then
-		--[[
-		--You'll need an if statement for each non-standard id
+	--[[
+	if splitItemId[1] == "by" then		--You'll need an if statement for each non-standard id
 		if splitItemId[2] == "randomarmor" then
 			local randomarmor = randomArmor.CreateRandArmor(pid, tonumber(splitItemId[3]))
 			--table.insert instead of inventoryHelper because I didn't know about it at the time
@@ -92,9 +90,9 @@ function dungeonLoot.Reward(pid, objectRefId)
 		
 	else
 	--otherwise just add the Id to the player's inventory
-		]]--
-		inventoryHelper.addItem(Players[pid].data.inventory,itemId,1)
-	end
+	]]--
+	inventoryHelper.addItem(Players[pid].data.inventory,itemId,1)
+	--end
 	
 	Players[pid]:LoadInventory()
 	Players[pid]:LoadEquipment()
