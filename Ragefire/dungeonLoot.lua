@@ -18,7 +18,7 @@ local jsondata = nil
 
 --Time in seconds between valid loots
 --Default is 1 hour
-local cooldownTime = 3600
+local cooldownTime = 7200
 
 function dungeonLoot.CheckId(objectRefId, pid)
 	local splitObjectRefId = objectRefId:split("_")
@@ -74,31 +74,46 @@ function dungeonLoot.Reward(pid, objectRefId)
 	local lootTable = jsonInterface.load(lootTableName .. ".json")
 	local length = table.getn(lootTable)
 	local lootRoll = math.random(1,length)
-	local itemId = lootTable[lootRoll]
+	local item = lootTable[lootRoll]
+	local itemId
+	local itemCount = 1
+	local itemName = "an item"
+	local message
 	
+	if item.refid ~= nil then
+		itemId = item.refid
+		if item.count ~= nil then
+			itemCount = item.count
+		end
+		if item.name ~= nil then
+			itemName = item.name
+		end
+	else
+		itemId = item
+	end
+	
+	message = "You find " .. itemName .. " within the chest."
 	--This is where you handle cases where the table entry isn't an itemId (ex. randomItems)
 	--I recommend using a prefix in the id (ex. by_<whatever>) then using the Id to determine what to do with it
 	--this example uses the id by_randomarmor_2 to make a random piece of armor with 2 enchants
 	local splitItemId = itemId:split("_")
-	
+		
 	if splitItemId[1] == "ragefire" then
 		--You'll need an if statement for each non-standard id
 		local itemType = splitItemId[2]
 		local itemTier = splitItemId[3]
-		itemId = ragefireTieredItem.BaseFunction(pid,1)
-		inventoryHelper.addItem(Players[pid].data.inventory,itemId,1)
-		
+		for i=1,itemCount do
+			itemId = ragefireTieredItem.BaseFunction(pid,1)
+			inventoryHelper.addItem(Players[pid].data.inventory,itemId,1)
+		end
+			
 	else
-	--otherwise just add the Id to the player's inventory
-		inventoryHelper.addItem(Players[pid].data.inventory,itemId,1)
+		--otherwise just add the Id to the player's inventory
+		inventoryHelper.addItem(Players[pid].data.inventory,itemId,itemCount)
 	end
-	--local packetItem = {refid = itemId, count = 1}
-	--Players[pid]:LoadItemChanges({packetItem}, enumerations.inventory.ADD)
 	Players[pid]:LoadInventory()
 	Players[pid]:LoadEquipment()
-	Players[pid]:Save()
-	tes3mp.MessageBox(pid, -1, "You find an item within the chest.")
-	
+	tes3mp.MessageBox(pid, -1, message)
 end
 
 return dungeonLoot

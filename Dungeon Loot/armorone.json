@@ -1,5 +1,17 @@
 {
-	1:"adamantium_cuirass"
-	2:"bonemold_cuirass"
-	3:"chitin cuirass"
+	1:{
+		"refid":"adamantium_cuirass"
+		"count":1
+		"name":"an Adamantium Cuirass"
+	  },
+	2:{
+		"refid":"bonemold_cuirass"
+		"count":1
+		"name":"a Bonemold Cuirass"
+	  },
+	3:{
+		"refid":"chitin cuirass"
+		"count":1
+		"name":"a Chitin Cuirass"
+	  }
 }
