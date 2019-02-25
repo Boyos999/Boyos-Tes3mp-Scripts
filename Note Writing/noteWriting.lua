@@ -7,16 +7,16 @@ Returns either a structured item, or nil if the player lacks paper.
 function noteWriting.CreateNote(pid,cmd)
 	--Make sure there is text after /write
 	if cmd[2] == nil then
-		Players[pid]:Message("No text given")
+		Players[pid]:Message("No text given\n")
 		return nil
 	end
 	
 	--Checks if players have the required Item(s)
 	if inventoryHelper.containsItem(Players[pid].data.inventory,"sc_paper plain") then
 		inventoryHelper.removeItem(Players[pid].data.inventory,"sc_paper plain",1)
-		Players[pid]:Message("You made a note")
+		Players[pid]:Message("You made a note\n")
 	else
-		Players[pid]:Message("You lack the materials to make a note")
+		Players[pid]:Message("You lack the materials to make a note\n")
 		return nil
 	end
 	
@@ -38,18 +38,6 @@ function noteWriting.CreateNote(pid,cmd)
 		i = i + 1
 	end
 	noteText = "<DIV ALIGN=\"CENTER\">" .. noteText .. "<p>"
-	--Unique world variable to prevent duplicate Ids
-	if WorldInstance.data.customVariables.noteCounter == nil then
-		idIterator = 0
-	else
-		idIterator = idIterator + 1
-	end
-	WorldInstance.data.customVariables.noteCounter = idIterator
-	
-	noteId = "player_note_" .. idIterator
-	
-	--Storing and creating custom records
-	--I'll make proper functions at some point I swear
 	recordTable["weight"] = noteWeight
 	recordTable["icon"] = noteIcon
 	recordTable["skillId"] = "-1"
@@ -59,7 +47,7 @@ function noteWriting.CreateNote(pid,cmd)
 	recordTable["scrollState"] = true
 	recordTable["name"] = noteName
 
-	noteWriting.nuCreateBookRecord(pid, noteId, recordTable)
+	noteId = noteWriting.nuCreateBookRecord(pid, recordTable)
 	
 	local structuredItem = { refId = noteId, count = 1, charge = -1}
 	Players[pid]:Save()
@@ -69,18 +57,25 @@ end
 --[[
 Based on Create and store record functions from commandhandler in https://github.com/TES3MP/CoreScripts 
 ]]--
-function noteWriting.nuCreateBookRecord(pid, noteId, recordTable)
-	local id = noteId
+function noteWriting.nuCreateBookRecord(pid, recordTable)
 	local recordStore = RecordStores["book"]
+	local id = recordStore:GenerateRecordId()
 	local savedTable = recordTable
 	
-	recordStore.data.permanentRecords[id] = savedTable
+	recordStore.data.generatedRecords[id] = savedTable
+	for _, player in pairs(Players) do
+        if not tableHelper.containsValue(Players[pid].generatedRecordsReceived, id) then
+            table.insert(player.generatedRecordsReceived, id)
+        end
+    end
+	Players[pid]:AddLinkToRecord("book", id)
 	recordStore:Save()
     tes3mp.ClearRecords()
     tes3mp.SetRecordType(enumerations.recordType[string.upper("book")])
 	packetBuilder.AddBookRecord(id, savedTable)
 	tes3mp.SendRecordDynamic(pid, true, false)
 	
+	return id
 end
 
 return noteWriting
