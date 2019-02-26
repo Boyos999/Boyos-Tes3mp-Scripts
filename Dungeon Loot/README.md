@@ -18,12 +18,7 @@ objectUniqueIndex = tes3mp.GetObjectRefNum(index) .. "-" .. tes3mp.GetObjectMpNu
 
 ```lua
 --dungeonLoot
-if dungeonLoot.CheckId(objectRefId,pid) == true then
-	if dungeonLoot.CheckCooldown(pid, tes3mp.GetCell(pid), objectRefId) == true then
-		dungeonLoot.Reward(pid, objectRefId)
-		isValid = false
-	end
-end
+dungeonLoot.main(pid, objectRefId, tes3mp.GetCell(pid))
 --dungeonLoot
 ```
 7. Add the following require statement at the top of evenhandler with the rest

@@ -20,6 +20,14 @@ local jsondata = nil
 --Default is 1 hour
 local cooldownTime = 3600
 
+function dungeonLoot.main(pid, objectRefId, locationName)
+	if dungeonLoot.CheckId(objectRefId, pid) == true then
+		if dungeonLoot.CheckCooldown(pid, locationName, objectRefId) == true then
+			dungeonLoot.Reward(pid, objectRefId)
+		end
+	end
+end
+
 function dungeonLoot.CheckId(objectRefId, pid)
 	local splitObjectRefId = objectRefId:split("_")
 	if splitObjectRefId[1] == "dungeonchest" then
