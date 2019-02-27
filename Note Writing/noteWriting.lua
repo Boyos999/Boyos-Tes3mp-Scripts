@@ -21,7 +21,6 @@ function noteWriting.CreateNote(pid,cmd)
 	end
 	
 	--Declare variables here
-	local idIterator = WorldInstance.data.customVariables.noteCounter
 	local noteId
 	local noteName = Players[pid].name .. "'s Note"
 	local noteModel = "m\\Text_Note_02.nif"
