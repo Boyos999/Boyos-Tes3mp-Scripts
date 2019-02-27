@@ -12,7 +12,6 @@
 			table.insert(Players[pid].data.inventory, playerNote)
 			Players[pid]:LoadInventory()
 			Players[pid]:LoadEquipment()
-			Players[pid]:Save()
 		end
 ```
 4. This will allow players to write notes using /write followed by the text of the note
