@@ -50,8 +50,6 @@ function noteWriting.CreateNote(pid,cmd)
 	noteId = noteWriting.nuCreateBookRecord(pid, recordTable)
 	
 	local structuredItem = { refId = noteId, count = 1, charge = -1}
-	Players[pid]:Save()
-	WorldInstance:Save()
 	return structuredItem
 end
 --[[
