@@ -7,16 +7,7 @@ Returns either a structured item, or nil if the player lacks paper.
 function noteWriting.CreateNote(pid,cmd)
 	--Make sure there is text after /write
 	if cmd[2] == nil then
-		Players[pid]:Message("No text given\n")
-		return nil
-	end
-	
-	--Checks if players have the required Item(s)
-	if inventoryHelper.containsItem(Players[pid].data.inventory,"sc_paper plain") then
-		inventoryHelper.removeItem(Players[pid].data.inventory,"sc_paper plain",1)
-		Players[pid]:Message("You made a note\n")
-	else
-		Players[pid]:Message("You lack the materials to make a note\n")
+		Players[pid]:Message(color.Red .. "No text given\n")
 		return nil
 	end
 	
@@ -31,6 +22,15 @@ function noteWriting.CreateNote(pid,cmd)
 	local i = 3
 	local recordTable = {}
 	
+	--Checks if players have the required Item(s)
+	if inventoryHelper.containsItem(Players[pid].data.inventory,"sc_paper plain") then
+		inventoryHelper.removeItem(Players[pid].data.inventory,"sc_paper plain",1)
+		Players[pid]:Message(color.Green .. "You made a note\n")
+	else
+		Players[pid]:Message(color.Red .. "You lack the materials to make a note\n")
+		return nil
+	end
+
 	--Put the text back together
 	while cmd[i] ~= nil do 
 		noteText = noteText .. " " .. cmd[i]
@@ -47,9 +47,11 @@ function noteWriting.CreateNote(pid,cmd)
 	recordTable["name"] = noteName
 
 	noteId = noteWriting.nuCreateBookRecord(pid, recordTable)
-	
-	local structuredItem = { refId = noteId, count = 1, charge = -1}
-	return structuredItem
+	Players[pid]:AddLinkToRecord("book", noteId)
+	inventoryHelper.addItem(Players[pid].data.inventory,noteId,1)
+	Players[pid]:LoadInventory()
+	Players[pid]:LoadEquipment()
+	return
 end
 --[[
 Based on Create and store record functions from commandhandler in https://github.com/TES3MP/CoreScripts 
@@ -65,7 +67,6 @@ function noteWriting.nuCreateBookRecord(pid, recordTable)
             table.insert(player.generatedRecordsReceived, id)
         end
     end
-	Players[pid]:AddLinkToRecord("book", id)
 	recordStore:Save()
     tes3mp.ClearRecords()
     tes3mp.SetRecordType(enumerations.recordType[string.upper("book")])
