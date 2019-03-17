@@ -8,7 +8,7 @@ function noteWriting.CreateNote(pid,cmd)
 	--Make sure there is text after /write
 	if cmd[2] == nil then
 		Players[pid]:Message(color.Red .. "No text given\n")
-		return nil
+		return
 	end
 	
 	--Declare variables here
@@ -28,7 +28,7 @@ function noteWriting.CreateNote(pid,cmd)
 		Players[pid]:Message(color.Green .. "You made a note\n")
 	else
 		Players[pid]:Message(color.Red .. "You lack the materials to make a note\n")
-		return nil
+		return
 	end
 
 	--Put the text back together
