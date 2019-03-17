@@ -34,7 +34,7 @@ Menus["Alternate Start"] = {
 Menus["Hlaalu"] = {
 	text = "Choose your starting location.",
 	buttons = {
-		{ caption = "Balmora (Default)", 
+		{ caption = color.Green .. "Balmora (Default)", 
 			destinations = { 
 				menuHelper.destinations.setDefault(nil,
 				{
@@ -44,7 +44,7 @@ Menus["Hlaalu"] = {
 				}) 
 			} 
 		},
-		{ caption = "Gnaar Mok", 
+		{ caption = color.Orange .. "Gnaar Mok", 
 			destinations = { 
 				menuHelper.destinations.setDefault(nil,
 				{
@@ -53,7 +53,7 @@ Menus["Hlaalu"] = {
 				}) 
 			}
 		},
-		{ caption = "Hla Oad", 
+		{ caption = color.Yellow .. "Hla Oad", 
 			destinations = { 
 				menuHelper.destinations.setDefault(nil,
 				{
@@ -62,7 +62,7 @@ Menus["Hlaalu"] = {
 				}) 
 			}
 		},
-		{ caption = "Suran", 
+		{ caption = color.Yellow .. "Suran", 
 			destinations = { 
 				menuHelper.destinations.setDefault(nil,
 				{
@@ -81,7 +81,7 @@ Menus["Hlaalu"] = {
 Menus["Redoran"] = {
 	text = "Choose your starting location.",
 	buttons = {
-		{ caption = "Ald-ruhn", 
+		{ caption = color.Yellow .. "Ald-ruhn", 
 			destinations = { 
 				menuHelper.destinations.setDefault(nil,
 				{
@@ -90,7 +90,7 @@ Menus["Redoran"] = {
 				}) 
 			}
 		},
-		{ caption = "Ald Velothi", 
+		{ caption = color.Red .. "Ald Velothi", 
 			destinations = { 
 				menuHelper.destinations.setDefault(nil,
 				{
@@ -99,7 +99,7 @@ Menus["Redoran"] = {
 				}) 
 			}
 		},
-		{ caption = "Maar Gan", 
+		{ caption = color.Orange .. "Maar Gan", 
 			destinations = { 
 				menuHelper.destinations.setDefault(nil,
 				{
@@ -108,7 +108,7 @@ Menus["Redoran"] = {
 				}) 
 			}
 		},
-		{ caption = "Khuul", 
+		{ caption = color.Red .. "Khuul", 
 			destinations = { 
 				menuHelper.destinations.setDefault(nil,
 				{
@@ -127,7 +127,7 @@ Menus["Redoran"] = {
 Menus["Telvanni"] = {
 	text = "Choose your starting location.",
 	buttons = {
-		{ caption = "Sadrith Mora", 
+		{ caption = color.Yellow .. "Sadrith Mora", 
 			destinations = { 
 				menuHelper.destinations.setDefault(nil,
 				{
@@ -136,7 +136,7 @@ Menus["Telvanni"] = {
 				}) 
 			}
 		},
-		{ caption = "Tel Aruhn", 
+		{ caption = color.Orange .. "Tel Aruhn", 
 			destinations = { 
 				menuHelper.destinations.setDefault(nil,
 				{
@@ -145,7 +145,7 @@ Menus["Telvanni"] = {
 				}) 
 			}
 		},
-		{ caption = "Tel Branora", 
+		{ caption = color.Red .. "Tel Branora", 
 			destinations = { 
 				menuHelper.destinations.setDefault(nil,
 				{
@@ -154,7 +154,7 @@ Menus["Telvanni"] = {
 				}) 
 			}
 		},
-		{ caption = "Tel Mora", 
+		{ caption = color.Orange .. "Tel Mora", 
 			destinations = { 
 				menuHelper.destinations.setDefault(nil,
 				{
@@ -163,7 +163,7 @@ Menus["Telvanni"] = {
 				}) 
 			}
 		},
-		{ caption = "Vos", 
+		{ caption = color.Orange .. "Vos", 
 			destinations = { 
 				menuHelper.destinations.setDefault(nil,
 				{
@@ -182,7 +182,7 @@ Menus["Telvanni"] = {
 Menus["Imperial"] = {
 	text = "Choose your starting location.",
 	buttons = {
-		{ caption = "Buckmoth Legion Fort", 
+		{ caption = color.Yellow .. "Buckmoth Legion Fort", 
 			destinations = { 
 				menuHelper.destinations.setDefault(nil,
 				{
@@ -191,7 +191,7 @@ Menus["Imperial"] = {
 				}) 
 			}
 		},
-		{ caption = "Caldera", 
+		{ caption = color.Green .. "Caldera", 
 			destinations = { 
 				menuHelper.destinations.setDefault(nil,
 				{
@@ -200,7 +200,7 @@ Menus["Imperial"] = {
 				}) 
 			}
 		},
-		{ caption = "Dagon Fel", 
+		{ caption = color.Red .. "Dagon Fel", 
 			destinations = { 
 				menuHelper.destinations.setDefault(nil,
 				{
@@ -209,7 +209,7 @@ Menus["Imperial"] = {
 				}) 
 			}
 		},
-		{ caption = "Ebonheart", 
+		{ caption = color.Yellow .. "Ebonheart", 
 			destinations = { 
 				menuHelper.destinations.setDefault(nil,
 				{
@@ -218,7 +218,7 @@ Menus["Imperial"] = {
 				}) 
 			}
 		},
-		{ caption = "Gnisis", 
+		{ caption = color.Orange .. "Gnisis", 
 			destinations = { 
 				menuHelper.destinations.setDefault(nil,
 				{
@@ -227,7 +227,7 @@ Menus["Imperial"] = {
 				}) 
 			}
 		},
-		{ caption = "Moonmoth Legion Fort", 
+		{ caption = color.Green .. "Moonmoth Legion Fort", 
 			destinations = { 
 				menuHelper.destinations.setDefault(nil,
 				{
@@ -236,7 +236,7 @@ Menus["Imperial"] = {
 				}) 
 			}
 		},
-		{ caption = "Pelagiad", 
+		{ caption = color.Green .. "Pelagiad", 
 			destinations = { 
 				menuHelper.destinations.setDefault(nil,
 				{
@@ -245,7 +245,7 @@ Menus["Imperial"] = {
 				}) 
 			}
 		},
-		{ caption = "Seyda Neen", 
+		{ caption = color.Green .. "Seyda Neen", 
 			destinations = { 
 				menuHelper.destinations.setDefault(nil,
 				{
@@ -254,7 +254,7 @@ Menus["Imperial"] = {
 				}) 
 			}
 		},
-		{ caption = "Wolverine Hall", 
+		{ caption = color.Yellow .. "Wolverine Hall", 
 			destinations = { 
 				menuHelper.destinations.setDefault(nil,
 				{
@@ -273,7 +273,7 @@ Menus["Imperial"] = {
 Menus["Other"] = {
 	text = "Choose your starting location.",
 	buttons = {
-		{ caption = "Molag Mar", 
+		{ caption = color.Red .. "Molag Mar", 
 			destinations = { 
 				menuHelper.destinations.setDefault(nil,
 				{
@@ -282,7 +282,7 @@ Menus["Other"] = {
 				}) 
 			}
 		},
-		{ caption = "Vivec", 
+		{ caption = color.Yellow .. "Vivec", 
 			destinations = { 
 				menuHelper.destinations.setDefault("Vivec") 
 			}
