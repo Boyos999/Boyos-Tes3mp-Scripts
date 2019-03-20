@@ -48,7 +48,7 @@ Menus["Hlaalu"] = {
 			destinations = { 
 				menuHelper.destinations.setDefault(nil,
 				{
-					menuHelper.effects.runGlobalFunction("logicHandler", "TeleportPlayerToLocation", {menuHelper.variables.currentPid(),"-8,3",-61448.434, 27527.604, 538.173,0, 135}),
+					menuHelper.effects.runGlobalFunction("logicHandler", "TeleportPlayerToLocation", {menuHelper.variables.currentPid(),"-8,3",-61448.434, 27527.604, 538.173,0, 2.3561925}),
 					menuHelper.effects.runPlayerFunction("Message", {"Spawned in Gnaar Mok\n"})
 				}) 
 			}
@@ -57,7 +57,7 @@ Menus["Hlaalu"] = {
 			destinations = { 
 				menuHelper.destinations.setDefault(nil,
 				{
-					menuHelper.effects.runGlobalFunction("logicHandler", "TeleportPlayerToLocation", {menuHelper.variables.currentPid(),"-6,-5",-46720, -38176, 224,0, 315}),
+					menuHelper.effects.runGlobalFunction("logicHandler", "TeleportPlayerToLocation", {menuHelper.variables.currentPid(),"-6,-5",-46720, -38176, 224,0, 5.4977825}),
 					menuHelper.effects.runPlayerFunction("Message", {"Spawned in Hla Oad\n"})
 				}) 
 			}
@@ -66,7 +66,7 @@ Menus["Hlaalu"] = {
 			destinations = { 
 				menuHelper.destinations.setDefault(nil,
 				{
-					menuHelper.effects.runGlobalFunction("logicHandler", "TeleportPlayerToLocation", {menuHelper.variables.currentPid(),"6,-7",53648.527, -51050.477, 224.153,0, 90}),
+					menuHelper.effects.runGlobalFunction("logicHandler", "TeleportPlayerToLocation", {menuHelper.variables.currentPid(),"6,-7",53648.527, -51050.477, 224.153,0, 1.570795}),
 					menuHelper.effects.runPlayerFunction("Message", {"Spawned in Suran\n"})
 				}) 
 			}
@@ -131,7 +131,7 @@ Menus["Telvanni"] = {
 			destinations = { 
 				menuHelper.destinations.setDefault(nil,
 				{
-					menuHelper.effects.runGlobalFunction("logicHandler", "TeleportPlayerToLocation", {menuHelper.variables.currentPid(),"17,4",143168, 35968, 528.649,0, 90}),
+					menuHelper.effects.runGlobalFunction("logicHandler", "TeleportPlayerToLocation", {menuHelper.variables.currentPid(),"17,4",143168, 35968, 528.649,0, 1.570795}),
 					menuHelper.effects.runPlayerFunction("Message", {"Spawned in Sadrith Mora\n"})
 				}) 
 			}
@@ -140,7 +140,7 @@ Menus["Telvanni"] = {
 			destinations = { 
 				menuHelper.destinations.setDefault(nil,
 				{
-					menuHelper.effects.runGlobalFunction("logicHandler", "TeleportPlayerToLocation", {menuHelper.variables.currentPid(),"15,5",126458.367, 48817.922, 930.067,0, 180}),
+					menuHelper.effects.runGlobalFunction("logicHandler", "TeleportPlayerToLocation", {menuHelper.variables.currentPid(),"15,5",126458.367, 48817.922, 930.067,0, 3.14159}),
 					menuHelper.effects.runPlayerFunction("Message", {"Spawned in Tel Aruhn\n"})
 				}) 
 			}
@@ -149,7 +149,7 @@ Menus["Telvanni"] = {
 			destinations = { 
 				menuHelper.destinations.setDefault(nil,
 				{
-					menuHelper.effects.runGlobalFunction("logicHandler", "TeleportPlayerToLocation", {menuHelper.variables.currentPid(),"15,-13",125216, -105216, 681.306,0, 45}),
+					menuHelper.effects.runGlobalFunction("logicHandler", "TeleportPlayerToLocation", {menuHelper.variables.currentPid(),"15,-13",125216, -105216, 681.306,0, 0.7853975}),
 					menuHelper.effects.runPlayerFunction("Message", {"Spawned in Tel Branora\n"})
 				}) 
 			}
@@ -158,7 +158,7 @@ Menus["Telvanni"] = {
 			destinations = { 
 				menuHelper.destinations.setDefault(nil,
 				{
-					menuHelper.effects.runGlobalFunction("logicHandler", "TeleportPlayerToLocation", {menuHelper.variables.currentPid(),"13,14",107072, 117312, 226.805,0, 45}),
+					menuHelper.effects.runGlobalFunction("logicHandler", "TeleportPlayerToLocation", {menuHelper.variables.currentPid(),"13,14",107072, 117312, 226.805,0, 0.7853975}),
 					menuHelper.effects.runPlayerFunction("Message", {"Spawned in Tel Mora\n"})
 				}) 
 			}
@@ -167,7 +167,7 @@ Menus["Telvanni"] = {
 			destinations = { 
 				menuHelper.destinations.setDefault(nil,
 				{
-					menuHelper.effects.runGlobalFunction("logicHandler", "TeleportPlayerToLocation", {menuHelper.variables.currentPid(),"11,14",92832, 116800, 1482.128,0, 90}),
+					menuHelper.effects.runGlobalFunction("logicHandler", "TeleportPlayerToLocation", {menuHelper.variables.currentPid(),"11,14",92832, 116800, 1482.128,0, 1.570795}),
 					menuHelper.effects.runPlayerFunction("Message", {"Spawned in Vos\n"})
 				}) 
 			}
@@ -186,7 +186,7 @@ Menus["Imperial"] = {
 			destinations = { 
 				menuHelper.destinations.setDefault(nil,
 				{
-					menuHelper.effects.runGlobalFunction("logicHandler", "TeleportPlayerToLocation", {menuHelper.variables.currentPid(),"-2,5",-13024, 43040, 2547.548,0, 270}),
+					menuHelper.effects.runGlobalFunction("logicHandler", "TeleportPlayerToLocation", {menuHelper.variables.currentPid(),"-2,5",-13024, 43040, 2547.548,0, 4.712385}),
 					menuHelper.effects.runPlayerFunction("Message", {"Spawned in Buckmoth Legion Fort\n"})
 				}) 
 			}
@@ -195,7 +195,7 @@ Menus["Imperial"] = {
 			destinations = { 
 				menuHelper.destinations.setDefault(nil,
 				{
-					menuHelper.effects.runGlobalFunction("logicHandler", "TeleportPlayerToLocation", {menuHelper.variables.currentPid(),"-2,2",-11296, 20768, 1650.637,0, 180}),
+					menuHelper.effects.runGlobalFunction("logicHandler", "TeleportPlayerToLocation", {menuHelper.variables.currentPid(),"-2,2",-11296, 20768, 1650.637,0, 3.14159}),
 					menuHelper.effects.runPlayerFunction("Message", {"Spawned in Caldera\n"})
 				}) 
 			}
@@ -213,7 +213,7 @@ Menus["Imperial"] = {
 			destinations = { 
 				menuHelper.destinations.setDefault(nil,
 				{
-					menuHelper.effects.runGlobalFunction("logicHandler", "TeleportPlayerToLocation", {menuHelper.variables.currentPid(),"2,-13",18112, -101984, 386.442,0, 270}),
+					menuHelper.effects.runGlobalFunction("logicHandler", "TeleportPlayerToLocation", {menuHelper.variables.currentPid(),"2,-13",18112, -101984, 386.442,0, 4.712385}),
 					menuHelper.effects.runPlayerFunction("Message", {"Spawned in Ebonheart\n"})
 				}) 
 			}
@@ -240,7 +240,7 @@ Menus["Imperial"] = {
 			destinations = { 
 				menuHelper.destinations.setDefault(nil,
 				{
-					menuHelper.effects.runGlobalFunction("logicHandler", "TeleportPlayerToLocation", {menuHelper.variables.currentPid(),"0,-7",1248, -56800, 1437.433,0, 90}),
+					menuHelper.effects.runGlobalFunction("logicHandler", "TeleportPlayerToLocation", {menuHelper.variables.currentPid(),"0,-7",1248, -56800, 1437.433,0, 1.570795}),
 					menuHelper.effects.runPlayerFunction("Message", {"Spawned in Pelagiad\n"})
 				}) 
 			}
@@ -258,7 +258,7 @@ Menus["Imperial"] = {
 			destinations = { 
 				menuHelper.destinations.setDefault(nil,
 				{
-					menuHelper.effects.runGlobalFunction("logicHandler", "TeleportPlayerToLocation", {menuHelper.variables.currentPid(),"18,3",149248, 29856, 712.153,0, 270}),
+					menuHelper.effects.runGlobalFunction("logicHandler", "TeleportPlayerToLocation", {menuHelper.variables.currentPid(),"18,3",149248, 29856, 712.153,0, 4.712385}),
 					menuHelper.effects.runPlayerFunction("Message", {"Spawned in Wolverine Hall\n"})
 				}) 
 			}
@@ -277,7 +277,7 @@ Menus["Other"] = {
 			destinations = { 
 				menuHelper.destinations.setDefault(nil,
 				{
-					menuHelper.effects.runGlobalFunction("logicHandler", "TeleportPlayerToLocation", {menuHelper.variables.currentPid(),"13,-8",109056, -61856, 2112.152,0, 90}),
+					menuHelper.effects.runGlobalFunction("logicHandler", "TeleportPlayerToLocation", {menuHelper.variables.currentPid(),"13,-8",109056, -61856, 2112.152,0, 1.570795}),
 					menuHelper.effects.runPlayerFunction("Message", {"Spawned in Molag Mar\n"})
 				}) 
 			}
@@ -301,7 +301,7 @@ Menus["Vivec"] = {
 			destinations = { 
 				menuHelper.destinations.setDefault(nil,
 				{
-					menuHelper.effects.runGlobalFunction("logicHandler", "TeleportPlayerToLocation", {menuHelper.variables.currentPid(),"Vivec, Arena Fighters Training",-640, -864, 195.318,0, 45}),
+					menuHelper.effects.runGlobalFunction("logicHandler", "TeleportPlayerToLocation", {menuHelper.variables.currentPid(),"Vivec, Arena Fighters Training",-640, -864, 195.318,0, 0.7853975}),
 					menuHelper.effects.runPlayerFunction("Message", {"Spawned in Vivec\n"})
 				}) 
 			}
@@ -310,7 +310,7 @@ Menus["Vivec"] = {
 			destinations = { 
 				menuHelper.destinations.setDefault(nil,
 				{
-					menuHelper.effects.runGlobalFunction("logicHandler", "TeleportPlayerToLocation", {menuHelper.variables.currentPid(),"Vivec, Foreign Quarter Plaza",-64, 128, 290.927,0, 90}),
+					menuHelper.effects.runGlobalFunction("logicHandler", "TeleportPlayerToLocation", {menuHelper.variables.currentPid(),"Vivec, Foreign Quarter Plaza",-64, 128, 290.927,0, 1.570795}),
 					menuHelper.effects.runPlayerFunction("Message", {"Spawned in Vivec\n"})
 				}) 
 			}
@@ -328,7 +328,7 @@ Menus["Vivec"] = {
 			destinations = { 
 				menuHelper.destinations.setDefault(nil,
 				{
-					menuHelper.effects.runGlobalFunction("logicHandler", "TeleportPlayerToLocation", {menuHelper.variables.currentPid(),"Vivec, Redoran Plaza",1376, -224, 1568.493,0, 270}),
+					menuHelper.effects.runGlobalFunction("logicHandler", "TeleportPlayerToLocation", {menuHelper.variables.currentPid(),"Vivec, Redoran Plaza",1376, -224, 1568.493,0, 4.712385}),
 					menuHelper.effects.runPlayerFunction("Message", {"Spawned in Vivec\n"})
 				}) 
 			}
@@ -337,7 +337,7 @@ Menus["Vivec"] = {
 			destinations = { 
 				menuHelper.destinations.setDefault(nil,
 				{
-					menuHelper.effects.runGlobalFunction("logicHandler", "TeleportPlayerToLocation", {menuHelper.variables.currentPid(),"Vivec, St. Delyn Plaza",-1568, -64, -1758.507,0, 90}),
+					menuHelper.effects.runGlobalFunction("logicHandler", "TeleportPlayerToLocation", {menuHelper.variables.currentPid(),"Vivec, St. Delyn Plaza",-1568, -64, -1758.507,0, 1.570795}),
 					menuHelper.effects.runPlayerFunction("Message", {"Spawned in Vivec\n"})
 				}) 
 			}
@@ -346,7 +346,7 @@ Menus["Vivec"] = {
 			destinations = { 
 				menuHelper.destinations.setDefault(nil,
 				{
-					menuHelper.effects.runGlobalFunction("logicHandler", "TeleportPlayerToLocation", {menuHelper.variables.currentPid(),"Vivec, St. Olms Plaza",1472, -64, -1823.507,0, 270}),
+					menuHelper.effects.runGlobalFunction("logicHandler", "TeleportPlayerToLocation", {menuHelper.variables.currentPid(),"Vivec, St. Olms Plaza",1472, -64, -1823.507,0, 4.712385}),
 					menuHelper.effects.runPlayerFunction("Message", {"Spawned in Vivec\n"})
 				}) 
 			}
@@ -355,7 +355,7 @@ Menus["Vivec"] = {
 			destinations = { 
 				menuHelper.destinations.setDefault(nil,
 				{
-					menuHelper.effects.runGlobalFunction("logicHandler", "TeleportPlayerToLocation", {menuHelper.variables.currentPid(),"4,-13",32864, -99200, 1120,0, 180}),
+					menuHelper.effects.runGlobalFunction("logicHandler", "TeleportPlayerToLocation", {menuHelper.variables.currentPid(),"4,-13",32864, -99200, 1120,0, 3.14159}),
 					menuHelper.effects.runPlayerFunction("Message", {"Spawned in Vivec\n"})
 				}) 
 			}
