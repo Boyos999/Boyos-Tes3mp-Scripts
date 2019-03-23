@@ -10,18 +10,8 @@
       "script":"noPickUp"
     }
 ```
-5. Download dungeonLoot.lua and armorone.json, put them in scripts and data folders respectively
-6. paste the following block in event handler's OnObjectActivate function after 
-```lua 
-objectUniqueIndex = tes3mp.GetObjectRefNum(index) .. "-" .. tes3mp.GetObjectMpNum(index)
+5. Download dungeonLoot.lua and armorone.json, put them in custom/scripts and custom/data folders respectively
+6. Add the following require statement to customScripts.lua
 ```
-
-```lua
---dungeonLoot
-dungeonLoot.main(pid, objectRefId, tes3mp.GetCell(pid))
---dungeonLoot
-```
-7. Add the following require statement at the top of evenhandler with the rest
-```lua
-dungeonLoot = require("dungeonLoot")
+dungeonLoot = require("custom.dungeonLoot")
 ```
