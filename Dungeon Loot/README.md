@@ -12,6 +12,6 @@
 ```
 5. Download dungeonLoot.lua and armorone.json, put them in custom/scripts and custom/data folders respectively
 6. Add the following require statement to customScripts.lua
-```
+```lua
 dungeonLoot = require("custom.dungeonLoot")
 ```

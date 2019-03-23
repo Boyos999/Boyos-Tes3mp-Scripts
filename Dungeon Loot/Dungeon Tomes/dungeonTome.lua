@@ -1,7 +1,5 @@
 local dungeonTome = {}
 
-local jsonInterface = require("jsonInterface")
-
 
 local jsondata = nil
 
@@ -21,12 +19,16 @@ local jsondata = nil
 --Default is 1 hour
 local cooldownTime = 3600
 
-function dungeonTome.main(pid, objectRefId, locationName)
-	if dungeonTome.CheckId(objectRefId, pid) == true then
-		if dungeonTome.CheckCooldown(pid, locationName, objectRefId) == true then
-			dungeonTome.Reward(pid, objectRefId)
-		end
-	end
+function dungeonTome.main(eventStatus, pid, locationName, objectInfo, players)
+	for _,object in pairs(objectInfo) do
+        if object.refId ~= nil then
+            if dungeonTome.CheckId(object.refId, pid) == true then
+                if dungeonTome.CheckCooldown(pid, locationName, object.refId) == true then
+                    dungeonTome.Reward(pid, object.refId)
+                end
+            end
+        end
+    end
 end
 
 function dungeonTome.CheckId(objectRefId, pid)
@@ -41,7 +43,7 @@ end
 function dungeonTome.CheckCooldown(pid, locationName, chestId)
 	local state
 	local playerName = Players[pid].name
-	jsondata = jsonInterface.load("DungeonTome.json")
+	jsondata = jsonInterface.load("custom/DungeonTome.json")
 	if jsondata == nil then
 		jsondata = {}
 	end
@@ -74,13 +76,13 @@ function dungeonTome.CheckCooldown(pid, locationName, chestId)
 end
 
 function dungeonTome.SaveJson(jsondata)
-	jsonInterface.save("DungeonTome.json", jsondata)
+	jsonInterface.save("custom/DungeonTome.json", jsondata)
 end
 
 function dungeonTome.Reward(pid, objectRefId)
 	local splitObjectRefId = objectRefId:split("_")
 	local lootTableName = splitObjectRefId[2] .. splitObjectRefId[3]
-	local lootTable = jsonInterface.load(lootTableName .. ".json")
+	local lootTable = jsonInterface.load("custom/" .. lootTableName .. ".json")
 	local length = table.getn(lootTable)
 	local lootRoll = math.random(1,length)
 	local spell = lootTable[lootRoll]
@@ -114,5 +116,7 @@ function dungeonTome.Reward(pid, objectRefId)
 
 	tes3mp.MessageBox(pid, -1, message)
 end
+
+customEventHooks.registerHandler("OnObjectActivate", dungeonTome.main)
 
 return dungeonTome
