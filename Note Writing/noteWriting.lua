@@ -2,7 +2,6 @@ local noteWriting = {}
 
 --[[
 Takes a pid, and the cmd inputted into chat.
-Returns either a structured item, or nil if the player lacks paper.
 ]]--
 function noteWriting.CreateNote(pid,cmd)
 	--Make sure there is text after /write
