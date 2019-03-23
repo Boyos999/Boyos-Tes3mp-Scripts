@@ -15,3 +15,4 @@
 ```lua
 dungeonLoot = require("custom.dungeonLoot")
 ```
+7. While technically optional, I'd recommend using randomnessHelper or some equivalent so the server doesn't have the same randomseed on each restart.
