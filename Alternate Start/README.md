@@ -15,19 +15,12 @@ Players[pid].currentCustomMenu = "Alternate Start"
 menuHelper.DisplayMenu(pid, Players[pid].currentCustomMenu)
 ```
 
-5. In logicHandler.lua, at the top of the file paste the following with the other require statements
+5. In serverCore.lua, at the top of the file paste the following with the other require statements
 ```lua
 altStartHelper = require("altStartHelper")
 ```
 
-6. Then also in logicHandler.lua, paste the following block near the bottom, before the return statements
-```lua
-logicHandler.TeleportPlayerToLocation = function(pid, altCell,altPosX, altPosY, altPosZ,altRotX, altRotY)
-	altStartHelper.altStartFunction(pid, altCell,altPosX, altPosY, altPosZ,altRotX, altRotY)
-end
-```
-
-7. In Scripts\Players\base.lua Comment or Delete the following block from BasePlayer:EndCharGen
+6. In Scripts\Players\base.lua Comment or Delete the following block from BasePlayer:EndCharGen
 NOTE: This step can be skipped if you're unsure, players will just load into balmora before the alternate start menu pops up
 
 ```lua

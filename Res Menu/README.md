@@ -18,13 +18,7 @@ eventHandler.OnDeathTimeExpiration = function(pid)
     end
 end
 ```
-5. In logicHandler.lua add the following line near the top with the rest of the require statements
+5. In serverCore.lua add the following line near the top with the rest of the require statements
 ```lua
 resMenuHelper = require("resMenuHelper")
-```
-6. Also in logicHandler.lua add the following function near the bottom, before the return
-```lua
-logicHandler.ResMenu = function(pid, location)
-	resMenuHelper.ResMenuFunction(pid,location)
-end
 ```

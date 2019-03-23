@@ -7,7 +7,7 @@ Menus["Res Menu"] = {
 			destinations = { 
 				menuHelper.destinations.setDefault(nil,
 				{
-					menuHelper.effects.runGlobalFunction("logicHandler", "ResMenu", {menuHelper.variables.currentPid(),1})
+					menuHelper.effects.runGlobalFunction("resMenuHelper", "ResMenuFunction", {menuHelper.variables.currentPid(),1})
 				}) 
 			} 
 		},
@@ -15,7 +15,7 @@ Menus["Res Menu"] = {
 			destinations = { 
 				menuHelper.destinations.setDefault(nil,
 				{
-					menuHelper.effects.runGlobalFunction("logicHandler", "ResMenu", {menuHelper.variables.currentPid(),0})
+					menuHelper.effects.runGlobalFunction("resMenuHelper", "ResMenuFunction", {menuHelper.variables.currentPid(),0})
 				}) 
 			} 
 		}
