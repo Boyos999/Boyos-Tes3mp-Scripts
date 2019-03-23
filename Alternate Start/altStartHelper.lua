@@ -1,5 +1,12 @@
 local altStartHelper = {}
 
+altStartHelper.OnPlayerEndCharGenReplacement = function(eventStatus, pid)
+    Players[pid].currentCustomMenu = "Alternate Start"
+    menuHelper.DisplayMenu(pid, Players[pid].currentCustomMenu)
+end
+
+customEventHooks.registerHandler("OnPlayerEndCharGen", altStartHelper.OnPlayerEndCharGenReplacement)
+
 altStartHelper.altStartFunction = function(pid, altCell,altPosX, altPosY, altPosZ,altRotX, altRotY)
 	if altCell ~= nil then
 

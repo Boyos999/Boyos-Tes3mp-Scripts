@@ -53,6 +53,8 @@ function noteWriting.CreateNote(pid,cmd)
 	Players[pid]:LoadEquipment()
 	return
 end
+
+customCommandHooks.registerCommand("write", noteWriting.CreateNote)
 --[[
 Based on Create and store record functions from commandhandler in https://github.com/TES3MP/CoreScripts 
 ]]--

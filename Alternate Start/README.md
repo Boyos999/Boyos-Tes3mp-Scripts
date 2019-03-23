@@ -5,22 +5,16 @@ To Install:
 
 1. Download alternateStart.lua and put it in your scripts\menu folder
 
-2. Download altStartHelper.lua and put it in your scripts folder
+2. Download altStartHelper.lua and put it in your scripts\custom folder
 
 3. Go to config.lua, find config.menuHelperFiles and add "alternateStart" to the list
 
-4. In eventHandler.lua, find the eventHandler.OnPlayerEndCharGen function and just before the end add the following two lines
-```lua
-Players[pid].currentCustomMenu = "Alternate Start"
-menuHelper.DisplayMenu(pid, Players[pid].currentCustomMenu)
+4. In customScripts.lua add the following require statement
+```
+    altStartHelper = require("custom.altStartHelper")
 ```
 
-5. In serverCore.lua, at the top of the file paste the following with the other require statements
-```lua
-altStartHelper = require("altStartHelper")
-```
-
-6. In Scripts\Players\base.lua Comment or Delete the following block from BasePlayer:EndCharGen
+5. In Scripts\Players\base.lua Comment or Delete the following block from BasePlayer:EndCharGen
 NOTE: This step can be skipped if you're unsure, players will just load into balmora before the alternate start menu pops up
 
 ```lua
