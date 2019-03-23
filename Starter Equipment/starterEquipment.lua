@@ -18,7 +18,7 @@ local skillArray = {"block", "armorer", "mediumarmor", "heavyarmor", "blunt", "l
 local starterEquipment = {}
 
 
-starterEquipment.GiveStarterItems = function(pid)
+starterEquipment.GiveStarterItems = function(eventStatus, pid)
 	local major = 30
 	local minor = 15
 	local baseGold = { refId = "Gold_001", count = 100, charge = -1}
@@ -298,5 +298,7 @@ starterEquipment.GiveStarterItems = function(pid)
 	Players[pid]:LoadInventory()
 	Players[pid]:LoadEquipment()
 end
+
+customEventHooks.registerHandler("OnPlayerEndCharGen",starterEquipment.GiveStarterItems)
 
 return starterEquipment

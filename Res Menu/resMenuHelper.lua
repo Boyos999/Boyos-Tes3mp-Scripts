@@ -1,8 +1,17 @@
-require("config")
-require("enumerations")
 
 local resMenuHelper = {}
 
+resMenuHelper.OnDeathTimeExpirationValidator = function(eventStatus, pid)
+    return customEventHooks.makeEventStatus(false,nil)
+end
+
+resMenuHelper.OnDeathTimeExpirationHandler = function(eventStatus, pid)
+    Players[pid].currentCustomMenu = "Res Menu"
+    menuHelper.DisplayMenu(pid, Players[pid].currentCustomMenu)
+end
+
+customEventHooks.registerValidator("OnDeathTimeExpiration", resMenuHelper.OnDeathTimeExpirationValidator)
+customEventHooks.registerHandler("OnDeathTimeExpiration", resMenuHelper.OnDeathTimeExpirationHandler)
 
 resMenuHelper.ResMenuFunction = function(pid, location)
 
