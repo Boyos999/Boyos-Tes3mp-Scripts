@@ -18,7 +18,7 @@ function noteWriting.CreateNote(pid,cmd)
 	local noteIcon = "m\\Tx_note_02.tga"
 	local noteWeight = 0.20
 	local noteValue = 1
-	local noteText = cmd[2]
+	local noteText
 	local i = 3
 	local recordTable = {}
 	
@@ -32,10 +32,8 @@ function noteWriting.CreateNote(pid,cmd)
 	end
 
 	--Put the text back together
-	while cmd[i] ~= nil do 
-		noteText = noteText .. " " .. cmd[i]
-		i = i + 1
-	end
+    noteText = table.concat(cmd, " ",2)
+
 	noteText = "<DIV ALIGN=\"CENTER\">" .. noteText .. "<p>"
 	recordTable["weight"] = noteWeight
 	recordTable["icon"] = noteIcon
@@ -59,23 +57,23 @@ customCommandHooks.registerCommand("write", noteWriting.CreateNote)
 Based on Create and store record functions from commandhandler in https://github.com/TES3MP/CoreScripts 
 ]]--
 function noteWriting.nuCreateBookRecord(pid, recordTable)
-	local recordStore = RecordStores["book"]
-	local id = recordStore:GenerateRecordId()
-	local savedTable = recordTable
+    local recordStore = RecordStores["book"]
+    local id = recordStore:GenerateRecordId()
+    local savedTable = recordTable
 	
-	recordStore.data.generatedRecords[id] = savedTable
-	for _, player in pairs(Players) do
+    recordStore.data.generatedRecords[id] = savedTable
+    for _, player in pairs(Players) do
         if not tableHelper.containsValue(Players[pid].generatedRecordsReceived, id) then
             table.insert(player.generatedRecordsReceived, id)
         end
     end
-	recordStore:Save()
+    recordStore:Save()
     tes3mp.ClearRecords()
     tes3mp.SetRecordType(enumerations.recordType[string.upper("book")])
-	packetBuilder.AddBookRecord(id, savedTable)
-	tes3mp.SendRecordDynamic(pid, true, false)
+    packetBuilder.AddBookRecord(id, savedTable)
+    tes3mp.SendRecordDynamic(pid, true, false)
 	
-	return id
+    return id
 end
 
 return noteWriting

@@ -4,4 +4,4 @@
 ```lua
 	noteWriting = require("custom.noteWriting")
 ```
-4. This will allow players to write notes using /write followed by the text of the note
+3. This will allow players to write notes using /write followed by the text of the note
