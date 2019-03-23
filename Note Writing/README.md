@@ -1,5 +1,5 @@
 # INSTALL INSTRUCTIONS
-1. Download noteWriting.lua, put it in your scripts folder
+1. Download noteWriting.lua, put it in your custom/scripts folder
 2. Add the following to the require statements to customScripts.lua
 ```lua
 	noteWriting = require("custom.noteWriting")
