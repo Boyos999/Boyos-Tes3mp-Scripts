@@ -2,6 +2,7 @@ local noteWriting = {}
 
 --[[
 Takes a pid, and the cmd inputted into chat.
+Returns either a structured item, or nil if the player lacks paper.
 ]]--
 function noteWriting.CreateNote(pid,cmd)
 	--Make sure there is text after /write
@@ -24,6 +25,9 @@ function noteWriting.CreateNote(pid,cmd)
 	--Checks if players have the required Item(s)
 	if inventoryHelper.containsItem(Players[pid].data.inventory,"sc_paper plain") then
 		inventoryHelper.removeItem(Players[pid].data.inventory,"sc_paper plain",1)
+		Players[pid]:Message(color.Green .. "You made a note\n")
+    elseif inventoryHelper.containsItem(Players[pid].data.inventory,"sc_paper_plain_01_canodia") then
+        inventoryHelper.removeItem(Players[pid].data.inventory,"sc_paper_plain_01_canodia",1)
 		Players[pid]:Message(color.Green .. "You made a note\n")
 	else
 		Players[pid]:Message(color.Red .. "You lack the materials to make a note\n")
