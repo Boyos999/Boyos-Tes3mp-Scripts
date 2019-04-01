@@ -19,7 +19,7 @@ function noteWriting.CreateNote(pid,cmd)
 	local noteWeight = 0.20
 	local noteValue = 1
 	local noteText
-	local i = 3
+	local packetItem = {}
 	local recordTable = {}
 	
 	--Checks if players have the required Item(s)
@@ -50,9 +50,17 @@ function noteWriting.CreateNote(pid,cmd)
 	noteId = noteWriting.nuCreateBookRecord(pid, recordTable)
 	Players[pid]:AddLinkToRecord("book", noteId)
 	inventoryHelper.addItem(Players[pid].data.inventory,noteId,1)
-	Players[pid]:LoadInventory()
-	Players[pid]:LoadEquipment()
+    packetItem.refId = noteId
+    packetItem.count = 1
+    noteWriting.SendInventoryPacket(pid, packetItem)
 	return
+end
+
+function noteWriting.SendInventoryPacket(pid, packetItem)
+    tes3mp.ClearInventoryChanges(pid)
+    tes3mp.SetInventoryChangesAction(pid, enumerations.inventory.ADD)
+    packetBuilder.AddPlayerInventoryItemChange(pid, packetItem)
+    tes3mp.SendInventoryChanges(pid)
 end
 
 customCommandHooks.registerCommand("write", noteWriting.CreateNote)

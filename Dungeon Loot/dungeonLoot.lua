@@ -13,7 +13,7 @@ local jsondata = nil
 
 --Time in seconds between valid loots
 --Default is 1 hour
-local cooldownTime = 3600
+local cooldownTime = 3
 
 function dungeonLoot.main(eventStatus, pid, locationName, objectInfo, players)
     for _,object in pairs(objectInfo) do
@@ -75,6 +75,13 @@ function dungeonLoot.SaveJson(jsondata)
 	jsonInterface.save("custom/DungeonLoot.json", jsondata)
 end
 
+function dungeonLoot.SendInventoryPacket(pid, packetItem)
+    tes3mp.ClearInventoryChanges(pid)
+    tes3mp.SetInventoryChangesAction(pid, enumerations.inventory.ADD)
+    packetBuilder.AddPlayerInventoryItemChange(pid, packetItem)
+    tes3mp.SendInventoryChanges(pid)
+end
+
 function dungeonLoot.Reward(pid, objectRefId)
 	local splitObjectRefId = objectRefId:split("_")
 	local lootTableName = splitObjectRefId[2] .. splitObjectRefId[3]
@@ -85,6 +92,7 @@ function dungeonLoot.Reward(pid, objectRefId)
 	local itemId
 	local itemCount = 1
 	local itemName = "an item"
+    local packetItem = {}
 	local message
 	
 	if item.refid ~= nil then
@@ -107,8 +115,9 @@ function dungeonLoot.Reward(pid, objectRefId)
 	inventoryHelper.addItem(Players[pid].data.inventory,itemId,itemCount)
 	--end
 	
-	Players[pid]:LoadInventory()
-	Players[pid]:LoadEquipment()
+    packetItem.refId = itemId
+    packetItem.count = itemCount
+    dungeonLoot.SendInventoryPacket(pid, packetItem)
 	tes3mp.MessageBox(pid, -1, message)
 	
 end
