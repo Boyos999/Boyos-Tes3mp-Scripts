@@ -95,8 +95,10 @@ end
 function potionLimiterTimer(pid)
     if Players[pid] ~= nil then
         if Players[pid]:IsLoggedIn() then
-            Players[pid].data.customVariables.activePotions = Players[pid].data.customVariables.activePotions - 1
-            tes3mp.MessageBox(pid, -1, "The effects of a potion have worn off")
+            if Players[pid].data.customVariables.activePotions > 0 then
+                Players[pid].data.customVariables.activePotions = Players[pid].data.customVariables.activePotions - 1
+                tes3mp.MessageBox(pid, -1, "The effects of a potion have worn off")
+            end
         end
     end
 end
