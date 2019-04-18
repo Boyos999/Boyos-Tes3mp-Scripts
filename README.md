@@ -22,3 +22,8 @@ A simple script to add some basic starter equipment to players based on their sk
 # Note Writing
 Use ```/write <text>``` (without <>) to create a note with given text.
 Makes a check to see if the player has the required item(s) (only paper) by default.
+
+# Potion Limiter
+Limits the number of active potion effects a player can have on them, by default this is 3 at alchemy less
+than 50, gaining one extra at 50, 75, and 100 alchemy.
+For use with non-vanilla potions, you need to add the required information following the format in vanillapotions.json, any custom records should work by default

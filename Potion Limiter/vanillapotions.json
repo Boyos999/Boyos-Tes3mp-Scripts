@@ -1,0 +1,1058 @@
+[
+    "potion_skooma_01":{
+        "name":"Skooma",
+        "duration":60
+    },
+    "Potion_Cyro_Whiskey_01":{
+        "name":"Flin",
+        "duration":60
+    },
+    "potion_comberry_wine_01":{
+        "name":"Shein",
+        "duration":60
+    },
+    "potion_cyro_brandy_01":{
+        "name":"Cyrodiilic Brandy",
+        "duration":60
+    },
+    "potion_comberry_brandy_01":{
+        "name":"Greef",
+        "duration":60
+    },
+    "Potion_Local_Brew_01":{
+        "name":"Mazte",
+        "duration":60
+    },
+    "potion_local_liquor_01":{
+        "name":"Sujamma",
+        "duration":60
+    },
+    "potion_t_bug_musk_01":{
+        "name":"Telvanni Bug Musk",
+        "duration":60
+    },
+    "p_burden_s":{
+        "name":"Standard Potion of Burden",
+        "duration":30
+    },
+    "p_fire_shield_s":{
+        "name":"Standard Potion of Fire Shield",
+        "duration":30
+    },
+    "p_fortify_endurance_s":{
+        "name":"Standard Fortify Endurance",
+        "duration":30
+    },
+    "p_fortify_personality_s":{
+        "name":"Standard Fortify Personality",
+        "duration":30
+    },
+    "p_fortify_speed_s":{
+        "name":"Standard Fortify Speed",
+        "duration":30
+    },
+    "p_fortify_strength_s":{
+        "name":"Standard Fortify Strength",
+        "duration":30
+    },
+    "p_fortify_health_s":{
+        "name":"Standard Fortify Health Potion",
+        "duration":30
+    },
+    "p_invisibility_s":{
+        "name":"Standard Potion of Invisibility",
+        "duration":30
+    },
+    "p_light_s":{
+        "name":"Standard Potion of Light",
+        "duration":30
+    },
+    "p_lightning shield_s":{
+        "name":"Standard Lightning Shield",
+        "duration":30
+    },
+    "p_night-eye_s":{
+        "name":"Standard Potion of Night-Eye",
+        "duration":30
+    },
+    "p_paralyze_s":{
+        "name":"Standard Potion of Paralyze",
+        "duration":30
+    },
+    "p_reflection_s":{
+        "name":"Standard Potion of Reflection",
+        "duration":30
+    },
+    "p_fire resistance_s":{
+        "name":"Standard Fire Resistance",
+        "duration":30
+    },
+    "p_magicka_resistance_s":{
+        "name":"Standard Magicka Resistance",
+        "duration":30
+    },
+    "p_poison_resistance_s":{
+        "name":"Standard Poison Resistance",
+        "duration":30
+    },
+    "p_shock_resistance_s":{
+        "name":"Standard Shock Resistance",
+        "duration":30
+    },
+    "p_restore_agility_s":{
+        "name":"Standard Restore Agility",
+        "duration":0
+    },
+    "p_restore_endurance_s":{
+        "name":"Standard Restore Endurance",
+        "duration":0
+    },
+    "p_restore_intelligence_s":{
+        "name":"Standard Restore Intelligence",
+        "duration":0
+    },
+    "p_restore_luck_s":{
+        "name":"Standard Potion of Restore Luck",
+        "duration":0
+    },
+    "p_restore_personality_s":{
+        "name":"Standard Restore Personality",
+        "duration":0
+    },
+    "p_restore_speed_s":{
+        "name":"Standard Restore Speed",
+        "duration":0
+    },
+    "p_restore_strength_s":{
+        "name":"Standard Restore Strength",
+        "duration":0
+    },
+    "p_restore_willpower_s":{
+        "name":"Standard Restore Willpower",
+        "duration":0
+    },
+    "p_restore_fatigue_s":{
+        "name":"Standard Restore Fatigue",
+        "duration":5
+    },
+    "p_silence_s":{
+        "name":"Standard Potion of Silence",
+        "duration":30
+    },
+    "p_spell_absorption_s":{
+        "name":"Standard Spell Absorption",
+        "duration":30
+    },
+    "p_levitation_s":{
+        "name":"Standard Rising Force Potion",
+        "duration":30
+    },
+    "p_fortify_fatigue_s":{
+        "name":"Standard Fortify Fatigue Potion",
+        "duration":30
+    },
+    "p_burden_c":{
+        "name":"Cheap Potion of Burden",
+        "duration":15
+    },
+    "p_burden_b":{
+        "name":"Bargain Potion of Burden",
+        "duration":8
+    },
+    "p_burden_q":{
+        "name":"Quality Potion of Burden",
+        "duration":45
+    },
+    "p_burden_e":{
+        "name":"Exclusive Potion of Burden",
+        "duration":60
+    },
+    "p_drain_agility_q":{
+        "name":"Spoiled SlowFall Potion",
+        "duration":40
+    },
+    "p_drain_endurance_q":{
+        "name":"Spoiled SlowFall Potion",
+        "duration":40
+    },
+    "p_drain_intelligence_q":{
+        "name":"Spoiled Potion of Swift Swim",
+        "duration":40
+    },
+    "p_drain_luck_q":{
+        "name":"Spoiled Cure Disease Potion",
+        "duration":40
+    },
+    "p_drain_magicka_q":{
+        "name":"Spoiled Cure Poison Potion",
+        "duration":40
+    },
+    "p_drain_personality_q":{
+        "name":"Spoiled Potion of Swift Swim",
+        "duration":40
+    },
+    "p_drain_speed_q":{
+        "name":"Spoiled Cure Poison Potion",
+        "duration":40
+    },
+    "p_drain_strength_q":{
+        "name":"Spoiled Cure Disease Potion",
+        "duration":40
+    },
+    "p_drain willpower_q":{
+        "name":"Spoiled Cure Disease Potion",
+        "duration":40
+    },
+    "p_feather_c":{
+        "name":"Cheap Potion of Feather",
+        "duration":15
+    },
+    "p_feather_b":{
+        "name":"Bargain Potion of Feather",
+        "duration":8
+    },
+    "p_feather_e":{
+        "name":"Exclusive Potion of Feather",
+        "duration":60
+    },
+    "p_feather_q":{
+        "name":"Quality Potion of Feather",
+        "duration":45
+    },
+    "p_fire_shield_c":{
+        "name":"Cheap Potion of Fire Shield",
+        "duration":15
+    },
+    "p_fire_shield_b":{
+        "name":"Bargain Potion of Fire Shield",
+        "duration":8
+    },
+    "p_fire_shield_e":{
+        "name":"Exclusive Potion of Fire Shield",
+        "duration":60
+    },
+    "p_fire_shield_q":{
+        "name":"Quality Potion of Fire Shield",
+        "duration":45
+    },
+    "p_fortify_agility_c":{
+        "name":"Cheap Fortify Agility",
+        "duration":15
+    },
+    "p_fortify_agility_b":{
+        "name":"Bargain Fortify Agility",
+        "duration":8
+    },
+    "p_fortify_agility_q":{
+        "name":"Quality Fortify Agility",
+        "duration":45
+    },
+    "p_fortify_agility_e":{
+        "name":"Exclusive Fortify Agility",
+        "duration":60
+    },
+    "p_fortify_endurance_c":{
+        "name":"Cheap Fortify Endurance",
+        "duration":15
+    },
+    "p_fortify_endurance_b":{
+        "name":"Bargain Fortify Endurance",
+        "duration":8
+    },
+    "p_fortify_endurance_q":{
+        "name":"Quality Fortify Endurance",
+        "duration":45
+    },
+    "p_fortify_endurance_e":{
+        "name":"Exclusive Fortify Endurance",
+        "duration":60
+    },
+    "p_fortify_fatigue_c":{
+        "name":"Cheap Fortify Fatigue",
+        "duration":15
+    },
+    "p_fortify_fatigue_b":{
+        "name":"Bargain Fortify Fatigue",
+        "duration":8
+    },
+    "p_fortify_fatigue_e":{
+        "name":"Exclusive Fortify Fatigue",
+        "duration":60
+    },
+    "p_fortify_fatigue_q":{
+        "name":"Quality Fortify Fatigue",
+        "duration":45
+    },
+    "p_fortify_health_c":{
+        "name":"Cheap Potion of Fortify Health",
+        "duration":15
+    },
+    "p_fortify_health_e":{
+        "name":"Exclusive Fortify Health",
+        "duration":60
+    },
+    "p_fortify_health_q":{
+        "name":"Quality Fortify Health",
+        "duration":45
+    },
+    "p_fortify_intelligence_c":{
+        "name":"Cheap Fortify Intelligence",
+        "duration":15
+    },
+    "p_fortify_intelligence_b":{
+        "name":"Bargain Fortify Intelligence",
+        "duration":8
+    },
+    "p_fortify_intelligence_e":{
+        "name":"Exclusive Fortify Intelligence",
+        "duration":60
+    },
+    "p_fortify_intelligence_q":{
+        "name":"Quality Fortify Intelligence",
+        "duration":45
+    },
+    "p_fortify_luck_c":{
+        "name":"Cheap Potion of Fortify Luck",
+        "duration":15
+    },
+    "p_fortify_luck_b":{
+        "name":"Bargain Potion of Fortify Luck",
+        "duration":8
+    },
+    "p_fortify_luck_q":{
+        "name":"Quality Potion of Fortify Luck",
+        "duration":45
+    },
+    "p_fortify_luck_e":{
+        "name":"Exclusive Fortify Luck",
+        "duration":60
+    },
+    "p_fortify_magicka_c":{
+        "name":"Cheap Potion of Fortify Magicka",
+        "duration":15
+    },
+    "p_fortify_magicka_e":{
+        "name":"Exclusive Fortify Magicka",
+        "duration":60
+    },
+    "p_fortify_magicka_q":{
+        "name":"Quality Fortify Magicka",
+        "duration":45
+    },
+    "p_fortify_magicka_b":{
+        "name":"Bargain Fortify Magicka",
+        "duration":8
+    },
+    "p_fortify_personality_c":{
+        "name":"Cheap Fortify Personality",
+        "duration":15
+    },
+    "p_fortify_personality_e":{
+        "name":"Exclusive Fortify Personality",
+        "duration":60
+    },
+    "p_fortify_personality_b":{
+        "name":"Bargain Fortify Personality",
+        "duration":8
+    },
+    "p_fortify_personality_q":{
+        "name":"Quality Fortify Personality",
+        "duration":45
+    },
+    "p_fortify_speed_c":{
+        "name":"Cheap Potion of Fortify Speed",
+        "duration":15
+    },
+    "p_fortify_speed_b":{
+        "name":"Bargain Potion of Fortify Speed",
+        "duration":8
+    },
+    "p_fortify_speed_q":{
+        "name":"Quality Potion of Fortify Speed",
+        "duration":45
+    },
+    "p_fortify_speed_e":{
+        "name":"Exclusive Fortify Speed",
+        "duration":60
+    },
+    "p_fortify_strength_c":{
+        "name":"Cheap Fortify Strength",
+        "duration":15
+    },
+    "p_fortify_strength_b":{
+        "name":"Bargain Fortify Strength",
+        "duration":8
+    },
+    "p_fortify_strength_e":{
+        "name":"Exclusive Fortify Strength",
+        "duration":60
+    },
+    "p_fortify_strength_q":{
+        "name":"Quality Fortify Strength",
+        "duration":45
+    },
+    "p_fortify_willpower_c":{
+        "name":"Cheap Fortify Willpower",
+        "duration":15
+    },
+    "p_fortify_willpower_b":{
+        "name":"Bargain Fortify Willpower",
+        "duration":8
+    },
+    "p_fortify_willpower_q":{
+        "name":"Quality Fortify Willpower",
+        "duration":45
+    },
+    "p_fortify_willpower_e":{
+        "name":"Exclusive Fortify Willpower",
+        "duration":60
+    },
+    "p_frost_shield_c":{
+        "name":"Cheap Potion of Frost Shield",
+        "duration":15
+    },
+    "p_frost_shield_b":{
+        "name":"Bargain Potion of Frost Shield",
+        "duration":8
+    },
+    "p_frost_shield_e":{
+        "name":"Exclusive Frost Shield",
+        "duration":60
+    },
+    "p_frost_shield_q":{
+        "name":"Quality Frost Shield",
+        "duration":45
+    },
+    "p_invisibility_c":{
+        "name":"Cheap Potion of Invisibility",
+        "duration":15
+    },
+    "p_invisibility_b":{
+        "name":"Bargain Potion of Invisibility",
+        "duration":8
+    },
+    "p_invisibility_q":{
+        "name":"Quality Potion of Invisibility",
+        "duration":45
+    },
+    "p_invisibility_e":{
+        "name":"Exclusive Invisibility",
+        "duration":60
+    },
+    "p_jump_c":{
+        "name":"Cheap Potion of Jump",
+        "duration":15
+    },
+    "p_jump_b":{
+        "name":"Bargain Potion of Jump",
+        "duration":8
+    },
+    "p_jump_e":{
+        "name":"Exclusive Potion of Jump",
+        "duration":60
+    },
+    "p_jump_s":{
+        "name":"Standard Potion of Jump",
+        "duration":30
+    },
+    "p_jump_q":{
+        "name":"Quality Potion of Jump",
+        "duration":45
+    },
+    "p_levitation_c":{
+        "name":"Cheap Rising Force Potion",
+        "duration":15
+    },
+    "p_levitation_b":{
+        "name":"Bargain Rising Force Potion",
+        "duration":8
+    },
+    "P_Levitation_Q":{
+        "name":"Quality Rising Force Potion",
+        "duration":45
+    },
+    "p_levitation_e":{
+        "name":"Exclusive Rising Force Potion",
+        "duration":60
+    },
+    "p_light_c":{
+        "name":"Cheap Potion of Light",
+        "duration":15
+    },
+    "p_light_b":{
+        "name":"Bargain Potion of Light",
+        "duration":8
+    },
+    "p_light_e":{
+        "name":"Exclusive Potion of Light",
+        "duration":60
+    },
+    "p_light_q":{
+        "name":"Quality Potion of Light",
+        "duration":45
+    },
+    "p_lightning shield_c":{
+        "name":"Cheap Lightning Shield",
+        "duration":15
+    },
+    "p_lightning shield_e":{
+        "name":"Exclusive Lightning Shield",
+        "duration":60
+    },
+    "p_lightning shield_q":{
+        "name":"Quality Lightning Shield",
+        "duration":45
+    },
+    "p_lightning shield_b":{
+        "name":"Bargain Lightning Shield",
+        "duration":8
+    },
+    "p_night-eye_c":{
+        "name":"Cheap Potion of Night-Eye",
+        "duration":15
+    },
+    "p_night-eye_b":{
+        "name":"Bargain Potion of Night-Eye",
+        "duration":8
+    },
+    "p_night-eye_q":{
+        "name":"Quality Potion of Night-Eye",
+        "duration":45
+    },
+    "p_night-eye_e":{
+        "name":"Exclusive Potion of Night-Eye",
+        "duration":60
+    },
+    "p_paralyze_c":{
+        "name":"Cheap Potion of Paralyze",
+        "duration":15
+    },
+    "p_paralyze_b":{
+        "name":"Bargain Potion of Paralyze",
+        "duration":8
+    },
+    "p_paralyze_e":{
+        "name":"Exclusive Potion of Paralyze",
+        "duration":60
+    },
+    "p_paralyze_q":{
+        "name":"Quality Potion of Paralyze",
+        "duration":45
+    },
+    "p_reflection_c":{
+        "name":"Cheap Potion of Reflection",
+        "duration":15
+    },
+    "p_reflection_b":{
+        "name":"Bargain Potion of Reflection",
+        "duration":8
+    },
+    "p_reflection_q":{
+        "name":"Quality Potion of Reflection",
+        "duration":45
+    },
+    "p_reflection_e":{
+        "name":"Exclusive Potion of Reflection",
+        "duration":60
+    },
+    "p_disease_resistance_c":{
+        "name":"Cheap Disease Resistance",
+        "duration":15
+    },
+    "p_disease_resistance_s":{
+        "name":"Standard Disease Resistance",
+        "duration":30
+    },
+    "p_disease_resistance_b":{
+        "name":"Bargain Disease Resistance",
+        "duration":8
+    },
+    "p_disease_resistance_q":{
+        "name":"Quality Disease Resistance",
+        "duration":45
+    },
+    "p_disease_resistance_e":{
+        "name":"Exclusive Disease Resistance",
+        "duration":60
+    },
+    "p_fire_resistance_c":{
+        "name":"Cheap Fire Resistance",
+        "duration":15
+    },
+    "p_fire_resistance_b":{
+        "name":"Bargain Fire Resistance",
+        "duration":8
+    },
+    "p_fire_resistance_q":{
+        "name":"Quality Fire Resistance",
+        "duration":45
+    },
+    "p_fire_resistance_e":{
+        "name":"Exclusive Fire Resistance",
+        "duration":60
+    },
+    "p_frost_resistance_c":{
+        "name":"Cheap Frost Resistance",
+        "duration":15
+    },
+    "p_frost_resistance_b":{
+        "name":"Bargain Frost Resistance",
+        "duration":8
+    },
+    "p_frost_resistance_e":{
+        "name":"Exclusive Frost Resistance",
+        "duration":60
+    },
+    "p_frost_resistance_q":{
+        "name":"Quality Frost Resistance",
+        "duration":45
+    },
+    "p_magicka_resistance_c":{
+        "name":"Cheap Magicka Resistance",
+        "duration":15
+    },
+    "p_magicka_resistance_b":{
+        "name":"Bargain Magicka Resistance",
+        "duration":8
+    },
+    "p_magicka_resistance_e":{
+        "name":"Exclusive Magicka Resistance",
+        "duration":60
+    },
+    "p_magicka_resistance_q":{
+        "name":"Quality Magicka Resistance",
+        "duration":45
+    },
+    "p_poison_resistance_c":{
+        "name":"Cheap Poison Resistance",
+        "duration":15
+    },
+    "p_poison_resistance_b":{
+        "name":"Bargain Poison Resistance",
+        "duration":8
+    },
+    "p_poison_resistance_e":{
+        "name":"Exclusive Poison Resistance",
+        "duration":60
+    },
+    "p_poison_resistance_q":{
+        "name":"Quality Poison Resistance",
+        "duration":45
+    },
+    "p_shock_resistance_c":{
+        "name":"Cheap Shock Resistance",
+        "duration":15
+    },
+    "p_shock_resistance_b":{
+        "name":"Bargain Shock Resistance",
+        "duration":8
+    },
+    "p_shock_resistance_e":{
+        "name":"Exclusive Shock Resistance",
+        "duration":60
+    },
+    "p_shock_resistance_q":{
+        "name":"Quality Shock Resistance",
+        "duration":45
+    },
+    "p_restore_agility_c":{
+        "name":"Cheap Restore Agility",
+        "duration":0
+    },
+    "p_restore_agility_b":{
+        "name":"Bargain Restore Agility",
+        "duration":0
+    },
+    "p_restore_agility_q":{
+        "name":"Quality Restore Agility",
+        "duration":0
+    },
+    "p_restore_agility_e":{
+        "name":"Exclusive Restore Agility",
+        "duration":0
+    },
+    "p_restore_endurance_c":{
+        "name":"Cheap Restore Endurance",
+        "duration":0
+    },
+    "p_restore_endurance_b":{
+        "name":"Bargain Restore Endurance",
+        "duration":0
+    },
+    "p_restore_endurance_q":{
+        "name":"Quality Restore Endurance",
+        "duration":0
+    },
+    "p_restore_endurance_e":{
+        "name":"Exclusive Restore Endurance",
+        "duration":0
+    },
+    "p_restore_fatigue_c":{
+        "name":"Cheap Restore Fatigue",
+        "duration":5
+    },
+    "p_restore_fatigue_b":{
+        "name":"Bargain Restore Fatigue",
+        "duration":5
+    },
+    "p_restore_fatigue_q":{
+        "name":"Quality Restore Fatigue",
+        "duration":5
+    },
+    "p_restore_fatigue_e":{
+        "name":"Exclusive Restore Fatigue",
+        "duration":5
+    },
+    "p_restore_health_c":{
+        "name":"Cheap Restore Health",
+        "duration":5
+    },
+    "p_restore_intelligence_c":{
+        "name":"Cheap Restore Intelligence",
+        "duration":0
+    },
+    "p_restore_intelligence_e":{
+        "name":"Exclusive Restore Intelligence",
+        "duration":0
+    },
+    "p_restore_intelligence_q":{
+        "name":"Quality Restore Intelligence",
+        "duration":0
+    },
+    "p_restore_intelligence_b":{
+        "name":"Bargain Restore Intelligence",
+        "duration":0
+    },
+    "p_restore_luck_b":{
+        "name":"Bargain Restore Luck",
+        "duration":0
+    },
+    "p_restore_luck_q":{
+        "name":"Quality Restore Luck",
+        "duration":0
+    },
+    "p_restore_luck_e":{
+        "name":"Exclusive Restore Luck",
+        "duration":0
+    },
+    "p_restore_luck_c":{
+        "name":"Cheap Restore Luck",
+        "duration":0
+    },
+    "p_restore_personality_b":{
+        "name":"Bargain Restore Personality",
+        "duration":0
+    },
+    "p_restore_personality_c":{
+        "name":"Cheap Restore Personality",
+        "duration":0
+    },
+    "p_restore_personality_e":{
+        "name":"Exclusive Restore Personality",
+        "duration":0
+    },
+    "p_restore_personality_q":{
+        "name":"Quality Restore Personality",
+        "duration":0
+    },
+    "p_restore_speed_c":{
+        "name":"Cheap Restore Speed",
+        "duration":0
+    },
+    "p_restore_speed_b":{
+        "name":"Bargain Restore Speed",
+        "duration":0
+    },
+    "p_restore_speed_q":{
+        "name":"Quality Restore Speed",
+        "duration":0
+    },
+    "p_restore_speed_e":{
+        "name":"Exclusive Restore Speed",
+        "duration":0
+    },
+    "p_restore_magicka_c":{
+        "name":"Cheap Restore Magicka",
+        "duration":5
+    },
+    "p_restore_magicka_b":{
+        "name":"Bargain Restore Magicka",
+        "duration":5
+    },
+    "p_restore_magicka_q":{
+        "name":"Quality Restore Magicka",
+        "duration":5
+    },
+    "p_restore_magicka_e":{
+        "name":"Exclusive Restore Magicka",
+        "duration":5
+    },
+    "p_restore_strength_c":{
+        "name":"Cheap Restore Strength",
+        "duration":0
+    },
+    "p_restore_strength_b":{
+        "name":"Bargain Restore Strength",
+        "duration":0
+    },
+    "p_restore_strength_q":{
+        "name":"Quality Restore Strength",
+        "duration":0
+    },
+    "p_restore_strength_e":{
+        "name":"Exclusive Restore Strength",
+        "duration":0
+    },
+    "p_restore_willpower_c":{
+        "name":"Cheap Restore Willpower",
+        "duration":0
+    },
+    "p_restore_willpower_b":{
+        "name":"Bargain Restore Willpower",
+        "duration":0
+    },
+    "p_restore_willpower_q":{
+        "name":"Quality Restore Willpower",
+        "duration":0
+    },
+    "p_restore_willpower_e":{
+        "name":"Exclusive Restore Willpower",
+        "duration":0
+    },
+    "p_chameleon_c":{
+        "name":"Cheap Potion of Shadow",
+        "duration":15
+    },
+    "p_chameleon_b":{
+        "name":"Bargain Potion of Shadow",
+        "duration":8
+    },
+    "p_chameleon_s":{
+        "name":"Standard Potion of Shadow",
+        "duration":30
+    },
+    "p_chameleon_q":{
+        "name":"Quality Potion of Shadow",
+        "duration":45
+    },
+    "p_chameleon_e":{
+        "name":"Exclusive Potion of Shadow",
+        "duration":60
+    },
+    "p_silence_c":{
+        "name":"Cheap Potion of Silence",
+        "duration":15
+    },
+    "p_silence_b":{
+        "name":"Bargain Potion of Silence",
+        "duration":8
+    },
+    "p_silence_q":{
+        "name":"Quality Potion of Silence",
+        "duration":45
+    },
+    "p_silence_e":{
+        "name":"Exclusive Potion of Silence",
+        "duration":60
+    },
+    "p_spell_absorption_c":{
+        "name":"Cheap Spell Absorption",
+        "duration":15
+    },
+    "p_spell_absorption_b":{
+        "name":"Bargain Spell Absorption",
+        "duration":8
+    },
+    "p_spell_absorption_q":{
+        "name":"Quality Spell Absorption",
+        "duration":45
+    },
+    "p_spell_absorption_e":{
+        "name":"Exclusive Spell Absorption",
+        "duration":60
+    },
+    "p_swift_swim_c":{
+        "name":"Cheap Potion of Swift Swim",
+        "duration":15
+    },
+    "p_swift_swim_b":{
+        "name":"Bargain Potion of Swift Swim",
+        "duration":8
+    },
+    "p_swift_swim_q":{
+        "name":"Quality Potion of Swift Swim",
+        "duration":45
+    },
+    "p_swift_swim_e":{
+        "name":"Exclusive Potion of Swift Swim",
+        "duration":60
+    },
+    "p_restore_health_b":{
+        "name":"Bargain Restore Health",
+        "duration":5
+    },
+    "p_restore_health_q":{
+        "name":"Quality Restore Health",
+        "duration":5
+    },
+    "p_restore_health_e":{
+        "name":"Exclusive Restore Health",
+        "duration":5
+    },
+    "potion_ancient_brandy":{
+        "name":"Ancient Dagoth Brandy",
+        "duration":60
+    },
+    "p_almsivi_intervention_s":{
+        "name":"Potion of Fool's Luck",
+        "duration":0
+    },
+    "p_detect_creatures_s":{
+        "name":"Potion of Detect Creatures",
+        "duration":15
+    },
+    "p_cure_common_s":{
+        "name":"Potion of Cure Common Disease",
+        "duration":0
+    },
+    "p_cure_blight_s":{
+        "name":"Potion of Cure Blight Disease",
+        "duration":0
+    },
+    "p_cure_paralyzation_s":{
+        "name":"Potion of Cure Paralyzation",
+        "duration":0
+    },
+    "p_cure_poison_s":{
+        "name":"Potion of Cure Poison",
+        "duration":0
+    },
+    "p_detect_key_s":{
+        "name":"Potion of Detect Key",
+        "duration":15
+    },
+    "p_dispel_s":{
+        "name":"Potion of Dispel",
+        "duration":0
+    },
+    "p_fortify_agility_s":{
+        "name":"Standard Fortify Agility Potion",
+        "duration":30
+    },
+    "p_fortify_intelligence_s":{
+        "name":"Standard Fortify Intelligence",
+        "duration":30
+    },
+    "p_fortify_luck_s":{
+        "name":"Standard Fortify Luck Potion",
+        "duration":30
+    },
+    "p_fortify_willpower_s":{
+        "name":"Standard Fortify Willpower",
+        "duration":30
+    },
+    "p_fortify_health_b":{
+        "name":"Bargain Fortify Health Potion",
+        "duration":8
+    },
+    "p_fortify_magicka_s":{
+        "name":"Standard Fortify Magicka Potion",
+        "duration":30
+    },
+    "p_mark_s":{
+        "name":"Potion of Marking",
+        "duration":0
+    },
+    "p_frost_resistance_s":{
+        "name":"Standard Resist Frost Potion",
+        "duration":30
+    },
+    "p_slowfall_s":{
+        "name":"Potion of Slowfalling",
+        "duration":15
+    },
+    "p_telekinesis_s":{
+        "name":"Potion of Telekinesis",
+        "duration":15
+    },
+    "p_water_breathing_s":{
+        "name":"Potion of Water Breathing",
+        "duration":15
+    },
+    "p_water_walking_s":{
+        "name":"Potion of Water Walking",
+        "duration":15
+    },
+    "p_vintagecomberrybrandy1":{
+        "name":"Vintage Brandy",
+        "duration":360
+    },
+    "p_frost_shield_s":{
+        "name":"Standard Potion of Frost Shield",
+        "duration":30
+    },
+    "p_restore_magicka_s":{
+        "name":"Standard Restore Magicka Potion",
+        "duration":5
+    },
+    "p_fortify_attack_e":{
+        "name":"Exclusive Fortify Attack",
+        "duration":60
+    },
+    "p_cure_common_unique":{
+        "name":"Trebonius' Potion of Curing",
+        "duration":0
+    },
+    "p_restore_health_s":{
+        "name":"Standard Restore Health Potion",
+        "duration":5
+    },
+    "p_detect_enchantment_s":{
+        "name":"Potion of Detect Enchantments",
+        "duration":15
+    },
+    "p_quarrablood_UNIQUE":{
+        "name":"Blood of the Quarra Masters",
+        "duration":30
+    },
+    "p_sinyaramen_UNIQUE":{
+        "name":"Sinyaramen's Potion",
+        "duration":20
+    },
+    "p_heroism_s":{
+        "name":"Potion of Heroism",
+        "duration":60
+    },
+    "p_lovepotion_unique":{
+        "name":"Love Potion",
+        "duration":10
+    },
+    "p_recall_s":{
+        "name":"Potion of Recall",
+        "duration":0
+    },
+    "pyroil_tar_unique":{
+        "name":"Pyroil Tar",
+        "duration":60
+    },
+    "p_dwemer_lubricant00":{
+        "name":"Spoiled Dwemer Oil",
+        "duration":30
+    },
+    "verminous_fabricant_elixir":{
+        "name":"Verminous Fabricant Elixir",
+        "duration":10
+    },
+    "hulking_fabricant_elixir":{
+        "name":"Hulking Fabricant Elixir",
+        "duration":10
+    },
+    "p_Imperfect_Elixir":{
+        "name":"Elixir of the Imperfect",
+        "duration":15
+    },
+    "potion_nord_mead":{
+        "name":"Nord Mead",
+        "duration":60
+    }
+]
