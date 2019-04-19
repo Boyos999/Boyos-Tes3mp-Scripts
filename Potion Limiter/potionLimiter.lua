@@ -21,7 +21,7 @@ function potionLimiter.OnPlayerItemUseValidator(eventStatus, pid, itemRefId)
         maxActivePotions = alchemy75Potions
     elseif tes3mp.GetSkillBase(pid, 16) == 50 then
         maxActivePotions = alchemy50Potions
-    elseif tes3mp.GetSkillBase(pid, 16) == 50 then
+    elseif tes3mp.GetSkillBase(pid, 16) == 25 then
         maxActivePotions = alchemy25Potions
     end
      
