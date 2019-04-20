@@ -1,5 +1,4 @@
 local noteWriting = {}
-
 --[[
 Takes a pid, and the cmd inputted into chat.
 Returns either a structured item, or nil if the player lacks paper.
@@ -49,18 +48,9 @@ function noteWriting.CreateNote(pid,cmd)
 
 	noteId = noteWriting.nuCreateBookRecord(pid, recordTable)
 	Players[pid]:AddLinkToRecord("book", noteId)
-	inventoryHelper.addItem(Players[pid].data.inventory,noteId,1)
     packetItem.refId = noteId
     packetItem.count = 1
-    noteWriting.SendInventoryPacket(pid, packetItem)
-	return
-end
-
-function noteWriting.SendInventoryPacket(pid, packetItem)
-    tes3mp.ClearInventoryChanges(pid)
-    tes3mp.SetInventoryChangesAction(pid, enumerations.inventory.ADD)
-    packetBuilder.AddPlayerInventoryItemChange(pid, packetItem)
-    tes3mp.SendInventoryChanges(pid)
+    playerPacketHelper.addPlayerItems(pid, {packetItem})
 end
 
 customCommandHooks.registerCommand("write", noteWriting.CreateNote)

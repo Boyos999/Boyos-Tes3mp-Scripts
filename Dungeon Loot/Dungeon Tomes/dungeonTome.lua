@@ -79,13 +79,6 @@ function dungeonTome.SaveJson(jsondata)
 	jsonInterface.save("custom/DungeonTome.json", jsondata)
 end
 
-function dungeonTome.SendSpellbookPacket(pid, packetSpell)
-    tes3mp.ClearSpellbookChanges(pid)
-    tes3mp.SetSpellbookChangesAction(pid, enumerations.spellbook.ADD)
-    tes3mp.AddSpell(pid, packetSpell)
-    tes3mp.SendSpellbookChanges(pid)
-end
-
 function dungeonTome.Reward(pid, objectRefId)
 	local splitObjectRefId = objectRefId:split("_")
 	local lootTableName = splitObjectRefId[2] .. splitObjectRefId[3]
@@ -115,11 +108,11 @@ function dungeonTome.Reward(pid, objectRefId)
 	if tableHelper.containsValue(Players[pid].data.spellbook, spellId) then
 		message = "You already know the spell contained within."
 	else
-		table.insert(Players[pid].data.spellbook, spellId)
+		--table.insert(Players[pid].data.spellbook, spellId)
 		message = "You find a spell of " .. spellName .. " within the tome."
 	end
 	
-    dungeonTome.SendSpellbookPacket(pid, spellId)
+    playerPacketHelper.addPlayerSpells(pid,{spellId})
 	tes3mp.MessageBox(pid, -1, message)
 end
 

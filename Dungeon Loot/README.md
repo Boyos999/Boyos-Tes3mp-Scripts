@@ -1,4 +1,5 @@
 # INSTALL INSTRUCTIONS
+REQUIRES playerPacketHelper
 1. Using this script, if you activate an object with an id that begins with "dungeonchest_", (ex. dungeonchest_armor_one), following the example it will look for the example table armorone.json
 2. It will then add a random item from that list (should be formatted like armorone.json) to the activating player's inventory
 3. Cooldown time is specified at the top of the file, during which players will not get items

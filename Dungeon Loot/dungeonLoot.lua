@@ -75,13 +75,6 @@ function dungeonLoot.SaveJson(jsondata)
 	jsonInterface.save("custom/DungeonLoot.json", jsondata)
 end
 
-function dungeonLoot.SendInventoryPacket(pid, packetItem)
-    tes3mp.ClearInventoryChanges(pid)
-    tes3mp.SetInventoryChangesAction(pid, enumerations.inventory.ADD)
-    packetBuilder.AddPlayerInventoryItemChange(pid, packetItem)
-    tes3mp.SendInventoryChanges(pid)
-end
-
 function dungeonLoot.Reward(pid, objectRefId)
 	local splitObjectRefId = objectRefId:split("_")
 	local lootTableName = splitObjectRefId[2] .. splitObjectRefId[3]
@@ -110,14 +103,10 @@ function dungeonLoot.Reward(pid, objectRefId)
 	message = "You find " .. itemName .. " within the chest."
 	--This is where you handle cases where the table entry isn't an itemId (ex. randomItems)
 	--I recommend using a prefix in the id (ex. by_<whatever>) then using the Id to determine what to do with it
-	local splitItemId = itemId:split("_")
-	--otherwise just add the Id to the player's inventory
-	inventoryHelper.addItem(Players[pid].data.inventory,itemId,itemCount)
-	--end
 	
     packetItem.refId = itemId
     packetItem.count = itemCount
-    dungeonLoot.SendInventoryPacket(pid, packetItem)
+    playerPacketHelper.addPlayerItems(pid,{packetItem})
 	tes3mp.MessageBox(pid, -1, message)
 	
 end
