@@ -63,12 +63,14 @@ function playerPacketHelper.sendInventoryChanges(pid, packetTable, enumeration)
 end
 
 function playerPacketHelper.sendSpellbookChanges(pid, spellList, enumeration)
-    tes3mp.ClearSpellbookChanges(pid)
-    tes3mp.SetSpellbookChangesAction(pid, enumeration)
-    for _,spell in pairs(spellList) do
-        tes3mp.AddSpell(pid, spell)
+    if spellList ~= nil then
+        tes3mp.ClearSpellbookChanges(pid)
+        tes3mp.SetSpellbookChangesAction(pid, enumeration)
+        for _,spell in pairs(spellList) do
+            tes3mp.AddSpell(pid, spell)
+        end
+        tes3mp.SendSpellbookChanges(pid)
     end
-    tes3mp.SendSpellbookChanges(pid)
 end
 
 --[[
