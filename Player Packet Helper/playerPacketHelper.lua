@@ -32,7 +32,7 @@ end
 
 function playerPacketHelper.removePlayerItems(pid, itemTable)
     for _,item in pairs(itemTable) do
-        if item.count == nil then
+        if item.count == nil or item.count <= 0 then
             item.count = 1
         end
         inventoryHelper.removeClosestItem(Players[pid].data.inventory, item.refId, item.count, item.charge, item.enchantmentCharge, item.soul)
@@ -63,7 +63,7 @@ function playerPacketHelper.sendInventoryChanges(pid, packetTable, enumeration)
 end
 
 function playerPacketHelper.sendSpellbookChanges(pid, spellList, enumeration)
-    if spellList ~= nil then
+    if tableHelper.isEmpty(spellList) == false then
         tes3mp.ClearSpellbookChanges(pid)
         tes3mp.SetSpellbookChangesAction(pid, enumeration)
         for _,spell in pairs(spellList) do
