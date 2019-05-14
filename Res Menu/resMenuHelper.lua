@@ -16,11 +16,11 @@ customEventHooks.registerHandler("OnDeathTimeExpiration", resMenuHelper.OnDeathT
 resMenuHelper.ResMenuFunction = function(pid, location)
 
     local currentResurrectType
-	if location == 1 then
-	    currentResurrectType = enumerations.resurrect.TRIBUNAL_TEMPLE
-	else
+    if location == 1 then
+        currentResurrectType = enumerations.resurrect.TRIBUNAL_TEMPLE
+    else
         currentResurrectType = enumerations.resurrect.IMPERIAL_SHRINE
-	end
+    end
 
 
     local message = "You have been revived"

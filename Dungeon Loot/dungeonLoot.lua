@@ -28,87 +28,87 @@ function dungeonLoot.main(eventStatus, pid, locationName, objectInfo, players)
 end
 
 function dungeonLoot.CheckId(objectRefId, pid)
-	local splitObjectRefId = objectRefId:split("_")
-	if splitObjectRefId[1] == "dungeonchest" then
-		return true
-	else
-		return false
-	end
+    local splitObjectRefId = objectRefId:split("_")
+    if splitObjectRefId[1] == "dungeonchest" then
+        return true
+    else
+        return false
+    end
 end
 
 function dungeonLoot.CheckCooldown(pid, locationName, chestId)
-	local state
-	local playerName = Players[pid].name
-	jsondata = jsonInterface.load("custom/DungeonLoot.json")
-	if jsondata == nil then
-		jsondata = {}
-	end
-	
-	if jsondata[playerName] == nil then
-		jsondata[playerName] = {}
-	end
-	
-	if jsondata[playerName][locationName] == nil then
-		jsondata[playerName][locationName] = {}
-	end
-	
-	if jsondata[playerName][locationName][chestId] == nil then
-		jsondata[playerName][locationName][chestId] = {}
-	end
-	
-	if jsondata[playerName][locationName][chestId].loottime == nil then
-		jsondata[playerName][locationName][chestId].loottime = os.time()
-		state = true
-	elseif os.time() <= (jsondata[playerName][locationName][chestId].loottime+cooldownTime) then
-		state = false
-		tes3mp.MessageBox(pid, -1, "The chest is empty")
-	else 
-		jsondata[playerName][locationName][chestId].loottime = os.time()
-		state = true
-	end
-	dungeonLoot.SaveJson(jsondata)
-	
-	return state
+    local state
+    local playerName = Players[pid].name
+    jsondata = jsonInterface.load("custom/DungeonLoot.json")
+    if jsondata == nil then
+        jsondata = {}
+    end
+    
+    if jsondata[playerName] == nil then
+        jsondata[playerName] = {}
+    end
+    
+    if jsondata[playerName][locationName] == nil then
+        jsondata[playerName][locationName] = {}
+    end
+    
+    if jsondata[playerName][locationName][chestId] == nil then
+        jsondata[playerName][locationName][chestId] = {}
+    end
+    
+    if jsondata[playerName][locationName][chestId].loottime == nil then
+        jsondata[playerName][locationName][chestId].loottime = os.time()
+        state = true
+    elseif os.time() <= (jsondata[playerName][locationName][chestId].loottime+cooldownTime) then
+        state = false
+        tes3mp.MessageBox(pid, -1, "The chest is empty")
+    else 
+        jsondata[playerName][locationName][chestId].loottime = os.time()
+        state = true
+    end
+    dungeonLoot.SaveJson(jsondata)
+    
+    return state
 end
 
 function dungeonLoot.SaveJson(jsondata)
-	jsonInterface.save("custom/DungeonLoot.json", jsondata)
+    jsonInterface.save("custom/DungeonLoot.json", jsondata)
 end
 
 function dungeonLoot.Reward(pid, objectRefId)
-	local splitObjectRefId = objectRefId:split("_")
-	local lootTableName = splitObjectRefId[2] .. splitObjectRefId[3]
-	local lootTable = jsonInterface.load("custom/" .. lootTableName .. ".json")
-	local length = table.getn(lootTable)
-	local lootRoll = math.random(1,length)
-	local item = lootTable[lootRoll]
-	local itemId
-	local itemCount = 1
-	local itemName = "an item"
+    local splitObjectRefId = objectRefId:split("_")
+    local lootTableName = splitObjectRefId[2] .. splitObjectRefId[3]
+    local lootTable = jsonInterface.load("custom/" .. lootTableName .. ".json")
+    local length = table.getn(lootTable)
+    local lootRoll = math.random(1,length)
+    local item = lootTable[lootRoll]
+    local itemId
+    local itemCount = 1
+    local itemName = "an item"
     local packetItem = {}
-	local message
-	
-	if item.refid ~= nil then
-		itemId = item.refid
-		if item.count ~= nil then
-			itemCount = item.count
-		end
-		if item.name ~= nil then
-			itemName = item.name
-		end
-	else
-		itemId = item
-	end
-	
-	message = "You find " .. itemName .. " within the chest."
-	--This is where you handle cases where the table entry isn't an itemId (ex. randomItems)
-	--I recommend using a prefix in the id (ex. by_<whatever>) then using the Id to determine what to do with it
-	
+    local message
+    
+    if item.refid ~= nil then
+        itemId = item.refid
+        if item.count ~= nil then
+            itemCount = item.count
+        end
+        if item.name ~= nil then
+            itemName = item.name
+        end
+    else
+        itemId = item
+    end
+    
+    message = "You find " .. itemName .. " within the chest."
+    --This is where you handle cases where the table entry isn't an itemId (ex. randomItems)
+    --I recommend using a prefix in the id (ex. by_<whatever>) then using the Id to determine what to do with it
+    
     packetItem.refId = itemId
     packetItem.count = itemCount
     playerPacketHelper.addPlayerItems(pid,{packetItem})
-	tes3mp.MessageBox(pid, -1, message)
-	
+    tes3mp.MessageBox(pid, -1, message)
+    
 end
 
 --customEventHooks.registerValidator("OnObjectActivate", dungeonLoot.CheckId)
