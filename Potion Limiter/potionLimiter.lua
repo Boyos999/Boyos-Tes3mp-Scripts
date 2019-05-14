@@ -10,9 +10,9 @@ local alchemy50Potions = 4
 local alchemy75Potions = 5
 local alchemy100Potions = 6
 
+
 function potionLimiter.OnPlayerItemUseValidator(eventStatus, pid, itemRefId)
     local isPotion = false
-    local recordStore = RecordStores["potion"]
     local maxActivePotions = BaseMaxActivePotions
     
     --Set the appropriate potion max
@@ -27,13 +27,7 @@ function potionLimiter.OnPlayerItemUseValidator(eventStatus, pid, itemRefId)
     end
     
     --Check if the item used is a potion
-    if recordStore.data.generatedRecords[itemRefId] ~= nil then
-        isPotion = true
-    elseif recordStore.data.permanentRecords[itemRefId] ~= nil then
-        isPotion = true
-    elseif vanillaPotionTable[itemRefId] ~= nil then
-        isPotion = true
-    end
+    isPotion = potionLimiter.getIsPotion(itemRefId)
     
     --If the item used is a potion and the player can/cannot use it
     if isPotion == true and Players[pid].data.customVariables.activePotions < maxActivePotions then
@@ -43,7 +37,21 @@ function potionLimiter.OnPlayerItemUseValidator(eventStatus, pid, itemRefId)
         return customEventHooks.makeEventStatus(false,false)
     end
     --The item used was not a potion
-    return customEventHooks.makeEventStatus(nil,false)
+    return customEventHooks.makeEventStatus(nil,nil)
+end
+
+function potionLimiter.getIsPotion(itemRefId)
+    local isPotion = false
+    local recordStore = RecordStores["potion"]
+    --Check if the item used is a potion
+    if recordStore.data.generatedRecords[itemRefId] ~= nil then
+        isPotion = true
+    elseif recordStore.data.permanentRecords[itemRefId] ~= nil then
+        isPotion = true
+    elseif vanillaPotionTable[itemRefId] ~= nil then
+        isPotion = true
+    end
+    return isPotion
 end
 
 function potionLimiter.getPotionDuration(itemRefId)
@@ -89,14 +97,17 @@ end
 
 function potionLimiter.OnPlayerItemUseHandler(eventStatus, pid, itemRefId)
     local potionDuration
-    --Both event statuses need to be ~false, since if default is false the player can't use the item
-    if eventStatus.validCustomHandlers ~= false and eventStatus.validDefaultHandler ~= false then
-        potionDuration = potionLimiter.getPotionDuration(itemRefId)
-        --don't make timers for instant potions
-        if potionDuration > 1 then
-            Players[pid].data.customVariables.activePotions = Players[pid].data.customVariables.activePotions + 1
-            local potTimer = tes3mp.CreateTimerEx("potionLimiterTimer",1000 * potionDuration,"i", pid)
-            tes3mp.StartTimer(potTimer)
+    local isPotion = potionLimiter.getIsPotion(itemRefId)
+    if isPotion == true then
+        --Both event statuses need to be ~false, since if default is false the player can't use the item
+        if eventStatus.validCustomHandlers ~= false and eventStatus.validDefaultHandler ~= false then
+            potionDuration = potionLimiter.getPotionDuration(itemRefId)
+            --don't make timers for instant potions
+            if potionDuration > 1 then
+                Players[pid].data.customVariables.activePotions = Players[pid].data.customVariables.activePotions + 1
+                local potTimer = tes3mp.CreateTimerEx("potionLimiterTimer",1000 * potionDuration,"i", pid)
+                tes3mp.StartTimer(potTimer)
+            end
         end
     end
 end
