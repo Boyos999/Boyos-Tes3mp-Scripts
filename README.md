@@ -34,3 +34,6 @@ Disclaimer: I have no idea what the performance impact of this is
 Contains add/remove item/spell functions for use specifically on players. These functions will also send
 players relevant packet data (which are contained as separate functions). Required by Note Writing, Dungeon Loot, 
 and Dungeon Tomes.
+
+# Guar Banker
+NOT A BANK SCRIPT, Allows players to use /banker to spawn a refId (configurable) on a cooldown, and despawn after a set interval (I tested with kanaBank)
