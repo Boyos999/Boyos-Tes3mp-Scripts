@@ -23,10 +23,10 @@ function noteWriting.CreateNote(pid,cmd)
     
     --Checks if players have the required Item(s)
     if inventoryHelper.containsItem(Players[pid].data.inventory,"sc_paper plain") then
-        inventoryHelper.removeItem(Players[pid].data.inventory,"sc_paper plain",1)
+        playerPacketHelper.removePlayerItems(pid, {{refId = "sc_paper plain", count = 1}})
         Players[pid]:Message(color.Green .. "You made a note\n")
     elseif inventoryHelper.containsItem(Players[pid].data.inventory,"sc_paper_plain_01_canodia") then
-        inventoryHelper.removeItem(Players[pid].data.inventory,"sc_paper_plain_01_canodia",1)
+        playerPacketHelper.removePlayerItems(pid, {{refId = "sc_paper_plain_01_canodia", count = 1}})
         Players[pid]:Message(color.Green .. "You made a note\n")
     else
         Players[pid]:Message(color.Red .. "You lack the materials to make a note\n")
@@ -48,9 +48,7 @@ function noteWriting.CreateNote(pid,cmd)
 
     noteId = noteWriting.nuCreateBookRecord(pid, recordTable)
     Players[pid]:AddLinkToRecord("book", noteId)
-    packetItem.refId = noteId
-    packetItem.count = 1
-    playerPacketHelper.addPlayerItems(pid, {packetItem})
+    playerPacketHelper.addPlayerItems(pid, {{refId = noteId, count = 1}})
 end
 
 customCommandHooks.registerCommand("write", noteWriting.CreateNote)
