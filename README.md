@@ -5,10 +5,8 @@ Opens a menu at the end of character creation, allowing the player to choose a c
 
 
 # Dungeon Loot
-Script for a hopefully modular system of cooldown based looting. Explaining how it determines which table it uses is easier with an example
-For the Id "dungeonchest_armor_one_a" the script looks for a table "armorone.json"
-When a player activates the chest (which could really be any object), the playername, location, id, and time are recorded if it has been long enough since the last activation.
-If everything checks out it gives the player an item from the respective table, more details both on file comments and the readme
+Using this script, if you activate an object with an entry in DungeonLootTables.json
+It will then add a random item from that list (should be formatted like DungeonLootTables.json) to the activating player's inventory
 
 # Old Scripts
 Scripts that I no longer have interest in updating but should technically still work
