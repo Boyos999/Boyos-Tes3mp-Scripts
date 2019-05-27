@@ -1,4 +1,4 @@
-[
+{
     "potion_skooma_01":{
         "name":"Skooma",
         "duration":60
@@ -1055,4 +1055,4 @@
         "name":"Nord Mead",
         "duration":60
     }
-]
+}
