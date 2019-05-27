@@ -1,12 +1,11 @@
 local dungeonLoot = {}
 
-local jsondata = nil
+local jsondata = jsonInterface.load("custom/DungeonLootLog.json")
+local lootTableTable = jsonInterface.load("custom/DungeonLootTables.json")
 
---The Id of the chest is extremely important, it determines what loot table is used
---ex. dungeonchest_armor_one will look for the jsonfile "armorone" in the data folder
---additional letter can be added after ex. dungeonchest_armor_one_a, the additional
---letter are not taken into account but will have seperate cooldowns
---If in different Cells, they will ahve different cooldowns regardless
+--The Id of the chest determines what loot table is used
+--Will look for tables in data/custom/DungeonLootTables.json
+--Example included for "dungeonchest_armor_one"
 
 --You will either need to enable places object collision, or set the collision overide on for each id
 --If you don't they won't have collision
@@ -18,8 +17,8 @@ local cooldownTime = 3
 function dungeonLoot.main(eventStatus, pid, locationName, objectInfo, players)
     for _,object in pairs(objectInfo) do
         if object.refId ~= nil then
-            if dungeonLoot.CheckId(object.refId, pid) == true then
-                if dungeonLoot.CheckCooldown(pid, locationName, object.refId) == true then
+            if dungeonLoot.CheckId(object.refId) == true then
+                if dungeonLoot.CheckCooldown(pid, locationName, object.uniqueIndex) == true then
                     dungeonLoot.Reward(pid, object.refId)
                 end
             end
@@ -27,19 +26,17 @@ function dungeonLoot.main(eventStatus, pid, locationName, objectInfo, players)
     end
 end
 
-function dungeonLoot.CheckId(objectRefId, pid)
-    local splitObjectRefId = objectRefId:split("_")
-    if splitObjectRefId[1] == "dungeonchest" then
+function dungeonLoot.CheckId(objectRefId)
+    if lootTableTable[objectRefId] ~= nil then
         return true
     else
         return false
     end
 end
 
-function dungeonLoot.CheckCooldown(pid, locationName, chestId)
+function dungeonLoot.CheckCooldown(pid, locationName, uniqueIndex)
     local state
     local playerName = Players[pid].name
-    jsondata = jsonInterface.load("custom/DungeonLoot.json")
     if jsondata == nil then
         jsondata = {}
     end
@@ -52,33 +49,32 @@ function dungeonLoot.CheckCooldown(pid, locationName, chestId)
         jsondata[playerName][locationName] = {}
     end
     
-    if jsondata[playerName][locationName][chestId] == nil then
-        jsondata[playerName][locationName][chestId] = {}
+    if jsondata[playerName][locationName][uniqueIndex] == nil then
+        jsondata[playerName][locationName][uniqueIndex] = {}
     end
     
-    if jsondata[playerName][locationName][chestId].loottime == nil then
-        jsondata[playerName][locationName][chestId].loottime = os.time()
+    if jsondata[playerName][locationName][uniqueIndex].loottime == nil then
+        jsondata[playerName][locationName][uniqueIndex].loottime = os.time()
         state = true
-    elseif os.time() <= (jsondata[playerName][locationName][chestId].loottime+cooldownTime) then
+    elseif os.time() <= (jsondata[playerName][locationName][uniqueIndex].loottime+cooldownTime) then
         state = false
         tes3mp.MessageBox(pid, -1, "The chest is empty")
     else 
-        jsondata[playerName][locationName][chestId].loottime = os.time()
+        jsondata[playerName][locationName][uniqueIndex].loottime = os.time()
         state = true
     end
-    dungeonLoot.SaveJson(jsondata)
     
     return state
 end
 
-function dungeonLoot.SaveJson(jsondata)
-    jsonInterface.save("custom/DungeonLoot.json", jsondata)
+function dungeonLoot.SaveJson()
+    if jsondata ~= nil then
+        jsonInterface.save("custom/DungeonLootLog.json", jsondata)
+    end
 end
 
 function dungeonLoot.Reward(pid, objectRefId)
-    local splitObjectRefId = objectRefId:split("_")
-    local lootTableName = splitObjectRefId[2] .. splitObjectRefId[3]
-    local lootTable = jsonInterface.load("custom/" .. lootTableName .. ".json")
+    local lootTable = lootTableTable[objectRefId]
     local length = table.getn(lootTable)
     local lootRoll = math.random(1,length)
     local item = lootTable[lootRoll]
@@ -113,5 +109,6 @@ end
 
 --customEventHooks.registerValidator("OnObjectActivate", dungeonLoot.CheckId)
 customEventHooks.registerHandler("OnObjectActivate", dungeonLoot.main)
+customEventHooks.registerHandler("OnServerExit", dungeonLoot.SaveJson)
 
 return dungeonLoot

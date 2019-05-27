@@ -1,0 +1,16 @@
+{
+    "dungeontome_tome_gods":{
+        1:{
+            "refid":"god's fire",
+            "name":"God's Fire"
+          },
+        2:{
+            "refid":"god's frost",
+            "name":"God's Frost"
+          },
+        3:{
+            "refid":"god's spark",
+            "name":"God's Spark"
+          }
+    }
+}
