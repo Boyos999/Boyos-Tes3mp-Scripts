@@ -1,0 +1,15 @@
+{
+    "testTemplate":{
+        "absorb agility",
+        "absorb endurance",
+        "absorb fatigue",
+        "absorb health",
+        "absorb intelligence",
+        "absorb luck",
+        "absorb personality",
+        "absorb speed",
+        "absorb spell points",
+        "absorb strength",
+        "absorb willpower"
+    }
+}
