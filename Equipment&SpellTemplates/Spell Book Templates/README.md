@@ -1,7 +1,8 @@
 # INSTALL INSTRUCTIONS
-1. Download spellBookTemplates.lua and put it in your scripts/custom folder
-2. Download spellBookTemplatesTable.json and put it in your data/custom folder
-3. Add the following to the require statements to the top of customScripts.lua (above any scripts that use it's functions)
+1. REQUIRES: Player Packet Helper
+2. Download spellBookTemplates.lua and put it in your scripts/custom folder
+3. Download spellBookTemplatesTable.json and put it in your data/custom folder
+4. Add the following to the require statements to the top of customScripts.lua (above any scripts that use it's functions)
 ```lua
 	spellBookTemplates = require("custom.spellBookTemplates")
 ```
