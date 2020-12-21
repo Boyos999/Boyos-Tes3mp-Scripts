@@ -3,16 +3,9 @@
 # Alternate Start
 Opens a menu at the end of character creation, allowing the player to choose a city they want to start in
 
-
 # Dungeon Loot
 Using this script, if you activate an object with an entry in DungeonLootTables.json
 It will then add a random item from that list (should be formatted like DungeonLootTables.json) to the activating player's inventory
-
-# Old Scripts
-Scripts that I no longer have interest in updating but should technically still work
-
-# Res Menu
-Gives the player the choice of respawning at an imperial shrine or tribunal temple on death, as opposed to it being random
 
 # Starter Equipment
 A simple script to add some basic starter equipment to players based on their skills
