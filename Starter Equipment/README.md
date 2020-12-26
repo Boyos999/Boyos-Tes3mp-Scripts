@@ -7,3 +7,4 @@ starterEquipment = require("custom.starterEquipment")
 
 # Config
 - Use to configure starter items and skill thresholds
+- Also contains some vanilla data
