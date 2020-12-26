@@ -5,10 +5,12 @@ vanillaPotionTable = jsonInterface.load("custom/vanillapotions.json")
 
 --config
 local BaseMaxActivePotions = 3
-local alchemy25Potions = 3
-local alchemy50Potions = 4
-local alchemy75Potions = 5
-local alchemy100Potions = 6
+local potionLimitTable = {
+    {alch = 0, potions = 3},
+    {alch = 50, potions = 4},
+    {alch = 75, potions = 5},
+    {alch = 100, potions = 6}
+}
 
 
 function potionLimiter.OnPlayerItemUseValidator(eventStatus, pid, itemRefId)
@@ -16,14 +18,10 @@ function potionLimiter.OnPlayerItemUseValidator(eventStatus, pid, itemRefId)
     local maxActivePotions = BaseMaxActivePotions
     
     --Set the appropriate potion max
-    if tes3mp.GetSkillBase(pid, 16) == 100 then
-        maxActivePotions = alchemy100Potions
-    elseif tes3mp.GetSkillBase(pid, 16) == 75 then
-        maxActivePotions = alchemy75Potions
-    elseif tes3mp.GetSkillBase(pid, 16) == 50 then
-        maxActivePotions = alchemy50Potions
-    elseif tes3mp.GetSkillBase(pid, 16) == 25 then
-        maxActivePotions = alchemy25Potions
+    for _,limit in pairs(potionLimitTable) do
+        if tes3mp.GetSkillBase(pid,16) >= limit.alch then
+            maxActivePotions = limit.potions
+        end
     end
     
     --Check if the item used is a potion
