@@ -17,7 +17,7 @@ starterEquipmentConfig.giveHighestArmor = true
 
 --Items given to all players regardless of skills
 starterEquipmentConfig.baseItems = {
-    {refid = "Gold_001", quantity = 50},
+    {refid = "gold_001", quantity = 50},
     {refid = "bk_a1_1_caiuspackage", quantity = 1}
 }
 
@@ -95,10 +95,10 @@ starterEquipmentConfig.rewardTable = {
     enchant = {
         major = {
             {refid = "life ring", quantity = 1},
-            {refid = "Misc_SoulGem_Lesser", quantity = 2}
+            {refid = "misc_soulgem_lesser", quantity = 2}
         },
         minor = {
-            {refid = "Misc_SoulGem_Petty", quantity = 2}
+            {refid = "misc_soulgem_petty", quantity = 2}
         }
     },
     destruction = {},
