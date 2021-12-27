@@ -52,8 +52,9 @@ end
 function starterEquipment.GiveItems(pid,items)
     if items ~= nil then
         for _,item in pairs(items) do
-            inventoryHelper.addItem(Players[pid].data.inventory, item.refid, item.quantity)
+            inventoryHelper.addItem(Players[pid].data.inventory, item.refId, item.count)
         end
+        Players[pid]:LoadItemChanges(items,enumerations.inventory.ADD)
     end
 end
 
@@ -96,33 +97,40 @@ function starterEquipment.CheckHighest(skill,highestWeapon,highestArmor)
     return true
 end
 
+function starterEquipment.MergeItemTables(baseTable,addTable)
+    if addTable ~= nil and baseTable ~= nil then
+        for _,item in pairs(addTable) do
+            table.insert(baseTable,item)
+        end
+    end
+    return baseTable
+end
+
 function starterEquipment.GiveStarterItems(eventStatus, pid)
     local major = starterEquipmentConfig.majorThreshold
     local minor = starterEquipmentConfig.minorThreshold
     local highestWeapon = starterEquipmentConfig.skillArray[starterEquipment.GetHighestWeapon(pid)+1]
     local highestArmor = starterEquipmentConfig.skillArray[starterEquipment.GetHighestArmor(pid)+1]
-    
+    local starterTable = starterEquipmentConfig.baseItems
+
     for i,skill in pairs(starterEquipmentConfig.skillArray) do
         local index = i-1
         if tes3mp.GetSkillBase(pid,index) >= major then
             if skill == "block" then
-                starterEquipment.GiveItems(pid,starterEquipmentConfig.rewardTable[skill].major[highestArmor])
+                starterTable = starterEquipment.MergeItemTables(starterTable,starterEquipmentConfig.rewardTable[skill].major[highestArmor])
             elseif starterEquipment.CheckHighest(skill,highestWeapon,highestArmor) then
-                starterEquipment.GiveItems(pid,starterEquipmentConfig.rewardTable[skill].major)
+                starterTable = starterEquipment.MergeItemTables(starterTable,starterEquipmentConfig.rewardTable[skill].major)
             end
         elseif tes3mp.GetSkillBase(pid,index) >= minor then
             if skill == "block" then
-                starterEquipment.GiveItems(pid,starterEquipmentConfig.rewardTable[skill].minor[highestArmor])
+                starterTable = starterEquipment.MergeItemTables(starterTable,starterEquipmentConfig.rewardTable[skill].minor[highestArmor])
             elseif starterEquipment.CheckHighest(skill,highestWeapon,highestArmor) then
-                starterEquipment.GiveItems(pid,starterEquipmentConfig.rewardTable[skill].minor)
+                starterTable = starterEquipment.MergeItemTables(starterTable,starterEquipmentConfig.rewardTable[skill].minor)
             end
         end
     end
     
-    starterEquipment.GiveItems(pid,starterEquipmentConfig.baseItems)
-    
-    Players[pid]:LoadInventory()
-    Players[pid]:LoadEquipment()
+    starterEquipment.GiveItems(pid,starterTable)
 end
 
 customEventHooks.registerHandler("OnPlayerEndCharGen",starterEquipment.GiveStarterItems)
