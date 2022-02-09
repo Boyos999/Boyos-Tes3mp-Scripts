@@ -24,80 +24,80 @@ starterEquipmentConfig.baseItems = {
 starterEquipmentConfig.rewardTable = {
     block = {
         major = {
-            heavyarmor = {{refid = "steel_towershield", quantity = 1}},
-            mediumarmor = {{refid = "bonemold_towershield", quantity = 1}},
-            lightarmor = {{refid = "chitin_towershield", quantity = 1}}
+            heavyarmor = {{refId = "steel_towershield", count = 1}},
+            mediumarmor = {{refId = "bonemold_towershield", count = 1}},
+            lightarmor = {{refId = "chitin_towershield", count = 1}}
         },
         minor = {
-            heavyarmor = {{refid = "steel_shield", quantity = 1}},
-            mediumarmor = {{refid = "bonemold_shield", quantity = 1}},
-            lightarmor = {{refid = "bonemold_shield", quantity = 1}}
+            heavyarmor = {{refId = "steel_shield", count = 1}},
+            mediumarmor = {{refId = "bonemold_shield", count = 1}},
+            lightarmor = {{refId = "bonemold_shield", count = 1}}
         }
     },
     armorer = {
         major = {
-            {refid = "repair_journeyman_01", quantity = 4}
+            {refId = "repair_journeyman_01", count = 4}
         },
         minor = {
-            {refid = "repair_prongs", quantity = 4}
+            {refId = "repair_prongs", count = 4}
         }
     },
     mediumarmor = {
         major = {
-            {refid = "bonemold_cuirass", quantity = 1}
+            {refId = "bonemold_cuirass", count = 1}
         },
         minor = {
-            {refid = "imperial_chain_cuirass", quantity = 1}
+            {refId = "imperial_chain_cuirass", count = 1}
         }
     },
     heavyarmor = {
         major = {
-            {refid = "steel_cuirass", quantity = 1}
+            {refId = "steel_cuirass", count = 1}
         },
         minor = {
-            {refid = "iron_cuirass", quantity = 1}
+            {refId = "iron_cuirass", count = 1}
         }
     },
     blunt = {
         major = {
-            {refid = "steel mace", quantity = 1}
+            {refId = "steel mace", count = 1}
         },
         minor = {
-            {refid = "iron club", quantity = 1}
+            {refId = "iron club", count = 1}
         }
     },
     longblade = {
         major = {
-            {refid = "steel longsword", quantity = 1}
+            {refId = "steel longsword", count = 1}
         },
         minor = {
-            {refid = "iron broadsword", quantity = 1}
+            {refId = "iron broadsword", count = 1}
         }
     },
     axe = {
         major = {
-            {refid = "steel war axe", quantity = 1}
+            {refId = "steel war axe", count = 1}
         },
         minor = {
-            {refid = "chitin war axe", quantity = 1}
+            {refId = "chitin war axe", count = 1}
         }
     },
     spear = {
         major = {
-            {refid = "steel spear", quantity = 1}
+            {refId = "steel spear", count = 1}
         },
         minor = {
-            {refid = "chitin spear", quantity = 1}
+            {refId = "chitin spear", count = 1}
         }
     },
     athletics = {},
     enchant = {
         major = {
-            {refid = "life ring", quantity = 1},
-            {refid = "misc_soulgem_lesser", quantity = 2}
+            {refId = "life ring", count = 1},
+            {refId = "misc_soulgem_lesser", count = 2}
         },
         minor = {
-            {refid = "misc_soulgem_petty", quantity = 2}
+            {refId = "misc_soulgem_petty", count = 2}
         }
     },
     destruction = {},
@@ -108,53 +108,53 @@ starterEquipmentConfig.rewardTable = {
     restoration = {},
     alchemy = {
         major = {
-            {refid = "apparatus_j_mortar_01", quantity = 1},
-            {refid = "ingred_marshmerrow_01", quantity = 5},
-            {refid = "ingred_wickwheat_01", quantity = 5}
+            {refId = "apparatus_j_mortar_01", count = 1},
+            {refId = "ingred_marshmerrow_01", count = 5},
+            {refId = "ingred_wickwheat_01", count = 5}
         },
         minor = {
-            {refid = "apparatus_a_mortar_01", quantity = 1},
-            {refid = "ingred_marshmerrow_01", quantity = 2},
-            {refid = "ingred_wickwheat_01", quantity = 2}
+            {refId = "apparatus_a_mortar_01", count = 1},
+            {refId = "ingred_marshmerrow_01", count = 2},
+            {refId = "ingred_wickwheat_01", count = 2}
         }
     },
     unarmored = {},
     security = {
         major = {
-            {refid =  "probe_journeyman_01", quantity = 1},
-            {refid = "pick_journeyman_01", quantity = 1}
+            {refId =  "probe_journeyman_01", count = 1},
+            {refId = "pick_journeyman_01", count = 1}
         },
         minor = {
-            {refid = "probe_apprentice_01", quantity = 1},
-            {refid = "pick_apprentice_01", quantity = 1}
+            {refId = "probe_apprentice_01", count = 1},
+            {refId = "pick_apprentice_01", count = 1}
         }
     },
     sneak = {},
     acrobatics = {},
     lightarmor = {
         major = {
-            {refid = "chitin cuirass", quantity = 1}
+            {refId = "chitin cuirass", count = 1}
         },
         minor = {
-            {refid = "netch_leather_boiled_cuirass", quantity = 1}
+            {refId = "netch_leather_boiled_cuirass", count = 1}
         }
     },
     shortblade = {
         major = {
-            {refid = "steel shortsword", quantity = 1}
+            {refId = "steel shortsword", count = 1}
         },
         minor = {
-            {refid = "chitin shortsword", quantity = 1}
+            {refId = "chitin shortsword", count = 1}
         }
     },
     marksman = {
         major = {
-            {refid = "steel longbow", quantity = 1},
-            {refid = "chitin arrow", quantity = 50},
-            {refid = "steel arrow", quantity = 15}
+            {refId = "steel longbow", count = 1},
+            {refId = "chitin arrow", count = 50},
+            {refId = "steel arrow", count = 15}
         },
         minor = {
-            {refid = "steel throwing star", quantity = 20}
+            {refId = "steel throwing star", count = 20}
         }
     },
     mercantile = {},
