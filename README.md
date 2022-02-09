@@ -3,10 +3,6 @@
 # Alternate Start
 Opens a menu at the end of character creation, allowing the player to choose a city they want to start in
 
-# Dungeon Loot
-Using this script, if you activate an object with an entry in DungeonLootTables.json
-It will then add a random item from that list (should be formatted like DungeonLootTables.json) to the activating player's inventory
-
 # Starter Equipment
 A simple script to add some basic starter equipment to players based on their skills
 
