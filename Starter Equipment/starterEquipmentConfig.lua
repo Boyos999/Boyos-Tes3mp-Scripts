@@ -17,7 +17,7 @@ starterEquipmentConfig.giveHighestArmor = true
 
 --Items given to all players regardless of skills
 starterEquipmentConfig.baseItems = {
-    {refid = "gold_001", quantity = 50}
+    {refId = "gold_001", count = 50}
 }
 
 --Table of starter items

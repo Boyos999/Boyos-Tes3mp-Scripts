@@ -44,11 +44,15 @@ function altStart.GenerateMenu()
 end
 
 function altStart.OnPlayerEndCharGenReplacement(eventStatus, pid)
-    if Menus["Alternate Start"] == nil then
-        altStart.GenerateMenu()
+    if config.useInstancedSpawn ~= true then
+        if Menus["Alternate Start"] == nil then
+            altStart.GenerateMenu()
+        end
+        Players[pid].currentCustomMenu = "Alternate Start"
+        menuHelper.DisplayMenu(pid, Players[pid].currentCustomMenu)
+    else
+        tes3mp.LogMessage(enumerations.log.WARN, "Alternate Start not supported with instance spawn.")
     end
-    Players[pid].currentCustomMenu = "Alternate Start"
-    menuHelper.DisplayMenu(pid, Players[pid].currentCustomMenu)
 end
 
 customEventHooks.registerHandler("OnPlayerEndCharGen", altStart.OnPlayerEndCharGenReplacement)
