@@ -4,5 +4,3 @@
 ```
 potionLimiter = require("custom.potionLimiter")
 ```
-
-note: quickkeys bypass onPlayerItemUse but it's planned to be fixed eventually
