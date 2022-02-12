@@ -24,3 +24,10 @@ and Dungeon Tomes.
 
 # Guar Banker
 NOT A BANK SCRIPT, Allows players to use /banker to spawn a refId (configurable) on a cooldown, and despawn after a set interval (I tested with kanaBank)
+
+# Player Corpses Persist
+Causes player deaths to leave a persistent, non-interactive (not lootable) corpse. By default retains 2 corpses per player, and corpses can be removed by activating them.
+
+Known Issues 
+- Corpse positioning is not exact due to death animations
+- When a "corpse" is spawned it will play a death animation
