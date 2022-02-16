@@ -61,9 +61,7 @@ end
 function playerCorpsesPersist.trackCorpse(pid,corpseIndex,corpseRefId)
     local playerName = Players[pid].name
     local playerCell = Players[pid].data.location.cell
-    if WorldInstance.data.customVariables.playerCorpses == nil then
-        WorldInstance.data.customVariables.playerCorpses = {}
-    end
+
     table.insert(WorldInstance.data.customVariables.playerCorpses,corpseIndex)
     if corpsesTracker == nil then
         corpsesTracker = {}
@@ -148,7 +146,7 @@ function playerCorpsesPersist.deleteCorpse(playerName,cell,uniqueIndex)
 end
 
 function playerCorpsesPersist.cleanCorpse(eventStatus,pid,cell,objects,players)
-    if eventStatus.validCustomHandlers ~= false and disposeCorpses == true then
+    if eventStatus.validCustomHandlers ~= false and disposeCorpses == true and not tableHelper.isEmpty(WorldInstance.data.customVariables.playerCorpses) then
         for uniqueIndex,object in pairs(objects) do
             if tableHelper.containsValue(WorldInstance.data.customVariables.playerCorpses, uniqueIndex) then
                 if RecordStores["npc"].data.generatedRecords[object.refId].name ~= nil then
@@ -169,7 +167,14 @@ function playerCorpsesPersist.corpseValidator(eventStatus,pid,cell,objects,playe
     end
 end
 
+function playerCorpsesPersist.init()
+    if WorldInstance.data.customVariables.playerCorpses == nil then
+        WorldInstance.data.customVariables.playerCorpses = {}
+    end
+end
+
 customEventHooks.registerValidator("OnDeathTimeExpiration",playerCorpsesPersist.deathHandler)
 
 customEventHooks.registerValidator("OnObjectActivate",playerCorpsesPersist.corpseValidator)
 customEventHooks.registerHandler("OnObjectActivate",playerCorpsesPersist.cleanCorpse)
+customEventHooks.registerHandler("OnServerPostInit",playerCorpsesPersist.init)
