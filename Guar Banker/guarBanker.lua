@@ -21,7 +21,7 @@ function guarBanker.SummonBankGuar(pid)
     local playerName = Players[pid].name
     
     if guarBanker.CheckCooldown(pid) then
-        uniqueIndex = logicHandler.CreateObjectAtPlayer(pid, {refId = bankerRefId, count = 1}, "spawn")
+        uniqueIndex = logicHandler.CreateObjectAtPlayer(pid, {refId = bankerRefId, count = 1, scale = 1}, "spawn")
         bankerTimer = tes3mp.CreateTimerEx("guarBankerDespawnBankGuar",1000 * bankerDespawnTime, "ss", cellDescription, uniqueIndex)
         tes3mp.StartTimer(bankerTimer)
     end

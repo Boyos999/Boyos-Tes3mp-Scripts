@@ -52,7 +52,7 @@ end
 
 function playerCorpsesPersist.spawnCorpse(pid)
     local corpseId = playerCorpsesPersist.createCorpseRecord(pid)
-    local corpseIndex = logicHandler.CreateObjectAtPlayer(pid, {refId = corpseId, count = 1}, "spawn")
+    local corpseIndex = logicHandler.CreateObjectAtPlayer(pid, {refId = corpseId, count = 1, scale = 1}, "spawn")
     logicHandler.RunConsoleCommandOnObject(pid,"SetHealth 0",Players[pid].data.location.cell,corpseIndex,true)
     tes3mp.LogMessage(enumerations.log.INFO,"PCP: Spawned Corpse for player: ".. logicHandler.GetChatName(pid) .. " in cell: "..Players[pid].data.location.cell)
     return corpseIndex, corpseId
