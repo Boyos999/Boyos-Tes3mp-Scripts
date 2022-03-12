@@ -173,7 +173,7 @@ function playerCorpsesPersist.init()
     end
 end
 
-customEventHooks.registerValidator("OnDeathTimeExpiration",playerCorpsesPersist.deathHandler)
+customEventHooks.registerHandler("OnPlayerDeath",playerCorpsesPersist.deathHandler)
 
 customEventHooks.registerValidator("OnObjectActivate",playerCorpsesPersist.corpseValidator)
 customEventHooks.registerHandler("OnObjectActivate",playerCorpsesPersist.cleanCorpse)
