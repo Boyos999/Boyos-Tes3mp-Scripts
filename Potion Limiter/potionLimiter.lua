@@ -77,6 +77,10 @@ function potionLimiter.OnPlayerSpellsActiveHandler(eventStatus,pid,playerPacket)
             end
         end
 
+        if activePotions < 0 then
+            activePotions = 0
+        end
+
         Players[pid].data.customVariables.activePotions = activePotions
     end
 end
