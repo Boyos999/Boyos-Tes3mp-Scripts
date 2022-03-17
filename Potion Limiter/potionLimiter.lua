@@ -1,20 +1,20 @@
 local potionLimiter = {}
 
-local potionLimiter.vanillaPotionTable = {}
-potionLimiter.vanillaPotionTable = jsonInterface.load("custom/vanillapotions.json")
+local vanillaPotionTable = {}
+vanillaPotionTable = jsonInterface.load("custom/vanillapotions.json")
 
 --config
-local potionLimiter.potionLimitTable = {
+local potionLimitTable = {
     {alch = 0, potions = 3},
     {alch = 50, potions = 4},
     {alch = 75, potions = 5},
     {alch = 100, potions = 6}
 }
-local potionLimiter.showMessageOnPotionEnd = true
+local showMessageOnPotionEnd = true
 
 function potionLimiter.OnPlayerItemUseValidator(eventStatus, pid, itemRefId)
     local isPotion = false
-    local maxActivePotions = potionLimiter.potionLimitTable[1].potions
+    local maxActivePotions = potionLimitTable[1].potions
     local activePotions = 0
 
     if Players[pid].data.customVariables.activePotions ~= nil then
@@ -22,7 +22,7 @@ function potionLimiter.OnPlayerItemUseValidator(eventStatus, pid, itemRefId)
     end
 
     --Set the appropriate potion max
-    for _,limit in pairs(potionLimiter.potionLimitTable) do
+    for _,limit in pairs(potionLimitTable) do
         if tes3mp.GetSkillBase(pid,16) >= limit.alch then
             maxActivePotions = limit.potions
         end
@@ -50,7 +50,7 @@ function potionLimiter.getIsPotion(itemRefId)
         isPotion = true
     elseif recordStore.data.permanentRecords[itemRefId] ~= nil then
         isPotion = true
-    elseif potionLimiter.vanillaPotionTable[itemRefId] ~= nil then
+    elseif vanillaPotionTable[itemRefId] ~= nil then
         isPotion = true
     end
     return isPotion
@@ -91,5 +91,3 @@ end
 
 customEventHooks.registerValidator("OnPlayerItemUse",potionLimiter.OnPlayerItemUseValidator)
 customEventHooks.registerHandler("OnPlayerSpellsActive",potionLimiter.OnPlayerSpellsActiveHandler)
-
-return potionLimiter
