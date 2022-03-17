@@ -3,7 +3,7 @@
         "name":"Skooma",
         "duration":60
     },
-    "Potion_Cyro_Whiskey_01":{
+    "potion_cyro_whiskey_01":{
         "name":"Flin",
         "duration":60
     },
@@ -1011,11 +1011,11 @@
         "name":"Potion of Detect Enchantments",
         "duration":15
     },
-    "p_quarrablood_UNIQUE":{
+    "p_quarrablood_unique":{
         "name":"Blood of the Quarra Masters",
         "duration":30
     },
-    "p_sinyaramen_UNIQUE":{
+    "p_sinyaramen_unique":{
         "name":"Sinyaramen's Potion",
         "duration":20
     },
@@ -1047,7 +1047,7 @@
         "name":"Hulking Fabricant Elixir",
         "duration":10
     },
-    "p_Imperfect_Elixir":{
+    "p_imperfect_elixir":{
         "name":"Elixir of the Imperfect",
         "duration":15
     },
