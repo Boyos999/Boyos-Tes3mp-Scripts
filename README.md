@@ -15,8 +15,6 @@ Limits the number of active potion effects a player can have on them, by default
 than 50, gaining one extra at 50, 75, and 100 alchemy.
 For use with non-vanilla potions, you need to add the required information following the format in vanillapotions.json, any custom records should work by default
 
-Disclaimer: I have no idea what the performance impact of this is
-
 # Player Packet Helper
 Contains add/remove item/spell functions for use specifically on players. These functions will also send
 players relevant packet data (which are contained as separate functions). Required by Note Writing, Dungeon Loot, 
