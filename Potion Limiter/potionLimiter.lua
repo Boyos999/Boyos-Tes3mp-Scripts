@@ -91,3 +91,5 @@ end
 
 customEventHooks.registerValidator("OnPlayerItemUse",potionLimiter.OnPlayerItemUseValidator)
 customEventHooks.registerHandler("OnPlayerSpellsActive",potionLimiter.OnPlayerSpellsActiveHandler)
+
+return potionLimiter
