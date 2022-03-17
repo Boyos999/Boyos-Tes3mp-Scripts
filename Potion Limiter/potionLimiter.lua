@@ -1,19 +1,20 @@
 local potionLimiter = {}
 
-local vanillaPotionTable = {}
-vanillaPotionTable = jsonInterface.load("custom/vanillapotions.json")
+local potionLimiter.vanillaPotionTable = {}
+potionLimiter.vanillaPotionTable = jsonInterface.load("custom/vanillapotions.json")
 
 --config
-local potionLimitTable = {
+local potionLimiter.potionLimitTable = {
     {alch = 0, potions = 3},
     {alch = 50, potions = 4},
     {alch = 75, potions = 5},
     {alch = 100, potions = 6}
 }
+local potionLimiter.showMessageOnPotionEnd = true
 
 function potionLimiter.OnPlayerItemUseValidator(eventStatus, pid, itemRefId)
     local isPotion = false
-    local maxActivePotions = potionLimitTable[1].potions
+    local maxActivePotions = potionLimiter.potionLimitTable[1].potions
     local activePotions = 0
 
     if Players[pid].data.customVariables.activePotions ~= nil then
@@ -21,7 +22,7 @@ function potionLimiter.OnPlayerItemUseValidator(eventStatus, pid, itemRefId)
     end
 
     --Set the appropriate potion max
-    for _,limit in pairs(potionLimitTable) do
+    for _,limit in pairs(potionLimiter.potionLimitTable) do
         if tes3mp.GetSkillBase(pid,16) >= limit.alch then
             maxActivePotions = limit.potions
         end
@@ -49,7 +50,7 @@ function potionLimiter.getIsPotion(itemRefId)
         isPotion = true
     elseif recordStore.data.permanentRecords[itemRefId] ~= nil then
         isPotion = true
-    elseif vanillaPotionTable[itemRefId] ~= nil then
+    elseif potionLimiter.vanillaPotionTable[itemRefId] ~= nil then
         isPotion = true
     end
     return isPotion
@@ -73,6 +74,9 @@ function potionLimiter.OnPlayerSpellsActiveHandler(eventStatus,pid,playerPacket)
                     activePotions = activePotions + 1
                 elseif action == enumerations.spellbook.REMOVE then
                     activePotions = activePotions - 1
+                    if potionLimiter.showMessageOnPotionEnd then
+                        tes3mp.MessageBox(pid, -1, "The effects of a potion have worn off")
+                    end
                 end
             end
         end
@@ -87,3 +91,5 @@ end
 
 customEventHooks.registerValidator("OnPlayerItemUse",potionLimiter.OnPlayerItemUseValidator)
 customEventHooks.registerHandler("OnPlayerSpellsActive",potionLimiter.OnPlayerSpellsActiveHandler)
+
+return potionLimiter
