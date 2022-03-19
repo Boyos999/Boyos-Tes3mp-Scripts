@@ -89,7 +89,15 @@ function potionLimiter.OnPlayerSpellsActiveHandler(eventStatus,pid,playerPacket)
     end
 end
 
+--Effects are removed on player death
+function potionLimiter.OnPlayerDeath(eventStatus,pid)
+    if eventStatus.validCustomHandlers ~= false and eventStatus.validDefaultHandler ~= false then
+        Players[pid].data.customVariables.activePotions = 0
+    end
+end
+
 customEventHooks.registerValidator("OnPlayerItemUse",potionLimiter.OnPlayerItemUseValidator)
 customEventHooks.registerHandler("OnPlayerSpellsActive",potionLimiter.OnPlayerSpellsActiveHandler)
+customEventHooks.registerHandler("OnPlayerDeath",potionLimiter.OnPlayerDeath)
 
 return potionLimiter
