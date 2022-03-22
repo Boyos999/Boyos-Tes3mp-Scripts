@@ -39,7 +39,7 @@ function playerCorpsesPersist.createCorpseRecord(pid)
         end
     end
 
-    recordStore:Save()
+    recordStore:QuicksaveToDrive()
     tes3mp.ClearRecords()
     tes3mp.SetRecordType(enumerations.recordType[string.upper("npc")])
     packetBuilder.AddNpcRecord(id, corpseRecord)

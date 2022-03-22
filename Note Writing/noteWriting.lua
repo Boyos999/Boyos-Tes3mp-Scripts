@@ -66,7 +66,7 @@ function noteWriting.nuCreateBookRecord(pid, recordTable)
             table.insert(player.generatedRecordsReceived, id)
         end
     end
-    recordStore:Save()
+    recordStore:QuicksaveToDrive()
     tes3mp.ClearRecords()
     tes3mp.SetRecordType(enumerations.recordType[string.upper("book")])
     packetBuilder.AddBookRecord(id, savedTable)
