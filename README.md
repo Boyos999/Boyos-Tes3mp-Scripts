@@ -29,3 +29,6 @@ Causes player deaths to leave a persistent, non-interactive (not lootable) corps
 Known Issues 
 - Corpse positioning is not exact due to death animations
 - When a "corpse" is spawned it will play a death animation
+
+# True Halberds
+A simple script that will create custom weapon records for halberds with more reasonable damage values based on the model of the weapon.
