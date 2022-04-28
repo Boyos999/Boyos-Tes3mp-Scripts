@@ -35,3 +35,6 @@ A simple script that will create custom weapon records for halberds with more re
 
 # Training Limiter
 A script that will prevent players from training more than a specified number of times per level. Unused training carries over to the next level, for example with default values a level 1 player will be able to train 5 times, if they don't use any training when they hit level 2 they will be able to train 10 times.
+
+Known Issues
+- Message Box will show increase to player skill even if it was blocked
