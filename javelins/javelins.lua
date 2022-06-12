@@ -56,7 +56,7 @@ function javelins.generateMenu(pid)
 
             local count = Players[pid].data.inventory[index].count
             Menus["javCraft"..spearRefId..pid] = {
-                caption = "Craft amount",
+                text = "Craft amount",
                 buttons = {}
             }
             for val=1,count do
