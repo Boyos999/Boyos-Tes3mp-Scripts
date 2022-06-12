@@ -39,3 +39,6 @@ A script that will prevent players from training more than a specified number of
 Known Issues
 - Message Box will show increase to player skill even if it was blocked
 - Skill increases to Sneak or Security from being jailed will be counted as training
+
+# Javelins
+Adds "javelin" records (throwable spears), and a crafting item that can be used to convert spears into javelins
