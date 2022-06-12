@@ -2,7 +2,7 @@ javelinsConfig = {}
 
 javelinsConfig.speed = 0.75
 --In addition to the 2x multiplier from being a thrown weapon
-javelinsConfig.damageMult = 2
+javelinsConfig.damageMult = 1.5
 javelinsConfig.subType = 11
 
 javelinsConfig.menuOrder = {
