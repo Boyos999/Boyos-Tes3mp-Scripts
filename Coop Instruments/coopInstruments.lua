@@ -33,8 +33,6 @@ function coopInstruments.playSound(pid, cellDescription, uniqueIndex, sound)
     logicHandler.RunConsoleCommandOnObject(pid, "playsound3d "..sound, cellDescription, uniqueIndex, true)
 end
 
---function coopInstruments.handleDulcimer(uniqueIndex, sound )
-
 function coopInstruments.isInstrument(refId)
     if coopInstrumentsConfig.instruments[refId] ~= nil then
         return true
