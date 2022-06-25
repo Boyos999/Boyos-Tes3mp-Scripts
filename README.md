@@ -42,3 +42,9 @@ Known Issues
 
 # Javelins
 Adds "javelin" records (throwable spears), and a crafting item that can be used to convert spears into javelins
+
+# Coop Instruments
+Allows players to hear instruments played by other players, supports 6th house bells and indoril instruments from TR
+
+# Familiars
+Adds "carryable" familiars
