@@ -27,7 +27,8 @@ javelinsConfig.baseSpears = {
         damage = {
             min = 10,
             max = 30
-        }
+        },
+        flags = "0x01"
     }
 }
 
@@ -37,7 +38,8 @@ javelinsConfig.baseSpears["bm huntsman spear"] = {
     damage = {
         min = 1,
         max = 22
-    }
+    },
+    flags = "0x00"
 }
 
 javelinsConfig.baseSpears["chitin spear"] = {
@@ -46,7 +48,8 @@ javelinsConfig.baseSpears["chitin spear"] = {
     damage = {
         min = 5,
         max = 13
-    }
+    },
+    flags = "0x00"
 }
 
 javelinsConfig.baseSpears["daedric spear"] = {
@@ -55,7 +58,8 @@ javelinsConfig.baseSpears["daedric spear"] = {
     damage = {
         min = 6,
         max = 40
-    }
+    },
+    flags = "0x01"
 }
 
 javelinsConfig.baseSpears["dwarven spear"] = {
@@ -64,7 +68,8 @@ javelinsConfig.baseSpears["dwarven spear"] = {
     damage = {
         min = 5,
         max = 21
-    }
+    },
+    flags = "0x01"
 }
 
 javelinsConfig.baseSpears["ebony spear"] = {
@@ -73,7 +78,8 @@ javelinsConfig.baseSpears["ebony spear"] = {
     damage = {
         min = 5,
         max = 32
-    }
+    },
+    flags = "0x01"
 }
 
 javelinsConfig.baseSpears["iron spear"] = {
@@ -82,7 +88,8 @@ javelinsConfig.baseSpears["iron spear"] = {
     damage = {
         min = 6,
         max = 15
-    }
+    },
+    flags = "0x00"
 }
 
 javelinsConfig.baseSpears["iron long spear"] = {
@@ -91,7 +98,8 @@ javelinsConfig.baseSpears["iron long spear"] = {
     damage = {
         min = 6,
         max = 15
-    }
+    },
+    flags = "0x00"
 }
 
 javelinsConfig.baseSpears["silver spear"] = {
@@ -100,7 +108,8 @@ javelinsConfig.baseSpears["silver spear"] = {
     damage = {
         min = 5,
         max = 23
-    }
+    },
+    flags = "0x03"
 }
 
 javelinsConfig.baseSpears["steel spear"] = {
@@ -109,7 +118,8 @@ javelinsConfig.baseSpears["steel spear"] = {
     damage = {
         min = 6,
         max = 17
-    }
+    },
+    flags = "0x00"
 }
 
 --Tamriel Data
@@ -119,7 +129,8 @@ javelinsConfig.baseSpears["steel spear"] = {
         damage = {
             min = 8,
             max = 23
-        }
+        },
+        flags = "0x01"
     }
 
     javelinsConfig.baseSpears["t_com_farm_pitchfork_01"] = {
@@ -127,7 +138,8 @@ javelinsConfig.baseSpears["steel spear"] = {
         damage = {
             min = 1,
             max = 5
-        }
+        },
+        flags = "0x00"
     }
 
     javelinsConfig.baseSpears["t_dae_regular_longspear_01"] = {
@@ -136,7 +148,8 @@ javelinsConfig.baseSpears["steel spear"] = {
         damage = {
             min = 10,
             max = 50
-        }
+        },
+        flags = "0x01"
     }
 
     javelinsConfig.baseSpears["t_dae_regular_trident_01"] = {
@@ -145,7 +158,8 @@ javelinsConfig.baseSpears["steel spear"] = {
         damage = {
             min = 7,
             max = 42
-        }
+        },
+        flags = "0x01"
     }
 
     javelinsConfig.baseSpears["t_de_aena_spear_01"] = {
@@ -154,7 +168,8 @@ javelinsConfig.baseSpears["steel spear"] = {
         damage = {
             min = 6,
             max = 15
-        }
+        },
+        flags = "0x00"
     }
 
     javelinsConfig.baseSpears["t_de_glass_spear_01"] = {
@@ -163,7 +178,8 @@ javelinsConfig.baseSpears["steel spear"] = {
         damage = {
             min = 6,
             max = 32
-        }
+        },
+        flags = "0x01"
     }
 
     javelinsConfig.baseSpears["t_dwe_regular_longspear_01"] = {
@@ -172,7 +188,8 @@ javelinsConfig.baseSpears["steel spear"] = {
         damage = {
             min = 5,
             max = 29
-        }
+        },
+        flags = "0x01"
     }
 
     javelinsConfig.baseSpears["t_imp_barrow_spear_01"] = {
@@ -181,7 +198,8 @@ javelinsConfig.baseSpears["steel spear"] = {
         damage = {
             min = 5,
             max = 17
-        }
+        },
+        flags = "0x00"
     }
 
     javelinsConfig.baseSpears["t_imp_reman_spear_01"] = {
@@ -190,7 +208,8 @@ javelinsConfig.baseSpears["steel spear"] = {
         damage = {
             min = 7,
             max = 15
-        }
+        },
+        flags = "0x00"
     }
 
     javelinsConfig.baseSpears["t_nor_iron_spear_01"] = {
@@ -199,7 +218,8 @@ javelinsConfig.baseSpears["steel spear"] = {
         damage = {
             min = 5,
             max = 20
-        }
+        },
+        flags = "0x00"
     }
 
     javelinsConfig.baseSpears["t_nor_orn_spear_01"] = {
@@ -208,7 +228,8 @@ javelinsConfig.baseSpears["steel spear"] = {
         damage = {
             min = 6,
             max = 21
-        }
+        },
+        flags = "0x00"
     }
 
     javelinsConfig.baseSpears["t_nor_silverspear_01"] = {
@@ -217,7 +238,8 @@ javelinsConfig.baseSpears["steel spear"] = {
         damage = {
             min = 2,
             max = 35
-        }
+        },
+        flags = "0x03"
     }
 
     javelinsConfig.baseSpears["t_nor_stalhrimspear_01"] = {
@@ -226,7 +248,8 @@ javelinsConfig.baseSpears["steel spear"] = {
         damage = {
             min = 5,
             max = 50
-        }
+        },
+        flags = "0x01"
     }
 
     javelinsConfig.baseSpears["t_nor_steel_spear_01"] = {
@@ -235,7 +258,8 @@ javelinsConfig.baseSpears["steel spear"] = {
         damage = {
             min = 6,
             max = 26
-        }
+        },
+        flags = "0x00"
     }
 
     javelinsConfig.baseSpears["t_orc_regular_spear_01"] = {
@@ -244,7 +268,8 @@ javelinsConfig.baseSpears["steel spear"] = {
         damage = {
             min = 8,
             max = 24
-        }
+        },
+        flags = "0x01"
     }
 
     javelinsConfig.baseSpears["t_orc_regular_spear_02"] = {
@@ -253,7 +278,8 @@ javelinsConfig.baseSpears["steel spear"] = {
         damage = {
             min = 8,
             max = 24
-        }
+        },
+        flags = "0x01"
     }
 
 return javelinsConfig

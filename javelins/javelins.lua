@@ -96,6 +96,7 @@ function javelins.OnServerPostInit()
                     min = math.floor(item.damage.min*damageMult),
                     max = math.floor(item.damage.max*damageMult)
                 }
+                flags = item.flags
             }
             recordStore.data.permanentRecords[item.id] = recordData
             tes3mp.LogMessage(enumerations.log.INFO, "Jav: Created permanent record for: "..item.id)
