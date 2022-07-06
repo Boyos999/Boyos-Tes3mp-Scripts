@@ -12,7 +12,7 @@ function coopInstruments.OnObjectActivate(eventStatus, pid, cellDescription, obj
             local dulcimer = coopInstrumentsConfig.trdulcimers[object.refId]
             local stage = Players[pid].data.customVariables.ciDulcimer
 
-            if stage == nil then
+            if stage == nil or dulcimer.sounds[stage] == nil then
                 stage = 1
             end
 
