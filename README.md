@@ -48,3 +48,7 @@ Allows players to hear instruments played by other players, supports 6th house b
 
 # Familiars
 Adds "carryable" familiars
+
+# Heart Fixer
+Fixes/re-implements a couple scripts relating to the final encounter of the main quest to work better in multiplayer when using journal sharing. No more end game scripts triggering from a bucket.
+ 
