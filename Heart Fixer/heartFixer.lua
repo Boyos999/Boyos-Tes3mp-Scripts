@@ -4,12 +4,32 @@ local heartFixer = {}
 --makes changes to the cell "Akulakhan's Chamber"
 local akulakhanUniqueIndex = "197818-0"
 local dagothBridgeUniqueIndex = "197672-0"
-local heartVoice = {'Say "vo\\misc\\Hit Heart 1.wav" "What are you doing?"',
-                    'Say "vo\\misc\\Hit Heart 2.wav" "WHAT ARE YOU DOING?!"',
-                    'Say "vo\\misc\\Hit Heart 3.wav" "FOOL!"',
-                    'Say "vo\\misc\\Hit Heart 4.wav" "STOP!"',
-                    'Say "vo\\misc\\Hit Heart 6.wav" "This is the end. The bitter, bitter end."'
+local dagothVoice = {
+    {
+        sound = "vo\\misc\\Hit Heart 1.wav",
+        message = "What are you doing?"
+    },
+    {
+        sound = "vo\\misc\\Hit Heart 2.wav",
+        message = "WHAT ARE YOU DOING?!"
+    },
+    {
+        sound = "vo\\misc\\Hit Heart 3.wav",
+        message = "FOOL!"
+    },
+    {
+        sound = "vo\\misc\\Hit Heart 4.wav",
+        message = "STOP!"
+    },
+    {
+        sound = "vo\\misc\\Hit Heart 6.wav",
+        message = "This is the end. The bitter, bitter end."
+    }
 }
+--what the sounds are named
+local recordPrefix = "hf_dagoth_heart_"
+--Modified LorkhanHeart script to remove redundant "Say" commands
+local heartScript = 'begin LorkhanHeart\n\nshort sunderHit\n\nshort keeningHit\n\nshort countHits\n\nshort countSays\n\nshort doOnce\n\n\n\nif ( menumode == 1 )\n\treturn\nendif\n\nif ( HeartDestroyed == 1 )\n\tif ( doOnce == 2 )\n\t\treturn\n\tendif\n\n\tif ( CellChanged == 1 )\n\t\tDisable\n\t\tSet doOnce to 2\n\tendif\n\n\tif ( CellChanged == 0 )\n\t\tif ( GetSoundPlaying "endrumble" == 0 )\n\n\t\t\tPlayLoopSound3D "endrumble"\n\t\tendif\n\tendif\n\tif ( GetSoundPlaying "heart" == 1 )\n\t\tStopSound "heart"\n\tendif\n\tif ( GetSoundPlaying "heartSunder" == 1 )\n\t\tStopSound "heartSunder"\n\tendif\n\n\treturn\nendif\n\nif ( sunderHit == 0 )\n\tSet sunderHit to HitOnMe Sunder\nendif\n\nSet keeningHit to HitOnMe Keening\nSetHealth 5000\n\nif ( doOnce == 0 )\n\tif ( GetDistance Player < 500 )\n\t\t"dagoth_ur_2"->PositionCell -40 2590 -180 320 "Akulakhan\'s Chamber"\n\t\t"dagoth_ur_2"->StartCombat Player\n\tSet doOnce to 1\n\tendif\nendif\n\n\nif ( sunderHit == 1 )\n\tif ( HeartDestroyed == 0 )\n\t\tif ( CellChanged == 0 )\n\t\t\tif ( GetSoundPlaying "heartSunder" == 0 )\n\n\t\t\tPlayLoopSound3D "heartsunder"\n\t\t\tendif\n\t\tendif\n\tendif\nelse\n\tif ( CellChanged == 0 )\n\t\tif ( GetSoundPlaying "heart" == 0 )\n\t\t\tPlayLoopSound3D, "heart"\n\t\tendif\n\tendif\n\treturn\nendif\n\nif ( keeningHit == 0 )\n\treturn\nendif\n\n\nSet countHits to ( countHits + 1 )\n\nif ( countHits == 0 )\n\tif ( countSays != 0 )\n\t\tSet countSays to 0\n\tendif\n\treturn\nendif\n\nif ( countHits == 1 )\n\tif ( countSays == 0 )\n\t\t"dagoth_ur_2"->SetFight 100\n\t\t"dagoth_ur_2"->StartCombat Player\n\t\tSet countSays to 1\n\tendif\n\tPlayGroup Idle2\nendif\n\nif ( countHits == 2 )\n\tif ( countSays == 1 )\n\t\tSet countSays to 2\n\tendif\n\tPlayGroup Idle3\nendif\n\nif ( countHits == 3 )\n\tif ( countSays == 2 )\n\t\tSet countSays to 3\n\tendif\n\tPlayGroup Idle4\nendif\n\nif ( countHits == 4 )\n\tif ( countSays == 3 )\n\t\tSet countSays to 4\n\tendif\n\tPlayGroup Idle5\nendif\n\nif ( countHits > 4 )\n\tif ( countSays == 4 )\n\t\tSet countSays to 5\n\tendif\n\tif ( GetSoundPlaying "heart" == 1 )\n\t\tStopSound "heart"\n\tendif\n\tif ( GetSoundPlaying "heartSunder" == 1 )\n\t\tStopSound "heartSunder"\n\tendif\n\tPlayGroup Death1\n\tset HeartDestroyed to 1\nendif\n\nEnd'
 
 function heartFixer.scriptGlobal(eventStatus, pid, variables)
     if eventStatus.validCustomHandlers ~= false and eventStatus.validDefaultHandler ~= false then
@@ -58,14 +78,24 @@ function heartFixerTimerEnd(pid)
 end
 
 function heartFixer.scriptOverride()
-    local recordStore = RecordStores["activator"]
-    recordStore.data.permanentRecords["dagoth destroy detector"] = {
+    RecordStores["activator"].data.permanentRecords["dagoth destroy detector"] = {
         baseId = "dagoth destroy detector",
         script = ""
     }
+    RecordStores["script"].data.permanentRecords["lorkhanheart"] = {
+        scriptText = heartScript
+    }
+    for i,voiceLine in pairs(dagothVoice) do
+        local id = recordPrefix .. i
+        RecordStores["sound"].data.permanentRecords[id] = {
+            sound = voiceLine.sound,
+            volume = 1,
+            pitch = 1
+        }
+    end
     --This is so the # of times hit is synced and also so the heart dies properly
     table.insert(config.synchronizedClientScriptIds, "LorkhanHeart")
-    tes3mp.LogMessage(enumerations.log.INFO, "HeartFixer: Added record to disable dagoth destroy detector")
+    tes3mp.LogMessage(enumerations.log.INFO, "HeartFixer: Loaded custom record overrides")
 end
 
 function heartFixer.scriptLocal(eventStatus, pid, cellDescription, objects, players)
@@ -77,9 +107,8 @@ function heartFixer.scriptLocal(eventStatus, pid, cellDescription, objects, play
                     for internalIndex, value in pairs(variableTable) do
                         if internalIndex == 2 and value > 0 and value <=5 then
                             for _,visitorPid in pairs(LoadedCells[cellDescription].visitors) do
-                                if visitorPid ~= pid then
-                                    logicHandler.RunConsoleCommandOnPlayer(visitorPid, heartVoice[value])
-                                end
+                                logicHandler.RunConsoleCommandOnPlayer(visitorPid, "playsoundVP "..recordPrefix..value.." 100 1")
+                                tes3mp.MessageBox(visitorPid,-1,dagothVoice[value].message)
                             end
                         end
                     end
