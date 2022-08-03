@@ -52,3 +52,5 @@ Adds "carryable" familiars
 # Heart Fixer
 Fixes/re-implements a couple scripts relating to the final encounter of the main quest to work better in multiplayer when using journal sharing. No more end game scripts triggering from a bucket.
  
+ # Potion Tweaks
+Allows for easy adjustment of the value, weight, magnitude, and duration of player made potions.
