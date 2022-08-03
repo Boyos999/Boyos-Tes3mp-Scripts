@@ -34,6 +34,7 @@ function familiars.OnObjectActivateValidator(eventStatus, pid, cellDescription, 
                     logicHandler.DeleteObject(pid, cellDescription, object.uniqueIndex, true)
                     inventoryHelper.addItem(Players[pid].data.inventory, object.refId..familiarsConfig.appendInv, 1, -1, -1, "")
                     Players[pid]:LoadItemChanges({{refId = object.refId..familiarsConfig.appendInv, count = 1, charge = -1, enchantmentCharge = -1, soul = ""}},enumerations.inventory.ADD)
+                    tableHelper.removeValue(Players[pid].data.customVariables.familiars.active, object.uniqueIndex)
                 end
             end
             --Prevent players from looting familiar corpses
