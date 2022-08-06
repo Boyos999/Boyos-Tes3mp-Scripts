@@ -54,3 +54,6 @@ Fixes/re-implements a couple scripts relating to the final encounter of the main
  
  # Potion Tweaks
 Allows for easy adjustment of the value, weight, magnitude, and duration of player made potions.
+
+# Enchant Tweaks
+Adjust player made constant effect enchantments that have a magnitude range to always take the max, average, or min magnitude
