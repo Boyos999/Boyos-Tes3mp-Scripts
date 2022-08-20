@@ -76,6 +76,38 @@ coopInstrumentsConfig.instruments = {
     t_de_setind_gong_01 = {
         allowActivate = false,
         sound = "T_SndObj_IndorilGong2"
+    },
+    tr_m3_oe_act_bell = {
+        allowActivate = false,
+        sound = "TR_m3_OE_bellclose"
+    },
+    tr_m3_q_kha_bell1 = {
+        allowActivate = true,
+        sound = "T_SndObj_IndorilBell1"
+    },
+    tr_m3_q_kha_bell2 = {
+        allowActivate = true,
+        sound = "T_SndObj_IndorilBell2"
+    },
+    tr_m3_q_kha_bell3 = {
+        allowActivate = true,
+        sound = "T_SndObj_IndorilBell3"
+    },
+    tr_m3_q_kha_bell4 = {
+        allowActivate = true,
+        sound = "T_SndObj_IndorilBell4"
+    },
+    tr_m3_q_kha_bell5 = {
+        allowActivate = true,
+        sound = "T_SndObj_IndorilBell5"
+    },
+    tr_m3_q_kha_bell6 = {
+        allowActivate = true,
+        sound = "T_SndObj_IndorilBell6"
+    },
+    tr_m3_q_kha_bell7 = {
+        allowActivate = true,
+        sound = "T_SndObj_IndorilBell7"
     }
 }
 
