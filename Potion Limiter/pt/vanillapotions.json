@@ -1,0 +1,1481 @@
+{
+  "potion_skooma_01": {
+    "name": "Skooma"
+  },
+  "potion_cyro_whiskey_01": {
+    "name": "Flin"
+  },
+  "potion_comberry_wine_01": {
+    "name": "Shein"
+  },
+  "potion_cyro_brandy_01": {
+    "name": "Cyrodiilic Brandy"
+  },
+  "potion_comberry_brandy_01": {
+    "name": "Greef"
+  },
+  "potion_local_brew_01": {
+    "name": "Mazte"
+  },
+  "potion_local_liquor_01": {
+    "name": "Sujamma"
+  },
+  "potion_t_bug_musk_01": {
+    "name": "Telvanni Bug Musk"
+  },
+  "p_burden_s": {
+    "name": "Standard Potion of Burden"
+  },
+  "p_fire_shield_s": {
+    "name": "Standard Potion of Fire Shield"
+  },
+  "p_fortify_endurance_s": {
+    "name": "Standard Fortify Endurance"
+  },
+  "p_fortify_personality_s": {
+    "name": "Standard Fortify Personality"
+  },
+  "p_fortify_speed_s": {
+    "name": "Standard Fortify Speed"
+  },
+  "p_fortify_strength_s": {
+    "name": "Standard Fortify Strength"
+  },
+  "p_fortify_health_s": {
+    "name": "Standard Fortify Health Potion"
+  },
+  "p_invisibility_s": {
+    "name": "Standard Potion of Invisibility"
+  },
+  "p_light_s": {
+    "name": "Standard Potion of Light"
+  },
+  "p_lightning shield_s": {
+    "name": "Standard Lightning Shield"
+  },
+  "p_night-eye_s": {
+    "name": "Standard Potion of Night-Eye"
+  },
+  "p_paralyze_s": {
+    "name": "Standard Potion of Paralyze"
+  },
+  "p_reflection_s": {
+    "name": "Standard Potion of Reflection"
+  },
+  "p_fire resistance_s": {
+    "name": "Standard Fire Resistance"
+  },
+  "p_magicka_resistance_s": {
+    "name": "Standard Magicka Resistance"
+  },
+  "p_poison_resistance_s": {
+    "name": "Standard Poison Resistance"
+  },
+  "p_shock_resistance_s": {
+    "name": "Standard Shock Resistance"
+  },
+  "p_restore_agility_s": {
+    "name": "Standard Restore Agility"
+  },
+  "p_restore_endurance_s": {
+    "name": "Standard Restore Endurance"
+  },
+  "p_restore_intelligence_s": {
+    "name": "Standard Restore Intelligence"
+  },
+  "p_restore_luck_s": {
+    "name": "Standard Potion of Restore Luck"
+  },
+  "p_restore_personality_s": {
+    "name": "Standard Restore Personality"
+  },
+  "p_restore_speed_s": {
+    "name": "Standard Restore Speed"
+  },
+  "p_restore_strength_s": {
+    "name": "Standard Restore Strength"
+  },
+  "p_restore_willpower_s": {
+    "name": "Standard Restore Willpower"
+  },
+  "p_restore_fatigue_s": {
+    "name": "Standard Restore Fatigue"
+  },
+  "p_silence_s": {
+    "name": "Standard Potion of Silence"
+  },
+  "p_spell_absorption_s": {
+    "name": "Standard Spell Absorption"
+  },
+  "p_levitation_s": {
+    "name": "Standard Rising Force Potion"
+  },
+  "p_fortify_fatigue_s": {
+    "name": "Standard Fortify Fatigue Potion"
+  },
+  "p_burden_c": {
+    "name": "Cheap Potion of Burden"
+  },
+  "p_burden_b": {
+    "name": "Bargain Potion of Burden"
+  },
+  "p_burden_q": {
+    "name": "Quality Potion of Burden"
+  },
+  "p_burden_e": {
+    "name": "Exclusive Potion of Burden"
+  },
+  "p_drain_agility_q": {
+    "name": "Spoiled SlowFall Potion"
+  },
+  "p_drain_endurance_q": {
+    "name": "Spoiled SlowFall Potion"
+  },
+  "p_drain_intelligence_q": {
+    "name": "Spoiled Potion of Swift Swim"
+  },
+  "p_drain_luck_q": {
+    "name": "Spoiled Cure Disease Potion"
+  },
+  "p_drain_magicka_q": {
+    "name": "Spoiled Cure Poison Potion"
+  },
+  "p_drain_personality_q": {
+    "name": "Spoiled Potion of Swift Swim"
+  },
+  "p_drain_speed_q": {
+    "name": "Spoiled Cure Poison Potion"
+  },
+  "p_drain_strength_q": {
+    "name": "Spoiled Cure Disease Potion"
+  },
+  "p_drain willpower_q": {
+    "name": "Spoiled Cure Disease Potion"
+  },
+  "p_feather_c": {
+    "name": "Cheap Potion of Feather"
+  },
+  "p_feather_b": {
+    "name": "Bargain Potion of Feather"
+  },
+  "p_feather_e": {
+    "name": "Exclusive Potion of Feather"
+  },
+  "p_feather_q": {
+    "name": "Quality Potion of Feather"
+  },
+  "p_fire_shield_c": {
+    "name": "Cheap Potion of Fire Shield"
+  },
+  "p_fire_shield_b": {
+    "name": "Bargain Potion of Fire Shield"
+  },
+  "p_fire_shield_e": {
+    "name": "Exclusive Potion of Fire Shield"
+  },
+  "p_fire_shield_q": {
+    "name": "Quality Potion of Fire Shield"
+  },
+  "p_fortify_agility_c": {
+    "name": "Cheap Fortify Agility"
+  },
+  "p_fortify_agility_b": {
+    "name": "Bargain Fortify Agility"
+  },
+  "p_fortify_agility_q": {
+    "name": "Quality Fortify Agility"
+  },
+  "p_fortify_agility_e": {
+    "name": "Exclusive Fortify Agility"
+  },
+  "p_fortify_endurance_c": {
+    "name": "Cheap Fortify Endurance"
+  },
+  "p_fortify_endurance_b": {
+    "name": "Bargain Fortify Endurance"
+  },
+  "p_fortify_endurance_q": {
+    "name": "Quality Fortify Endurance"
+  },
+  "p_fortify_endurance_e": {
+    "name": "Exclusive Fortify Endurance"
+  },
+  "p_fortify_fatigue_c": {
+    "name": "Cheap Fortify Fatigue"
+  },
+  "p_fortify_fatigue_b": {
+    "name": "Bargain Fortify Fatigue"
+  },
+  "p_fortify_fatigue_e": {
+    "name": "Exclusive Fortify Fatigue"
+  },
+  "p_fortify_fatigue_q": {
+    "name": "Quality Fortify Fatigue"
+  },
+  "p_fortify_health_c": {
+    "name": "Cheap Potion of Fortify Health"
+  },
+  "p_fortify_health_e": {
+    "name": "Exclusive Fortify Health"
+  },
+  "p_fortify_health_q": {
+    "name": "Quality Fortify Health"
+  },
+  "p_fortify_intelligence_c": {
+    "name": "Cheap Fortify Intelligence"
+  },
+  "p_fortify_intelligence_b": {
+    "name": "Bargain Fortify Intelligence"
+  },
+  "p_fortify_intelligence_e": {
+    "name": "Exclusive Fortify Intelligence"
+  },
+  "p_fortify_intelligence_q": {
+    "name": "Quality Fortify Intelligence"
+  },
+  "p_fortify_luck_c": {
+    "name": "Cheap Potion of Fortify Luck"
+  },
+  "p_fortify_luck_b": {
+    "name": "Bargain Potion of Fortify Luck"
+  },
+  "p_fortify_luck_q": {
+    "name": "Quality Potion of Fortify Luck"
+  },
+  "p_fortify_luck_e": {
+    "name": "Exclusive Fortify Luck"
+  },
+  "p_fortify_magicka_c": {
+    "name": "Cheap Potion of Fortify Magicka"
+  },
+  "p_fortify_magicka_e": {
+    "name": "Exclusive Fortify Magicka"
+  },
+  "p_fortify_magicka_q": {
+    "name": "Quality Fortify Magicka"
+  },
+  "p_fortify_magicka_b": {
+    "name": "Bargain Fortify Magicka"
+  },
+  "p_fortify_personality_c": {
+    "name": "Cheap Fortify Personality"
+  },
+  "p_fortify_personality_e": {
+    "name": "Exclusive Fortify Personality"
+  },
+  "p_fortify_personality_b": {
+    "name": "Bargain Fortify Personality"
+  },
+  "p_fortify_personality_q": {
+    "name": "Quality Fortify Personality"
+  },
+  "p_fortify_speed_c": {
+    "name": "Cheap Potion of Fortify Speed"
+  },
+  "p_fortify_speed_b": {
+    "name": "Bargain Potion of Fortify Speed"
+  },
+  "p_fortify_speed_q": {
+    "name": "Quality Potion of Fortify Speed"
+  },
+  "p_fortify_speed_e": {
+    "name": "Exclusive Fortify Speed"
+  },
+  "p_fortify_strength_c": {
+    "name": "Cheap Fortify Strength"
+  },
+  "p_fortify_strength_b": {
+    "name": "Bargain Fortify Strength"
+  },
+  "p_fortify_strength_e": {
+    "name": "Exclusive Fortify Strength"
+  },
+  "p_fortify_strength_q": {
+    "name": "Quality Fortify Strength"
+  },
+  "p_fortify_willpower_c": {
+    "name": "Cheap Fortify Willpower"
+  },
+  "p_fortify_willpower_b": {
+    "name": "Bargain Fortify Willpower"
+  },
+  "p_fortify_willpower_q": {
+    "name": "Quality Fortify Willpower"
+  },
+  "p_fortify_willpower_e": {
+    "name": "Exclusive Fortify Willpower"
+  },
+  "p_frost_shield_c": {
+    "name": "Cheap Potion of Frost Shield"
+  },
+  "p_frost_shield_b": {
+    "name": "Bargain Potion of Frost Shield"
+  },
+  "p_frost_shield_e": {
+    "name": "Exclusive Frost Shield"
+  },
+  "p_frost_shield_q": {
+    "name": "Quality Frost Shield"
+  },
+  "p_invisibility_c": {
+    "name": "Cheap Potion of Invisibility"
+  },
+  "p_invisibility_b": {
+    "name": "Bargain Potion of Invisibility"
+  },
+  "p_invisibility_q": {
+    "name": "Quality Potion of Invisibility"
+  },
+  "p_invisibility_e": {
+    "name": "Exclusive Invisibility"
+  },
+  "p_jump_c": {
+    "name": "Cheap Potion of Jump"
+  },
+  "p_jump_b": {
+    "name": "Bargain Potion of Jump"
+  },
+  "p_jump_e": {
+    "name": "Exclusive Potion of Jump"
+  },
+  "p_jump_s": {
+    "name": "Standard Potion of Jump"
+  },
+  "p_jump_q": {
+    "name": "Quality Potion of Jump"
+  },
+  "p_levitation_c": {
+    "name": "Cheap Rising Force Potion"
+  },
+  "p_levitation_b": {
+    "name": "Bargain Rising Force Potion"
+  },
+  "p_levitation_q": {
+    "name": "Quality Rising Force Potion"
+  },
+  "p_levitation_e": {
+    "name": "Exclusive Rising Force Potion"
+  },
+  "p_light_c": {
+    "name": "Cheap Potion of Light"
+  },
+  "p_light_b": {
+    "name": "Bargain Potion of Light"
+  },
+  "p_light_e": {
+    "name": "Exclusive Potion of Light"
+  },
+  "p_light_q": {
+    "name": "Quality Potion of Light"
+  },
+  "p_lightning shield_c": {
+    "name": "Cheap Lightning Shield"
+  },
+  "p_lightning shield_e": {
+    "name": "Exclusive Lightning Shield"
+  },
+  "p_lightning shield_q": {
+    "name": "Quality Lightning Shield"
+  },
+  "p_lightning shield_b": {
+    "name": "Bargain Lightning Shield"
+  },
+  "p_night-eye_c": {
+    "name": "Cheap Potion of Night-Eye"
+  },
+  "p_night-eye_b": {
+    "name": "Bargain Potion of Night-Eye"
+  },
+  "p_night-eye_q": {
+    "name": "Quality Potion of Night-Eye"
+  },
+  "p_night-eye_e": {
+    "name": "Exclusive Potion of Night-Eye"
+  },
+  "p_paralyze_c": {
+    "name": "Cheap Potion of Paralyze"
+  },
+  "p_paralyze_b": {
+    "name": "Bargain Potion of Paralyze"
+  },
+  "p_paralyze_e": {
+    "name": "Exclusive Potion of Paralyze"
+  },
+  "p_paralyze_q": {
+    "name": "Quality Potion of Paralyze"
+  },
+  "p_reflection_c": {
+    "name": "Cheap Potion of Reflection"
+  },
+  "p_reflection_b": {
+    "name": "Bargain Potion of Reflection"
+  },
+  "p_reflection_q": {
+    "name": "Quality Potion of Reflection"
+  },
+  "p_reflection_e": {
+    "name": "Exclusive Potion of Reflection"
+  },
+  "p_disease_resistance_c": {
+    "name": "Cheap Disease Resistance"
+  },
+  "p_disease_resistance_s": {
+    "name": "Standard Disease Resistance"
+  },
+  "p_disease_resistance_b": {
+    "name": "Bargain Disease Resistance"
+  },
+  "p_disease_resistance_q": {
+    "name": "Quality Disease Resistance"
+  },
+  "p_disease_resistance_e": {
+    "name": "Exclusive Disease Resistance"
+  },
+  "p_fire_resistance_c": {
+    "name": "Cheap Fire Resistance"
+  },
+  "p_fire_resistance_b": {
+    "name": "Bargain Fire Resistance"
+  },
+  "p_fire_resistance_q": {
+    "name": "Quality Fire Resistance"
+  },
+  "p_fire_resistance_e": {
+    "name": "Exclusive Fire Resistance"
+  },
+  "p_frost_resistance_c": {
+    "name": "Cheap Frost Resistance"
+  },
+  "p_frost_resistance_b": {
+    "name": "Bargain Frost Resistance"
+  },
+  "p_frost_resistance_e": {
+    "name": "Exclusive Frost Resistance"
+  },
+  "p_frost_resistance_q": {
+    "name": "Quality Frost Resistance"
+  },
+  "p_magicka_resistance_c": {
+    "name": "Cheap Magicka Resistance"
+  },
+  "p_magicka_resistance_b": {
+    "name": "Bargain Magicka Resistance"
+  },
+  "p_magicka_resistance_e": {
+    "name": "Exclusive Magicka Resistance"
+  },
+  "p_magicka_resistance_q": {
+    "name": "Quality Magicka Resistance"
+  },
+  "p_poison_resistance_c": {
+    "name": "Cheap Poison Resistance"
+  },
+  "p_poison_resistance_b": {
+    "name": "Bargain Poison Resistance"
+  },
+  "p_poison_resistance_e": {
+    "name": "Exclusive Poison Resistance"
+  },
+  "p_poison_resistance_q": {
+    "name": "Quality Poison Resistance"
+  },
+  "p_shock_resistance_c": {
+    "name": "Cheap Shock Resistance"
+  },
+  "p_shock_resistance_b": {
+    "name": "Bargain Shock Resistance"
+  },
+  "p_shock_resistance_e": {
+    "name": "Exclusive Shock Resistance"
+  },
+  "p_shock_resistance_q": {
+    "name": "Quality Shock Resistance"
+  },
+  "p_restore_agility_c": {
+    "name": "Cheap Restore Agility"
+  },
+  "p_restore_agility_b": {
+    "name": "Bargain Restore Agility"
+  },
+  "p_restore_agility_q": {
+    "name": "Quality Restore Agility"
+  },
+  "p_restore_agility_e": {
+    "name": "Exclusive Restore Agility"
+  },
+  "p_restore_endurance_c": {
+    "name": "Cheap Restore Endurance"
+  },
+  "p_restore_endurance_b": {
+    "name": "Bargain Restore Endurance"
+  },
+  "p_restore_endurance_q": {
+    "name": "Quality Restore Endurance"
+  },
+  "p_restore_endurance_e": {
+    "name": "Exclusive Restore Endurance"
+  },
+  "p_restore_fatigue_c": {
+    "name": "Cheap Restore Fatigue"
+  },
+  "p_restore_fatigue_b": {
+    "name": "Bargain Restore Fatigue"
+  },
+  "p_restore_fatigue_q": {
+    "name": "Quality Restore Fatigue"
+  },
+  "p_restore_fatigue_e": {
+    "name": "Exclusive Restore Fatigue"
+  },
+  "p_restore_health_c": {
+    "name": "Cheap Restore Health"
+  },
+  "p_restore_intelligence_c": {
+    "name": "Cheap Restore Intelligence"
+  },
+  "p_restore_intelligence_e": {
+    "name": "Exclusive Restore Intelligence"
+  },
+  "p_restore_intelligence_q": {
+    "name": "Quality Restore Intelligence"
+  },
+  "p_restore_intelligence_b": {
+    "name": "Bargain Restore Intelligence"
+  },
+  "p_restore_luck_b": {
+    "name": "Bargain Restore Luck"
+  },
+  "p_restore_luck_q": {
+    "name": "Quality Restore Luck"
+  },
+  "p_restore_luck_e": {
+    "name": "Exclusive Restore Luck"
+  },
+  "p_restore_luck_c": {
+    "name": "Cheap Restore Luck"
+  },
+  "p_restore_personality_b": {
+    "name": "Bargain Restore Personality"
+  },
+  "p_restore_personality_c": {
+    "name": "Cheap Restore Personality"
+  },
+  "p_restore_personality_e": {
+    "name": "Exclusive Restore Personality"
+  },
+  "p_restore_personality_q": {
+    "name": "Quality Restore Personality"
+  },
+  "p_restore_speed_c": {
+    "name": "Cheap Restore Speed"
+  },
+  "p_restore_speed_b": {
+    "name": "Bargain Restore Speed"
+  },
+  "p_restore_speed_q": {
+    "name": "Quality Restore Speed"
+  },
+  "p_restore_speed_e": {
+    "name": "Exclusive Restore Speed"
+  },
+  "p_restore_magicka_c": {
+    "name": "Cheap Restore Magicka"
+  },
+  "p_restore_magicka_b": {
+    "name": "Bargain Restore Magicka"
+  },
+  "p_restore_magicka_q": {
+    "name": "Quality Restore Magicka"
+  },
+  "p_restore_magicka_e": {
+    "name": "Exclusive Restore Magicka"
+  },
+  "p_restore_strength_c": {
+    "name": "Cheap Restore Strength"
+  },
+  "p_restore_strength_b": {
+    "name": "Bargain Restore Strength"
+  },
+  "p_restore_strength_q": {
+    "name": "Quality Restore Strength"
+  },
+  "p_restore_strength_e": {
+    "name": "Exclusive Restore Strength"
+  },
+  "p_restore_willpower_c": {
+    "name": "Cheap Restore Willpower"
+  },
+  "p_restore_willpower_b": {
+    "name": "Bargain Restore Willpower"
+  },
+  "p_restore_willpower_q": {
+    "name": "Quality Restore Willpower"
+  },
+  "p_restore_willpower_e": {
+    "name": "Exclusive Restore Willpower"
+  },
+  "p_chameleon_c": {
+    "name": "Cheap Potion of Shadow"
+  },
+  "p_chameleon_b": {
+    "name": "Bargain Potion of Shadow"
+  },
+  "p_chameleon_s": {
+    "name": "Standard Potion of Shadow"
+  },
+  "p_chameleon_q": {
+    "name": "Quality Potion of Shadow"
+  },
+  "p_chameleon_e": {
+    "name": "Exclusive Potion of Shadow"
+  },
+  "p_silence_c": {
+    "name": "Cheap Potion of Silence"
+  },
+  "p_silence_b": {
+    "name": "Bargain Potion of Silence"
+  },
+  "p_silence_q": {
+    "name": "Quality Potion of Silence"
+  },
+  "p_silence_e": {
+    "name": "Exclusive Potion of Silence"
+  },
+  "p_spell_absorption_c": {
+    "name": "Cheap Spell Absorption"
+  },
+  "p_spell_absorption_b": {
+    "name": "Bargain Spell Absorption"
+  },
+  "p_spell_absorption_q": {
+    "name": "Quality Spell Absorption"
+  },
+  "p_spell_absorption_e": {
+    "name": "Exclusive Spell Absorption"
+  },
+  "p_swift_swim_c": {
+    "name": "Cheap Potion of Swift Swim"
+  },
+  "p_swift_swim_b": {
+    "name": "Bargain Potion of Swift Swim"
+  },
+  "p_swift_swim_q": {
+    "name": "Quality Potion of Swift Swim"
+  },
+  "p_swift_swim_e": {
+    "name": "Exclusive Potion of Swift Swim"
+  },
+  "p_restore_health_b": {
+    "name": "Bargain Restore Health"
+  },
+  "p_restore_health_q": {
+    "name": "Quality Restore Health"
+  },
+  "p_restore_health_e": {
+    "name": "Exclusive Restore Health"
+  },
+  "potion_ancient_brandy": {
+    "name": "Ancient Dagoth Brandy"
+  },
+  "p_almsivi_intervention_s": {
+    "name": "Potion of Fool's Luck"
+  },
+  "p_detect_creatures_s": {
+    "name": "Potion of Detect Creatures"
+  },
+  "p_cure_common_s": {
+    "name": "Potion of Cure Common Disease"
+  },
+  "p_cure_blight_s": {
+    "name": "Potion of Cure Blight Disease"
+  },
+  "p_cure_paralyzation_s": {
+    "name": "Potion of Cure Paralyzation"
+  },
+  "p_cure_poison_s": {
+    "name": "Potion of Cure Poison"
+  },
+  "p_detect_key_s": {
+    "name": "Potion of Detect Key"
+  },
+  "p_dispel_s": {
+    "name": "Potion of Dispel"
+  },
+  "p_fortify_agility_s": {
+    "name": "Standard Fortify Agility Potion"
+  },
+  "p_fortify_intelligence_s": {
+    "name": "Standard Fortify Intelligence"
+  },
+  "p_fortify_luck_s": {
+    "name": "Standard Fortify Luck Potion"
+  },
+  "p_fortify_willpower_s": {
+    "name": "Standard Fortify Willpower"
+  },
+  "p_fortify_health_b": {
+    "name": "Bargain Fortify Health Potion"
+  },
+  "p_fortify_magicka_s": {
+    "name": "Standard Fortify Magicka Potion"
+  },
+  "p_mark_s": {
+    "name": "Potion of Marking"
+  },
+  "p_frost_resistance_s": {
+    "name": "Standard Resist Frost Potion"
+  },
+  "p_slowfall_s": {
+    "name": "Potion of Slowfalling"
+  },
+  "p_telekinesis_s": {
+    "name": "Potion of Telekinesis"
+  },
+  "p_water_breathing_s": {
+    "name": "Potion of Water Breathing"
+  },
+  "p_water_walking_s": {
+    "name": "Potion of Water Walking"
+  },
+  "p_vintagecomberrybrandy1": {
+    "name": "Vintage Brandy"
+  },
+  "p_frost_shield_s": {
+    "name": "Standard Potion of Frost Shield"
+  },
+  "p_restore_magicka_s": {
+    "name": "Standard Restore Magicka Potion"
+  },
+  "p_fortify_attack_e": {
+    "name": "Exclusive Fortify Attack"
+  },
+  "p_cure_common_unique": {
+    "name": "Trebonius' Potion of Curing"
+  },
+  "p_restore_health_s": {
+    "name": "Standard Restore Health Potion"
+  },
+  "p_detect_enchantment_s": {
+    "name": "Potion of Detect Enchantments"
+  },
+  "p_quarrablood_unique": {
+    "name": "Blood of the Quarra Masters"
+  },
+  "p_sinyaramen_unique": {
+    "name": "Sinyaramen's Potion"
+  },
+  "p_heroism_s": {
+    "name": "Potion of Heroism"
+  },
+  "p_lovepotion_unique": {
+    "name": "Love Potion"
+  },
+  "p_recall_s": {
+    "name": "Potion of Recall"
+  },
+  "pyroil_tar_unique": {
+    "name": "Pyroil Tar"
+  },
+  "p_dwemer_lubricant00": {
+    "name": "Spoiled Dwemer Oil"
+  },
+  "verminous_fabricant_elixir": {
+    "name": "Verminous Fabricant Elixir"
+  },
+  "hulking_fabricant_elixir": {
+    "name": "Hulking Fabricant Elixir"
+  },
+  "p_imperfect_elixir": {
+    "name": "Elixir of the Imperfect"
+  },
+  "potion_nord_mead": {
+    "name": "Nord Mead"
+  },
+  "t_orc_drink_liquorungorth_01": {
+    "name": "<Deprecated>"
+  },
+  "t_de_drink_liquorllotham_01": {
+    "name": "Llotham"
+  },
+  "t_de_drink_punavitjug": {
+    "name": "Punavit Jug"
+  },
+  "t_nor_drink_beerlight_01": {
+    "name": "Light Beer"
+  },
+  "t_rea_drink_teagyrrg_01": {
+    "name": "Gyrgg"
+  },
+  "t_nor_potion_feather_c": {
+    "name": "Cheap Potion of Feather"
+  },
+  "t_nor_potion_restoreintelli_c": {
+    "name": "Cheap Restore Intelligence"
+  },
+  "t_nor_potion_burden_c": {
+    "name": "Cheap Potion of Burden"
+  },
+  "t_nor_potion_chameleon_c": {
+    "name": "Cheap Potion of Shadow"
+  },
+  "t_nor_potion_resistdesease_c": {
+    "name": "Cheap Disease Resistance"
+  },
+  "t_nor_potion_resistfire_c": {
+    "name": "Cheap Fire Resistance"
+  },
+  "t_nor_potion_shieldfire_c": {
+    "name": "Cheap Potion of Fire Shield"
+  },
+  "t_nor_potion_fortifyagility_c": {
+    "name": "Cheap Fortify Agility"
+  },
+  "t_nor_potion_fortifyendurance_c": {
+    "name": "Cheap Fortify Endurance"
+  },
+  "t_nor_potion_fortifyfatigue_c": {
+    "name": "Cheap Fortify Fatigue"
+  },
+  "t_nor_potion_fortifyhealth_c": {
+    "name": "Cheap Potion of Fortify Health"
+  },
+  "t_nor_potion_fortifyintell_c": {
+    "name": "Cheap Fortify Intelligence"
+  },
+  "t_nor_potion_fortifyluck_c": {
+    "name": "Cheap Potion of Fortify Luck"
+  },
+  "t_nor_potion_fortifymagicka_c": {
+    "name": "Cheap Potion of Fortify Magicka"
+  },
+  "t_nor_potion_fortifypersonal_c": {
+    "name": "Cheap Fortify Personality"
+  },
+  "t_nor_potion_fortifyspeed_c": {
+    "name": "Cheap Potion of Fortify Speed"
+  },
+  "t_nor_potion_fortifystrength_c": {
+    "name": "Cheap Fortify Strength"
+  },
+  "t_nor_potion_fortifywillpow_c": {
+    "name": "Cheap Fortify Willpower"
+  },
+  "t_nor_potion_resistfrost_c": {
+    "name": "Cheap Frost Resistance"
+  },
+  "t_nor_potion_shieldfrost_c": {
+    "name": "Cheap Potion of Frost Shield"
+  },
+  "t_nor_potion_invisibility_c": {
+    "name": "Cheap Potion of Invisibility"
+  },
+  "t_nor_potion_jump_c": {
+    "name": "Cheap Potion of Jump"
+  },
+  "t_nor_potion_levitation_c": {
+    "name": "Cheap Potion of Levitation"
+  },
+  "t_nor_potion_light_c": {
+    "name": "Cheap Potion of Light"
+  },
+  "t_nor_potion_shieldlightning_c": {
+    "name": "Cheap Lightning Shield"
+  },
+  "t_nor_potion_resistmagicka_c": {
+    "name": "Cheap Magicka Resistance"
+  },
+  "t_nor_potion_nighteye_c": {
+    "name": "Cheap Potion of Night-Eye"
+  },
+  "t_nor_potion_paralyze_c": {
+    "name": "Cheap Potion of Paralyze"
+  },
+  "t_nor_potion_resistpoison_c": {
+    "name": "Cheap Poison Resistance"
+  },
+  "t_nor_potion_reflection_c": {
+    "name": "Cheap Potion of Reflection"
+  },
+  "t_nor_potion_restoreagility_c": {
+    "name": "Cheap Restore Agility"
+  },
+  "t_nor_potion_restoreenduranc_c": {
+    "name": "Cheap Restore Endurance"
+  },
+  "t_nor_potion_restorefatigue_c": {
+    "name": "Cheap Restore Fatigue"
+  },
+  "t_nor_potion_restorehealth_c": {
+    "name": "Cheap Restore Health"
+  },
+  "t_nor_potion_restoreluck_c": {
+    "name": "Cheap Restore Luck"
+  },
+  "t_nor_potion_restorepersonal_c": {
+    "name": "Cheap Restore Personality"
+  },
+  "t_nor_potion_restorespeed_c": {
+    "name": "Cheap Restore Speed"
+  },
+  "t_nor_potion_restorestrength_c": {
+    "name": "Cheap Restore Strength"
+  },
+  "t_nor_potion_restorewillpow_c": {
+    "name": "Cheap Restore Willpower"
+  },
+  "t_nor_potion_resistshock_c": {
+    "name": "Cheap Shock Resistance"
+  },
+  "t_nor_potion_silence_c": {
+    "name": "Cheap Potion of Silence"
+  },
+  "t_nor_potion_spellabsorbtion_c": {
+    "name": "Cheap Spell Absorption"
+  },
+  "t_nor_potion_swiftswim_c": {
+    "name": "Cheap Potion of Swift Swim"
+  },
+  "t_nor_potion_restoremagicka_c": {
+    "name": "Cheap Restore Magicka"
+  },
+  "t_nor_potion_drainspeed_q": {
+    "name": "Spoiled Cure Poison Potion"
+  },
+  "t_nor_potion_shieldfire_q": {
+    "name": "Quality Potion of Fire Shield"
+  },
+  "t_nor_potion_chameleon_q": {
+    "name": "Quality Potion of Shadow"
+  },
+  "t_nor_potion_burden_q": {
+    "name": "Quality Potion of Burden"
+  },
+  "t_nor_potion_resistdisease_q": {
+    "name": "Quality Disease Resistance"
+  },
+  "t_nor_potion_drainwillpow_q": {
+    "name": "Spoiled Cure Disease Potion"
+  },
+  "t_nor_potion_drainendurance_q": {
+    "name": "Spoiled SlowFall Potion"
+  },
+  "t_nor_potion_drainintelli_q": {
+    "name": "Spoiled Potion of Swift Swim"
+  },
+  "t_nor_potion_drainluck_q": {
+    "name": "Spoiled Cure Disease Potion"
+  },
+  "t_nor_potion_drainmagicka_q": {
+    "name": "Spoiled Cure Poison Potion"
+  },
+  "t_nor_potion_drainpersonality_q": {
+    "name": "Spoiled Potion of Swift Swim"
+  },
+  "t_nor_potion_drainstrength_q": {
+    "name": "Spoiled Cure Disease Potion"
+  },
+  "t_nor_potion_feather_q": {
+    "name": "Quality Potion of Feather"
+  },
+  "t_nor_potion_resistfire_q": {
+    "name": "Quality Fire Resistance"
+  },
+  "t_nor_potion_fortifyagility_q": {
+    "name": "Quality Fortify Agility"
+  },
+  "t_nor_potion_fortifyendurance_q": {
+    "name": "Quality Fortify Endurance"
+  },
+  "t_nor_potion_fortifyfatigue_q": {
+    "name": "Quality Fortify Fatigue"
+  },
+  "t_nor_potion_fortifyhealth_q": {
+    "name": "Quality Fortify Health"
+  },
+  "t_nor_potion_fortifyintelli_q": {
+    "name": "Quality Fortify Intelligence"
+  },
+  "t_nor_potion_fortifyluck_q": {
+    "name": "Quality Potion of Fortify Luck"
+  },
+  "t_nor_potion_fortifymagicka_q": {
+    "name": "Quality Fortify Magicka"
+  },
+  "t_nor_potion_fortifypersonal_q": {
+    "name": "Quality Fortify Personality"
+  },
+  "t_nor_potion_fortifyspeed_q": {
+    "name": "Quality Potion of Fortify Speed"
+  },
+  "t_nor_potion_fortifystrength_q": {
+    "name": "Quality Fortify Strength"
+  },
+  "t_nor_potion_fortifywillpow_q": {
+    "name": "Quality Fortify Willpower"
+  },
+  "t_nor_potion_resistfrost_q": {
+    "name": "Quality Frost Resistance"
+  },
+  "t_nor_potion_shieldfrost_q": {
+    "name": "Quality Frost Shield"
+  },
+  "t_nor_potion_invisibility_q": {
+    "name": "Quality Potion of Invisibility"
+  },
+  "t_nor_potion_jump_q": {
+    "name": "Quality Potion of Jump"
+  },
+  "t_nor_potion_levitation_q": {
+    "name": "Quality Rising Force Potion"
+  },
+  "t_nor_potion_light_q": {
+    "name": "Quality Potion of Light"
+  },
+  "t_nor_potion_shieldlightning_q": {
+    "name": "Quality Lightning Shield"
+  },
+  "t_nor_potion_resistmagicka_q": {
+    "name": "Quality Magicka Resistance"
+  },
+  "t_nor_potion_nighteye_q": {
+    "name": "Quality Potion of Night-Eye"
+  },
+  "t_nor_potion_paralyze_q": {
+    "name": "Quality Potion of Paralyze"
+  },
+  "t_nor_potion_reflection_q": {
+    "name": "Quality Potion of Reflection"
+  },
+  "t_nor_potion_restoreagility_q": {
+    "name": "Quality Restore Agility"
+  },
+  "t_nor_potion_restoreendurance_q": {
+    "name": "Quality Restore Endurance"
+  },
+  "t_nor_potion_restorefatigue_q": {
+    "name": "Quality Restore Fatigue"
+  },
+  "t_nor_potion_restorehealth_q": {
+    "name": "Quality Restore Health"
+  },
+  "t_nor_potion_restoreintelli_q": {
+    "name": "Quality Restore Intelligence"
+  },
+  "t_nor_potion_restoreluck_q": {
+    "name": "Quality Restore Luck"
+  },
+  "t_nor_potion_restoremagicka_q": {
+    "name": "Quality Restore Magicka"
+  },
+  "t_nor_potion_restorepersonal_q": {
+    "name": "Quality Restore Personality"
+  },
+  "t_nor_potion_restorespeed_q": {
+    "name": "Quality Restore Speed"
+  },
+  "t_nor_potion_restorestrength_q": {
+    "name": "Quality Restore Strength"
+  },
+  "t_nor_potion_resistshock_q": {
+    "name": "Quality Shock Resistance"
+  },
+  "t_nor_potion_silence_q": {
+    "name": "Quality Potion of Silence"
+  },
+  "t_nor_potion_spellabsorbtion_q": {
+    "name": "Quality Spell Absorption"
+  },
+  "t_nor_potion_swiftswim_q": {
+    "name": "Quality Potion of Swift Swim"
+  },
+  "t_nor_potion_drainagility_q": {
+    "name": "Spoiled SlowFall Potion"
+  },
+  "t_nor_potion_resistpoison_q": {
+    "name": "Quality Poison Resistance"
+  },
+  "t_nor_potion_restorewillpow_q": {
+    "name": "Quality Restore Willpower"
+  },
+  "t_orc_drink_liquorungorth_02": {
+    "name": "Ungorth"
+  },
+  "t_rea_drink_liquoraeli_01": {
+    "name": "Aeli"
+  },
+  "t_nor_drink_winereach_01": {
+    "name": "Vintage Reach Wine"
+  },
+  "t_nor_drink_beer_01": {
+    "name": "Beer"
+  },
+  "t_imp_drink_winetwinmoon_01": {
+    "name": "Twin Moons Wine"
+  },
+  "t_imp_drink_winetamikaclr_01": {
+    "name": "Tamika's Cellar Fine Wine"
+  },
+  "t_imp_drink_winefreeestat_01": {
+    "name": "Free Estates Wine"
+  },
+  "t_imp_drink_winesuriliebr_01": {
+    "name": "Surilie Brothers"
+  },
+  "t_imp_drink_winewolfsbl_01": {
+    "name": "Wolfsblood Wine"
+  },
+  "t_imp_drink_wineplallovin_01": {
+    "name": "Plallo's Vineyard Wine"
+  },
+  "t_imp_drink_aleakul_01": {
+    "name": "Akul"
+  },
+  "t_imp_drink_cideraliyew_01": {
+    "name": "Aliyew"
+  },
+  "t_imp_drink_cherrybrandy_01": {
+    "name": "Kurst"
+  },
+  "t_imp_drink_ricebeermori_01": {
+    "name": "Mori"
+  },
+  "t_imp_subst_sloadoil_01": {
+    "name": "Sload Oil"
+  },
+  "t_imp_drink_wineblackhill_01": {
+    "name": "Black Hills Wine"
+  },
+  "t_imp_drink_winerufinoclr_01": {
+    "name": "Rufino's Cellar Wine"
+  },
+  "t_rga_drink_winesutchtalan_01": {
+    "name": "Talan's Heritage Wine"
+  },
+  "t_rga_drink_winesutchgonogro_01": {
+    "name": "Go Nogro Wine"
+  },
+  "t_nor_drink_snowberryaleveig_01": {
+    "name": "Veig"
+  },
+  "t_de_drink_bourbongoya_01": {
+    "name": "Goya"
+  },
+  "t_we_drink_pigmilkbeerjagga_01": {
+    "name": "Jagga"
+  },
+  "t_com_potion_resistparalysis_c": {
+    "name": "Cheap Paralysis Resistance"
+  },
+  "t_com_potion_resistparalysis_b": {
+    "name": "Bargain Paralysis Resistance"
+  },
+  "t_com_potion_resistparalysis_e": {
+    "name": "Exclusive Paralysis Resistance"
+  },
+  "t_com_potion_resistparalysis_s": {
+    "name": "Standard Paralysis Resistance"
+  },
+  "t_com_potion_resistparalysis_q": {
+    "name": "Quality Paralysis Resistance"
+  },
+  "t_bre_drink_winewayrest_01": {
+    "name": "Wayrest Spiced Wine"
+  },
+  "t_imp_drink_winebattle_01": {
+    "name": "Colovian Battlewine"
+  },
+  "t_nor_subst_wasabipaste_01": {
+    "name": "Wasabi Paste"
+  },
+  "t_rga_drink_sift": {
+    "name": "Sift"
+  },
+  "t_nor_potion_curecommon_01": {
+    "name": "Quality Cure Common Disease"
+  },
+  "t_com_subst_vitriol_oil_01": {
+    "name": "Vitriol Oil"
+  },
+  "t_com_subst_phyrric_acid_01": {
+    "name": "Phyrric Acid"
+  },
+  "t_com_subst_aqua_vita_01": {
+    "name": "Aqua Vita"
+  },
+  "t_imp_subst_incarnadine_01": {
+    "name": "Incarnadine"
+  },
+  "t_de_drink_punavitresin_01": {
+    "name": "Punavit Residue"
+  },
+  "t_imp_drink_winesour": {
+    "name": "Sour Wine"
+  },
+  "t_imp_drink_winesweet": {
+    "name": "Sweet Wine"
+  },
+  "t_nor_drink_fyrg_01": {
+    "name": "Fyrg"
+  },
+  "t_nor_drink_bodja_01": {
+    "name": "Bodja"
+  },
+  "t_com_potion_dragonblood": {
+    "name": "Dragon's Blood"
+  },
+  "t_de_drink_guarmilk_01": {
+    "name": "Guar Milk"
+  },
+  "t_imp_rune_reman": {
+    "name": "Rune Cuirass and Sword"
+  },
+  "t_imp_rune_reman2": {
+    "name": "Rune Cuirass and Axe"
+  },
+  "t_imp_rune_sidri": {
+    "name": "Rune Bow and Helm"
+  },
+  "t_imp_rune_hestra": {
+    "name": "Rune Blade and Gauntlets"
+  },
+  "t_imp_rune_hestra2": {
+    "name": "Rune Mace and Gauntlets"
+  },
+  "t_imp_rune_sidri2": {
+    "name": "Rune Bow"
+  },
+  "tr_m3_stw_jug_greef": {
+    "name": "Greef in Stoneware Jug"
+  },
+  "tr_i2_454_llansubalm": {
+    "name": "Llansu Balm"
+  },
+  "tr_i2_454_serynward": {
+    "name": "Unguent of St. Seryn"
+  },
+  "tr-i2_454_powder": {
+    "name": "Timsa Powder"
+  },
+  "tr_i2_tramatea": {
+    "name": "Trama Tea"
+  },
+  "tr_m3_p_oddserum": {
+    "name": "Odd Serum"
+  },
+  "tr_m3_q_a5_spoiledwine": {
+    "name": "Spoiled Sutch Wine"
+  },
+  "tr_m3_juice1_i3-128-ind": {
+    "name": "Aloe Juice"
+  },
+  "tr_m3_juice2_i3-128-ind": {
+    "name": "Hamum Root Juice"
+  },
+  "tr_m3_juice3_i3-128-ind": {
+    "name": "Sweetpulp Juice"
+  },
+  "tr_m3_juice4_i3-128-ind": {
+    "name": "Holly Wine"
+  },
+  "tr_m3-131_levitation_spoiled": {
+    "name": "Spoiled Rising Force Potion"
+  },
+  "tr_m3_water1_m1-128-ind": {
+    "name": "Restorative Spring Water"
+  },
+  "tr_m1_tel_scampskinsoup_aa": {
+    "name": "Scamp Broth"
+  },
+  "tr_m1_pt_redram_pot": {
+    "name": "Rantela Irenam's Shadow Potion"
+  },
+  "tr_m1_bugmusk": {
+    "name": "Half Bottle of Bug Musk"
+  },
+  "tr_m1_unknown_potion": {
+    "name": "Unidentified potion"
+  },
+  "tr_m1_unknown_potion_2": {
+    "name": "Unidentified Potion"
+  },
+  "tr_m1_unknown_potion_3": {
+    "name": "Unidentified Potion"
+  },
+  "tr_m1_q59_mai_pot": {
+    "name": "Rantela Irenam's Shadow Potion"
+  },
+  "tr_m1_q66_ra2_rat_blood": {
+    "name": "Plague Rat Blood"
+  },
+  "tr_p_sscure": {
+    "name": "Argil's Cure Potion"
+  },
+  "tr_m1_q_sinsalaccuse": {
+    "name": "Deadly Poison"
+  },
+  "tr_m1_gs_mq_5_reward": {
+    "name": "Sacred Oil"
+  },
+  "tr_m2_bthang_dwrv_oil": {
+    "name": "Spoiled Dwemer Oil"
+  },
+  "tr_m2_q_18_potion": {
+    "name": "Sendas's Cure"
+  },
+  "tr_m2_q_4_annavenepoison": {
+    "name": "Annavene Selas' Poison"
+  },
+  "tr_m2_q_14_potion": {
+    "name": "Syrinia's Potion"
+  },
+  "tr_m2_q_14_nalethskooma": {
+    "name": "Naleth's Skooma"
+  },
+  "tr_m3_q_6_perfume": {
+    "name": "Bargain Telvanni Bug Musk"
+  },
+  "tr_m3_q_11_blood": {
+    "name": "Blood of Merihayan"
+  },
+  "tr_m3_oe_q_rothermazte": {
+    "name": "Rother Nerevyn's Mazte"
+  },
+  "tr_m3_oe_vintagecolovian_wine": {
+    "name": "Vintage Colovian Battlewine"
+  },
+  "tr_i3-726-imp_p_physlube": {
+    "name": "Potion of Physical Lubrication"
+  },
+  "tr_i3-726-imp_p_psychlube": {
+    "name": "Potion of Psychical Lubrication"
+  },
+  "tr_i3-726-imp_p_socilube": {
+    "name": "Potion of Social Lubrication"
+  },
+  "tr_i3-726-imp_p_rejuveation_q": {
+    "name": "Quality Rejuvenation Potion"
+  },
+  "tr_i3-726-imp_p_blindingflash": {
+    "name": "Blinding Flash Potion"
+  },
+  "tr_i3-726-imp_p_inspiration": {
+    "name": "Potion of Inspiration"
+  },
+  "tr_i3-726-imp_p_rejuveation_e": {
+    "name": "Exclusive Rejuvenation Potion"
+  },
+  "tr_i3-726-imp_p_wind": {
+    "name": "Potion of the Wind"
+  },
+  "tr_i3-726-imp_p_ether": {
+    "name": "Potion of Ether"
+  },
+  "tr_i3-726-imp_p_nether": {
+    "name": "Potion of Nether"
+  },
+  "tr_i3-287_skooma_spiled": {
+    "name": "Waterlogged Skooma"
+  },
+  "tr_m3_p_unaarie_uni": {
+    "name": "Unaarie's Enigma"
+  },
+  "tr_m3_q_hideseeksludge": {
+    "name": "Bottle of Sludge"
+  },
+  "tr_m3_bols_brew": {
+    "name": "Bols Special Mazte"
+  },
+  "tr_m3_oe_etcensus_wine": {
+    "name": "Blue Squirrel Wine"
+  },
+  "tr_m3_oe_fg_p_uncurse": {
+    "name": "Sycora's Uncursing Potion"
+  },
+  "tr_m3_dilutefoedusliquor": {
+    "name": "Locutius Family Liquor"
+  },
+  "tr_m3_oe_tg_sweetliespotion": {
+    "name": "Potion of Sweet Little Lies"
+  },
+  "tr_m3_oe_tg_poisonedwine": {
+    "name": "Poisoned Wayrest Spiced Wine"
+  },
+  "tr_m3_oe_escapeelixir": {
+    "name": "Astien's Escape Elixir"
+  },
+  "tr_m3_voicebottle1": {
+    "name": "Leader of Men"
+  },
+  "tr_m3_voicebottle2": {
+    "name": "Charming Scoundrel"
+  },
+  "tr_m3_voicebottle3": {
+    "name": "Dremora Lord"
+  },
+  "tr_m3_voicebottle4": {
+    "name": "Faded Ancestor Spirit"
+  },
+  "tr_m3_voicebottle5": {
+    "name": "Veradul Delvas"
+  },
+  "tr_m3_voicebottle6": {
+    "name": "Indrid Cold"
+  },
+  "tr_m3_oe_drainpersonality": {
+    "name": "Exclusive Drain Personality"
+  },
+  "tr_m2_q_ab_regrowthpotion": {
+    "name": "Regrowth Potion"
+  },
+  "tr_m7_nva8_comberry_wine_01": {
+    "name": "Shein"
+  },
+  "tr_m7_nva8_winesuriliebr_01": {
+    "name": "Surilie Brothers"
+  },
+  "tr_m7_nva8_winefreeestat_01": {
+    "name": "Free Estates Wine"
+  },
+  "tr_m7_nva8_potion_local_brew_01": {
+    "name": "Mazte"
+  },
+  "tr_m3_aimrahpoison01": {
+    "name": "Weak Poison"
+  },
+  "tr_m3_badcure_i3-274-ind": {
+    "name": "Failed Potion of Cure Corprus"
+  },
+  "tr_m3_q_badshockpotion": {
+    "name": "Spoiled Shock Resistance"
+  },
+  "tr_m3_kha_lava_whiskey": {
+    "name": "Daedric Lava Whiskey"
+  },
+  "tr_m4_tj_p_paralyze": {
+    "name": "Gorgrenat's Concoction"
+  },
+  "tr_m3_aim_sevenwonderspotion": {
+    "name": "Potion of Seven Wonders"
+  },
+  "sky_ire_kw03_vinbrandy": {
+    "name": "3E398 Vintage Cyrodiilic Brandy"
+  },
+  "sky_ire_kw20_vinwine": {
+    "name": "3E416 Vintage Wolfsblood Wine"
+  },
+  "sky_ire_kw_caves_poison_01": {
+    "name": "Lingering Paralyzation Poison"
+  },
+  "sky_qre_dse03_weedkiller": {
+    "name": "Bottle of Weed-Killer"
+  },
+  "sky_qre_dsmg02_potion": {
+    "name": "Reachman Alchemy Sample"
+  },
+  "sky_qre_nar02_alovach_gyrgg": {
+    "name": "Alovach Gyrgg"
+  },
+  "pc_q1-2_potion": {
+    "name": "Phynaster's Elixir"
+  }
+}

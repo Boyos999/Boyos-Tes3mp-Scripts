@@ -4,3 +4,4 @@
 ```
 potionLimiter = require("custom.potionLimiter")
 ```
+3. If using TR+PC+SHOTN or tamriel data replace vanillapotions.json with the one inside the pt folder
