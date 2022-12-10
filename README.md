@@ -57,3 +57,6 @@ Allows for easy adjustment of the value, weight, magnitude, and duration of play
 
 # Enchant Tweaks
 Adjust player made constant effect enchantments that have a magnitude range to always take the max, average, or min magnitude
+
+# TR Summons
+Workaround script for new Tamriel Rebuilt summon spells that are otherwise MWSE-only
