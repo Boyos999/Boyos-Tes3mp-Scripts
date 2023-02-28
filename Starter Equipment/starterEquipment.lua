@@ -111,7 +111,7 @@ function starterEquipment.GiveStarterItems(eventStatus, pid)
     local minor = starterEquipmentConfig.minorThreshold
     local highestWeapon = starterEquipmentConfig.skillArray[starterEquipment.GetHighestWeapon(pid)+1]
     local highestArmor = starterEquipmentConfig.skillArray[starterEquipment.GetHighestArmor(pid)+1]
-    local starterTable = starterEquipmentConfig.baseItems
+    local starterTable = tableHelper.deepCopy(starterEquipmentConfig.baseItems)
 
     for i,skill in pairs(starterEquipmentConfig.skillArray) do
         local index = i-1
