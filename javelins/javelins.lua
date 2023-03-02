@@ -95,7 +95,7 @@ function javelins.OnServerPostInit()
                 damageChop = {
                     min = math.floor(item.damage.min*damageMult),
                     max = math.floor(item.damage.max*damageMult)
-                }
+                },
                 flags = item.flags
             }
             recordStore.data.permanentRecords[item.id] = recordData
