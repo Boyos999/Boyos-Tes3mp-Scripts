@@ -44,7 +44,7 @@ trSummonsConfig.summonMap = {
     t_cyr_cnj_summonminobarrowguard = "t_cyr_und_minobarrow_01",
     t_com_cnj_summonskeletonchamp = "t_glb_und_skelcmpgls_01",
     t_com_cnj_summonfrostmonarch = "t_dae_cre_monarchfr_01",
-    t_com_cnj_summonspiderdaedra = "t_dae_cre_spiderdae_01",
+    t_com_cnj_summonspiderdaedra = "t_dae_cre_spiderdae_01"
 }
 
 trSummonsConfig.summonRecords = {
