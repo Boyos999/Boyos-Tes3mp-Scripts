@@ -53,6 +53,7 @@ function trainingLimiter.OnPlayerSkill(eventStatus, pid, playerPacket)
             return customEventHooks.makeEventStatus(nil,nil)
         else
             --Reset skill and level progress
+            Players[pid]:LoadAttributes()
             Players[pid]:LoadSkills()
             Players[pid]:LoadLevel()
 
