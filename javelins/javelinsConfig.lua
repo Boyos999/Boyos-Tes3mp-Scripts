@@ -6,11 +6,14 @@ javelinsConfig.damageMult = 1.5
 javelinsConfig.subType = 11
 
 javelinsConfig.menuOrder = {
-    "t_com_farm_pitchfork_01","t_rga_fishingspear_01","t_qyc_chitin_spear_01","chitin spear","t_yne_iron_shspear","t_yne_iron_spear","iron spear","iron long spear","t_com_iron_longspear_01","t_de_dreugh_spear_01","t_mao_trident_01","t_de_indoril_spear_01","t_de_aena_spear_01","t_imp_reman_spear_01","t_kha_copper_spear_01","t_qy_bronze_spear_01",
-    "t_imp_barrow_spear_01","t_nor_iron_spear_01","t_nor_orn_spear_01","t_imp_legion_longspear_01","t_imp_legion_spear_01","t_imp_templar_longspear_01","t_imp_templar_spear_01","t_qyk_obsidian_spear_01","t_nor_ancient_spear_01","t_nor_orn_longspear_01","t_we_wenbone_spear_01","steel spear","t_com_steel_longspear_01","silver spear","t_rga_yoku_spear_01","t_imp_silver_longspear_01","dwarven spear","bm huntsman spear",
-    "t_orc_regular_spear_01","t_orc_regular_spear_02","t_orc_regular_longspear_01","t_nor_steel_spear_01","t_de_ashlander_spear_01","t_ayl_regular_spear_01","t_dwe_regular_longspear_01",
-    "adamantium_spear","t_de_glass_spear_01","t_de_glass_longspear_01","t_nor_silverspear_01","ebony spear","t_de_ebony_longspear_01","daedric spear","t_nor_stalhrimspear_01",
-    "t_dae_regular_trident_01","t_dae_regular_longspear_01"
+    "t_com_farm_pitchfork_01","t_rga_fishingspear_01","t_qyc_chitin_spear_01","chitin spear","t_yne_iron_shspear","t_yne_iron_spear","iron spear",
+    "iron long spear","t_com_iron_longspear_01","t_de_dreugh_spear_01","t_mao_trident_01","t_de_indoril_spear_01","t_de_aena_spear_01","t_imp_reman_spear_01",
+    "t_kha_copper_spear_01","t_qy_bronze_spear_01","t_imp_barrow_spear_01","t_nor_iron_spear_01","t_nor_orn_spear_01","t_imp_legion_longspear_01",
+    "t_imp_legion_spear_01","t_imp_templar_longspear_01","t_imp_templar_spear_01","t_qyk_obsidian_spear_01","t_nor_ancient_spear_01","t_nor_orn_longspear_01",
+    "t_we_wenbone_spear_01","steel spear","t_com_steel_longspear_01","silver spear","t_rga_yoku_spear_01","t_imp_silver_longspear_01","dwarven spear","bm huntsman spear",
+    "t_orc_regular_spear_01","t_orc_regular_spear_02","t_orc_regular_longspear_01","t_nor_steel_spear_01","t_de_ashlander_spear_01","t_ayl_regular_spear_01",
+    "t_dwe_regular_longspear_01","adamantium_spear","t_de_glass_spear_01","t_de_glass_longspear_01","t_nor_silverspear_01","ebony spear","t_de_ebony_longspear_01",
+    "daedric spear","t_nor_stalhrimspear_01","t_dae_regular_trident_01","t_dae_regular_longspear_01"
 }
 
 javelinsConfig.craftItem = {
