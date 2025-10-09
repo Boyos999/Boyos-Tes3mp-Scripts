@@ -2,6 +2,8 @@ local trSummons = {}
 
 require("custom.trSummonsConfig")
 
+local creatureIdList = {}
+
 function trSummons.isSummonSpell(refId)
     if trSummonsConfig.summonRecords[refId] ~= nil then
         return true
@@ -76,6 +78,25 @@ function trSummons.OnPlayerSpellsActive(eventStatus,pid,playerPacket)
     end
 end
 
+function trSummons.OnActorDeath(eventStatus,pid,cellDescription,actors)
+    if eventStatus.validDefaultHandler then
+        for uniqueIndex, actor in pairs(actors) do
+            local refId = actor.refId
+            if refId ~= nil then
+                if creatureIdList[refId] ~= nil then
+                    for id, player in pairs(Players) do
+                        if player.summons ~= nil then
+                            if player.summons[uniqueIndex] ~= nil then
+                                trSummons.removeSummon(id, refId, uniqueIndex)
+                            end
+                        end
+                    end
+                end
+            end
+        end
+    end
+end
+
 function trSummons.initRecords()
     for id,spell in pairs(trSummonsConfig.summonRecords) do
         RecordStores["spell"].data.permanentRecords[id] = spell
@@ -86,6 +107,9 @@ function trSummons.initRecords()
             baseId = creatureId,
             aiFight = 30
         }
+        creatureIdList[creatureId.."sm"] = {
+            isTrSummon = true
+        }
         tes3mp.LogMessage(enumerations.log.VERBOSE, trSummonsConfig.logPrefix .. "Initialized record for creature "..creatureId.."sm")
     end
     RecordStores["spell"]:QuicksaveToDrive()
@@ -95,6 +119,8 @@ end
 
 --Handle summoning/desummoning by spell effect
 customEventHooks.registerHandler("OnPlayerSpellsActive",trSummons.OnPlayerSpellsActive)
+--Handle removing summons on death
+customEventHooks.registerHandler("OnActorDeath",trSummons.OnActorDeath)
 --Generate records
 customEventHooks.registerHandler("OnServerPostInit",trSummons.initRecords)
 
