@@ -11,5 +11,4 @@ trSummons = require("custom.trSummons")
 2. The summons do not despawn on death and are lootable (until the spell expires or the player disconnects)
 3. Summons spawn at the player's exact location
 4. Summons cannot be used in player-made spells
-5. Unlike vanilla summons, the new tr summoned creatures have the same refId as their base versions. Any script that relies on this refId will apply to summoned variants as well.
-6. Summons will not work for NPCs
+5. Summons will not work for NPCs

@@ -67,9 +67,9 @@ function trSummons.OnPlayerSpellsActive(eventStatus,pid,playerPacket)
         for spellId,spellTable in pairs(spells) do
             if trSummons.isSummonSpell(spellId) then
                 if action == enumerations.spellbook.ADD then
-                    trSummons.spawnSummon(pid, trSummonsConfig.summonMap[spellId])
+                    trSummons.spawnSummon(pid, trSummonsConfig.summonMap[spellId] .. "sm")
                 elseif action == enumerations.spellbook.REMOVE then
-                    trSummons.removeSummon(pid, trSummonsConfig.summonMap[spellId])
+                    trSummons.removeSummon(pid, trSummonsConfig.summonMap[spellId] .. "sm")
                 end
             end
         end
@@ -77,12 +77,19 @@ function trSummons.OnPlayerSpellsActive(eventStatus,pid,playerPacket)
 end
 
 function trSummons.initRecords()
-    local recordStore = RecordStores["spell"]
     for id,spell in pairs(trSummonsConfig.summonRecords) do
-        recordStore.data.permanentRecords[id] = spell
+        RecordStores["spell"].data.permanentRecords[id] = spell
         tes3mp.LogMessage(enumerations.log.VERBOSE, trSummonsConfig.logPrefix .. "Initialized record for spell "..id)
     end
-    recordStore:QuicksaveToDrive()
+    for spellId, creatureId in pairs(trSummonsConfig.summonMap) do
+        RecordStores["creature"].data.permanentRecords[creatureId.."sm"] = {
+            baseId = creatureId,
+            aiFight = 30
+        }
+        tes3mp.LogMessage(enumerations.log.VERBOSE, trSummonsConfig.logPrefix .. "Initialized record for creature "..creatureId.."sm")
+    end
+    RecordStores["spell"]:QuicksaveToDrive()
+    RecordStores["creature"]:QuicksaveToDrive()
     tes3mp.LogMessage(enumerations.log.INFO, trSummonsConfig.logPrefix .. "Initialized custom records")
 end
 
