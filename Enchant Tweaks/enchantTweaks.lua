@@ -6,7 +6,8 @@ local enchantTweaks = {}
 -- 0 = Always minimum (why?)
 -- 1 = Always average (round down)
 -- 2 = Always maximum
-local enchantTweaksMagMode = 1
+-- 3 = Random value in range
+local enchantTweaksMagMode = 3
 
 -- Table of effects to replace (see enumerations.lua for valid effects)
 -- This can be used to both block certain effects, or increase/decrease the effectiveness
@@ -34,6 +35,8 @@ function enchantTweaks.getMagnitude(effect)
         return math.floor((effect.magnitudeMax+effect.magnitudeMin)/2)
     elseif enchantTweaksMagMode == 2 then
         return effect.magnitudeMax
+    elseif enchantTweaksMagMode == 3 then
+        return math.floor(math.random(effect.magnitudeMin,effect.magnitudeMax))
     end
 end
 
